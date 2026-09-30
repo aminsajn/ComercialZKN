@@ -1,0 +1,253 @@
+ingrediente,sector_key,pvp_medio,tn_media,n_clientes
+Azucar,abejorros,703.5,1.1,2
+Azucar,agroquimico,885.9,5.8,12
+Azucar,alternativas a lacteos,824.5,86.0,2
+Azucar,barritas y bebidas deport,522.9,1.2,2
+Azucar,bolleria,925.1,95.3,37
+Azucar,cafe,1108.1,5.3,2
+Azucar,carnico,1010.8,4.2,3
+Azucar,cemento,863.0,49.4,3
+Azucar,cereales,848.3,83.0,2
+Azucar,cervezas,932.0,2.6,2
+Azucar,chocolate,818.6,106.5,11
+Azucar,conservas pescado,1037.0,0.4,3
+Azucar,conservas vegetales,860.0,48.0,31
+Azucar,"especias, aromas,colorant",909.9,12.0,21
+Azucar,estuchadores,877.2,72.3,14
+Azucar,frutos secos y snacks,962.3,24.0,8
+Azucar,galleteros,964.4,350.6,7
+Azucar,golosinas,804.5,99.9,21
+Azucar,helados,820.1,48.0,25
+Azucar,"lacteos, yogur, postr lac",991.0,70.2,13
+Azucar,licores,920.7,16.0,13
+Azucar,medicamentos,0.0,0.0,1
+Azucar,mermeladas y confituras,925.3,17.0,9
+Azucar,miel,1278.6,1.0,583
+Azucar,nutraceuticos,788.5,37.6,3
+Azucar,panaderia,941.6,5.2,29
+Azucar,pasteleria,930.5,8.6,33
+Azucar,piensos ganaderia,1151.9,22.0,86
+Azucar,platos preparados,951.2,156.2,3
+Azucar,refrescos,802.8,4.2,8
+Azucar,salsas y aderezos,786.5,62.1,15
+Azucar,suplementos deportivos,1150.0,1.0,1
+Azucar,turron,916.1,99.7,26
+Azucar,vino y derivados del vino,1099.1,48.2,20
+Azucar,zumos y nectares,1041.3,557.0,17
+Azucar Integral,agroquimico,0.0,0.0,2
+Azucar Integral,alternativas a lacteos,0.0,0.0,1
+Azucar Integral,bolleria,944.2,1.8,11
+Azucar Integral,cemento,505.0,2.8,1
+Azucar Integral,cereales,468.5,1.5,1
+Azucar Integral,cervezas,1339.8,261.0,1
+Azucar Integral,chocolate,790.9,67.5,2
+Azucar Integral,conservas pescado,1189.2,5.4,1
+Azucar Integral,conservas vegetales,923.7,0.6,4
+Azucar Integral,"especias, aromas,colorant",989.3,0.4,9
+Azucar Integral,estuchadores,741.7,1.5,6
+Azucar Integral,frutos secos y snacks,585.0,0.1,2
+Azucar Integral,golosinas,822.0,0.0,2
+Azucar Integral,helados,878.8,0.3,3
+Azucar Integral,"lacteos, yogur, postr lac",901.2,26.5,3
+Azucar Integral,licores,992.5,12.1,2
+Azucar Integral,mermeladas y confituras,967.0,0.1,2
+Azucar Integral,miel,1380.0,0.0,1
+Azucar Integral,nutraceuticos,1163.3,0.5,2
+Azucar Integral,panaderia,929.0,0.1,5
+Azucar Integral,pasteleria,1180.0,0.5,10
+Azucar Integral,piensos ganaderia,595.0,20.4,1
+Azucar Integral,refrescos,825.0,0.6,2
+Azucar Integral,salsas y aderezos,330.0,0.0,3
+Azucar Liquido,conservas vegetales,0.0,0.0,1
+Azucar Liquido,vino y derivados del vino,815.1,151.8,2
+Azucar Liquido,zumos y nectares,739.6,645.4,2
+Azucar Liquido Invertido,bolleria,1045.1,119.1,2
+Azucar Liquido Invertido,chocolate,0.0,0.0,1
+Azucar Liquido Invertido,"especias, aromas,colorant",1275.5,3.6,3
+Azucar Liquido Invertido,golosinas,1215.7,1.8,1
+Azucar Liquido Invertido,"lacteos, yogur, postr lac",0.0,0.0,1
+Azucar Liquido Invertido,licores,626.4,75.3,1
+Azucar Liquido Invertido,pasteleria,1273.3,15.5,4
+Azucar Liquido Invertido,piensos ganaderia,0.0,0.1,1
+Azucar Liquido Invertido,salsas y aderezos,0.0,0.0,1
+Azucar Liquido Invertido,vino y derivados del vino,552.7,4.7,8
+Azucar Liquido Invertido,zumos y nectares,961.6,255.2,5
+Caramelo natural,helados,35030.0,0.6,1
+Dextrosa,abejorros,1265.5,3.4,1
+Dextrosa,agroquimico,1177.8,1.9,12
+Dextrosa,barritas y bebidas deport,480.0,1.3,1
+Dextrosa,bolleria,1399.3,3.8,5
+Dextrosa,carnico,778.3,20.0,2
+Dextrosa,cereales,885.8,22.5,2
+Dextrosa,cervezas,1268.9,10.0,2
+Dextrosa,chocolate,1096.1,13.5,1
+Dextrosa,conservas vegetales,1500.0,0.4,1
+Dextrosa,"especias, aromas,colorant",1093.0,25.0,17
+Dextrosa,frutos secos y snacks,1342.1,14.4,1
+Dextrosa,galleteros,1083.6,90.5,2
+Dextrosa,golosinas,901.4,3.8,4
+Dextrosa,helados,1280.1,1.3,10
+Dextrosa,"lacteos, yogur, postr lac",1044.0,5.0,2
+Dextrosa,mermeladas y confituras,0.0,0.0,1
+Dextrosa,miel,1416.8,0.4,8
+Dextrosa,panaderia,1071.7,5.6,6
+Dextrosa,pasteleria,1162.4,2.5,7
+Dextrosa,piensos ganaderia,1117.7,10.0,8
+Dextrosa,platos preparados,1188.3,16.2,1
+Dextrosa,salsas y aderezos,1134.5,13.1,3
+Dextrosa,suplementos deportivos,1024.7,15.0,1
+Fructooligosacaridos,agroquimico,2600.0,0.1,1
+Fructooligosacaridos,barritas y bebidas deport,1067.8,1.2,13
+Fructooligosacaridos,bolleria,136.1,0.0,10
+Fructooligosacaridos,carnico,0.0,0.1,1
+Fructooligosacaridos,cereales,2009.8,3.3,5
+Fructooligosacaridos,chocolate,0.0,0.0,3
+Fructooligosacaridos,conservas vegetales,0.0,0.0,4
+Fructooligosacaridos,"especias, aromas,colorant",511.0,0.0,5
+Fructooligosacaridos,frutos secos y snacks,1264.4,0.0,2
+Fructooligosacaridos,galleteros,1785.4,0.5,12
+Fructooligosacaridos,golosinas,2069.4,0.2,6
+Fructooligosacaridos,helados,1648.1,0.0,7
+Fructooligosacaridos,"lacteos, yogur, postr lac",728.9,0.0,9
+Fructooligosacaridos,medicamentos,466.2,0.0,1
+Fructooligosacaridos,mermeladas y confituras,726.4,0.2,4
+Fructooligosacaridos,nutraceuticos,2072.4,2.4,7
+Fructooligosacaridos,panaderia,1971.7,1.8,7
+Fructooligosacaridos,pasteleria,1181.7,0.0,8
+Fructooligosacaridos,refrescos,0.0,0.0,1
+Fructooligosacaridos,salsas y aderezos,726.9,0.6,3
+Fructooligosacaridos,turron,1659.8,1.2,4
+Fructooligosacaridos,vino y derivados del vino,0.0,0.0,1
+Fructooligosacaridos,zumos y nectares,254.9,0.0,4
+Fructosa,agroquimico,1451.2,0.2,4
+Fructosa,alternativas a lacteos,1590.0,1.2,1
+Fructosa,barritas y bebidas deport,1305.1,52.4,2
+Fructosa,bolleria,1115.5,5.0,6
+Fructosa,conservas vegetales,1392.8,26.8,4
+Fructosa,"especias, aromas,colorant",1135.6,0.3,9
+Fructosa,frutos secos y snacks,0.0,0.0,1
+Fructosa,golosinas,1676.0,11.9,2
+Fructosa,helados,1421.8,10.2,9
+Fructosa,"lacteos, yogur, postr lac",1266.7,10.0,2
+Fructosa,mermeladas y confituras,1471.4,1.2,5
+Fructosa,miel,1465.9,1.0,7
+Fructosa,nutraceuticos,1338.9,1.2,3
+Fructosa,panaderia,1554.0,0.0,1
+Fructosa,pasteleria,1518.9,3.8,6
+Fructosa,piensos ganaderia,1334.4,3.2,5
+Fructosa,piensos mascotas,1525.9,2.5,2
+Fructosa,refrescos,1667.5,22.0,1
+Fructosa,salsas y aderezos,1360.3,6.5,1
+Fructosa,suplementos deportivos,1452.9,1.2,3
+Fructosa,turron,1890.0,1.8,2
+Fructosa,vino y derivados del vino,1666.6,0.5,2
+Fructosa,zumos y nectares,1467.8,1.0,2
+Jarabe de glucosa,agroquimico,893.9,2.4,4
+Jarabe de glucosa,barritas y bebidas deport,1100.0,1.2,1
+Jarabe de glucosa,bolleria,1021.9,3.6,3
+Jarabe de glucosa,cereales,730.0,24.3,3
+Jarabe de glucosa,chocolate,723.4,66.4,3
+Jarabe de glucosa,conservas vegetales,1095.5,9.6,2
+Jarabe de glucosa,frutos secos y snacks,1009.0,20.3,2
+Jarabe de glucosa,golosinas,890.2,43.3,11
+Jarabe de glucosa,helados,1306.0,2.4,3
+Jarabe de glucosa,"lacteos, yogur, postr lac",1097.0,27.6,2
+Jarabe de glucosa,miel,1150.0,1.2,1
+Jarabe de glucosa,nutraceuticos,577.5,1.2,4
+Jarabe de glucosa,panaderia,1235.0,1.2,1
+Jarabe de glucosa,pasteleria,1218.4,10.1,8
+Jarabe de glucosa,turron,1014.5,6.0,6
+Jarabe de glucosa,zumos y nectares,537.7,4.6,1
+Jarabe de glucosa y fructosa,agroquimico,957.1,2.4,9
+Jarabe de glucosa y fructosa,alternativas a lacteos,577.5,9.6,1
+Jarabe de glucosa y fructosa,bolleria,956.9,13.9,13
+Jarabe de glucosa y fructosa,carnico,1165.2,9.0,1
+Jarabe de glucosa y fructosa,cereales,1093.4,30.2,1
+Jarabe de glucosa y fructosa,chocolate,680.0,8.4,1
+Jarabe de glucosa y fructosa,conservas pescado,890.0,10.8,1
+Jarabe de glucosa y fructosa,conservas vegetales,892.9,3.6,8
+Jarabe de glucosa y fructosa,"especias, aromas,colorant",864.5,2.4,8
+Jarabe de glucosa y fructosa,frutos secos y snacks,1104.0,7.8,1
+Jarabe de glucosa y fructosa,galleteros,1252.9,4.3,1
+Jarabe de glucosa y fructosa,helados,1120.8,5.4,8
+Jarabe de glucosa y fructosa,"lacteos, yogur, postr lac",1090.7,46.8,2
+Jarabe de glucosa y fructosa,licores,597.0,37.6,1
+Jarabe de glucosa y fructosa,mermeladas y confituras,0.0,0.0,1
+Jarabe de glucosa y fructosa,miel,856.3,1.2,32
+Jarabe de glucosa y fructosa,panaderia,1082.9,3.6,3
+Jarabe de glucosa y fructosa,pasteleria,1054.8,1.2,6
+Jarabe de glucosa y fructosa,piensos ganaderia,786.6,21.7,13
+Jarabe de glucosa y fructosa,refrescos,1136.2,300.4,1
+Jarabe de glucosa y fructosa,salsas y aderezos,920.2,25.1,7
+Jarabe de glucosa y fructosa,turron,1345.4,10.2,8
+Jarabe de glucosa y fructosa,vino y derivados del vino,0.0,0.0,1
+Jarabe de glucosa y fructosa,zumos y nectares,892.1,89.8,5
+Jarabe de maltitol,agroquimico,0.0,0.0,1
+Jarabe de maltitol,barritas y bebidas deport,0.0,0.0,1
+Jarabe de maltitol,bolleria,1135.2,8.4,6
+Jarabe de maltitol,cereales,1216.7,39.0,1
+Jarabe de maltitol,chocolate,1565.0,1.2,1
+Jarabe de maltitol,conservas vegetales,1232.2,35.0,5
+Jarabe de maltitol,"especias, aromas,colorant",1031.0,28.4,3
+Jarabe de maltitol,golosinas,1192.6,34.6,6
+Jarabe de maltitol,helados,1030.3,11.7,7
+Jarabe de maltitol,"lacteos, yogur, postr lac",0.0,0.0,2
+Jarabe de maltitol,medicamentos,1266.2,11.8,1
+Jarabe de maltitol,mermeladas y confituras,796.7,7.2,3
+Jarabe de maltitol,nutraceuticos,1015.9,75.4,2
+Jarabe de maltitol,panaderia,1376.1,4.8,2
+Jarabe de maltitol,pasteleria,1263.7,20.8,2
+Jarabe de maltitol,salsas y aderezos,1060.0,0.5,3
+Jarabe de maltitol,suplementos deportivos,1054.5,12.4,1
+Jarabe de maltitol,turron,1195.2,15.0,3
+Jarabe de sorbitol,agroquimico,1183.6,19.2,3
+Jarabe de sorbitol,bolleria,1296.7,5.0,12
+Jarabe de sorbitol,"especias, aromas,colorant",0.0,0.0,1
+Jarabe de sorbitol,golosinas,1772.8,12.0,2
+Jarabe de sorbitol,helados,1302.7,3.8,2
+Jarabe de sorbitol,"lacteos, yogur, postr lac",1235.0,11.9,1
+Jarabe de sorbitol,nutraceuticos,1607.9,9.1,2
+Jarabe de sorbitol,panaderia,1089.0,27.6,1
+Jarabe de sorbitol,pasteleria,1277.2,5.2,9
+Jarabe de sorbitol,piensos ganaderia,300.0,24.5,1
+Jarabe de sorbitol,salsas y aderezos,1196.3,20.4,3
+Jarabe de sorbitol,turron,1410.7,4.6,3
+Maltitol,barritas y bebidas deport,0.0,0.0,1
+Maltitol,bolleria,1715.0,2.4,5
+Maltitol,chocolate,2434.3,1.4,2
+Maltitol,"especias, aromas,colorant",0.0,0.0,1
+Maltitol,golosinas,1990.0,0.2,1
+Maltitol,helados,1442.5,20.0,2
+Maltitol,mermeladas y confituras,2515.7,0.5,2
+Maltitol,nutraceuticos,2686.6,0.3,2
+Maltitol,panaderia,1890.0,1.0,1
+Maltitol,pasteleria,2005.5,1.3,2
+Maltitol,turron,2261.5,4.6,5
+Melaza de cana,agroquimico,669.0,0.7,3
+Melaza de cana,alternativas a lacteos,0.0,0.0,1
+Melaza de cana,barritas y bebidas deport,0.0,0.0,1
+Melaza de cana,bolleria,293.8,0.0,4
+Melaza de cana,carnico,867.0,6.0,2
+Melaza de cana,cereales,968.2,57.6,2
+Melaza de cana,cervezas,1245.0,1.2,1
+Melaza de cana,conservas vegetales,0.0,0.0,1
+Melaza de cana,"especias, aromas,colorant",968.0,6.1,7
+Melaza de cana,frutos secos y snacks,0.0,0.0,1
+Melaza de cana,galleteros,0.0,0.1,1
+Melaza de cana,golosinas,1115.2,14.4,6
+Melaza de cana,licores,0.0,0.0,1
+Melaza de cana,mermeladas y confituras,0.0,0.0,1
+Melaza de cana,panaderia,1003.5,92.4,2
+Melaza de cana,pasteleria,811.0,1.2,6
+Melaza de cana,salsas y aderezos,1100.7,6.0,5
+Melaza de cana,vino y derivados del vino,795.0,1.9,1
+Sorbitol,agroquimico,1636.7,3.0,2
+Sorbitol,bolleria,0.0,0.0,1
+Sorbitol,conservas vegetales,1519.4,1.2,2
+Sorbitol,mermeladas y confituras,987.5,1.2,2
+Sorbitol,panaderia,1704.5,2.4,3
+Sorbitol,pasteleria,1835.0,5.4,1
+Sorbitol,suplementos deportivos,1370.0,0.8,2
+Sorbitol,turron,1611.1,19.9,9
+Sorbitol,vino y derivados del vino,1549.0,1.0,1
+Sorbitol,zumos y nectares,1634.2,12.0,2

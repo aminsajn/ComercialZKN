@@ -1,0 +1,51 @@
+Leads con URL: 1079. Iniciando scraping...
+
+[  25/1079]   2.3%  ok=16  sin_prod=3  errores=6  ultima: Kuchenmeister GmbH -> ok
+[  50/1079]   4.6%  ok=34  sin_prod=7  errores=9  ultima: NUTRIS -> ok
+[  75/1079]   7.0%  ok=49  sin_prod=13  errores=13  ultima: Nutreine SAS -> ok
+[ 100/1079]   9.3%  ok=63  sin_prod=19  errores=18  ultima: Pharmalink -> ok
+[ 125/1079]  11.6%  ok=79  sin_prod=23  errores=23  ultima: El Granero -> ok
+[ 150/1079]  13.9%  ok=97  sin_prod=26  errores=27  ultima: ROYAL FASSIN B.V. -> ok
+[ 175/1079]  16.2%  ok=113  sin_prod=30  errores=32  ultima: Nayaa Ingredients -> ok_sin_productos
+[ 200/1079]  18.5%  ok=127  sin_prod=36  errores=37  ultima: Kymuba -> ok_sin_productos
+[ 225/1079]  20.9%  ok=144  sin_prod=38  errores=43  ultima: Sternlife -> ok
+[ 250/1079]  23.2%  ok=161  sin_prod=42  errores=47  ultima: ABC NUTRITIONALS -> ok_sin_productos
+[ 275/1079]  25.5%  ok=181  sin_prod=43  errores=51  ultima: Globulinks Ltd? -> ok
+[ 300/1079]  27.8%  ok=201  sin_prod=45  errores=54  ultima: HISPANOAMERICAN BROKERS, S.L. -> ok
+[ 325/1079]  30.1%  ok=219  sin_prod=46  errores=60  ultima: Sesamis -> ok
+[ 350/1079]  32.4%  ok=238  sin_prod=48  errores=64  ultima: General Mills -> ok
+[ 375/1079]  34.8%  ok=254  sin_prod=50  errores=71  ultima: Yeo Valley -> ok
+[ 400/1079]  37.1%  ok=269  sin_prod=52  errores=79  ultima: PROMOPHARMA -> ok
+[ 425/1079]  39.4%  ok=283  sin_prod=54  errores=88  ultima: DOK Kindersuesswaren.de -> error_home
+[ 450/1079]  41.7%  ok=301  sin_prod=58  errores=91  ultima: Tirlan -> ok
+[ 475/1079]  44.0%  ok=317  sin_prod=63  errores=95  ultima: PROZIS GROUP -> error_home
+[ 500/1079]  46.3%  ok=338  sin_prod=63  errores=99  ultima: ORGANO FOOD TECH CORPORATION -> ok
+[ 525/1079]  48.7%  ok=356  sin_prod=64  errores=105  ultima: Tarata Honey New Zealand -> error_home
+[ 550/1079]  51.0%  ok=371  sin_prod=67  errores=112  ultima: Spiruella -> ok
+[ 575/1079]  53.3%  ok=394  sin_prod=67  errores=114  ultima: URAI S.p.A. -> ok
+[ 600/1079]  55.6%  ok=414  sin_prod=69  errores=117  ultima: Tarapharm -> ok
+[ 625/1079]  57.9%  ok=433  sin_prod=72  errores=120  ultima: Vimax Malgorzata Rogiewicz -> ok
+[ 650/1079]  60.2%  ok=450  sin_prod=76  errores=124  ultima: COMPA?IA INDUSTRIAL DE CEREALE -> ok
+[ 675/1079]  62.6%  ok=467  sin_prod=80  errores=128  ultima: Gliselab S.L.U -> ok_sin_productos
+[ 700/1079]  64.9%  ok=482  sin_prod=83  errores=135  ultima: Grupo Crono -> error_home
+[ 725/1079]  67.2%  ok=502  sin_prod=84  errores=139  ultima: HiPP GmbH & Co. Vertrieb KG -> error_home
+[ 750/1079]  69.5%  ok=520  sin_prod=86  errores=144  ultima: Rimon chemicals -> ok
+[ 775/1079]  71.8%  ok=535  sin_prod=89  errores=151  ultima: Prima Food Ingredients Ltd -> ok
+[ 800/1079]  74.1%  ok=550  sin_prod=94  errores=156  ultima: Deretil Vitatech -> error_home
+[ 825/1079]  76.5%  ok=568  sin_prod=96  errores=161  ultima: Inexall d.o.o. -> ok
+[ 850/1079]  78.8%  ok=586  sin_prod=98  errores=166  ultima: Sucralliance -> ok
+[ 875/1079]  81.1%  ok=604  sin_prod=98  errores=173  ultima: Design -> ok
+[ 900/1079]  83.4%  ok=623  sin_prod=100  errores=177  ultima: Pladis -> ok
+[ 925/1079]  85.7%  ok=641  sin_prod=101  errores=183  ultima: Kassatly Chtaura -> ok
+[ 950/1079]  88.0%  ok=660  sin_prod=103  errores=187  ultima: L Cell Longevity Supplements -> ok
+[ 975/1079]  90.4%  ok=676  sin_prod=106  errores=193  ultima: Nutrigums Ltd -> error_home
+[1000/1079]  92.7%  ok=696  sin_prod=107  errores=197  ultima: SPA La Bergere -> ok
+[1025/1079]  95.0%  ok=712  sin_prod=112  errores=201  ultima: COLMENARES NAHUELCURA -> ok
+[1050/1079]  97.3%  ok=731  sin_prod=115  errores=204  ultima: Bake the shape -> error_home
+[1075/1079]  99.6%  ok=751  sin_prod=115  errores=209  ultima: ECOSTUP SRL -> ok
+[1079/1079] 100.0%  ok=755  sin_prod=115  errores=209  ultima: KOMVIDA KOMBUCHA -> ok
+
+Finalizado. Resultados en data/leads_productos.csv
+  Con productos:     755
+  Sin productos:     115
+  Errores/bloqueos:  209

@@ -1,0 +1,1008 @@
+codigo_producto,descripcion,descripcion_comercial,descripcion_tecnica,ud_secundaria,bio,fecha_registro,fecha_baja,es_producto_activo,id_linea_negocio,id_agrupacion,id_naturaleza,id_familia,id_subfamilia,id_cont_ventas,id_cont_compras
+40000,Azúcar Blanco EEC Nº 2,Azúcar Blanco EEC Nº 2,null,TN,No,2007-11-12,null,true,SL,MP06,MP,F005,SF013,SL,MP
+40001,Azúcar Blanco 150 ICUMSA,Azúcar Blanco,null,TN,No,2008-10-03,null,true,SL,MP14,MP,F005,SF016,SL,MP
+40002,Azúcar Blanco EEC Nº 2 CAÑA,Azúcar Blanco EEC Nº 2 CAÑA,Azúcar,TN,No,2009-12-11,2023-05-22,false,SL,MP06,MP,10,11,SL,MP
+40003,Azúcar Blanco EEC Nº 2 REMOLACHA,Azúcar Blanco EEC Nº 2 REMOLACHA,Azucar,TN,No,2012-01-10,null,true,SL,MP01,MP,F005,SF013,SL,MP
+40006,Azúcar Blanco EEC Nº 2 Palet Plast.ZK,Azúcar Blanco EEC Nº 2 Palet Plast.ZK,null,TN,No,2017-08-03,null,true,SL,null,PC,10,11,SL,MP
+40007,Azúcar Blanco EEC Nº 2 ACOR / TEREOS.,Azúcar Blanco EEC Nº 2,null,TN,No,2018-07-05,2023-05-03,false,SL,MP07,MP,10,11,SL,MP
+40008,Azúcar Blanco EEC Nº2 ACOR/TEREOS Pallet PlastCHEP,Azúcar Blanco EEC Nº2 ACOR/TEREOS Pallet PlastCHEP,null,TN,No,2018-07-09,null,true,SL,MP07,PC,F005,SF013,SL,PA
+40010,Azúcar Blanco EEC Nº 1,Azúcar Blanco EEC Nº 1,null,TN,No,2007-11-12,null,true,SL,MP06,MP,F005,SF013,SL,MP
+40020,Panela,Panela,Jugo de caña de azúcar,TN,No,2018-02-09,null,true,SL,MP06,MP,10,11,SL,MP
+40050,Az. Bl. EEC Nº 2 Sobrante,Az. Bl. EEC Nº 2 Sobrante,null,TN,No,2011-04-01,null,true,SL,MP06,PA,F005,SF013,SL,PA
+40100,Azúcar Moreno Light,Azúcar Moreno Light,null,TN,No,2007-11-12,2023-05-03,false,SL,MP04,MP,10,113,SL,MP
+40101,Azúcar Moreno Demerara,Azúcar Moreno Demerara,null,TN,No,2017-11-28,null,true,SL,null,MP,10,113,SL,MP
+40102,Azúcar Moreno Dark Demerara,Azúcar Moreno Dark Demerara,null,TN,No,2017-11-28,null,true,SL,MP04,MP,F005,SF016,SL,MP
+40110,Azúcar Moreno Brown (Azucarera),Azúcar Moreno Brown,null,TN,No,2007-11-12,null,true,SL,MP04,MP,F005,SF016,SL,MP
+40111,Azúcar Moreno Brown (Alvean),Azúcar Moreno Brown,null,TN,No,2018-09-12,null,true,SL,MP04,MP,F005,SF016,SL,MP
+40112,Azúcar Moreno Brown (Alvean) Pallet Plast.,Azúcar Moreno Brown (Alvean) Pallet Plast.,null,TN,No,2018-11-14,null,true,SL,MP04,MP,F005,SF016,SL,MP
+40113,Azúcar Moreno Brown C,Azúcar Morena Brown C,null,TN,No,2020-08-26,null,true,SL,MP04,MP,F005,SF016,SL,MP
+40200,Azúcar Golden - BIO - ES-ECO-024-MU (Agric No UE),Azúcar Golden - BIO - ES-ECO-024-MU (Agric No UE),null,TN,Sí,2007-11-12,null,true,SL,MP10,MP,F005,SF014,SL,MP
+40201,Azúcar Blanco BIO ES-ECO-024-MU Ag No UE,Azúcar Blanco BIO ES-ECO-024-MU Ag No UE,PROVEEDOR: RAR,TN,Sí,2016-06-21,null,true,SL,MP10,MP,F005,SF014,SL,MP
+40202,Azúcar Polvo LM BIO,Azúcar Polvo LM BIO ES-ECO-024-MU,Azúcar Orgánica de caña en polvo o glass,TN,Sí,2019-09-20,null,true,SL,null,MP,20,21,SL,MP
+40203,Azúcar BIO 300-500 -ES-ECO-024-MU (Agric No EU),Azúcar caña <1000IC ES-ECO-024-MU,Azúcar BIO 300-500 -ES-ECO-024-MU (Agric No EU),TN,Sí,2020-10-06,null,true,SL,MP23,MP,F005,SF014,SL,MP
+40204,Azúcar BIO 600-1200 -ES-ECO-024-MU (Agric No EU),Azúcar BIO 600-1200 -ES-ECO-024-MU (Agric No EU),Azúcar BIO 600-1200 -ES-ECO-024-MU (Agric No EU),TN,Sí,2020-10-06,null,true,SL,MP23,MP,F005,SF014,SL,MP
+40205,Azúcar Bio/FairTrade ES-ECO-024-MU (Agric No UE),Azúcar Bio/FairTrade ES-ECO-024-MU (Agric No UE),null,TN,Sí,2015-01-22,null,true,SL,null,MP,20,21,SL,MP
+40255,Azúcar Cruda,Azúcar Cruda,null,TN,No,2011-06-28,2023-05-03,false,SL,MP03,MP,10,11,SL,MP
+40260,Melaza de Caña,Melaza de Caña,Melaza,TN,No,2012-11-22,null,true,LQ,MP22,MP,F010,SF032,LQ,MP
+40311,Azúcar en polvo LM (ENG),Powdered Sugar LM,"Powdered sugar, silicon dioxide",TN,No,2018-08-13,null,true,SL,MP09,MP,F005,SF018,SL,MP
+40330,Azúcar Perlado 2,Azúcar Perlado 2,null,TN,No,2007-11-12,null,true,SL,MP08,MP,F005,SF017,SL,MP
+40331,Azúcar Perlado 2 Pallet Plast.,Azúcar Perlado 2 Pallet Plast.,null,TN,No,2018-09-10,null,true,SL,MP08,MP,F005,SF017,SL,MP
+40340,Azúcar Perlado 1,Azúcar Perlado 1,null,TN,No,2013-10-03,null,true,SL,MP08,MP,F005,SF017,SL,MP
+40345,Azúcar Perlado 4,Azúcar Perlado 4,null,TN,No,2014-03-25,null,true,SL,MP08,MP,F005,SF017,SL,MP
+40350,Azúcar Granulado Extrafino,Azúcar Granulado Extrafino,"Tamizado entre 0,2 mm y 0,4 mm",TN,No,2007-11-12,null,true,SL,MP08,MP,F005,SF015,SL,MP
+40355,"Azúcar Granulado 0,6mm a 1mm","Azúcar Granulado 0,6mm a 1mm","Azúcar K2 - De 0,6 a 1mm",TN,No,2009-09-29,null,true,SL,MP08,MP,F005,SF015,SL,MP
+40500,Azucar Blanco Bonsucro,Azucar Blanco Bonsucro,Azúcar,TN,No,2020-12-10,null,true,SL,MP06,MP,20,21,SL,MP
+41000,Fructosa MAIZ Cristal,Fructosa Cristal,null,TN,No,2007-11-12,null,true,SL,MP15,MP,F009,SF028,SL,MP
+41001,Fructosa MAIZ Cristal Pallet CHEP Plastico,Fructosa Cristal Pallet CHEP Plastico,null,TN,No,2017-11-14,null,true,SL,MP15,MP,F009,SF028,SL,PA
+41002,Fructosa MAIZ Cristal solo Fabricación,Fructosa Cristal solo Fabricación,null,TN,No,2019-02-19,null,true,SL,MP15,MP,F009,SF028,SL,MP
+41005,Fructosa MAIZ Cristal Granulada,Fructosa Cristal Granulada,null,TN,No,2014-03-03,null,true,SL,MP15,MP,F009,SF028,SL,MP
+41006,Fructosa MAIZ Cristal Granulada Pallet Plast. CHEP,Fructosa Cristal Granulada Pallet Plast. CHEP,null,TN,No,2017-10-05,null,true,SL,MP15,MP,F009,SF028,SL,PA
+41007,Fructosa MAIZ Cristal Granul. Pallet EUR Plast. Zk,Fructosa Cristal Granulada Pallet EUR Plast. ZUKAN,null,TN,No,2018-06-25,null,true,SL,MP15,PA,F009,SF028,SL,PA
+41010,Fructosa REMOLACHA Cristal,Fructosa REMOLACHA Cristal,null,TN,No,2013-10-14,null,true,SL,MP31,MP,F009,SF028,SL,MP
+42000,Dextrosa Cristal Monohidrato Maiz,Dextrosa Cristal Monohidrato Maiz,null,TN,No,2007-11-12,null,true,SL,MP33,MP,F006,SF019,SL,MP
+42001,Dextrosa C.Monohidrato Maiz Pallet Plast.  CHEP,Dextrosa C.Monohidrato Maiz Pallet  Plast.  CHEP,null,TN,No,2017-10-04,null,true,SL,MP33,MP,F006,SF019,SL,PA
+42005,Dextrosa Cristal Monoh Trigo Cons Liquida (TER),Dextrosa Cristal Monohidrato Trigo,null,TN,No,2012-08-23,null,true,SL,MP16,MP,F006,SF019,SL,MP
+43000,Maltitol Liquido 75-5308,Maltitol Liquido 75-5308,JARABE DE MALTITOL ( E-965 ii ),TN,No,2007-11-12,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+43001,Maltitol Liquido 67-5308,Maltitol Liquido 67-5308,Jarabe de Maltitol,TN,No,2018-12-05,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+43002,Maltitol Estandar Liq 75-5008,Maltitol Estandar Liq 75-5008,Jarabe de Maltitol,TN,No,2020-08-20,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+43005,Maltitol Liquido 75-5502,Maltitol Liquido 75-5502,null,TN,No,2013-09-26,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+43015,Maltitol Liquido 80-5308,Maltitol Liquido 80-5308,JARABE DE MALTITOL,TN,No,2017-11-13,null,true,LQ,MP18,PA,F011,SF033,LQ,PA
+43016,Maltitol Liquido 82-5308,Maltitol Liquido 82-5308,Maltitol líquido 82 ºBrix,TN,No,2018-05-17,null,true,LQ,MP18,PA,F011,SF033,LQ,PA
+43050,Maltitol en Polvo,Maltitol en Polvo,null,TN,No,2007-11-12,null,true,SL,MP12,MP,F011,SF034,SL,MP
+43060,Mix Fibra,Mix Fibra,Fibra Soluble,TN,No,2017-03-15,null,true,LQ,null,PA,60,63,LQ,PA
+43100,Sorbitol Liquido 70% No cristalizable,Sorbitol Líquido 70% No cristalizable,JARABE DE SORBITOL (E-420 ii),TN,No,2007-11-12,null,true,LQ,MP18,MP,F011,SF036,LQ,MP
+43150,Sorbitol en Polvo,Sorbitol en Polvo,null,TN,No,2007-11-12,null,true,SL,MP13,MP,F011,SF037,SL,MP
+44001,Glucor 60/79 Bio - ES-ECO-024-MU (Agric no UE),Glucor 60/79 Bio - ES-ECO-024-MU (Agric no UE),null,TN,Sí,2016-06-29,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44002,Glucor 45/80 Bio ES-ECO-024-MU,Glucor 45/80 Bio ES-ECO-024-MU,Glucor 45/80 Bio ES-ECO-024-MU,TN,Sí,2020-12-18,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44010,Fructor 10/81,Fructor 10/81,Jarabe de Glucosa y Fructosa,TN,No,2007-11-12,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+44011,Fructor 10/83,Fructor 10/83,null,TN,No,2008-01-10,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+44014,Fructor 10/71,Fructor 10/71,null,TN,No,2009-01-23,null,true,LQ,MP17,PA,F010,SF031,LQ,PA
+44015,Fructor 10/77,Fructor 10/77,Jarabe de Glucosa y Fructosa,TN,No,2007-11-12,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+44017,Fructor 10/77 Pallet EUR,Fructor 10/77 Pallet EUR,Jarabe de Glucosa y Fructosa,TN,No,2017-11-07,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+44020,Fructor 20/77,Fructor 20/77,Jarabe de Glucosa y Fructosa,TN,No,2007-11-12,null,true,LQ,MP17,PA,F010,SF031,LQ,PA
+44030,Fructor 25/72,Fructor 25/72,JARABE DE GLUCOSA Y FRUCTOSA					,TN,No,2012-03-23,null,true,LQ,MP17,PA,F010,SF031,LQ,PA
+44040,Fructor 42/71,Fructor 42/71,JARABE DE GLUCOSA Y FRUCTOSA,TN,No,2007-11-12,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+44043,Fructor 42/71 ALTO COLOR,Fructor 42/71 ALTO COLOR,JARABE DE GLUCOSA Y FRUCTOSA,TN,No,2018-06-25,null,true,LQ,null,PA,F010,SF031,LQ,PA
+44054,FRUCTAMYL 99%,FRUCTAMYL 99%,null,TN,No,2021-01-18,null,true,LQ,MP27,MP,F010,SF031,LQ,MP
+44080,Fructor 85/75,Fructor 85/75,JARABE DE FRUCTOSA Y GLUCOSA,TN,No,2008-01-04,null,true,LQ,MP17,PA,F010,SF031,LQ,PA
+44090,Fructor 100/75,Fructor 100/75,null,TN,No,2009-06-16,null,true,LQ,MP36,PA,F009,SF029,LQ,PA
+44092,Fructor 100/69,Fructor 100/69,JARABE DE FRUCTOSA,TN,No,2015-01-26,null,true,LQ,MP36,MP,F009,SF029,LQ,MP
+44093,Fructor 100/80,Fructor 100/80,null,TN,No,2015-01-30,null,true,LQ,MP36,PA,F009,SF029,LQ,PA
+44094,Fructor 100/70,Fructor 100/70,null,TN,No,2015-10-21,null,true,LQ,MP36,MP,F009,SF029,LQ,MP
+44096,Fructor 95/71 - FRUCTAMYL 211,FRUCTOSA LIQUIDA,null,TN,No,2017-11-28,null,true,LQ,MP27,MP,F010,SF031,LQ,MP
+44099,Fructor 100/78,Fructor 100/78,JARABE DE FRUCTOSA,TN,No,2020-12-02,null,true,LQ,MP36,PA,F009,SF029,LQ,PA
+44110,Glucor 60/80,Glucor 60/80,null,TN,No,2007-11-12,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44111,Glucor 60/82,Glucor 60/82,JARABE DE GLUCOSA,TN,No,2008-01-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44120,Glucor 45/80,Glucor 45/80,Jarabe de Glucosa,TN,No,2007-11-12,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44124,Glucor 42/83,Glucor 42/83,null,TN,No,2014-08-11,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44125,Glucor 42/81,Glucor 42/81,null,TN,No,2014-08-25,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44127,Glucor 45/80 Sin Serigrafiar,Glucor 45/80 Sin Serigrafiar,Jarabe de Glucosa,TN,No,2017-11-08,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44130,Glucor 38/80,Glucor 38/80,null,TN,No,2007-11-12,null,true,LQ,null,MP,F010,SF030,LQ,MP
+44131,Glucor 37/79,Glucor 37/79,JARABE DE GLUCOSA,TN,No,2011-12-07,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44132,Glucor 99/72,Glucor 99/72,null,TN,No,2014-01-21,null,true,LQ,MP26,MP,F010,SF030,LQ,MP
+44133,Glucor 37/79 Sin Serigrafiar,Glucor 37/79 Sin Serigrafiar,JARABE DE GLUCOSA,TN,No,2017-11-08,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44134,Glucor 37/79 Pallet EUR,Glucor 37/79 Pallet EUR,JARABE DE GLUCOSA,TN,No,2017-11-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44200,Maltor 70/80,Maltor 70/80,JARABE DE GLUCOSA					,TN,No,2007-11-12,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+44300,Apifonda - M.P. para piensos - Apicultura,Apifonda - M.P. para piensos - Apicultura,null,TN,No,2008-01-10,2025-03-11,false,AP,PA13,MP,70,71,AP,MP
+44301,Azucar Blanco – Materia Prima para Piensos,Azúcar Blanco – Materia Prima para Piensos,null,TN,No,2019-12-03,null,true,AP,MP30,PA,F002,SF003,AP,MP
+44302,Dextrosa Cristal –  Materia Prima para Piensos,Dextrosa Cristal - Materia prima para piensos,null,TN,No,2019-12-03,null,true,AP,MP30,PA,F002,SF003,AP,MP
+44303,Fructosa Cristal – Materia Prima para Piensos,Fructosa Cristal – Materia Prima para Piensos,null,TN,No,2019-12-03,null,true,AP,MP30,PA,F002,SF003,AP,MP
+44304,Azucar Polvo LS – Pienso completo – Apicultura,Azucar Polvo LS – Pienso completo – Apicultura,null,TN,No,2019-12-03,null,true,AP,PA14,PA,F002,SF003,AP,MP
+44305,Fructor 10/81 – Pienso completo – Apicultura,Jarabe de glucosa y fructosa - Mat.prima para pien,null,TN,No,2019-12-03,null,true,AP,PA14,PA,F002,SF003,AP,MP
+44306,Fructor 10/77 - Pienso completo – Apicultura,Fructor 10/77 - Pienso completo – Apicultura,Jarabe de Glucosa y Fructosa,TN,No,2019-12-03,null,true,AP,PA14,MP,F002,SF003,AP,MP
+44307,Azucar PI 73.5-67 – Pienso completo – Apicultura,Azucar PI 73.5-67 – Pienso completo – Apicultura,JARABE DE AZÚCAR INVERTIDO,TN,No,2019-12-12,null,true,AP,PA14,PA,F002,SF003,AP,PA
+44308,Fructor 20/77 – Pienso completo – Apicultura,Fructor 20/77 – Pienso completo – Apicultura,Jarabe de glucosa y fructosa,TN,No,2019-12-17,null,true,AP,PA14,MP,F002,SF003,AP,MP
+44309,Mixco Sweet 75-10.4545 - Pienso completo – Apicult,Mixco Sweet 75-10.4545 - Pienso completo – Apicult,null,TN,No,2020-01-22,null,true,AP,PA14,PA,F001,SF001,AP,PA
+44310,Apipasta 90% - Pienso completo - Apicultura,Apipasta 90% - Pienso completo - Apicultura,"Azucar, jarabe de glucosa",TN,No,2014-12-03,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44312,Apipasta 90% Az.Moreno - Pienso completo - Apicult,Apipasta 90% Az.Moreno - Pienso completo - Apicult,null,TN,No,2015-02-04,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44313,Apipasta Vitaminas 90% - Pienso para Apicultura,Apipasta Vitaminas 90% - Pienso para Apicultura,"AZUCAR, JARABE DE GLUCOSA, PROTEINAS Y VITAMINAS",TN,No,2015-11-02,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44314,Apipasta 90% - BIO - Pienso completo - Apicultura,Apipasta 90% BIO Pienso completo Api ES-ECO-024-MU,null,TN,Sí,2016-08-30,null,true,AP,PA13,PA,F003,SF005,AP,PA
+44315,Apipasta PLUS - Pienso para Apicultura,Apipasta PLUS - Pienso para Apicultura,"Azúcar líquido invertido, jarabe de glucosa, levadura de cerveza, complejo vitamínico, conservante (sorbato potásico)",TN,No,2016-11-22,null,true,AP,PA15,PA,F003,SF006,AP,PA
+44316,Apipasta 90% - Pienso completo -Apicultura (IN/ES),Apipasta 90% - Pienso completo -Apicultura (IN/ES),"Azucar, jarabe de glucosa",TN,No,2017-11-17,2025-03-11,false,AP,PA13,PA,70,71,AP,PA
+44317,Apipasta 90% - Con PyV -Pienso-Apicultura (IN/ES),Apipasta 90% - Con PyV -Pienso-Apicultura (IN/ES),"AZUCAR, JARABE DE GLUCOSA, PROTEINAS Y VITAMINAS",TN,No,2017-11-17,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44318,Apipasta Vitaminas 90% - Pienso Apicultura (FR/AR),Apipasta Vitaminas 90% - Pienso Apicultura (FR/AR),"AZUCAR, JARABE DE GLUCOSA, PROTEINAS Y VITAMINAS",TN,No,2017-11-20,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44319,Apipasta 90% - Pienso completo -Apicultura (BG/IN),Apipasta 90% - Pienso completo -Apicultura (BG/IN),"Azucar, jarabe de glucosa",TN,No,2017-11-24,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44320,Apipasta 90% - Con PyV -Pienso-Apicultura (BG/IN),Apipasta 90% - Con PyV -Pienso-Apicultura (BG/IN),"AZUCAR, JARABE DE GLUCOSA, PROTEINAS Y VITAMINAS",TN,No,2017-11-24,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44321,Apipasta 90% - Pienso completo -Apicultura (IN/FR),Apipasta 90% - Pienso completo -Apicultura (IN/FR),"Azucar, jarabe de glucosa",TN,No,2017-12-18,null,true,AP,PA13,PA,70,71,AP,PA
+44322,Apipasta 90% - Con PyV -Pienso-Apicultura (IN/FR),Apipasta 90% - Con PyV -Pienso-Apicultura (IN/FR),"AZUCAR, JARABE DE GLUCOSA, PROTEINAS Y VITAMINAS",TN,No,2017-12-18,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44323,Apipasta 90% - Pienso completo -Apicultura (EN/TR),Apipasta 90% - Pienso completo -Apicultura (EN/TR),"Azucar, jarabe de glucosa",TN,No,2018-01-04,null,true,AP,PA13,PA,70,71,AP,PA
+44324,Apipasta 90% - Con PyV -Pienso-Apicultura (EN/TR),Apipasta 90% - Con PyV -Pienso-Apicultura (EN/TR),"AZUCAR, JARABE DE GLUCOSA, PROTEINAS Y VITAMINAS",TN,No,2018-01-04,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44325,Apipasta 90% - BIO - Pienso completo – Api (IN/FR),Apipasta 90% - BIO - Pienso completo – Api (IN/FR),"Azúcar ecológico, Jarabe de glucosa ecológico",TN,Sí,2018-09-20,null,true,AP,PA13,PA,F003,SF005,AP,PA
+44326,Apipasta 90% - Con PyV - Pienso Apicultura (IN/IT),Apipasta 90% - Con PyV - Pienso Apicultura (IN/IT),"Azúcar líquido invertido, jarabe de glucosa, proteínas y vitamínas",TN,No,2018-09-20,null,true,AP,PA15,PA,70,72,AP,PA
+44327,APIPASTA NUEVAS VITAMINAS,APIPASTA NUEVAS VITAMINAS,"Jarabe de Azúcar invertido, Jarabe de Glucosa, Complejo vitamínico y Aminoácidos.",TN,No,2019-02-28,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44328,Apipasta 90% - Pienso completo –  BABE APICULTURE,Apipasta 90% - Pienso completo – Apicultura.,"Azucar, jarabe de glucosa",TN,No,2019-05-21,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44329,Apipasta 90% BIO - Pienso completo BABE APICULTURE,Apipasta 90% - Pienso completo BABE APICULTURE,null,TN,Sí,2019-05-21,null,true,AP,PA13,PA,F003,SF005,AP,PA
+44330,Apipasta 90% - Pienso completo - Apicul.-BE ORG KW,Apipasta 90% - Pienso completo - Apicultura,"Azucar, jarabe de glucosa",TN,No,2020-06-15,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44331,Apipasta PLUS - Pienso para Apicultura - BE ORG KW,Apipasta PLUS - Pienso para Apicultura,"Azúcar líquido invertido, jarabe de glucosa, levadura de cerveza, complejo vitamínico, conservante (sorbato potásico)",TN,No,2020-06-15,null,true,AP,PA15,PA,F003,SF006,AP,PA
+44332,Apipasta Vitaminas 90% - Pienso Apicultura -CIVAN,APIPASTA 90% - CON P Y V PIENSO APILCULTURA,"Inverted liquid sugar, glucose syrup, proteins and vitamins",TN,No,2020-07-15,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44333,Apipasta 90% - Pienso completo – Apicul. BALMINA,Apipasta 90% - Pienso completo – Apicul. BALMINA,"Azucar, jarabe de glucosa",TN,No,2020-09-28,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44334,Apipasta Vitaminas 90% - Pienso Apicul. BALMINA,Apipasta Vitaminas 90% - Pienso Apicul. BALMINA,"AZUCAR, JARABE DE GLUCOSA, PROTEINAS Y VITAMINAS",TN,No,2020-09-28,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44350,Fondant,Fondant,null,TN,No,2008-07-08,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+44351,Apipasta 90% - Pienso completo – APICANDI,Apipasta 90% - Pienso completo – Apicultura,"Azucar, jarabe de glucosa",TN,No,2020-02-11,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44400,Apipasta - Aliment complet pour les abeilles (SA),Apipasta - Aliment complet pour les abeilles (SA),null,TN,No,2016-02-18,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44401,Apipasta 90% - Pienso completo - Apicultura (SI),Apipasta 90% - Pienso completo - Apicultura (SI),null,TN,No,2016-02-18,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44402,Apipasta 90% - Pienso completo - Apicultura (RK),Apipasta 90% - Pienso completo - Apicultura (RK),null,TN,No,2016-02-18,2025-03-11,false,AP,PA13,PA,70,71,AP,PA
+44403,Apipasta 90% - Con P y V - Pienso para Apic. (RK),Apipasta 90% - Con P y V - Pienso para Apic. (RK),null,TN,No,2016-02-22,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44404,Apipasta 90% - Con P y V - Pienso para Apic. (SI),Apipasta 90% - Con P y V - Pienso para Apic. (SI),null,TN,No,2016-03-09,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44405,Apipasta 90% - Pienso completo - Apicultura (IR),Apipasta 90% - Pienso completo - Apicultura (IR),null,TN,No,2016-05-03,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44406,Apipasta 90% - Pienso completo - Apicultura (EU),Apipasta 90% - Pienso completo - Apicultura (EU),null,TN,No,2016-09-29,2025-03-11,false,AP,PA13,PA,70,71,AP,PA
+44407,Apipasta 90% - Pienso completo - Apicultura (BM),Apipasta 90% - Pienso completo - Apicultura (BM),null,TN,No,2016-10-04,null,true,AP,PA13,PA,70,71,AP,PA
+44408,Apipasta 90% - Con P y V - Pienso para Apic. (BM),Apipasta 90% - Con P y V - Pienso para Apic. (BM),null,TN,No,2016-10-04,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44409,Apipasta 90% - Con P y V - Pienso para Apic. (EU),Apipasta 90% - Con P y V - Pienso para Apic. (EU),null,TN,No,2016-11-14,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44410,Beesucre - Pienso completo - Apicultura,Beesucre - Pienso completo - Apicultura,null,TN,No,2017-07-11,null,true,AP,PA13,PA,F003,SF004,AP,PA
+44411,Beesucre Vit. - Pienso completo - Apicultura,Beesucre Vit. - Pienso completo - Apicultura,"Azúcar, jarabe de glucosa, proteínas y vitaminas",TN,No,2017-09-04,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44412,Beesucre - Mix,Beesucre - Mix,"JARABE DE AZÚCAR INVERTIDO, FRUCTOSA",TN,No,2017-11-14,null,true,AP,PA16,PA,F001,SF001,AP,PA
+44650,LECHE VEGETAL EN POLVO,LECHE VEGETAL EN POLVO,LECHE VEGETAL (28% GRASA),TN,No,2019-01-28,null,true,SL,null,MP,90,89,SL,MP
+44900,Glucosa Atomizada DE 34,Glucosa Atomizada DE 34,null,TN,No,2007-11-12,null,true,SL,null,MP,90,96,SL,MP
+46248,CORREC. ACIDO ASCORBICO (E300),CORREC. ACIDO ASCORBICO (E300),null,KG,No,2019-06-27,null,true,AP,PA04,CO,F002,76,AP,MP
+46249,CORREC. ACIDO CITRICO MONOHIDRATO (E330),CORREC. ACIDO CITRICO MONOHIDRATO (E330),null,KG,No,2019-06-27,null,true,LQ,null,CO,AC01,AC007,LQ,CO
+46259,CORREC. COLOR CARAMELINA DEDC,CORREC. COLOR CARAMELINA DEDC,null,KG,No,2019-06-27,null,true,LQ,null,CO,AC01,AC002,LQ,LQ
+46276,CORREC. SORBATO POTASICO (E202),CORREC. SORBATO POTASICO (E202),null,KG,No,2019-06-27,null,true,LQ,null,CO,AC01,AC003,LQ,CO
+47003,EXTRACTO-003.50,EXTRACTO-003.50,Cloudy regular limón - 50Brix,TN,No,2018-09-06,null,true,LQ,MP28,MP,30,35,LQ,MP
+47013,RE.EXTRACTO-004,RE.EXTRACTO-004,Rechazo ultrafiltración Zumo de Limón Baja Pulpa,TN,No,2019-01-31,null,true,BS,PA09,MP,30,36,BS,MP
+47014,EXTRACTO-005.65,EXTRACTO-005.65,Zumo de Naranja Despulpado Concentrado 65ºBrix,TN,No,2019-03-05,null,true,LQ,MP28,MP,30,35,LQ,MP
+47026,EXTRACTO-004.30,EXTRACTO-004.30,Zumo de limón 30ºBrix,TN,No,2020-01-08,null,true,LQ,MP28,MP,30,35,LQ,MP
+49000,Acido Citrico Monohidrato,Acido Citrico Monohidrato,null,TN,No,2008-01-24,null,true,SL,null,CO,90,97,SL,CO
+49002,Sorbato potásico,Sorbato potásico,null,TN,No,2008-11-24,null,true,SL,null,CO,90,97,SL,CO
+49003,Antiespumante,Antiespumante,null,TN,No,2008-11-24,2020-11-17,false,LQ,null,CO,90,97,LQ,CO
+49006,Almidón nativo de Maiz,Almidon Nativo de Maiz,null,TN,No,2009-12-30,null,true,SL,MP20,MP,F013,SF044,SL,MP
+49015,Harina de levadura de cerveza,Harina de levadura de cerveza,Harina de levadura de cerveza,TN,No,2018-10-09,null,true,AP,PA04,MP,F013,SF044,SL,MP
+49020,Oligofructosa/Fibrulose F 97,Oligofructosa/Fibrulose F 97,null,TN,No,2016-05-05,2019-08-23,false,SL,null,CO,90,94,SL,CO
+49022,L-Prolina,L-Prolina,null,KG,No,2018-10-22,null,true,LQ,null,CO,90,95,LQ,CO
+49025,Acido L-Malico,Acido L-Malico,null,KG,No,2018-10-22,null,true,LQ,null,CO,90,95,LQ,CO
+49046,Xilitol,Xilitol,null,KG,No,2019-08-21,null,true,LQ,null,MP,90,97,LQ,MP
+49054,Sucralosa,Sucralosa,null,KG,No,2020-01-10,null,true,LQ,null,MP,80,82,LQ,MP
+49201,Aroma de Vainilla,Aroma de Vainilla,null,TN,No,2018-10-22,2019-08-23,false,LQ,null,CO,90,AR,LQ,CO
+51000,Base Extracto Granizado,Base Extracto Granizado,null,TN,No,2019-04-02,null,true,LQ,null,SM,BA,BASP,LQ,LQ
+60000,Azúcar Líquida Neutra 67º,Azúcar Líquida Neutra 67º,AZUCAR LIQUIDO,TN,No,2007-11-12,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+60001,Azúcar Líquida Neutra 67º - C,Azúcar Líquida Neutra 67º - C,"Azúcar, agua, conservante(sorbato potásico)",TN,No,2016-02-16,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+60002,Azúcar Líquida Neutra 63º,Azúcar Líquida Neutra 63º,null,TN,No,2012-10-04,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+60003,Azúcar Líq. Neutra 67º- BIO - ES-ECO-024-MU(No UE),Azúcar Líq. Neutra 67º- BIO - ES-ECO-024-MU(No UE),Azúcar Ecológica y Agua,TN,Sí,2017-02-28,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+60004,Az.Líq.Neutra 67º BIO PIENSO COMPLETO - APICULTURA,Az.Líq.Neutra 67º BIO PIENSO COMPLETO - APICULTURA,Azúcar Ecológica y Agua,TN,Sí,2020-01-07,null,true,AP,PA17,PA,F001,SF001,AP,PA
+60005,Azúcar Liquida Neutra en M.Seca,Azúcar Liquida Neutra en M.Seca,null,TN,No,2008-08-05,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+60006,A. Líq. Neutra 67 BL BIO- ACB ES-ECO-024-MU(No UE),A. Líq. Neutra 67 BL BIO- ACB ES-ECO-024-MU(No UE),Azúcar Ecológica y Agua,TN,Sí,2020-06-02,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+60010,Azúcar Liquida Neutra S.A.,Azúcar Liquida Neutra S.A.,AZUCAR LIQUIDO,TN,No,2007-12-24,null,true,LQ,MP37,PA,F004,SF011,LQ,PA
+60011,Azúcar Líquida Integral de Caña,Azúcar Líquida Integral de Caña,null,TN,No,2017-02-24,null,true,LQ,MP21,PA,F004,SF008,LQ,PA
+60012,Azúcar Liquida Neutra S.A. – pH 3,Azúcar Liquida Neutra S.A.,Azúcar líquido,TN,No,2018-08-02,null,true,LQ,MP37,PA,F004,SF011,LQ,PA
+60013,Azúcar Liquida Neutra S.A. – pH 7,Azúcar Liquida Neutra S.A.,Azúcar líquido,TN,No,2018-08-02,null,true,LQ,MP37,PA,F004,SF011,LQ,PA
+60015,Azúcar Líquida Neutra - Cofrutos,Azúcar Líquida Neutra,Azúcar liquido,TN,No,2018-08-22,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+60100,Azúcar PI 67-30,Azúcar PI 67-30,null,TN,No,2007-12-26,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60101,Azúcar PI 67-40,Azúcar PI 67-40,null,TN,No,2012-05-30,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60102,Azúcar PI 67-15,Azúcar PI 67-15,AZUCAR LIQUIDO INVERTIDO,TN,No,2012-05-30,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60103,Azúcar PI 70-30,Azúcar PI 70-30,null,TN,No,2012-05-30,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60104,Azúcar PI 72-60,Azúcar PI 72-60,null,TN,No,2012-05-30,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60105,"Azúcar PI 73,5-67","Azúcar PI 73,5-67","AGUA, JARABE DE AZUCAR INVERTIDO, E-330",TN,No,2012-05-29,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60106,Azúcar PI 69-75,Azúcar PI 69-75,null,TN,No,2012-05-30,null,true,LQ,MP35,PA,30,32,LQ,PA
+60107,Azúcar PI 70-50,Azúcar PI 70-50,null,TN,No,2012-09-11,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60114,"Azúcar PI 73,5-67-C","Azúcar PI 73,5-67-C",JARABE DE AZUCAR INVERTIDO              CONSERVANTE: SORBATO POTASICO,TN,No,2015-02-09,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60115,"Azúcar PI 73,5-67 Oro","Azúcar PI 73,5-67 Oro",JARABE DE AZUCAR INVERTIDO,TN,No,2015-06-22,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60116,Azúcar PI 63-96,Azúcar PI 63-96,null,TN,No,2016-08-01,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60117,"Azúcar PI 73,5-56","Azúcar PI 73,5-56",null,TN,No,2016-11-30,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60118,Azúcar PI 71-90,Azúcar PI 71-90,Jarabe de azúcar invertido,TN,No,2017-06-12,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60119,Azúcar PI 74-50,Azúcar PI 74-50,Azúcar Líquido Invertido,TN,No,2017-06-16,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60120,Azúcar PI 74-20,Azúcar PI 74-20,Azúcar Líquido Invertido,TN,No,2017-07-03,null,true,LQ,null,PA,30,32,LQ,PA
+60121,"Azúcar PI 73,5-67 Pallet EUR Plast.CHEP","Azúcar PI 73,5-67 Pallet EUR Plast.CHEP","AGUA, JARABE DE AZUCAR INVERTIDO, E-330",TN,No,2017-11-07,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60122,"Azúcar PI 73,5-67-C Sin Serigrafiar","Azúcar PI 73,5-67-C Sin Serigrafiar",JARABE DE AZUCAR INVERTIDO              CONSERVANTE: SORBATO POTASICO,TN,No,2017-11-08,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60123,"Azúcar PI 73,5-67 - BIO","Azúcar PI 73,5-67 - BIO ES-ECO-024-MU",JARABE DE AZUCAR LIQUIDO INVERTIDO,TN,Sí,2017-11-16,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60124,"Azúcar PI 73,5-67 WILD VAL.","Azúcar PI 73,5-67",Jarabe de azúcar invertido,TN,No,2018-08-02,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60125,"Azúcar PI 73,5-67 (ENG)","Sugar PI 73,5-67",Inverted sugar syrup,TN,No,2018-08-13,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60126,"Azúcar PI 73,5-67 Pallet Plast.","Azúcar PI 73,5-67 Pallet Plast.","AGUA, JARABE DE AZUCAR INVERTIDO, E-330",TN,No,2018-09-10,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60127,Azúcar PI 75-50,Azúcar PI 75-50,Azúcar Liquido Invertido,TN,No,2018-12-04,null,true,LQ,null,PA,30,32,LQ,PA
+60128,AZÚCAR PI 75-50-C,AZÚCAR PI 75-50-C,Azúcar parcialmente invertido con 50% Sacarosa y Sorbato potásico - APICULTURA,TN,No,2019-10-29,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60129,Mixco Sweet 74-50.1220,Mixco Sweet 74-50.1220,Azúcar líquido invertido,TN,No,2020-06-24,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+60130,Azucar PI 73.5-67 C – Pienso completo para Abejas,Azucar PI 73.5-67 C – Pienso completo para Abejas,"Componentes analíticos: Contenido de humedad: <26.5%+0.5, Sacarosa 33%+2, Fructosa 33%+2, Dextrosa 33%+2, Proteína bruta 0%, Fibra bruta 0%, Aceites y grasas brutos 0%, ceniza bruta < 0.1%, Calcio <10mg/kg, Sodio <10mg/kg, Fósforo <10mg/kg. Aditivos tecno",TN,No,2020-09-22,null,true,AP,PA14,PA,F002,SF003,AP,PA
+60200,Azúcar Invertido 67º,Azúcar Invertido 67º,JARABE DE AZUCAR INVERTIDO,TN,No,2007-12-26,2026-07-13,false,LQ,MP35,PA,F004,SF009,LQ,PA
+60202,Azúcar TIEN 71.100,Azúcar TIEN 71.100,null,TN,No,2011-11-23,null,true,BS,PA05,PA,F004,SF009,BS,PA
+60203,Azúcar TIEN 65.5.100,Azúcar TIEN 65.5.100,null,TN,No,2011-11-23,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60206,Azúcar TIEN 74.100,Azúcar TIEN 74.100,null,TN,No,2012-11-22,null,true,BS,PA05,PA,30,34,BS,PA
+60207,Azúcar TIEN 67.100,Azúcar TIEN 67.100,null,TN,No,2013-01-10,2026-07-13,false,LQ,MP35,PA,F004,SF009,LQ,PA
+60208,Azúcar TIEN 72.100 - CAÑA,Azúcar TIEN 72.100,null,TN,No,2016-03-30,null,true,LQ,MP35,PA,F004,SF009,BS,PA
+60209,Azúcar Invertido 63º,Azúcar Invertido 63º,null,TN,No,2016-11-07,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60210,Azúcar Invertido 80º,Azúcar Invertido 80º,null,TN,No,2014-04-14,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60211,Azúcar Invertido 67º C,Azúcar Invertido 67º C,JARABE DE AZÚCAR INVERTIDO,TN,No,2017-01-05,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60212,Azúcar liquido invertido 67º BIO,Azúcar liquido invertido 67º BIO,JARABE DE AZUCAR LIQUIDO INVERTIDO,TN,No,2017-11-16,2025-01-22,false,LQ,MP35,PA,30,32,LQ,PA
+60214,Azúcar Invertido 67º - JAKE,Azúcar Invertido 67º,Jarabe de azúcar invertido,TN,No,2018-08-02,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60215,Azúcar TIEN 74.100 CAÑA,Azúcar TIEN 74.100 CAÑA,null,TN,No,2015-07-17,null,true,BS,PA05,PA,30,34,BS,PA
+60216,Azúcar invertido 67% - COBOPA,Azúcar invertido 67%,JARABE DE AZUCAR INVERTIDO,TN,No,2018-08-07,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60217,TIEN 71.100 Vitivinícola del Ribeiro,TIEN 71.100,Jarabe de azúcar invertido,TN,No,2018-09-06,null,true,LQ,PA06,PA,F004,SF009,LQ,PA
+60218,Azúcar invertida 67 – Martin Braun,Azúcar invertida 67,JARABE DE AZUCAR INVERTIDO,TN,No,2018-09-19,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60250,Compotienz-2106,Compotienz-2106,Jarabe de Azúcar invertido,TN,No,2019-11-11,null,true,BS,PA05,PA,BA,SF039,BS,PA
+60502,CLARIFICADO-002,CLARIFICADO-002,Clarificado debbiter naranja,TN,No,2018-09-25,null,true,BS,PA09,PA,30,36,AP,PA
+60504,CLARIFICADO-003.50,CLARIFICADO-003.50,Clarificado regular limón – 50ºBrix,TN,No,2018-12-19,null,true,BS,PA09,PA,30,36,BS,PA
+60506,CLARIFICADO-002DA.67,CLARIFICADO-002DA.67,Clarificado debbiter naranja desamargado– 67ºBrix,TN,No,2019-01-14,null,true,BS,PA09,PA,30,36,BS,PA
+60510,CLARIFICADO-003INV.65,CLARIFICADO-003INV.65,Clarificado regular limón invertido-65ºBrix,TN,No,2019-01-15,null,true,BS,PA09,PA,F012,SF038,BS,PA
+60512,CLARIFICADO-004.52,CLARIFICADO-004.52,Clarificado zumo limón-52ºBrix,TN,No,2019-01-17,null,true,BS,PA09,PA,30,36,BS,PA
+60513,CLARIFICADO-001DA.65,CLARIFICADO-001DA.65,Clarificado debbiter limón desamargado– 65ºBrix,TN,No,2019-01-17,null,true,BS,PA09,PA,30,36,BS,PA
+60515,CLARIFICADO-005.65,CLARIFICADO-005.65,Clarificado Zumo de Naranja despulpado procedente de concentrado - 65ºBrix,TN,No,2019-03-05,null,true,BS,PA09,PA,30,36,BS,PA
+60517,CLARIFICADO-006.50,CLARIFICADO-006.50,Clarificado Concentrado Zumo de Limón – Más de 50ºBrix,TN,No,2019-06-04,null,true,BS,PA09,PA,30,36,BS,PA
+60518,CLARIFICADO-007.65,CLARIFICADO-007.65,Clarificado nectarina,TN,No,2019-06-19,null,true,BS,PA09,PA,30,36,BS,PA
+60519,CLARIFICADO-008.50,CLARIFICADO-008.50,Zumo concentrado de melón clarificado,TN,No,2019-10-31,null,true,BS,PA09,PA,30,36,BS,PA
+60520,CLARIFICADO-009.65,CLARIFICADO-009.65,Zumo concentrado de mandarina clarificado,TN,No,2019-11-06,null,true,BS,PA09,PA,30,36,BS,PA
+60521,CLARIFICADO-010.03,CLARIFICADO-010.03,Zumo Clarificado de Brócoli,TN,No,2020-11-19,null,true,BS,PA09,PA,30,36,BS,PA
+60900,Fructosa Líquida,Fructosa Líquida,null,TN,No,2011-02-21,null,true,LQ,null,PA,30,34,LQ,PA
+60902,Fructor 100/74 remolacha,Fructor 100/74 remolacha,Fructosa remolacha,TN,No,2018-05-21,null,true,LQ,MP36,PA,F009,SF029,LQ,PA
+60910,Glucosa Caramelizada 81,Glucosa Caramelizada 81,null,TN,No,2011-09-01,null,true,LQ,null,PA,30,34,LQ,PA
+61020,Mix La Huertana,Mix La Huertana,null,TN,No,2007-12-26,null,true,LQ,null,PA,30,34,LQ,PA
+61090,Mix Turrón FTSA,Mix Turrón FTSA,null,TN,No,2007-12-26,null,true,LQ,null,PA,30,34,LQ,PA
+61095,Mixco Sweet 76-50.1220,Mixco Sweet 76-50.1220,null,TN,No,2014-05-13,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61104,Mixco Sweet 81-05.5041 A-MI,Mixco Sweet 81-05.5041 A-MI,"Inverted sugar syrup, glucose syrup, fructose, color (plain caramel), honey flavour",TN,No,2017-09-04,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61105,Mix Turrón 74-40.0619,Mix Turrón 74-40.0619,null,TN,No,2009-07-14,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61106,Mixco Sweet 75-10.4545,Mixco Sweet 75-10.4545,null,TN,No,2014-11-20,null,true,AP,PA17,PA,F001,SF001,AP,PA
+61109,Mixco Sweet 68-55.0045,Mixco Sweet 68-55.0045,null,TN,No,2015-02-24,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61111,"Mixco Sweet 71,5-50.1522","Mixco Sweet 71,5-50.1522 SIN CONSERVANTES",null,TN,No,2015-03-23,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61113,Mixco Sweet 74-05.3244,Mixco Sweet 74-05.3244,null,TN,No,2015-05-11,2024-11-13,false,BS,PA10,PA,30,34,LQ,PA
+61114,Mixco Sweet 81-05.4739 A-MI,Mixco Sweet 81-05.4739 A-MI,"JARABE AZUCAR INVERTIDO, FRUCTOSA, JARABE GLUCOSA, AROMA MIEL",TN,No,2015-05-11,2018-02-26,false,LQ,null,PA,30,34,LQ,PA
+61115,"Mixco Sweet 69,6-302840","Mixco Sweet 69,6-302840",null,TN,No,2008-01-16,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61116,Mixco Sweet 81-07.5149,Mixco Sweet 81-05.4739,null,TN,No,2015-05-11,null,true,LQ,null,PA,30,34,LQ,PA
+61118,Mixco Sweet 75-45.2431,Mixco Sweet 75-45.2431,null,TN,No,2015-05-28,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61119,Mixco Sweet 76-45.2127,Mixco Sweet 76-45.2127,null,TN,No,2015-06-30,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61121,Mixco Sweet 68-00.5050,Mixco Sweet 68-00.5050,null,TN,No,2015-09-04,null,true,BS,PA11,PA,30,34,BS,PA
+61124,Mixco Sweet 73-37.3225,Mixco Sweet 73-37.3225,null,TN,No,2017-04-19,null,true,LQ,null,PA,30,34,LQ,PA
+61125,Mix Caramelo Liquido,Mix Caramelo Liquido,null,TN,No,2008-01-24,null,true,LQ,MP22,PA,40,47,LQ,PA
+61126,Mixco Sweet 76-46.1421,Mixco Sweet 76-46.1421,null,TN,No,2017-04-20,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61127,"Mixco Sweet 71,5-50.1522-C","Mixco Sweet 71,5-50.1522-C CON CONSERVANTES","Azúcar, jarabe de glucosa y fructosa, agua, conservante(sorbato potásico)",TN,No,2017-05-15,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61128,Mixco Sweet 70-00.4749,Mixco Sweet 70-00.4749,"Jarabe de azúcar invertido, Jarabe de glucosa y fructosa",TN,No,2017-07-04,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61129,Mixco Sweet 73-35.3025,Mixco Sweet 73-35.3025,Jarabe de Azúcar Invertido; Jarabe de Fructosa y Glucosa,TN,No,2017-08-04,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61131,Mixco Sweet 75-10.4545 Con P y V,Mixco Sweet 75-10.4545 Con P y V,"Jarabe de azúcar invertido, completo vitamínico y aminoácidos, sorbato potásico.",TN,No,2017-10-02,null,true,AP,PA17,PA,F001,SF001,AP,PA
+61132,Mixco Sugar Nutrient 65-00.4749,Mixco Sugar Nutrient 65-00.4749,"Jarabe de azúcar invertido, Jarabe de glucosa y fructosa",TN,No,2018-06-20,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+61134,Mixco Sweet 77.00-3637,Mixco Sweet 77.00-3637,"Jarabe de azúcar invertido, Jarabe de glucosa",TN,No,2018-10-16,null,true,LQ,null,PA,30,34,LQ,PA
+61136,Mixco Sweet 78-25.3631,Mixco Sweet 78-25.3631,"Azúcar líquido invertido, Jarabe de glucosa, Fructosa.",TN,No,2019-01-21,null,true,AP,PA17,PA,F001,SF001,AP,PA
+61137,Mixco Sweet 74-45.1925,Mixco Sweet 74-45.1925,"Jarabe de glucosa y fructosa, azúcar.",TN,No,2019-06-21,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61138,Mixco Sweet 75-45.0718,Mixco Sweet 75-45.0718,"Jarabe de glucosa y fructosa, azúcar",TN,No,2019-11-29,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61139,Mixco Sweet 76-45.0517,Mixco Sweet 76-45.0517,"Jarabe de glucosa y fructosa, azúcar",TN,No,2020-01-23,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61163,Mixco Sweet Plus 82-04.5240 CO,Mixco Sweet Plus 82-04.5240 CO,"Jarabe de azúcar invertido, colorante (caramelo natural)",TN,No,2017-09-25,null,true,LQ,null,PA,30,34,LQ,PA
+61164,Mixco Sweet Plus-M 82-05.5141,Mixco Sweet Plus-M 82-05.5141,Jarabe de azúcar invertido,TN,No,2017-12-12,null,true,BS,PA10,PA,BA,SF040,BS,PA
+61169,Mix Sorbitol Maltitol 70-7525,Mix Sorbitol Maltitol 70-7525,"sorbitol, maltitol",TN,No,2017-06-20,null,true,LQ,PA06,PA,60,62,LQ,PA
+61170,Mix Maltitol Sorbitol MS 74-8020,Mix Maltitol Sorbitol MS 74-8020,"JARABE DE MALTITOL (E-965 ii ), JARABE DE SORBITOL (E-420 ii )",TN,No,2008-01-11,null,true,LQ,MP18,PA,F011,SF035,LQ,PA
+61171,Mix Maltitol Sorbitol MS 70-7525,Mix Maltitol Sorbitol MS 70-7525,null,TN,No,2012-05-22,null,true,LQ,MP18,PA,F011,SF035,LQ,PA
+61172,Mix Maltitol Sorbitol MS 70-5050,Mix Maltitol Sorbitol MS 70-5050,null,TN,No,2012-05-22,null,true,LQ,MP18,PA,60,62,LQ,PA
+61173,Mix Maltitol Stevia 75%,Mix Maltitol Stevia 75%,"Jarabe de Maltitol ( E-965 ii ) , Glucósidos de esteviol ( E-960 )		",TN,No,2015-06-03,null,true,LQ,MP18,PA,F011,SF035,LQ,PA
+61177,Mixco Sweet 81-00.0932 A-MI,Mixco Sweet 81-00.0932 A-MI,null,TN,No,2015-11-20,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61178,Mixco Sweet 81-05.0730 A-MI,Mixco Sweet 81-05.0730 A-MI,null,TN,No,2017-06-02,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61179,Mixco Sweet 81-05.5041 A-MI Alto Color,Mixco Sweet 81-05.5041 A-MI Alto Color,"Jarabe de Azúcar Invertido, Jarabe de glucosa, Fructosa, Colorante (caramelo natural), Aroma miel",TN,No,2018-11-06,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61181,Mixco Sweet 67-75.0025,Mixco Sweet 67-75.0025,null,TN,No,2014-03-21,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61182,Mixco Sweet 70-20.3245,Mixco Sweet 70-20.3245,null,TN,No,2014-03-21,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61183,Maltitol aromatizado,Maltitol aromatizado,"Jarabe de maltitol, aroma",TN,No,2018-11-14,null,true,LQ,MP18,PA,F011,SF033,LQ,PA
+61184,Mixco Sweet 74-44.1225,Mixco Sweet 74-44.1225,null,TN,No,2014-07-10,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61185,Mixco Sweet 70-93.0000,Mixco Sweet 70-93.0000,null,TN,No,2014-07-18,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61186,Mixco Sweet 81-00.0932,Mixco Sweet 81-00.0932,Jarabe de Glucosa y Fructosa,TN,No,2014-07-31,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61188,Mix Maltitol Isomalt 80-6535,Mix Maltitol Isomalt 80-6535,"Jarabe de maltitol, Jarabe de sorbitol, Isomalt",TN,No,2020-10-27,null,true,LQ,MP18,PA,F011,SF035,LQ,PA
+61189,Mixco Sweet 77-50.1825,Mixco Sweet 77-50.1825,null,TN,No,2015-11-02,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61191,Mixco Sweet Plus 82-05.4739,Mixco Sweet Plus 82-05.4739,null,TN,No,2016-01-27,null,true,LQ,null,PA,30,34,LQ,PA
+61194,Mixco Sweet 67-35.2538,Mixco Sweet 67-35.2538,null,TN,No,2016-07-29,null,true,LQ,null,PA,30,34,LQ,PA
+61195,Mixco Sweet 64-50.2525,Mixco Sweet 64-50.2525,Azúcar,TN,No,2016-07-29,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61196,Mixco Sweet PLUS 81-05.4739 AR.CO.,Mixco Sweet PLUS 81-05.4739 AR.CO.,null,TN,No,2016-12-01,2024-03-11,false,LQ,PA06,PA,30,34,PA,PA
+61197,Mixco Sweet Plus 82-05.5041,Mixco Sweet Plus 82-05.5041,null,TN,No,2017-01-18,null,true,BS,PA10,PA,BA,SF040,BS,PA
+61198,Mixco Sweet Plus 82-05.5536,Mixco Sweet Plus 82-05.5536,null,TN,No,2017-01-18,null,true,BS,PA10,PA,BA,SF040,BS,PA
+61199,Mixco Sweet 82-05.5041,Mixco Sweet 82-05.5041,null,TN,No,2017-03-07,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61200,Fosvitae 85%,Fosvitae 85%,Jarabe de fructooligosacáridos,TN,No,2017-05-29,null,true,FB,PA23,PA,F007,SF023,FB,PA
+61201,Fos y Stevia (72º),Fos y Stevia (72º),"Fructooligosacáridos,  Glicósidos de Esteviol",TN,No,2017-05-29,null,true,FB,PA20,PA,F007,SF020,FB,PA
+61202,Mixco-Bom Chocolate,Mixco-Bom Chocolate,"Grasa Vegetal (Palma), Cacao desgrasado en polvo, Maltitol, Isomalt, Aceite de Girasol, Aroma de vainilla, Aroma de Chocolate, Sucralosa, Conservante E-202 y Emulgente E-471",TN,No,2017-05-29,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+61203,Mixco-Bom Avellana,Mixco-Bom Avellana,"Grasa Vegetal (Palma); Cacao desgrasado en polvo, Maltitol, Isomalt, Aceite de Girasol, Sucralosa, Aroma de Avellana, Aroma de Vainilla, Conservante E-202 y Emulgente E-471",TN,No,2017-05-29,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+61204,Mixco-Bom Caramelo,Mixco-Bom Caramelo,"Grasa Vegetal (Palma), Cacao desgrasado en polvo, Maltitol, Isomalt, Aceite de Girasol, Aroma de Caramelo, Sucralosa, Conservante E-202 y Emulgente E-471.",TN,No,2017-05-29,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+61205,Cobertura 0% Chocolate,Cobertura 0% Chocolate,"Isomalt, Maltitol, Manteca de cacao, Cacao desgrasado en polvo, Almidón de maíz, Aceite de girasol, E-471, Sorbato potásico, Goma guar, Goma garrofín",TN,No,2017-09-14,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+61207,Mixco Sweet 74-00.5050 M1,Mixco Sweet 74-00.5050 M1,Jarabe de Azúcar invertido,TN,No,2017-12-19,null,true,BS,PA11,PA,BA,SF041,BS,PA
+61208,Mixco Sweet 74-00.5050 I,Mixco Sweet 74-00.5050 I,Jarabe de Azúcar invertido,TN,No,2017-12-28,null,true,BS,PA11,PA,BA,SF041,BS,PA
+61209,Mixco Sweet 74-53.2323 M,Mixco Sweet 74-53.2323 M,Azúcar líquido invertido,TN,No,2017-12-28,null,true,BS,PA10,PA,30,34,BS,PA
+61210,Fosvitae Polvo,Fosvitae Polvo,Fructooligosacáridos,TN,No,2018-01-15,null,true,FB,PA23,PA,F007,SF025,FB,PA
+61211,Mixco Sweet 74-01.5050 REMOLACHA,Mixco Sweet 74-01.5050 REMOLACHA,Jarabe de azúcar invertido,TN,No,2018-01-16,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61212,Mixco Sweet 72-09.6427 B2 SB20,Mixco Sweet 72-09.6427 B2,"Jarabe de azúcar invertido, Sorbitol",TN,No,2018-01-17,null,true,BS,PA08,PA,BA,SF042,BS,PA
+61214,Mixco Sweet 74-01.5050 CAÑA,Mixco Sweet 74-01.5050 CAÑA,Jarabe de azúcar invertido,TN,No,2018-01-23,null,true,BS,PA05,PA,30,34,BS,PA
+61215,Mix Maltitol 74-8020,Mix Maltitol 74-8020,"JARABE DE MALTITOL (E-965 ii ), JARABE DE SORBITOL (E-420 ii )",TN,No,2018-02-16,null,true,LQ,MP18,PA,F011,SF035,LQ,PA
+61216,Mixco Sweet 74-65.1717,Mixco Sweet 74-65.1717,Azúcar Líquido Invertido,TN,No,2018-02-27,null,true,BS,PA10,PA,30,34,BS,PA
+61217,Mix Maltitol Sorbitol MS 80-8020,Mix Maltitol Sorbitol MS 80-8020,"Jarabe de maltitol, Jarabe de sorbitol",TN,No,2018-03-20,2018-04-18,false,LQ,null,PA,60,62,LQ,PA
+61218,Fosvitae 85 % BIO,Fosvitae 85 % BIO ES-ECO-024-MU,null,TN,Sí,2018-05-16,null,true,FB,PA23,PA,F007,SF024,FB,PA
+61219,Mixco Sweet 72-53.2522,Mixco Sweet 72-53.2522,"Jarabe de azúcar invertido, Sorbitol",TN,No,2018-08-28,null,true,BS,PA10,PA,30,34,BS,PA
+61220,Mixco Sweet 65-00.5050,Mixco Sweet 65-00.5050,Jarabe de azúcar invertido,TN,No,2018-09-18,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61222,Fosfruit,Fosfruit,"Fructooligosacáridos, Aroma natural",TN,No,2018-12-20,null,true,FB,PA22,PA,F007,SF021,FB,PA
+61225,CA1956,CA1956,Jarabe de azúcar invertido,TN,No,2019-06-06,null,true,BS,PA10,PA,BA,SF040,BS,PA
+61226,Mix Maltitol Sorbitol MS 70-8020 ACK,Mix Maltitol Sorbitol MS 70-8020 ACK,"Jarabe de maltitol, Jarabe de sorbitol, Acesulfame K.",TN,No,2019-07-03,null,true,LQ,MP18,PA,F011,SF035,LQ,PA
+61227,Mixco Sweet 72-10.6723,Mixco Sweet 72-10.6723,Jarabe de azúcar invertido,TN,No,2019-08-08,null,true,BS,PA08,PA,30,34,BS,PA
+61228,Fosvitae 95% Plus,Fosvitae 95% Plus,Fructooligosacáridos 95 %,TN,No,2019-11-07,null,true,FB,PA24,PA,F007,SF023,FB,PA
+61229,Fosvitae Plus Polvo,Fosvitae Plus Polvo,Fructooligosacáridos 95 % Polvo,TN,No,2019-11-07,null,true,FB,PA24,PA,F007,SF025,FB,PA
+61230,Nectar Base 9 74º,Nectar Base 9 74º,"Jarabe de glucosa y fructosa, minerales.",TN,No,2020-03-03,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+61231,Mixco Sweet 67-05.5045,Mixco Sweet 67-05.5045,"Jarabe de glucosa y fructosa, sacarosa",TN,No,2020-04-24,null,true,BS,PA10,PA,BA,SF040,BS,PA
+61232,Base Neutra PA6427,Base Neutra PA6427,"Jarabe de glucosa y fructosa, sacarosa",TN,No,2020-06-10,2023-06-13,false,BS,PA08,PA,30,34,LQ,PA
+61233,Base Neutra MIP 2323,Base Neutra MIP 2323,"Jarabe de glucosa y fructosa, sacarosa",TN,No,2020-06-10,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+61234,Base Neutra MRO5050,Base Neutra MRO5050,Jarabe de azúcar invertido,TN,No,2020-06-11,2023-06-13,false,BS,PA08,PA,30,34,LQ,PA
+61235,Mixco Sweet 74-50.0516,Mixco Sweet 74-50.0516,null,TN,No,2020-06-29,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61236,BASE NEUTRA IRG5050,BASE NEUTRA IRG5050,Azúcar invertido,TN,No,2020-09-28,2023-01-30,false,BS,null,PA,30,34,LQ,PA
+61237,Base Neutra MOP5050,Base Neutra MOP5050,Azúcar invertido,TN,No,2020-10-16,2023-06-13,false,BS,PA08,PA,30,34,LQ,PA
+61238,Fosvitae 85-76º,Fosvitae 85-76º,Fructooligosacáridos (FOS),TN,No,2020-10-29,null,true,FB,PA23,PA,60,62,LQ,PA
+61239,Mixco Sweet 74-00.5050 EM,Mixco Sweet 74-00.5050 EM,"Jarabe de glucosa y fructosa, minerales.",TN,No,2020-12-22,2024-01-23,false,BS,PA11,PA,30,34,BS,PA
+61900,Mix Fru-Dex 67º,Mix Fru-Dex 67º,null,TN,No,2010-07-13,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+62000,Mix Idoneo - Pienso Completo - Apicultura,Mix Idoneo - Pienso Completo - Apicultura,"JARABE DE AZUCAR INVERTIDO, JARABE DE GLUCOSA Y FRUCTOSA",TN,No,2008-01-11,null,true,AP,PA16,PA,F001,SF001,AP,PA
+62001,Apimix - Pienso completo - Apicultura,Apimix - Pienso completo - Apicultura,"Jarabe de azúcar invertido, fructosa, conservante;sorbato potásico (1k202), complejo vitamínico y aminoácidos",TN,No,2015-01-22,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62002,Mix Idoneo Plus - Pienso compuesto - Apicultura,Mix Idoneo Plus - Pienso compuesto - Apicultura,null,TN,No,2015-08-27,null,true,AP,PA16,PA,F001,SF001,AP,PA
+62004,Mix Abejorros 65-30.4028 Pienso Completo - Apicult,Mix Abejorros 65-30.4028 Pienso Completo - Apicult,null,TN,No,2012-10-23,null,true,AP,PA18,PA,F001,SF001,AP,PA
+62005,Mix Abejorros 68-30.4028 Pienso Completo - Apicult,Mix Abejorros 68-30.4028 Pienso Completo - Apicult,null,TN,No,2008-01-30,null,true,AP,PA18,PA,F001,SF001,AP,PA
+62006,Mix Abejorros Eco,Mix Abejorros Eco,null,TN,No,2011-08-31,null,true,AP,PA18,PA,F001,SF001,AP,PA
+62007,Mix Abejorros 60-30.4028 Pienso Completo - Apicult,Mix Abejorros 60-30.4028 Pienso Completo - Apicult,null,TN,No,2012-02-23,null,true,AP,PA18,PA,F001,SF001,AP,PA
+62008,Apimix - Pienso completo - Apicultura (IN/ES),Apimix - Pienso completo - Apicultura (IN/ES),"JARABE DE AZUCAR INVERTIDO, FRUCTOSA, SORBATO POTASICO, COMPLEJO VITAMINICO Y AMINOACIDOS",TN,No,2017-11-17,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62009,Apimix - Pienso completo - Apicultura (BM),Apimix - Pienso completo - Apicultura (BM),null,TN,No,2016-10-04,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62011,Apimix - Pienso completo - Apicultura (BG/IN),Apimix - Pienso completo - Apicultura (BG/IN),"JARABE DE AZUCAR INVERTIDO, FRUCTOSA, SORBATO POTASICO, COMPLEJO VITAMINICO Y AMINOACIDOS",TN,No,2017-11-24,null,true,AP,PA16,PA,70,73,AP,PA
+62012,Apimix - Pienso completo - Apicultura (IN/FR),Apimix - Pienso completo - Apicultura (IN/FR),"SIROP DE SUCRE INVERTI, FRUCTOSE, SORBATE DE POTASSIUM, COMPLEXE DE VITAMINES ET ACIDES AMINÉS",TN,No,2017-12-18,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62013,Apimix - Pienso completo – Apicultura (IN/IT),Apimix - Pienso completo – Apicultura (IN/IT),"Jarabe de azúcar invertido, fructosa, complejo vitamínico y aminoácidos. Conservante sorbáto potásico.",TN,No,2018-09-20,null,true,AP,PA16,PA,70,73,AP,PA
+62014,MIX ABEJORROS 72-30.4028 PIENSO COMPLETO,MIX ABEJORROS 72-30.4028 PIENSO COMPLETO,Azúcar parcialmente invertido - APICULTURA,TN,No,2020-10-26,null,true,AP,PA18,PA,F001,SF001,AP,PA
+62016,Mix Idóneo P y V - Pienso Completo - Apicultura,Mix Idóneo P y V - Pienso Completo - Apicultura,"JARABE DE AZUCAR INVERTIDA, JARABE DE GLUCOSA Y FRUCTOSA",TN,No,2017-12-21,null,true,AP,PA16,PA,F001,SF001,AP,PA
+62017,APIMIX – CON SACAROSA PARA APIC. HERMANOS ANDRES N,APIMIX,null,TN,No,2019-02-15,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62018,Mix Idóneo PyV – Pienso Completo- Apicultura EN/IT,Mix Idóneo PyV – Pienso Completo- Apicultura EN/IT,"Jarabe de azúcar invertido, Jarabe de glucosa y fructosa, Complejo vitamínico y Aminoácidos. Conservante: Sorbato Potásico.",TN,No,2019-02-28,null,true,AP,PA16,PA,F001,SF001,AP,PA
+62019,Apimix Forte – Pienso completo - Apicultura,Apimix Forte – Pienso completo - Apicultura,"Jarabe de azúcar invertido, jarabe de glucosa, aminoácidos libres y vitaminas",TN,No,2019-05-02,null,true,AP,PA16,PA,70,73,AP,PA
+62020,Mix Fructor Apicultor - Pienso completo - Apicult.,Mix Fructor Apicultor - Pienso completo - Apicult.,"Jarabe de Glucosa y Fructosa, Jarabe de Azúcar Invertido",TN,No,2008-01-11,null,true,AP,PA17,PA,F001,SF001,AP,PA
+62021,Apimix 75 Pienso completo – Apicultura,Apimix 75 Pienso completo – Apicultura,"Jarabe de azúcar invertido, fructosa, conservante: sorbato potásico (1k202)",TN,No,2020-01-27,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62022,Apimix 75 PyV Pienso completo – Apicultura,Apimix 75 PyV Pienso completo – Apicultura,"Jarabe de azúcar invertido, fructosa, conservante; sorbato potásico (1k202), complejo vitamínico y aminoácidos",TN,No,2020-01-27,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62023,Apimix 75 PyV - (IN/FR) Pienso completo – Apicultu,Apimix 75 PyV Pienso completo – Apicultura,"Azúcar parcialmente invertido con un extra del 10% de fructosa de remolacha, sorbato, aminoácidos libres y vitaminas - APICULTURA",TN,No,2020-02-25,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62024,Apimix - Pienso completo - Apicultura - BE ORG KW,Apimix - Pienso completo - Apicultura,null,TN,No,2020-06-15,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62025,Apimix 75 PyV - (ENG) Pienso completo – Apicultura,Apimix 75 PyV - (ENG) Pienso completo – Apicultura,"Partially inverted sugar with an extra 10% of beet fructose, sorbate, free amino acids and vitamins – BEEKEEPING",TN,No,2020-07-13,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62026,Apimix - Pienso Completo No Cristaliza- Apicultura,Apimix - Pienso completo - Apicultura,null,TN,No,2020-09-17,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62030,Mix Apiglass,Mix Apiglass,DESTINADO A: APICULTURAMODO DE EMPLEO: DIRECTOUTILIZAR PREFERENTEMENTE ANTES DE 12 MESES DESPUES DE LA FECHA DE FABRICACION,TN,No,2008-01-11,null,true,AP,PA17,PA,F001,SF001,AP,PA
+62070,Mix Golden Jarabe,Mix Golden Jarabe,"JARABE DE AZUCAR INVERTIDO, AZUCAR",TN,No,2010-03-23,null,true,LQ,MP22,PA,F004,SF012,LQ,PA
+62071,Mix Golden Jarabe Alto Color,Mix Golden Jarabe Alto Color,null,TN,No,2014-02-10,null,true,LQ,MP22,PA,F004,SF012,LQ,PA
+62072,Mix Golden Jarabe alto color (ENG),High-colour “Mix Golden” syrup,"Sugar, inverted sugar syrup",TN,No,2018-08-13,null,true,LQ,MP22,PA,F004,SF012,LQ,PA
+62073,Cane Golden Syrup,Cane Golden Syrup,"JARABE DE AZUCAR INVERTIDO, AZUCAR",TN,No,2020-08-27,null,true,LQ,MP22,PA,F004,SF012,LQ,PA
+62100,Mix Siro Jarabe de Glucosa 70º,Mix Siro Jarabe de Glucosa 70º,Jarabe de Glucosa y Fructosa.,TN,No,2010-10-14,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+62150,Jarabe de Melaza de Caña,Jarabe de Melaza de Caña,Melaza,TN,No,2013-11-28,null,true,LQ,MP22,PA,F010,SF032,LQ,PA
+62151,Jarabe de Melaza- Soft Treacle (Negro),Jarabe de Melaza- Soft Treacle (Negro),null,TN,No,2016-09-15,null,true,LQ,MP22,PA,F010,SF032,LQ,PA
+62152,Jarabe de Melaza- Extra Soft (Rojo),Jarabe de Melaza- Extra Soft (Rojo),Jarabe de Melaza,TN,No,2018-08-10,null,true,LQ,MP22,PA,F010,SF032,LQ,PA
+62153,Jarabe de Melaza de caña (ENG),Treacle syrup,Cane treacle syrup,TN,No,2018-08-13,null,true,LQ,MP22,PA,F010,SF032,LQ,PA
+62154,Mixco Sweet 80-31.3233 JM,Mixco Sweet 80-31.3233 JM,Jarabe de melaza de caña,TN,No,2018-09-25,null,true,LQ,MP22,PA,F010,SF032,LQ,PA
+62302,Fondant AR-VA,Fondant AR-VA,null,TN,No,2014-10-22,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62303,Fondant AR-FR R01,Fondant AR-FR R01,null,TN,No,2015-06-03,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62305,Fondant AR-LI R01,Fondant AR-LI R01,null,TN,No,2015-06-03,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62400,Fondant ES-R01,Fondant ES-R01,"Azúcar, jarabe de glucosa y fructosa, agua",TN,No,2015-04-08,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62401,Fondant ES-R02,Fondant ES-R02,"Azúcar , Jarabe de Glucosa, Agua.",TN,No,2015-04-20,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62402,Fondant ES-R03,Fondant ES-R03,"Azúcar, Jarabe de Glucosa y Fructosa, Agua.",TN,No,2015-05-20,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62403,Fondant ES-R04,Fondant ES-R04,"Azúcar, Jarabe de Glucosa, Agua.",TN,No,2015-12-10,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62404,Fondant ES-R05,Fondant ES-R05,"Azúcar, Jarabe de Glucosa, Agua.",TN,No,2016-11-10,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62405,Fondant ES-R06,Fondant ES-R06,"Azúcar, Jarabe de Glucosa y Agua.",TN,No,2017-06-14,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62406,Fondant ES-R01 Palet Chep Plástico 80x120,Fondant ES-R01 Palet Chep Plástico 80x120,"Azúcar, Agua, Jarabe de Glucosa y Fructosa",TN,No,2017-09-14,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62407,Fondant ES-R03 EN/EL,Fondant ES-R03 EN/EL,"Azúcar, Jarabe de Glucosa y Fructosa, Agua.",TN,No,2018-01-04,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62408,Fondant ES-R04 EN/EL,Fondant ES-R04 EN/EL,"Azúcar, Jarabe de Glucosa, Agua.",TN,No,2018-01-04,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62409,Fondant ES-R03 – DELITÉ,Fondant ES-R03 – DELITÉ,"Azúcar, Jarabe de glucosa y fructosa",TN,No,2018-08-07,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62410,FONDANT ES-R06 LA TAHONA DE UTIEL,FONDANT ES-R06,"AZÚCAR, JARABE DE GLUCOSA, MONO Y DIGLICÉRIDOS DE ÁCIDOS GRASOS (E-471).",TN,No,2019-02-11,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62411,Fondant ES-R01-Bayogar (Etiq. Plastica Anonima),Fondant ES-R01,null,TN,No,2020-03-30,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62412,Fondant ES-R03 - Jacobo Lozano (Etiq. Cliente),Fondant ES-R03,null,TN,No,2020-03-30,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62413,Fondant ES-R04 - Jacobo Lozano (Etiq. Cliente),Fondant ES-R04,"Azucar, jarabe de glucosa, agua",TN,No,2020-03-30,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62420,Fondant ES-R01 Sin Serigrafiar,Fondant ES-R01 Sin Serigrafiar,null,TN,No,2015-09-11,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62422,Fondant ES-R03 Sin Serigrafiar,Fondant ES-R03 Sin Serigrafiar,null,TN,No,2017-03-31,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62423,Fondant ES-R04 Sin Serigrafiar,Fondant ES-R04 Sin Serigrafiar,"Azucar, jarabe de glucosa, agua",TN,No,2015-12-10,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62443,Fondant ES-R04 -SIN ETIQUETAR,Fondant ES-R04,"Azucar, jarabe de glucosa, agua",TN,No,2020-03-26,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62501,Fondant GL-R02,Fondant GL-R02,null,TN,No,2015-09-11,null,true,LQ,PA03,PA,50,53,LQ,PA
+62502,Fondant GL-R01 (ENG),Fondant GL-R01,"Sugar, glucose syrup, water, emulsifier (E-471)",TN,No,2018-08-13,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62503,Jarabe de azúcar invertido cristalizado,Jarabe de azúcar invertido cristalizado,"Azúcar invertido, Jarabe de glucosa y fructosa",TN,No,2020-11-25,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62800,Fondant CH - R01,Fondant CH - R01,null,TN,No,2015-06-23,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62825,Fondant sin azúcar,Fondant sin azúcar,"Isomalt, Maltitol, Agua, Goma Guar, Goma Garrofin.",TN,No,2017-02-24,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+62826,Fondant Light,Fondant Light,null,TN,No,2017-02-24,null,true,LQ,null,PA,50,55,LQ,PA
+62850,Sirope Sabor Miel Light,Sirope Sabor Miel Light,null,TN,No,2017-02-24,null,true,LQ,MP22,PA,40,45,LQ,PA
+62900,Siropes de Chocolate,Siropes de Chocolate,"Glucose syrup, sugar, cocoa defatted powder, potasiumm sorbate",TN,No,2017-02-24,null,true,LQ,MP22,PA,40,45,LQ,PA
+62901,Siropes de Caramelo,Siropes de Caramelo,"Glucose syrup, sugar, fat filled milk, plain caramel, natural toffee flavour: potassium sorbate, salt",TN,No,2017-02-24,null,true,LQ,MP22,PA,40,45,LQ,PA
+62902,Siropes de Fresa,Siropes de Fresa,"Glucose syrup, sugar, color (E120, E150a), flavour, potassium sorbate",TN,No,2017-02-24,null,true,LQ,MP22,PA,40,45,LQ,PA
+62903,Sirope sabor Arce,Sirope sabor Arce,"Jarabe de azúcar invertido, colorante (caramelo natural), aroma",TN,No,2017-10-24,null,true,LQ,MP22,PA,40,45,LQ,PA
+62904,Maple Flavoured Syrup (E202),Maple Flavoured Syrup (E202),"Inverted sugar syrup, aromatic caramel (E150a), potassium sorbate (E202), flavour.",TN,No,2018-02-05,null,true,LQ,MP22,PA,40,45,LQ,PA
+62905,Jarabe sabor Fresa,Jarabe sabor Fresa,"Azúcar líquido, Ácido cítrico (E330), Colorante carmín o E120, Aroma, Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62906,Jarabe sabor Plátano,Jarabe sabor Plátano,"Azúcar líquido, Ácido cítrico (E330), Aroma, Colorante Curcumina o E-100 , Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62907,Jarabe sabor Blueraspberry,Jarabe sabor Blueraspberry,"Azúcar líquido, Ácido cítrico (E330), Colorante Azul brillante o E-133, Aroma, Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62908,Jarabe sabor Cereza,Jarabe sabor Cereza,"Azúcar líquido, Ácido cítrico (E330), Colorante carmín o E120, Aroma, Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62909,Jarabe sabor Sandia,Jarabe sabor Sandia,"Azúcar líquido, Ácido cítrico (E330), Colorante carmín o E120, Aroma, Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62910,Jarabe sabor Algodón de Azúcar,Jarabe sabor Algodón de Azúcar,"Azúcar líquido, Ácido cítrico (E330), Colorante carmín o E120, Aroma, Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62911,Jarabe sabor Bubblegum,Jarabe sabor Bubblegum,"Azúcar líquido, Ácido cítrico (E330), Colorante carmín o E120, Aroma, Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62912,Jarabe sabor Manzana,Jarabe sabor Manzana,"Azúcar líquido, Ácido cítrico (E330), Curcumina o E-100, azul brillante o E-133, Aroma, Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62913,Jarabe sabor Limón,Jarabe sabor Limón,"Azúcar líquido, Ácido cítrico (E330), Aroma, Colorante Curcumina o E-100 , Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62914,Jarabe sabor Uva,Jarabe sabor Uva,"Azúcar líquido, Ácido cítrico (E330), Carmín o E-120, azul brillante o E-133, Aroma, Sorbato potásico (E202)",TN,No,2018-03-20,null,true,LQ,null,PA,40,46,LQ,PA
+62915,Pecan nuts syrup,Sirope nueces de Pecan,"Inverted sugar syrup, plain caramel (E150a), pecan nut natural flavour, potassium sorbate (E202)",TN,No,2019-01-10,null,true,LQ,MP22,PA,40,45,LQ,PA
+63100,PEP58,PEP58,null,TN,No,2014-12-17,null,true,SL,PA01,PA,F005,SF018,SL,PA
+63105,VMJP,VMJP,null,TN,No,2015-01-22,null,true,SL,MP16,PA,F006,SF019,SL,PA
+63500,Jarabe de Azucar Invertido BIO,Jarabe de Azucar Invertido BIO ES-ECO-024-MU,"Azúcar ecológico, agua",TN,Sí,2019-09-23,null,true,LQ,MP17,PA,F004,SF009,LQ,MP
+64000,Nectar Base 1,Nectar Base 1,null,TN,No,2012-04-25,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64001,Nectar Base 1.5 66º,Nectar Base 1.5 66º,null,TN,No,2014-06-10,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64005,Nectar Base 2 67º,Nectar Base 2 67º,null,TN,No,2012-04-25,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64011,Nectar Base 2 71º,Nectar Base 2 71º,null,TN,No,2014-01-23,null,true,BS,PA08,PA,30,34,BS,PA
+64012,Nectar Base 2 74º,Nectar Base 2 74º,Azucar liquido invertido,TN,No,2018-12-12,null,true,BS,PA08,PA,30,34,BS,PA
+64013,Néctar Base 2 72º,Néctar Base 2 72º,null,TN,No,2019-04-01,null,true,BS,PA08,PA,30,34,BS,PA
+64015,Nectar Base 3 67º,Nectar Base 3 67º,null,TN,No,2012-05-10,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64020,Nectar Base 3 70º,Nectar Base 3 70º,null,TN,No,2012-05-10,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64029,Nectar Base 4.01 69º REG,Nectar Base 4.01 69º REG,null,TN,No,2015-06-12,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64031,Nectar Base 4.1.01 68º REG,Nectar Base 4.1.01 68º REG,null,TN,No,2013-01-31,2019-09-11,false,BS,null,PA,30,34,LQ,PA
+64034,Nectar Base 4.03 67º,Nectar Base 4.03 67º,null,TN,No,2014-01-31,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64035,Nectar Base 5 67º,Nectar Base 5 67º,null,TN,No,2012-07-05,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64036,Nectar Base 5.5 67º,Nectar Base 5.5 67º,null,TN,No,2013-02-25,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64038,Nectar Base 7 67º,Nectar Base 7 67º,null,TN,No,2013-04-09,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64039,Nectar Base 7 68º,Nectar Base 7 68º,null,TN,No,2013-09-17,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+64040,Nectar Base 8 74º,Nectar Base 8 74º,null,TN,No,2013-01-14,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+64041,Nectar Base 7.5 67º,Nectar Base 7.5 67º,null,TN,No,2013-11-26,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64042,"Nectar Base 4.1 PLUS - 68,5º","Nectar Base 4.1 PLUS - 68,5º",null,TN,No,2014-07-25,2023-06-13,false,BS,PA11,PA,30,34,LQ,PA
+64043,Nectar Base 4.1 PLUS - 69º,Nectar Base 4.1 PLUS - 69º,null,TN,No,2014-08-28,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64047,Nectar Base 5.5 66º,Nectar Base 5.5 66º,null,TN,No,2014-12-02,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+64050,Nectar Base 9 65º,Nectar Base 9 65º,null,TN,No,2013-02-25,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64051,Nectar Base 4.1 PLUS - 70º,Nectar Base 4.1 PLUS - 70º,null,TN,No,2015-06-22,2023-06-13,false,BS,PA11,PA,30,34,LQ,PA
+64052,Nectar Base 7 69º,Nectar Base 7 69º,null,TN,No,2015-07-23,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+64053,Nectar Base 7 71º,Nectar Base 7 71º,null,TN,No,2016-05-10,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+64054,Nectar Base 4.1 PLUS - 71º,Nectar Base 4.1 PLUS - 71º,null,TN,No,2017-06-13,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64055,"Nectar Base 4.1 PLUS - 65,5º","Nectar Base 4.1 PLUS - 65,5º",null,TN,No,2017-08-25,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64056,Nectar Base 4.1 PLUS - 65º,Nectar Base 4.1 PLUS - 65º,Jarabe de azúcar invertido,TN,No,2018-02-14,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64057,Nectar Base 4.0 PLUS - 69º,Nectar Base 4.0 PLUS - 69º,Jarabe de azúcar invertido,TN,No,2018-02-14,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64058,Nectar Base 4.0 HPLUS - 69º,Nectar Base 4.0 HPLUS - 69º,null,TN,No,2018-07-11,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64059,"Nectar Base 4.1 HPLUS - 65,5º","Nectar Base 4.1 HPLUS - 65,5º",null,TN,No,2018-07-11,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64060,Nectar Base 10 67º,Nectar Base 10 67º,null,TN,No,2013-05-17,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64061,Nectar Base 10.55 70º,Nectar Base 10.55 70º,null,TN,No,2016-05-20,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64062,Nectar Base 10.55 74º,Nectar Base 10.55 74º,null,TN,No,2017-04-05,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64063,Nectar Base 4.1 ULTRA – 69º,Nectar Base 4.1 ULTRA – 69º,Jarabe de azúcar invertido,TN,No,2018-08-29,2024-11-13,false,BS,PA12,PA,30,34,LQ,PA
+64064,Nectar Base 4.1 ULTRA – 65º,Nectar Base 4.1 ULTRA – 65º,Jarabe de azúcar invertido,TN,No,2018-08-30,2024-11-13,false,BS,PA12,PA,30,34,LQ,PA
+64065,Nectar Base 4.1 HPLUS - 65º,Nectar Base 4.1 HPLUS - 65º,Jarabe de azúcar invertido,TN,No,2018-09-04,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64066,Nectar Base 4.0 PLUS - 71º,Nectar Base 4.0 PLUS - 71º,Jarabe de azúcar invertido,TN,No,2018-09-07,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64067,Nectar Base 4.1 PLUS - 68º brix,Nectar Base 4.1 PLUS - 68º brix,null,TN,No,2018-10-01,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64068,Nectar Base 4.1 HPLUS - 69º,Nectar Base 4.1 HPLUS - 69º,Jarabe de azúcar invertido,TN,No,2018-10-16,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64069,Nectar Base 7 65º,Nectar Base 7 65º,null,TN,No,2018-10-19,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+64070,Nectar Base 6.5N2014 66º,Nectar Base 6.5N2014 66º,null,TN,No,2014-05-29,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64071,Nectar Base 6.5P2014 66º,Nectar Base 6.5P2014 66º,null,TN,No,2014-07-21,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64072,Jarabe Azúcar 4.1.01 68º,Jarabe Azúcar 4.1.01 68º,null,TN,No,2016-02-08,null,true,LQ,null,PA,30,34,LQ,PA
+64073,Jarabe Azúcar 4.1.01 74º,Jarabe Azúcar 4.1.01 74º,null,TN,No,2017-04-27,null,true,LQ,null,PA,30,34,LQ,PA
+64074,Nectar Base 4.1 ULTRA - 65º MICROFILTRADO,Nectar Base 4.1 ULTRA - 65º MICROFILTRADO,null,TN,No,2019-03-29,2024-11-13,false,BS,PA12,PA,30,34,LQ,PA
+64079,Nectar Base 4.01 71º REG,Nectar Base 4.01 71º REG,null,TN,No,2016-07-19,2019-09-11,false,BS,null,PA,30,34,LQ,PA
+64080,Nectar Base 4.1.01 65º REG,Nectar Base 4.1.01 65º REG,Jarabe de azúcar invertido,TN,No,2017-10-02,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64081,Mix Base Azúcares 65,Mix Base Azúcares 65,Azúcar invertido,TN,No,2018-05-02,2024-11-13,false,BS,PA10,PA,30,34,LQ,PA
+64082,Nectar Base 4.1 ULTRA – 68º,Nectar Base 4.1 ULTRA – 68º,Jarabe de azúcar invertido,TN,No,2018-11-22,2024-11-13,false,BS,PA12,PA,30,34,LQ,PA
+64083,Nectar Base 4.1 ULTRA – 71º,Nectar Base 4.1 ULTRA – 71º,Jarabe de azúcar invertido,TN,No,2019-12-23,2024-11-13,false,BS,PA12,PA,30,34,LQ,PA
+64084,Nectar Base 7 BC 65º,Nectar Base 7 BC 65º,null,TN,No,2020-05-19,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+64085,Nectar Base 4.1 ULTRA – 70º,Nectar Base 4.1 ULTRA – 70º,Jarabe de azúcar invertido,TN,No,2020-10-08,2024-11-13,false,BS,PA12,PA,30,34,LQ,PA
+64100,Azucar 4.55 74º,Azucar 4.55 74º,null,TN,No,2014-01-22,2024-11-13,false,BS,PA11,PA,30,34,LQ,PA
+64101,Base 11U2014 67º,Base 11U2014 67º,null,TN,No,2014-07-18,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64102,Base 11U2014 71º,Base 11U2014 71º,null,TN,No,2014-10-30,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64103,Nectar Base 11 74º,Nectar Base 11 74º,null,TN,No,2016-10-27,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64105,"Azucar Liquido 65,6 Brix","Azucar Liquido 65,6 Brix",null,TN,No,2020-06-23,2023-01-30,false,BS,null,PA,30,34,LQ,PA
+64500,COMPO MANZ,COMPO MANZ,null,TN,No,2014-12-13,null,true,BS,PA08,PA,30,34,BS,PA
+64501,348 Comp,348 Comp,null,TN,No,2014-12-13,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64502,COMPO AL,COMPO AL,null,TN,No,2014-12-13,null,true,BS,PA10,PA,BA,SF040,BS,PA
+64504,COMPO HCA,COMPO HCA,null,TN,No,2015-04-17,null,true,BS,PA10,PA,BA,SF040,BS,PA
+64505,COMPO RAE,COMPO RAE,null,TN,No,2015-04-17,null,true,BS,PA10,PA,BA,SF040,BS,PA
+64506,COMPO LE,COMPO LE,null,TN,No,2015-08-28,null,true,BS,PA10,PA,BA,SF040,BS,PA
+64507,COMPO MOP,COMPO MOP,null,TN,No,2017-02-09,2023-02-16,false,BS,null,PA,30,34,LQ,PA
+64508,1F6RUO,1F6RUO,Fructosa,TN,No,2018-04-16,null,true,LQ,null,PA,30,34,LQ,PA
+65005,Azúcar en polvo LS,Azúcar en polvo LS,"Azúcar, Dioxido de Silicio (E551)",TN,No,2008-11-21,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65006,Azúcar en polvo LS Pallet Plast. ZK,Azúcar en polvo LS Pallet Plast. ZK,"Azúcar, Dioxido de Silicio (E551)",TN,No,2017-08-03,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65007,Azúcar en polvo LS Pallet Plast. CHEP,Azúcar en polvo LS Pallet  Plast. CHEP,"Azúcar, Dioxido de Silicio (E551)",TN,No,2017-09-28,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65008,Azúcar en polvo LS Pallet EUR,Azúcar en polvo LS Pallet EUR,"Azúcar, Dioxido de Silicio (E551)",TN,No,2017-10-05,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65010,Azúcar en polvo,Azúcar en polvo,null,TN,No,2008-11-25,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65011,Azúcar en polvo y grano 50-50,Azúcar en polvo y grano 50-50,null,TN,No,2015-05-11,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65015,Azúcar en polvo LM,Azúcar en polvo LM,"Azúcar, Almidón de Maiz",TN,No,2010-07-13,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65016,Azúcar en polvo LM Pallet PLT,Azúcar en polvo LM Pallet PLT,"Azúcar, Almidón de Maiz",TN,No,2017-09-28,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65018,Azúcar en polvo LM - BIO,Azúcar en polvo LM - BIO ES-ECO-024-MU,"Azúcar, Almidón de Maiz",TN,Sí,2019-09-24,null,true,SL,null,PA,20,21,SL,PA
+65020,Azúcar en polvo SG - LM Micronizada,Azúcar en polvo SG - LM Micronizada,null,TN,No,2013-07-09,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65021,Azúcar en polvo - LM3 Micronizada,Azúcar en polvo - LM3 Micronizada,null,TN,No,2019-04-12,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65022,Azúcar en polvo - LM3 Micronizada - Madera chep,Azúcar en polvo - LM3 Micronizada - Madera chep,null,TN,No,2019-07-11,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65024,Azúcar en Polvo - LM3 Micronizada - Plastico chep,Azúcar en Polvo - LM3 Micronizada - Plastico chep,null,TN,No,2019-07-18,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65025,Azucar en polvo LS - EPSA,Azucar en polvo LS,"Azúcar, Dioxido de Silicio (E551)",TN,No,2020-02-05,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65026,Azucar en Polvo-LM3 Microni. -P. Madera-Orig. Remo,Azucar en Polvo-LM3 Microni. -P. Madera-Orig. Remo,Azúcar en polvo o glas,TN,No,2020-05-15,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65100,Stevia & Fibra,Stevia & Fibra,null,TN,No,2016-03-14,null,true,FB,PA20,PA,F007,SF020,LQ,PA
+65101,Stevia Zero,Stevia Zero,null,TN,No,2017-02-24,null,true,LQ,PA07,PA,60,61,LQ,PA
+65102,Azúcar&Stevia,Azúcar&Stevia,null,TN,No,2017-02-24,null,true,LQ,null,PA,60,61,LQ,PA
+65104,Stevia - Naturvía,Stevia - Naturvía,Glucósidos de esteviol,TN,No,2017-07-06,2023-06-13,false,LQ,PA07,MP,60,61,SL,MP
+65105,Xilitol & Stevia,Xilitol & Stevia,"xilitol, glucosidos de steviol",TN,No,2017-09-28,null,true,LQ,PA07,PA,60,61,LQ,PA
+90000,Muestra de Producto Líquido,Muestra de Producto Líquido,null,TN,No,2015-05-07,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+90001,Muestra de Producto Sólido,Muestra de Producto Sólido,null,TN,No,2015-06-11,null,true,SL,MP06,PA,F005,SF013,SL,PA
+99101,ATI-API,ATI-API,null,TN,No,2008-09-04,null,true,AP,PA13,PA,70,71,AP,FD
+99150,Residuos,Residuos,null,TN,No,2016-05-25,null,true,LQ,PA06,PA,OT,OT,SL,PA
+99950,Producto de Pruebas Líquido - 1,Producto de Pruebas Líquido - 1,null,TN,No,2011-11-15,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+99951,Producto de Pruebas Líquido - 2,Producto de Pruebas Líquido - 2,null,TN,No,2011-11-15,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61061,Mixco Sweet 67-70.0028,Mixco Sweet 67-70.0028,"Azúcar, Dextrosa",TN,No,2012-05-22,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61065,Mixco Sweet 72.5-40.1625,Mixco Sweet 72.5-40.1625,null,TN,No,2012-11-06,null,true,LQ,null,PA,30,34,LQ,PA
+61068,Mixco Sweet 77.5-00.2018,Mixco Sweet 77.5-00.2018,null,TN,No,2013-01-24,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61069,Mixco Sweet 65-40.2831 Pienso Completo - Apicult,Mixco Sweet 65-40.2831 Pienso Completo - Apicult,null,TN,No,2013-01-24,null,true,AP,PA17,PA,F001,SF001,AP,PA
+61071,Mixco Sweet 71-50.1723,Mixco Sweet 71-50.1723,null,TN,No,2013-03-06,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61073,Mixco Sweet 75-00.5050,Mixco Sweet 75-00.5050,null,TN,No,2013-04-26,null,true,LQ,null,PA,30,34,LQ,PA
+61076,Mixco Sweet 75-00.3838,Mixco Sweet 75-00.3838,null,TN,No,2019-11-08,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61077,Mixco Sweet 74-50.1214,Mixco Sweet 74-50.1214,null,TN,No,2013-05-16,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61079,Mixco Sweet 72.5-40.1525,Mixco Sweet 72.5-40.1525,null,TN,No,2013-07-25,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+47028,EXTRACTO-004.50,EXTRACTO-004.50,Zumo Concentrado de Limón 500 GPL,TN,No,2021-01-28,null,true,LQ,MP28,MP,30,35,LQ,MP
+60522,CLARIFICADO-004.50,CLARIFICADO-004.50,Zumo Concentrado de Limón Clarificado 500 GPL,TN,No,2021-01-28,null,true,BS,PA09,PA,30,36,BS,PA
+61240,Base Neutra MIP 74-2323,Base Neutra MIP 74-2323,"Azúcar invertido, azúcar, minerales.",TN,No,2021-01-29,2023-06-05,false,BS,PA05,PA,30,34,LQ,PA
+60131,Azucar PI 77-50,Azucar PI 77-50,Azúcar Líquido Invertido,TN,No,2021-02-02,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+62027,Apimix Pienso Completo (ESP-ENG),Apimix Pienso Completo (ESP-ENG),"Jarabe de azúcar invertido, fructosa.Invert sugar syrup, fructose.",TN,No,2021-02-04,null,true,AP,PA16,PA,F001,SF002,AP,PA
+62028,Apimix Pienso Completo (ESP-ITA),Apimix Pienso Completo (ESP-ITA),"Jarabe de azúcar invertido, fructosa.Sciroppo di zucchero invertito, fruttosio.",TN,No,2021-02-04,null,true,AP,PA16,PA,F001,SF002,AP,PA
+64076,Nectar Base 8 68º,Nectar Base 8 68º,null,TN,No,2021-02-09,2023-01-30,false,BS,null,PA,30,34,LQ,PA
+99123,Reciclado Apipasta,Reciclado Apipasta,null,TN,No,2021-03-08,null,true,AP,PA13,PA,70,71,AP,PA
+62414,Fondant ES-R02 Sin Serigrafiar,Fondant ES-R02 Sin Serigrafiar,null,TN,No,2021-03-09,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+43003,Maltitol 55/75,Maltitol 55/75,null,TN,No,2021-03-31,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+64086,Nectar Base 14 65º,Nectar Base 14 65º,null,TN,No,2021-04-14,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+61241,Base Neutra MRO 70-5050,Base Neutra MRO 70-5050,"Azúcar invertido, azúcar, minerales.",TN,No,2021-04-15,2023-06-13,false,BS,PA08,PA,30,34,LQ,PA
+61242,Base Neutra CAEP 70-2522,Base Neutra CAEP 70-2522,"Azúcar invertido, azúcar, minerales.",TN,No,2021-04-15,2023-06-13,false,BS,PA08,PA,30,34,LQ,PA
+40013,Azucar Blanco EEC Nº2 Extrafino,Azucar Blanco EEC Nº2 Extrafino,null,TN,No,2021-04-23,null,true,SL,MP08,MP,F005,SF015,SL,MP
+61243,Fosvitae R,Fosvitae,Jarabe de Fructooligosacaridos 95 % Plus - 74º Brix,TN,No,2021-04-26,null,true,FB,PA21,PA,F007,SF023,FB,PA
+64087,Nectar Base 4.1 ULTRA - 65.5º,Nectar Base 4.1 ULTRA - 65.5º,Jarabe de azúcar invertido,TN,No,2021-05-05,2024-11-13,false,BS,PA12,PA,30,34,LQ,PA
+44136,"Dextrosa Liquida. 99,5","Dextrosa Liquida,99,5","Dextrosa Liquida,99,5",TN,No,2021-07-14,null,true,LQ,MP26,MP,40,41,LQ,MP
+40103,Azúcar Moreno >2500i - Brown (Dry Dem BLZ),Azúcar Moreno Brown,Azúcar Moreno Brown,TN,No,2021-08-10,null,true,SL,MP25,MP,F005,SF016,SL,MP
+64088,Nectar Base 4.1 ULTRA – 66º,Nectar Base 4.1 ULTRA – 66º,Nectar Base 4.1 ULTRA – 66º,TN,No,2021-08-12,2024-11-13,false,BS,PA12,PA,30,34,LQ,PA
+64089,Nectar Base SN 65º Brix,Nectar Base SN 65º Brix,null,TN,No,2021-08-27,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+45001,Azucar Blanco EEC nº2 - PQ01 RETAIL HACENDADO,Azúcar Blanco 1 Kg - HACENDADO,null,KG,No,2021-08-31,null,true,RT,PA02,PA,10,11,RT,RT
+45002,Azucar Blanco EEC nº2 - PQ02 RETAIL HACENDADO,Azúcar Blanco EEC nº2,null,KG,No,2021-08-31,null,true,RT,PA02,PA,10,11,RT,RT
+7110007131,Azúcar Moreno >2500i - Cassa  El Salvador,Azúcar Moreno Brown,CONTRATO,TN,No,2023-09-05,null,true,SL,MP25,MP,10,113,SL,MP
+61289,Fosvitae 95% Plus 78º,Fosvitae 95% Plus 78º,null,TN,No,2023-09-05,null,true,FB,PA21,PA,F007,SF023,FB,PA
+64510,CATI  70,CATI  70,null,TN,No,2023-09-22,null,true,BS,PA05,PA,BA,SF039,BS,PA
+65032,Azúcar en polvo RAS,Azúcar en polvo RAS,"(99130 ) Azúcar GMX, (99132): SUB RE SAC; (99140) ACUMULADO ASPIRACIÓN VALENCIA",TN,No,2023-09-29,null,true,SL,PA01,PA,10,111,SL,PA
+44140,Glucor 30/72,Glucor 30/72,JARABE DE GLUCOSA,TN,No,2023-09-29,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+63101,PEP58 - LM,PEP58,PEP58,TN,No,2023-10-23,null,true,SL,PA01,PA,F005,SF018,SL,PA
+7230000000,AZ >4000 ICUMSA - Generalizado  Generalizado,AZ >4000 ICUMSA - Generalizado  Generalizado,PRODUCCIÓN,TN,No,2023-10-24,null,true,SL,MP32,MP,10,11,SL,MP
+7230007131,DC Raw Sugar >4000I - Cassa  El Salvador,Azúcar Moreno >4000 icumsa,CONTRATO,TN,No,2023-10-24,null,true,SL,MP32,MP,F005,SF016,SL,MP
+44337,Apipasta Vitaminas - Pienso Apicultura - BE ORG KW,Apipasta Vitaminas - Pienso Apicultura - BE ORG KW,Apipasta Vitaminas - Pienso Apicultura - BE ORG KW,TN,No,2022-03-03,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44003,Glucor 45/80 Bio ES-ECO-024-MU (Agric No UE) NOP,Glucor 45/80 Bio ES-ECO-024-MU (Agric No UE) NOP,Jarabe de glucosa Bio NOP,TN,Sí,2021-09-07,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+61244,Mixco Sweet 70-00.5050 U,Mixco Sweet 70-00.5050 U,Jarabe de azúcar invertido,TN,No,2021-09-20,null,true,BS,PA12,PA,BA,SF043,BS,PA
+61245,Mixco Sweet 68-00.5050 I,Mixco Sweet 68-00.5050 I,null,TN,No,2021-09-20,null,true,BS,PA11,PA,BA,SF041,BS,PA
+61247,Mixco Sweet 65-00.5050 U,Mixco Sweet 65-00.5050 U,Jarabe de azúcar invertido,TN,No,2021-09-20,2025-11-03,false,BS,PA12,PA,30,34,BS,PA
+61248,Mixco Sweet 65-00.5050 I,Mixco Sweet 65-00.5050 I,Jarabe de azúcar invertido,TN,No,2021-09-20,null,true,BS,PA11,PA,BA,SF041,BS,PA
+61249,Mixco Sweet 68-00.5050 RC,Mixco Sweet 68-00.5050 RC,null,TN,No,2021-09-20,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61250,Mixco Sweet 69-00.5050 RC,Mixco Sweet 69-00.5050 RC,null,TN,No,2021-09-20,null,true,BS,PA05,PA,30,34,BS,PA
+61251,Mixco Sweet 65-00.5050 RCP V1,Mixco Sweet 65-00.5050 RCP V1,Jarabe de azúcar invertido,TN,No,2021-09-20,null,true,BS,PA05,PA,30,34,BS,PA
+61252,Mixco Sweet 65-00.5050 UL,Mixco Sweet 65-00.5050 UL,null,TN,No,2021-09-20,null,true,BS,PA12,PA,30,34,BS,PA
+64509,Nectar Base SN 68º Brix,Nectar Base SN 68º Brix,null,TN,No,2021-09-27,2023-02-17,false,BS,PA05,PA,30,34,LQ,PA
+61259,Mixco Sweet 68-00.5050 U,Mixco Sweet 68-00.5050 U,Mixco Sweet 68-00.5050 U,TN,No,2022-03-24,null,true,BS,PA12,PA,BA,SF043,BS,PA
+40206,Azúcar Blanco BIO ES-ECO-024-MU Ag No UE NOP,Azúcar Blanco BIO ES-ECO-024-MU Ag No UE NOP,Azúcar Blanco BIO ES-ECO-024-MU Ag No UE NOP,TN,Sí,2021-09-28,null,true,SL,MP10,MP,F005,SF014,SL,MP
+40256,Raw Sugar 1300ICUMSA,Raw Sugar 1300ICUMSA,Azúcar Crudo 1300ICUMSA,TN,No,2021-10-01,2023-03-01,false,SL,MP05,MP,10,11,SL,MP
+61141,Mixco Sweet 69-70.0030,Mixco Sweet 69-70.0030,"Azúcar, Dextrosa",TN,No,2021-10-26,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61142,Mixco Sweet 70-00.4252,Mixco Sweet 70-00.4252,"Jarabe de azúcar invertido, Jarabe de glucosa y fructosa",TN,No,2021-11-03,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61274,Mixco Sweet 72-53.2323,BASE NEUTRA 550471,Azúcar líquido invertido,TN,No,2022-12-01,2025-04-16,false,BS,PA10,PA,30,34,LQ,PA
+43101,Sorbitol Liquido 70% No cristalizable - EPSA,Sorbitol Líquido 70% No cristalizable,Sorbitol Liquido 70% No cristalizable,TN,No,2022-12-13,null,true,LQ,MP18,MP,F011,SF036,LQ,MP
+61275,BASE NEUTRA 550463,BASE NEUTRA 550463,"Jarabe de azúcar invertido, azúcar",TN,No,2022-12-15,2023-03-07,false,BS,PA05,PA,30,34,LQ,PA
+61276,Mixco Sweet 72-20.4040 SC80,Mixco Sweet 72-20.4040 SC80,Jarabe de azúcar invertido,TN,No,2023-01-05,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61277,Mixco Sweet 72-20.4040 SR80,Mixco Sweet 72-20.4040 SR80,Jarabe de azúcar invertido,TN,No,2023-01-05,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61278,Mixco Sweet 72-00.5050,Mixco Sweet 72-00.5050,Jarabe de azúcar invertido,TN,No,2023-01-11,null,true,BS,PA11,PA,BA,SF041,BS,PA
+7400000000,Azúcar Blanco EEC nº2 REMOLACHA - GENERAL,Azúcar Blanco EEC nº2 REMOLACHA - GENERAL,PRODUCCIÓN,TN,No,2023-01-11,null,true,SL,MP01,MP,10,11,SL,MP
+7400002031,Az Bl. EEC Nº2 Remolacha PTE DEST-Tereos Franci,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-11,null,true,SL,MP01,MP,F005,SF013,SL,MP
+7400003011,Azúcar Bl. EEC nº2 REMOL - ACOR ESPAÑA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-11,null,true,SL,MP01,MP,F005,SF013,SL,MP
+43052,Maltitol en Polvo Luijan 40 Mesh,Maltitol en Polvo Luijan 40 Mesh,Maltitol en Polvo Luijan 40 Mesh,TN,No,2021-11-04,null,true,SL,MP12,MP,F011,SF034,SL,MP
+44335,Azúcar Blanco BIO MP para piensos,Azúcar Blanco BIO MP para piensos ES-ECO-024-MU,Azúcar Blanco BIO MP para piensos,TN,Sí,2021-11-05,null,true,AP,MP30,PA,F002,SF003,AP,MP
+61143,Mixco Sweet 70-00.5050,Mixco Sweet 70-00.5050,null,TN,No,2021-11-08,null,true,BS,PA11,PA,30,34,BS,PA
+61253,Mixco Sweet 77-00.2037,Mixco Sweet 77-00.2037,"Jarabe de glucosa y fructosa, Jarabe de azúcar invertido",TN,No,2021-11-12,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+65027,Azúcar en Polvo-LS Micronizada,Azúcar en Polvo-LS Micronizada,Azúcar en polvo o glas,TN,No,2021-11-15,null,true,SL,PA01,PA,F005,SF018,SL,PA
+64090,ATI 68º,ATI 68º,ATI 68º,TN,No,2021-11-17,null,true,BS,PA05,PA,30,34,BS,PA
+64091,ATI 65º,ATI 65º,ATI 65º,TN,No,2021-11-17,null,true,BS,PA05,PA,BA,SF039,BS,PA
+60016,Azúcar Líquida Neutra S.A. - OSBORNE,Azúcar Líquida Neutra S.A.,Azúcar líquido,TN,No,2021-11-24,null,true,LQ,MP37,PA,F004,SF011,LQ,PA
+44128,Glucor 42/80 - materia prima para piensos,Glucor 42/80 - materia prima para piensos,Glucor 42/80 - materia prima para piensos,TN,No,2021-12-15,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+61254,Mixco Sweet plus-M 82-05.5141 MP para piensos,Mixco Sweet plus-M 82-05.5141 MP para piensos,Mixco Sweet plus-M 82-05.5141 MP para piensos,TN,No,2021-12-20,null,true,AP,MP30,PA,70,76,AP,PA
+61255,Mixco Sweet 71-00.2446,Mixco Sweet 71-00.2446,"Jarabe de glucosa y fructosa, azúcar invertido, dextrosa",TN,No,2021-12-21,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61256,Mixco Sweet 65-00.5050 RC,Mixco Sweet 65-00.5050 RC,null,TN,No,2021-12-22,null,true,BS,PA05,PA,BA,SF039,BS,PA
+40016,Azúcar Blanco EEC Nº 2,Azúcar Blanco EEC Nº 2,null,TN,No,2022-02-23,null,true,SL,MP06,MP,F005,SF013,SL,MP
+44336,Fructosa Cristal Granulada – MP para Piensos,Fructosa Cristal Granulada – MP para Piensos,Fructosa Cristal Granulada – MP para Piensos,TN,No,2022-01-03,null,true,AP,MP30,MP,F002,SF003,AP,MP
+64092,Mixco Sweet 70-53.2323,Mixco Sweet 70-53.2323,Azúcar líquido invertido,TN,No,2022-01-03,null,true,BS,PA10,PA,30,34,BS,PA
+61257,Mixco Sweet 74-00.3244,Mixco Sweet 74-00.3244,"Azúcar invertido, Jarabe de Glucosa y Fructosa",TN,No,2022-01-13,null,true,BS,PA10,PA,BA,SF040,BS,PA
+61258,Fosvitae R 90 %,Fosvitae 90 %,Fructooligosacáridos,TN,No,2022-03-18,null,true,FB,PA21,PA,F007,SF023,FB,PA
+62029,Azucar Biomip,Azucar Biomip ES-ECO-024-MU,Mix Abejorros 68-30.4028 Pienso Completo - Apicult,TN,No,2022-01-31,null,true,AP,PA18,PA,F001,SF001,AP,PA
+40207,Azúcar BIO <45 ES-ECO-024-MU Ag UE REMOLACHA,Azúcar BIO <45 ES-ECO-024-MU Ag UE REMOLACHA,PROVEEDOR: RAR,TN,Sí,2022-02-01,null,true,SL,MP24,MP,F005,SF014,SL,MP
+99125,Mezcla Dextrosa y Sacarosa,Mezcla Dextrosa y Sacarosa,null,TN,No,2022-02-09,null,true,SL,MP16,MP,10,13,SL,MP
+60018,Azúcar Líq. Neutra 67º-BIO-ES-ECO-024-MU AgUE/NoUE,Azúcar Líq. Neutra 67º-BIO-ES-ECO-024-MU AgUE/NoUE,Azúcar Líq. Neutra 67º-BIO-ES-ECO-024-MU(AgUE/NoUE),TN,Sí,2022-02-15,null,true,LQ,PA06,PA,30,31,LQ,PA
+64093,ATI 69º,ATI 69º,ATI 69º,TN,No,2022-03-22,null,true,BS,PA05,PA,30,34,BS,PA
+60019,Azúcar Líquida Neutra 67º- Remolacha,Azúcar Líquida Neutra 67º- Remolacha,Azúcar Líquida,TN,No,2022-04-06,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+60021,Azúcar Líquida Neutra 67º- Caña,Azúcar Líquida Neutra 67º- Caña,Azúcar Líquida Neutra,TN,No,2022-04-06,null,true,LQ,PA06,PA,30,31,LQ,PA
+60022,Azúcar Líquida Neutra 67º - ACB,Azúcar Líquida Neutra 67º,AZUCAR LIQUIDO,TN,No,2022-04-06,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+60023,Azúcar Líq. Neutra 67 BL BIO ES-ECO-024-MU(No UE),Azúcar Líq. Neutra 67 BL BIO ES-ECO-024-MU(No UE),Azúcar Ecológica y Agua,TN,Sí,2022-04-06,null,true,LQ,PA06,PA,30,31,LQ,PA
+44070,Fructor 70/81,Fructor 70/81 Sedasweet,Fructor 70/81 Sedasweet,TN,No,2022-04-12,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+61260,Fosvitae R 60 %,Fosvitae 60 %,Jarabe de fructooligosacáridos 60 %,TN,No,2022-04-21,null,true,FB,PA21,PA,F007,SF023,FB,PA
+40208,Azucar Blanco BIO NordZucker ES-ECO-024-MU Ag NoUE,Azucar Blanco BIO NordZucker ES-ECO-024-MU Ag NoUE,Azucar Blanco BIO NordZucker ES-ECO-024-MU Ag NoUE,TN,Sí,2022-05-17,null,true,SL,MP10,MP,F005,SF014,SL,MP
+40004,Azucar Blanco EEC Nº 2 CORREFINO,Azucar Blanco EEC Nº 2 CORREFINO,Azúcar Blanco EEC Nº 2 REMOLACHA CORREFINO,TN,No,2022-05-17,null,true,SL,MP07,MP,F005,SF013,SL,MP
+99128,Rechazo produccion RETAIL,Rechazo produccion RETAIL,null,TN,No,2022-06-01,null,true,RT,PA02,PC,F012,SF038,RT,RT
+61261,Mixco Sweet 68-00.5050 RC COFI,Mixco Sweet 68-00.5050 RC,Azúcar líquido invertido,TN,No,2022-06-06,null,true,BS,PA05,PA,30,34,BS,PA
+61262,Mixco Sweet 69-00.5050 RC COFI,Mixco Sweet 69-00.5050 RC COFI,Mixco Sweet 69-00.5050 RC COFI,TN,No,2022-06-06,null,true,BS,PA05,PA,30,34,BS,PA
+61263,Mixco Sweet 65-00.5050 RCP COFI,Mixco Sweet 65-00.5050 RCP,Azúcar líquido invertido,TN,No,2022-06-06,null,true,BS,PA05,PA,30,34,BS,PA
+61264,Mixco Sweet 65-00.5050 RC COFI,Mixco Sweet 65-00.5050 RC,Azúcar líquido invertido,TN,No,2022-06-06,null,true,BS,PA05,PA,30,34,BS,PA
+7400028061,Azúcar Blanco EEC Nº2 Remolacha - Zdanivskyi Sugar,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-17,null,true,SL,MP01,MP,10,11,SL,MP
+60221,Azúcar invertido 71º R,Azúcar invertido 71º R,Jarabe de azúcar invertido,TN,No,2023-01-17,null,true,BS,PA05,PA,30,32,BS,PA
+60222,Azúcar invertido 71º Caña,Azúcar invertido 71º Caña,Jarabe de azúcar invertido,TN,No,2023-01-17,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+61281,Mixco Sweet 65-00.5050 RC V2,Mixco Sweet 65-00.5050 RC V2,Jarabe de azúcar invertido,TN,No,2023-01-19,null,true,BS,PA05,PA,30,34,LQ,PA
+61282,Mixco Sweet 72-00.5050 RC V2,Mixco Sweet 72-00.5050 RC V2,Jarabe de azúcar invertido,TN,No,2023-01-19,null,true,BS,PA05,PA,BA,SF039,BS,PA
+62031,Mix Abejorros 65-30.4028 Pienso Completo Apic(FRA),Mix Abejorros 65-30.4028 Pienso Completo Apic(FRA),Mix Abejorros 65-30.4028 Pienso Completo Apic(FRA),TN,No,2023-01-24,null,true,AP,PA18,PA,F001,SF001,AP,PA
+61266,Mixco Sweet 37-00.5050A,Mixco Sweet 37-00.5050A,Jarabe de azúcar invertido acidificado,TN,No,2023-02-03,null,true,BS,PA10,PA,BA,SF040,BS,PA
+7200000000,>45 ICUMSA - Generalizado Generalizado,Azúcar Blanco,PRODUCCIÓN,TN,No,2023-02-08,null,true,SL,MP14,MP,10,11,SL,MP
+7200015111,>45 ICUMSA - Pantaleon Guatemala,Azúcar Blanco,CONTRATO,TN,No,2023-02-08,null,true,SL,MP14,MP,10,11,SL,MP
+7200016111,>45 ICUMSA - Santa Ana Guatemala,Azúcar Blanco,CONTRATO,TN,No,2023-02-08,null,true,SL,MP14,MP,10,11,SL,MP
+7200029121,>45 ICUMSA - Mayaguez Colombia,Azúcar Blanco EEC Nº 3,CONTRATO,TN,No,2023-02-08,null,true,SL,MP14,MP,F005,SF016,SL,MP
+61265,Mixco Sweet 65-00.5050 PL,Mixco Sweet 65-00.5050 PL,Jarabe de azúcar invertido,TN,No,2022-07-15,null,true,BS,PA11,PA,30,34,BS,PA
+40104,Azúcar 250 ICUMSA – Pantaleón,Azúcar 250 ICUMSA – Pantaleón,Azúcar 250 ICUMSA – Pantaleón,TN,No,2022-08-03,null,true,SL,MP05,MP,F005,SF016,SL,MP
+40017,Azucar Blanco 200I,Azucar Blanco 200I,null,TN,No,2022-08-05,2024-01-08,false,SL,MP05,MP,10,11,SL,MP
+61268,Nutriose,Nutriose,Nutriose,TN,No,2022-10-04,null,true,LQ,PA07,PA,60,62,LQ,PA
+61267,Mixco Sweet 74-00.5050 LM,Mixco Sweet 74-00.5050 LM,null,TN,No,2022-08-11,2023-03-23,false,BS,PA05,PA,30,34,LQ,PA
+61165,Mixco Sweet 80-55.2222,Mixco Sweet 80-55.2222,"Azúcar, Azúcar líquido invertido",TN,No,2022-09-20,null,true,LQ,PA06,PA,30,34,LQ,PA
+40024,Azúcar blanco EEC nº3 - 70 ICUMSA,Azúcar blanco EEC nº3,Azúcar blanco EEC nº3,TN,No,2022-09-22,null,true,SL,MP14,MP,F005,SF016,SL,MP
+45003,Azucar Blanco EEC nº2 - PQ01 RETAIL HACENDADO,Azúcar Blanco 1 Kg - HACENDADO,null,KG,No,2022-09-23,2023-02-22,false,RT,PA02,PA,10,11,RT,RT
+40025,Azucar Azucarera Spot,Azúcar Blanco EEC Nº 2,null,TN,No,2022-09-29,null,true,SL,MP07,MP,F005,SF013,SL,MP
+40030,Azucar azucarera trimestral,Azúcar Blanco EEC Nº2,null,TN,No,2022-10-06,null,true,SL,MP07,MP,F005,SF013,SL,MP
+61269,Mixco Sweet 68-20.4040,Mixco Sweet 68-20.4040,"Jarabe de azúcar invertido, azúcar",TN,No,2022-10-10,null,true,BS,PA05,PA,30,34,LQ,PA
+40026,Azúcar Refinado,Azúcar Refinado,Azúcar,TN,No,2022-10-10,null,true,SL,MP14,MP,F005,SF016,SL,MP
+61270,Mixco Sweet 71-00.5050 I,Mixco Sweet 71-00.5050 I,Jarabe de azúcar invertido,TN,No,2022-10-13,null,true,BS,PA11,PA,30,34,BS,PA
+64094,Mixco Sweet 72-53.2323 100 Icu,Mixco Sweet 72-53.2323 100 Icu,Azúcar líquido invertido,TN,No,2022-11-04,null,true,BS,PA10,PA,BA,SF040,BS,PA
+40027,Azúcar Blanco 180I,Azúcar Blanco 180I,Azúcar Blanco 180I,TN,No,2022-11-07,null,true,SL,MP05,MP,F005,SF016,SL,MP
+62074,Mix Golden Jarabe (ENG),Mix Golden Jarabe (ENG),Mix Golden Jarabe (ENG),TN,No,2022-11-15,null,true,LQ,MP22,PA,F004,SF012,LQ,PA
+61271,Mixco Sweet 68-00.5050 RC,Mixco Sweet 68-00.5050 RC,Azúcar líquido invertido,TN,No,2022-11-16,2023-06-26,false,BS,PA05,PA,30,34,LQ,PA
+61272,Mixco Sweet 72-00.5050 RC,Mixco Sweet 72-00.5050 RC,Jarabe de azúcar invertido,TN,No,2022-11-21,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61273,Mixco Sweet 72-09.6427 B2,BASE NEUTRA 550174,Jarabe azúcar líquido invertido,TN,No,2022-11-24,2023-07-28,false,BS,PA08,PA,30,34,LQ,PA
+40114,Azúcar Morena Brown >3700IC,Azúcar Morena Brown >3700IC,Azúcar Morena Brown >3700IC,TN,No,2022-11-29,2023-06-05,false,SL,MP25,MP,10,113,SL,MP
+7400004011,Azúcar Bl. EEC nº2 REMOL - AZUCARERA ESPAÑA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-11,null,true,SL,MP01,MP,F005,SF013,SL,MP
+7400010031,Azúcar Bl. EEC nº2 REMOL - SUDZUCKER FRANCIA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-11,null,true,SL,MP01,MP,F005,SF013,SL,MP
+7400011031,Azúcar Bl. EEC nº2 REMOL - CRISTALCO FRANCIA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-11,null,true,SL,MP01,MP,10,11,SL,MP
+7400026191,Azúcar Bl. EEC nº2 REMOL - UAB LIETUVOS C.F. LITUA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-11,null,true,SL,MP01,MP,10,11,SL,MP
+7400014061,Azúcar Bl. EEC nº2 REMOL - PODYLLA FOOD C. UCRANIA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-11,null,true,SL,MP01,MP,F005,SF013,SL,MP
+7400023171,Azúcar Bl. EEC nº2 REMOL - PFEIFER & LAN. ALEMANIA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-11,null,true,SL,MP01,MP,10,11,SL,MP
+7400012051,Azúcar Bl. EEC nº2 REMOL - COSUN HOLANDA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-11,null,true,SL,MP01,MP,10,11,SL,MP
+7400027201,Azúcar Bl. EEC nº2 REMOL - ISCAL BELGICA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-01-12,null,true,SL,MP01,MP,10,11,SL,MP
+61279,Mixco Sweet 65-00.5050 RCP V2,Mixco Sweet 65-00.5050 RCP V2,Jarabe de azúcar invertido,TN,No,2023-01-12,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61280,Mixco Sweet 68-00.5050 RC V2,Mixco Sweet 68-00.5050 RC V2,Jarabe de azúcar invertido,TN,No,2023-01-12,null,true,BS,PA05,PA,BA,SF039,BS,PA
+7200017111,>45 ICUMSA - Palo Gordo Guatemala,Azúcar Blanco,CONTRATO,TN,No,2023-02-08,null,true,SL,MP14,MP,F005,SF016,SL,MP
+7200031221,>45 ICUMSA - Savola Egipto,Azúcar Blanco EEC Nº 3,CONTRATO,TN,No,2023-02-08,null,true,SL,MP14,MP,10,11,SL,MP
+7220000000,>150 ICUMSA - Generalizado  Generalizado,>150 ICUMSA - Generalizado  Generalizado,PRODUCCIÓN,TN,No,2023-02-08,null,true,SL,MP05,MP,10,11,SL,MP
+7220032231,Raw Sugar <2500ICUMSA - Eswatini Ubombo Sugar,Raw Sugar <2500 icumsa,CONTRATO,TN,No,2023-02-08,null,true,SL,MP05,MP,F005,SF016,SL,MP
+7220015111,>150 ICUMSA - Pantaleon  Guatemala,Azúcar 250 icumsa,CONTRATO,TN,No,2023-02-08,null,true,SL,MP05,MP,F005,SF016,SL,MP
+7220030211,>150 ICUMSA - Wilmar  Myanmar,Azúcar Blanco 180I,CONTRATO,TN,No,2023-02-08,null,true,SL,MP05,MP,F005,SF016,SL,MP
+42006,Dextrosa Cristal Monoh Trigo Venta TER,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Venta TER,TN,No,2023-03-06,null,true,SL,MP16,MP,F006,SF019,SL,MP
+45004,Azucar Blanco EEC nº2 - PQ01 RETAIL HACENDADO,Azúcar Blanco 1 Kg - HACENDADO,null,KG,No,2023-02-13,null,true,RT,PA02,PA,10,11,RT,RT
+40209,Azúcar BIO 200-400- ES-ECO-024-MU (Agric No EU),Azúcar BIO 200-400- ES-ECO-024-MU (Agric No EU),Azúcar BIO 300-500 -ES-ECO-024-MU (Agric No EU),TN,Sí,2023-02-21,null,true,LQ,MP10,MP,20,21,SL,MP
+42007,Dextrosa Cristal Monoh Trigo Pdte. Destino TER,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Pdte. Destino TER,TN,No,2023-03-06,null,true,SL,MP16,MP,10,13,SL,MP
+42008,Dextrosa Cristal Monoh Trigo  Cons Liquida ROS,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo  Cons Liquida ROS,TN,No,2023-03-06,null,true,SL,MP16,MP,10,13,SL,MP
+42009,Dextrosa Cristal Monoh Trigo Venta ROS,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Venta ROS,TN,No,2023-03-06,null,true,SL,MP16,MP,10,13,SL,MP
+42010,Dextrosa Cristal Monoh Trigo Pdte. Destino ROS,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Pdte. Destino ROS,TN,No,2023-03-06,null,true,SL,MP16,MP,10,13,SL,MP
+42011,Dextrosa Cristal Monoh Trigo  Cons Liquida RTT,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo  Cons Liquida RTT,TN,No,2023-03-06,null,true,SL,MP16,MP,10,13,SL,MP
+42012,Dextrosa Cristal Monoh Trigo Venta RTT,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Venta RTT,TN,No,2023-03-06,null,true,SL,MP16,MP,10,13,SL,MP
+42013,Dextrosa Cristal Monoh Trigo Pdte. Destino RTT,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Pdte. Destino RTT,TN,No,2023-03-06,null,true,SL,MP16,MP,10,13,SL,MP
+7800000000,Azúcar BIO Caña <45i NO UE NOP -Generalizado,Azúcar BIO Caña <45i NO UE NOP -Generalizado,PRODUCCIÓN,TN,Sí,2023-03-15,null,true,SL,MP10,MP,20,21,SL,MP
+7800008021,Azúcar BIO Caña - RAR  Portugal.,Azúcar Blanco BIO ES-ECO-024-MU Ag No UE,CONTRATO,TN,Sí,2023-03-15,2024-05-24,false,SL,MP10,MP,20,21,SL,MP
+7800013151,Azúcar BIO Caña - Elite NOP  India,Azúcar Blanco BIO ES-ECO-024-MU Ag No UE NOP,CONTRATO,TN,Sí,2023-03-15,null,true,SL,MP10,MP,F005,SF014,SL,MP
+7810000000,Azúcar BIO 300-500i NO UE NOP - Generalizado,Azúcar BIO 300-500i NO UE NOP- Generalizado,PRODUCCIÓN,TN,Sí,2023-03-15,null,true,SL,MP23,MP,20,21,SL,MP
+7810033151,Azúcar BIO 300-500 ICUMSA Elite India,Azúcar BIO 300-500 -ES-ECO-024-MU (Agric No EU),CONTRATO,TN,Sí,2023-03-15,null,true,SL,MP23,MP,F005,SF014,SL,MP
+7820022041,Azúcar BIO Remolacha - Italia Zuccheri  Italia,Azúcar Blanco BIO ES-ECO-024-MU Ag UE Origen Remol,CONTRATO,TN,Sí,2023-03-15,null,true,SL,MP24,MP,F005,SF014,SL,MP
+7820000000,Azúcar BIO Remolacha - Generalizado  Generalizado,Azúcar BIO Remolacha - Generalizado  Generalizado,PRODUCCIÓN,TN,Sí,2023-03-15,null,true,SL,MP24,MP,20,21,SL,MP
+61283,Mixco Sweet 67-00.5050 M2,Mixco Sweet 67-00.5050 M2,Jarabe de azúcar invertido,TN,No,2023-03-16,null,true,BS,PA11,PA,BA,SF041,BS,PA
+61284,Mixco Sweet 72-09.6427 B2 SB2,Mixco Sweet 72-09.6427 B2,"Jarabe de azúcar invertido, sorbitol",TN,No,2023-03-20,null,true,BS,PA08,PA,BA,SF042,BS,PA
+61285,Mixco Sweet 72-09.6427 B2 SB2.2,Mixco Sweet 72-09.6427 B2,"Jarabe de azúcar invertido, sorbitol",TN,No,2023-03-20,null,true,BS,PA08,PA,30,34,BS,PA
+42014,Dextrosa Cristal Monoh Trigo  Cons Liquida HI TER,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo  Cons Liquida HI TER,TN,No,2023-03-23,null,true,SL,MP16,MP,10,13,SL,MP
+42015,Dextrosa Cristal Monoh Trigo  Cons Liquida HI ROS,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo  Cons Liquida HI ROS,TN,No,2023-03-23,null,true,SL,MP16,MP,10,13,SL,MP
+42016,Dextrosa Cristal Monoh Trigo  Cons Liquida HI RTT,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo  Cons Liquida HI RTT,TN,No,2023-03-23,null,true,SL,MP16,MP,10,13,SL,MP
+44352,Apipasta 90% vitaminas  Pienso completo – APICANDI,Apipasta 90% vitaminas  Pienso completo – APICANDI,Apipasta 90% vitaminas  Pienso completo – APICANDI,TN,No,2023-03-28,null,true,AP,PA13,PA,F003,SF004,AP,PA
+61286,Mixco Sweet 72-66.1717,Mixco Sweet 72-66.1717,Azúcar líquido invertido,TN,No,2023-04-03,null,true,BS,PA08,PA,BA,SF042,BS,PA
+99134,SUB RE PO,SUB RE PO,SUB RE PO,TN,No,2023-04-05,null,true,SL,PA01,PA,10,11,SL,PA
+64095,Mixco Sweet 70-50.2525 100 Icu,Mixco Sweet 70-50.2525 100 Icu,Jarabe de azúcar invertido,TN,No,2023-04-14,null,true,BS,PA10,PA,BA,SF040,BS,PA
+7500003011,Correfino EEC Nº2 Caña/Rem - Acor  España,Azúcar Blanco EEC Nº 2,CONTRATO,TN,No,2023-04-14,null,true,SL,MP07,MP,F005,SF013,SL,MP
+7500004011,Correfino EEC Nº2 Caña/Rem - Azucarera España,Azúcar Blanco EEC Nº 2,CONTRATO,TN,No,2023-04-14,null,true,SL,MP07,MP,F005,SF013,SL,MP
+7400045061,Azúcar Blanco EEC Nº2 Remo-Novoorzhytskyi Ucrania,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-05-25,null,true,SL,MP01,MP,10,11,SL,MP
+7500012051,Correfino EEC Nº2 Caña/Rem - Cosun  Holanda,Azúcar Blanco EEC Nº 2,CONTRATO,TN,No,2023-04-14,null,true,SL,MP07,MP,10,11,SL,MP
+7500000000,Correfino EEC Nº2 Caña/Rem - Generalizado,Correfino EEC Nº2 Caña/Rem - Generalizado,PRODUCCIÓN,TN,No,2023-04-14,null,true,SL,MP07,MP,10,11,SL,MP
+7501004011,Correfino EEC Nº2 Caña/Rem Glase - Azucarera Esp,Azúcar Blanco EEC Nº 2 (Azucarera),CONTRATO,TN,No,2023-04-14,null,true,SL,MP07,MP,10,11,SL,MP
+7510000000,Correfino EEC Nº2 Caña/Rem >150i - Generalizado,Correfino EEC Nº2 Caña/Rem >150i - Generalizado,PRODUCCIÓN,TN,No,2023-04-14,null,true,SL,MP05,MP,10,11,SL,MP
+7200035261,>45 ICUMSA - Carmelita  Colombia,Azúcar Blanco,CONTRATO,TN,No,2023-04-20,null,true,SL,MP14,MP,10,11,SL,MP
+62032,APIMIX INSTANT,APIMIX INSTANT,null,TN,No,2023-05-30,null,true,AP,PA14,PA,F001,SF002,AP,PA
+44338,APIPASTA 90% HIVE ALIVE-PIENSO COMPLETO - APICULT,APIPASTA 90% HIVE ALIVE-PIENSO COMPLETO - APICULT,APIPASTA 90% HIVE ALIVE-PIENSO COMPLETO - APICULT,TN,No,2023-04-21,null,true,AP,PA13,PA,70,71,AP,PA
+45005,Azucar Blanco EEC nº2 - PQ01 RETAIL HACENDADO,Azúcar Blanco 1 Kg - HACENDADO,null,KG,No,2023-04-24,null,true,RT,PA02,PA,10,11,RT,RT
+65009,PREMEZCLA PARA AZÚCAR EN POLVO LS,PREMEZCLA PARA AZÚCAR EN POLVO LS,Azúcar polvo + 5% Óxido de silicio,TN,No,2023-04-24,null,true,SL,PA01,PA,10,111,SL,PA
+7600000000,Azúcar Granulometrias - Generalizado,Azúcar Granulometrias - Generalizado,PRODUCCIÓN,TN,No,2023-04-26,null,true,SL,MP08,MP,10,11,SL,MP
+7600037022,Azúcar Granulometrias - Sidul  Portugal,Azúcar Blanco EEC Nº 2 Extrafino,CONTRATO,TN,No,2023-04-26,null,true,SL,MP08,MP,10,11,SL,MP
+7600039292,Azúcar Granulometrias - Kampong Speu Sugar Camboya,Azúcar Blanco EEC Nº 2 Extrafino,CONTRATO,TN,No,2023-04-26,null,true,SL,MP08,MP,10,11,SL,MP
+7600007132,Azúcar Granulometrias - Cassa  El Salvador,Azúcar Blanco EEC Nº 2 Extrafino,CONTRATO,TN,No,2023-04-26,null,true,SL,MP08,MP,10,11,SL,MP
+7600004011,Azúcar Granulado Extrafino-Azucarera España,Azúcar Granulado Extrafino,CONTRATO,TN,No,2023-04-26,null,true,SL,MP08,MP,F005,SF015,SL,MP
+7300000000,Azúcar Blanco EEC Nº2 Caña - Generalizado,Azúcar Blanco EEC Nº2 Caña - Generalizado,PRODUCCIÓN.,TN,No,2023-04-26,null,true,SL,MP06,MP,10,11,SL,MP
+7300019071,Azúcar Blanco EEC Nº2 Caña - Antei/Cevital Argelia,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7300005081,Azúcar Blanco EEC Nº2 Caña - Cosumar  Marruecos,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7300015111,Azúcar Blanco EEC Nº2 Caña - Pantaleon  Guatemala,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7300016111,Azúcar Blanco EEC Nº2 Caña - Santa Ana Guatemala,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7300017111,Azúcar Blanco EEC Nº2 Caña - Palo Gordo  Guatemala,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,10,11,SL,MP
+7300018111,Azúcar Blanco EEC Nº2 Caña - Magdalena  Guatemala,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,10,11,SL,MP
+7300007131,Azúcar Blanco EEC Nº2 Caña - Cassa  El Salvador,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7300008021,Azúcar Blanco EEC Nº2 Caña - RAR  Portugal,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7300020091,Azúcar Blanco EEC Nº2 Caña - RCL Foods  Sudafrica,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,10,11,SL,MP
+7300037021,Azúcar Blanco EEC Nº2 Caña - Sidul  Portugal,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7300038281,Azúcar Blanco EEC Nº2 Caña -Al Khaleej Sugar Dubai,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,10,11,SL,MP
+7300039291,Azúcar Blanco EEC Nº2 Caña - Kampong Speu Camboya,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-04-26,null,true,SL,MP06,MP,F005,SF013,SL,MP
+43151,SORBITOL POLVO CONSUMO LÍQUIDA,SORBITOL POLVO CONSUMO LÍQUIDA,null,TN,No,2023-04-26,null,true,SL,MP13,MP,60,62,LQ,MP
+7000000000,Azúcar Crudo - Generalizado,Azúcar Cruda,PRODUCCIÓN,TN,No,2023-05-02,null,true,SL,MP03,MP,10,11,SL,MP
+7000036271,Azúcar Crudo - Trevalles  Honduras,Azúcar Cruda,CONTRATO,TN,No,2023-05-02,null,true,SL,MP03,MP,10,11,SL,MP
+7110000000,Azúcar Moreno >2500i - Generalizado,Azúcar Moreno >2500i - Generalizado,PRODUCCIÓN,TN,No,2023-05-02,null,true,SL,MP25,MP,10,113,SL,MP
+7110009141,Azúcar Moreno >2500i - ASR  Belice,Azúcar Moreno Brown,CONTRATO,TN,No,2023-05-02,null,true,SL,MP25,MP,F005,SF016,SL,MP
+7110004241,Azúcar Moreno >2500i - Azucarera Mauricio,Azúcar Moreno Brown >3700IC,CONTRATO,TN,No,2023-05-02,null,true,SL,MP25,MP,F005,SF016,SL,MP
+7110004161,Azúcar Moreno >2500i - Azucarera Malawi,Azúcar Moreno Brown,CONTRATO,TN,No,2023-05-02,null,true,SL,MP25,MP,F005,SF016,SL,MP
+64096,Mixco Sweet 70-01.5050 Caña,Mixco Sweet 70-01.5050 Caña,Jarabe de azúcar invertido,TN,No,2023-05-05,null,true,BS,PA10,PA,BA,SF040,BS,PA
+7400040061,AZ Blanco EEC Nº2 R-Narkevychi Sugar Plant UCRANIA,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-05-10,null,true,SL,MP01,MP,10,11,SL,MP
+7400041061,Azúcar Blanco EEC Nº2 Remolacha - Radekhvskui,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-05-11,null,true,SL,MP01,MP,10,11,SL,MP
+61144,Mixco Sweet 70-00.4252 T,Mixco Sweet 70-00.4252 T,"Jarabe de Azúcar Invertido, Jarabe de glucosa y fructosa (Origen Trigo)",TN,No,2023-05-11,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+60224,Azúcar invertido 76º,Azúcar invertido 76º,JARABE DE AZUCAR INVERTIDO,TN,No,2023-05-12,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+65013,Azúcar en polvo LS Pallet Plast. CHEP 100x120,Azúcar en polvo LS Pallet Plast. CHEP 100x120,"Azúcar, Dioxido de Silicio (E551)",TN,No,2023-05-18,null,true,SL,PA01,PA,F005,SF018,SL,PA
+7502004011,Correfino EEC Nº2 Caña/Rem Fab - Azucarera España,Azúcar Blanco EEC Nº 2,CONTRATO,TN,No,2023-05-18,null,true,SL,MP07,MP,10,11,SL,MP
+7512004011,Correfino EEC Nº2 Caña/Rem >150i Fab Azucarera Esp,Azucar Blanco 200I,CONTRATO,TN,No,2023-05-18,null,true,SL,MP05,MP,10,11,SL,MP
+7500904011,Correfino EEC Nº2 Caña/Rem - Azucarera España SPOT,Azúcar Blanco EEC Nº 2,CONTRATO,TN,No,2023-05-18,null,true,SL,MP07,MP,10,11,SL,MP
+7500804011,Correfino EEC Nº2 Caña/Rem  Azucarera Esp TRIMESTR,Azúcar Blanco EEC Nº 2,CONTRATO,TN,No,2023-05-18,null,true,SL,MP07,MP,10,11,SL,MP
+40210,AZUCAR BIO 100-400 ES-ECO-024-MU (Agric No UE),AZUCAR BIO 100-400 ES-ECO-024-MU (Agric No UE),AZUCAR BIO 100-400 ES-ECO-024-MU (Agric No UE),TN,No,2023-06-13,2023-06-14,false,SL,MP23,MP,20,21,SL,MP
+7830000000,Azúcar BIO 100-400i NO UE NOP - Generalizado,Azúcar BIO 100-400i NO UE NOP - Generalizado,PRODUCCIÓN,TN,Sí,2023-06-14,null,true,SL,MP23,MP,20,21,SL,MP
+7830033151,Azúcar BIO 100-400 ICUMSA - Elite  India,Azúcar BIO 100-400 ES-ECO-024-MU (Agric No UE),CONTRATO,TN,Sí,2023-06-14,null,true,SL,MP23,MP,20,21,SL,MP
+45006,AZÚCAR BLANCO EEC Nº2 C - PQ01 RETAIL – JUST SUGAR,AZÚCAR BLANCO EEC Nº2 C - PQ01 RETAIL – JUST SUGAR,null,KG,No,2023-06-21,null,true,RT,PA02,PA,10,11,RT,RT
+7600010012,Azúcar Perlado 2-Sudzucker España,Azúcar Perlado 2,CONTRATO,TN,No,2023-06-22,null,true,SL,MP08,MP,F005,SF017,SL,MP
+61287,Fosvitae 95% Plus BIO ES-ECO-024-MU Agric. UE,Fosvitae 95% Plus BIO ES-ECO-024-MU Agric. UE,Jarabe de Fructooligosacáridos (FOS) orgánico / Organic Fructooligosaccharides (FOS) syrup,TN,Sí,2023-06-28,null,true,FB,PA24,PA,F007,SF024,FB,PA
+7840046301,Azúcar BIO 200-800 IC - Azucarera El Viejo C.Rica,Azúcar BIO 200-800 ES-ECO-024-MU (Agric No UE),CONTRATO,TN,Sí,2023-06-28,null,true,SL,MP23,MP,F005,SF014,SL,MP
+7840000000,Azúcar BIO 200-800i NO UE NOP - Generalizado,Azúcar BIO 200-800i NO UE NOP - Generalizado,PRODUCCIÓN,TN,Sí,2023-06-28,null,true,SL,MP23,MP,20,21,SL,MP
+7400047311,Azúcar Blanco EEC Nº2 Remo - Agrana Tull Austria,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-06-28,null,true,SL,MP01,MP,10,11,SL,MP
+60008,Azúcar líquida Neutra 65º,Azúcar líquida Neutra 65º,AZUCAR LIQUIDO,TN,No,2023-07-05,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+62444,Fondant ES-R01 Pallet Plástico 80x120 ZK,Fondant ES-R01 Pallet Plástico 80x120 ZK,"Azúcar, Agua, Jarabe de Glucosa y Fructosa",TN,No,2023-07-13,null,true,LQ,PA03,PA,F008,SF027,LQ,PA
+73001,Azúcar Blanco EEC Nº2 Caña- PAPEL SERIGRAFIADO ZK,Azúcar Blanco EEC Nº 2 Caña,null,TN,No,2023-07-17,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7200039291,Azúcar blanco - Kampong Speu Sugar Camboya,Azúcar Blanco,CONTRATO,TN,No,2023-07-18,null,true,SL,MP14,MP,F005,SF016,SL,MP
+7400048311,Az. Bl. EEC nº2 Remol PTE DEST-Agrana Leop Austria,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2023-07-19,null,true,SL,MP01,MP,F005,SF013,SL,MP
+61288,Mixco Sweet 65-00.5050 LC,Mixco Sweet 65-00.5050 LC,null,TN,No,2023-07-31,null,true,BS,PA05,PA,30,34,BS,PA
+65028,AZÚCAR EN POLVO LS 48m,AZÚCAR EN POLVO LS 48m,Azúcar polvo,TN,No,2023-08-24,null,true,SL,PA01,PA,10,111,SL,PA
+65029,AZÚCAR EN POLVO LS 25m,AZÚCAR EN POLVO LS 25m,Azúcar polvo,TN,No,2023-08-24,null,true,SL,PA01,PA,10,111,SL,PA
+65030,AZÚCAR EN POLVO LM 48m,AZÚCAR EN POLVO LM 48m,Azúcar polvo,TN,No,2023-08-24,null,true,SL,PA01,PA,F005,SF018,SL,PA
+65031,AZÚCAR EN POLVO LM 25-35m,AZÚCAR EN POLVO LM 25-35m,Azúcar polvo,TN,No,2023-08-24,null,true,SL,PA01,PA,10,111,SL,PA
+63102,PEP 58 LM 48,PEP 58,PEP 58,TN,No,2024-05-23,null,true,SL,PA01,PA,F005,SF018,SL,PA
+61290,Mixco Sweet 65-00.5050 HC,Mixco Sweet 65-00.5050 HC,null,TN,No,2023-11-02,null,true,BS,PA05,PA,30,34,BS,PA
+61291,Fosfruit Plus Bio,Fosfruit Plus Bio ES-ECO-024-MU,"Jarabe de fructooligosacáridos, Aroma natural",TN,Sí,2023-11-08,null,true,FB,PA22,PA,F007,SF022,FB,PA
+44141,Glucor 37/79 (ENG),Glucor 37/79,ingredients: Glucose syrup,TN,No,2023-11-15,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+61292,Mixco Sweet 72-00.5050 M1A,Mixco Sweet 72-00.5050 M1A,Jarabe de azúcar invertido,TN,No,2023-11-16,null,true,BS,PA11,PA,BA,SF041,BS,PA
+7300004011,Azúcar Blanco EEC Nº2 Caña- Azucarera  España,Azúcar Blanco EEC Nº 2 CAÑA,CONTRATO,TN,No,2023-11-21,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7310000000,Azúcar Blanco EEC Nº2 Caña-Fair Trade-Generalizado,Azúcar Blanco EEC Nº2 Caña-Fair Trade,PRODUCCIÓN,TN,No,2023-11-21,null,true,SL,MP06,MP,10,11,SL,MP
+7310004011,Azúcar Blanco EEC Nº2 Caña-FairTrade-Azucarera ESP,Azúcar Blanco EEC Nº 2 Caña - FairTrade,CONTRATO,TN,No,2023-11-21,null,true,SL,MP06,MP,F005,SF013,SL,MP
+44112,GLUCOR 60/82 BIO,GLUCOR 60/82 BIO,GLUCOR 60/82 BIO,TN,Sí,2023-11-22,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+61293,Mixco Sweet 70-55.0045,Mixco Sweet 70-55.0045,"Azúcar, Jarabe de glucosa",TN,No,2023-11-23,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+2100050331,Almidon Maiz - ADM Bulgaria,Almidon Nativo de Maíz,CONTRATO,TN,No,2023-11-24,null,true,SL,MP20,MP,F013,SF044,SL,MP
+2100002011,Almidon Maiz - Tereos España,Almidon Nativo de Maíz,CONTRATO,TN,No,2023-12-04,null,true,SL,MP20,MP,F013,SF044,SL,MP
+1210049321,Sorbitol Liquido - Shandong Tianli Pharm - China,Sorbitol Líquido 70% No cristalizable,CONTRATO,TN,No,2023-12-12,null,true,LQ,MP18,MP,F011,SF036,LQ,MP
+1200051321,Sorbitol Polvo-Shandong Lujian Biologic Tech China,Sorbitol en Polvo,CONTRATO,TN,No,2023-12-12,null,true,SL,MP13,MP,F011,SF037,SL,MP
+1100051321,Maltitol Polvo-Shandong Lujian Biologic Tech-China,Maltitol en Polvo Luijan 40 Mesh,Maltitol en Polvo Luijan 20-30 Mesh,TN,No,2023-12-12,null,true,SL,MP12,MP,F011,SF034,SL,MP
+1110049321,Maltitol Liquido - Shandong Tianli Pharm-China,Maltitol 55/75,CONTRATO,TN,No,2023-12-12,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+1110052321,Maltitol Liquido - Hylen  China,Maltitol 55/75,null,TN,No,2023-12-12,null,true,LQ,MP18,MP,60,62,LQ,MP
+1110053321,Maltitol Liquido-Shandong Bailong Bio-Tech - China,Maltitol Líquido 75-5308,JARABE DE MALTITOL ( E-965 ii ),TN,No,2023-12-12,null,true,LQ,MP18,MP,60,62,LQ,MP
+1100002031,Maltitol Polvo - Tereos  Francia,Maltitol en Polvo,CONTRATO,TN,No,2023-12-12,null,true,SL,MP12,MP,60,63,SL,MP
+1210054031,Sorbitol Liquido - Roquette Francia,Sorbitol Líquido 70% No cristalizable,JARABE DE SORBITOL (E-420 ii),TN,No,2023-12-12,null,true,LQ,MP18,MP,F011,SF036,LQ,MP
+1210002031,Sorbitol Liquido - Tereos Francia,Sorbitol Líquido 70% No cristalizable,JARABE DE SORBITOL (E-420 ii),TN,No,2023-12-12,null,true,LQ,MP18,MP,F011,SF036,LQ,MP
+1200002031,Sorbitol Polvo - Tereos Francia,Sorbitol en Polvo,CONTRATO,TN,No,2023-12-12,null,true,SL,MP13,MP,60,62,SL,MP
+3000050341,Fructosa Maiz Cristal Granulada - ADM  Turquía,Fructosa Cristal Granulada,CONTRATO,TN,No,2023-12-18,null,true,SL,MP15,MP,F009,SF028,SL,MP
+3010050341,Fructosa Maiz Cristal Polvo - ADM  Turquía,Fructosa Cristal,CONTRATO,TN,No,2023-12-18,null,true,SL,MP15,MP,F009,SF028,SL,MP
+3020050341,Fructosa Maiz Cristal Disolving - ADM  Turquía,Fructosa Cristal solo fabricación,PRODUCCION,TN,No,2023-12-18,null,true,SL,MP15,MP,F009,SF028,SL,MP
+3100055351,Fructosa Remolacha Cristal - Galam  Israel,Fructosa Remolacha Cristal,CONTRATO,TN,No,2023-12-18,null,true,SL,MP31,MP,10,12,SL,MP
+3210002201,Fructosa Trigo Líquida 95/71 - Tereos  Belgica,FRUCTOSA LÍQUIDA,CONTRATO,TN,No,2023-12-18,null,true,SL,MP27,MP,40,41,LQ,MP
+4000050331,Dextrosa Maiz Cristal Monohidrato - ADM  Bulgaria,Dextrosa Cristal Monohidrato Maíz,CONTRATO,TN,No,2023-12-18,null,true,SL,MP33,MP,F006,SF019,SL,MP
+4110050031,"Dextrosa Trigo Líquida >= 99,5% - ADM Francia","Dextrosa Liquida 99,5",CONTRATO,TN,No,2023-12-20,null,true,LQ,MP26,MP,40,41,LQ,MP
+4111050031,"Dextrosa Trigo líquida <99,5% - ADM Francia",Glucor 99/72,CONTRATO,TN,No,2023-12-20,null,true,LQ,MP26,MP,40,41,LQ,MP
+3000750341,Fructosa Maiz Cristal Granulada-ADM Turquía CUATRI,Fructosa Cristal Granulada,CONTRATO,TN,No,2023-12-20,null,true,SL,MP15,MP,F009,SF028,SL,MP
+3010750341,Fructosa Maiz Cristal Polvo - ADM  Turquía CUATRIM,Fructosa Cristal,CONTRATO,TN,No,2023-12-20,null,true,SL,MP15,MP,F009,SF028,SL,MP
+3020750341,Fructosa Maiz Cristal Disolving-ADM Turquía CUATRI,Fructosa Cristal solo fabricación,PRODUCCION,TN,No,2023-12-20,null,true,SL,MP15,MP,F009,SF028,SL,MP
+5100050031,Fructor 10/81 - ADM  Francia,Fructor 10/81,Jarabe de Glucosa y Fructosa,TN,No,2023-12-20,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5100750031,Fructor 10/81 - ADM  Francia CUATRIMESTRAL,Fructor 10/81,Jarabe de Glucosa y Fructosa,TN,No,2023-12-20,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5100002011,Fructor 10/81 - Tereos  España,Fructor 10/81,Jarabe de Glucosa y Fructosa,TN,No,2023-12-20,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5101050031,Fructor 10/77 - ADM  Francia,Fructor 10/77,Jarabe de Glucosa y Fructosa,TN,No,2023-12-20,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5101750031,Fructor 10/77 - ADM  Francia CUATRIMESTRAL,Fructor 10/77,Jarabe de Glucosa y Fructosa,TN,No,2023-12-20,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5101002011,Fructor 10/77 - Tereos  España,Fructor 10/77,Jarabe de Glucosa y Fructosa,TN,No,2023-12-20,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5101056021,Fructor 10/77 - Copam  Portugal,Fructor 10/77,Jarabe de Glucosa y Fructosa,TN,No,2023-12-20,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5102002011,Fructor 42/71 - Tereos  España,Fructor 42/71,JARABE DE GLUCOSA Y FRUCTOSA,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5200050031,Glucor 60/82 - ADM  Francia,Glucor 60/82,JARABE DE GLUCOSA,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5200750031,Glucor 60/82 - ADM  Francia CUATRIMESTRAL,Glucor 60/82,JARABE DE GLUCOSA,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5200002011,Glucor 60/82 - Tereos  España,Glucor 60/82,JARABE DE GLUCOSA,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5201050031,Glucor 45/80 - ADM  Francia,Glucor 45/80,Jarabe de Glucosa,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5201750031,Glucor 45/80 - ADM  Francia CUATRIMESTRAL,Glucor 45/80,Jarabe de Glucosa,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5201002011,Glucor 45/80 - Tereos España,Glucor 45/80,Jarabe de Glucosa,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5201056021,Glucor 45/80 - Copam  Portugal,Glucor 45/80,Jarabe de Glucosa,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5202057361,Glucor 45/80 BIO ES-ECO-024-MU - Blattmann  Suiza,Glucor 45/80 Bio ES-ECO-024-MU,Glucor 45/80 Bio ES-ECO-024-MU,TN,Sí,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5205050031,Glucor 37/79 - ADM  Francia,Glucor 37/79,JARABE DE GLUCOSA,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5205750031,Glucor 37/79 - ADM  Francia CUATRIMESTRAL,Glucor 37/79,JARABE DE GLUCOSA,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5205002011,Glucor 37/79 - Tereos  España,Glucor 37/79,JARABE DE GLUCOSA,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5206050031,Maltor 70/80 - ADM  Francia,Maltor 70/80,JARABE DE GLUCOSA					,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5206750031,Maltor 70/80 - ADM  Francia CUATRIMESTRAL,Maltor 70/80,JARABE DE GLUCOSA					,TN,No,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5207957361,Glucor 60/79 BIO,Glucor 60/79 Bio ES-ECO-024-MU (Agric no UE),Glucor 60/79 Bio ES-ECO-024-MU (Agric no UE),TN,Sí,2023-12-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+4100002201,Dextrosa Trigo Cristal Monoh PTE DEST-Tereos Belgi,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Pdte. Destino TER,TN,No,2023-12-22,null,true,SL,MP16,MP,F006,SF019,SL,MP
+4100054031,Dextrosa Trigo Cristal Monoh PTE DEST-Roquette FR,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Pdte. Destino RTT,TN,No,2023-12-22,null,true,SL,MP16,MP,10,13,SL,MP
+4100058321,Dextrosa Trigo Cristal MonPTE DEST-Henan Feit CHN,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Pdte. Destino - HEINAN FEITIAN-CHINA,TN,No,2023-12-22,null,true,SL,MP16,MP,10,13,SL,MP
+4120002201,Dextrosa Trigo Cristal Monoh VTA-Tereos Belgica,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Venta TER,TN,No,2023-12-22,null,true,SL,MP16,MP,F006,SF019,SL,MP
+4120054031,Dextrosa Trigo Cristal Monoh VTA-Roquette Francia,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Venta RTT,TN,No,2023-12-22,null,true,SL,MP16,MP,F006,SF019,SL,MP
+4130002201,Dextrosa Trigo Cristal Monoh CONS-Tereos Belgica,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Cons Líquida TER,TN,No,2023-12-22,null,true,SL,MP16,MP,10,13,SL,MP
+4130054031,Dextrosa Trigo Cristal Monoh CONS-Roquette Francia,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Cons Líquida RTT,TN,No,2023-12-22,null,true,SL,MP16,MP,10,13,SL,MP
+4130058321,Dextrosa Trigo Cristal Monoh CONS-Henan Feit China,Dextrosa Cristal Monohidrato Trigo,Dextrosa Trigo Cristal Monoh consumo -HF CHINA,TN,No,2023-12-22,null,true,SL,MP16,MP,10,13,SL,MP
+4140002201,Dextrosa Trigo Cristal Monoh. HI - Tereos Belgica,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo  Cons Liquida HI TER,TN,No,2023-12-22,null,true,SL,MP16,MP,F006,SF019,SL,MP
+4140054031,Dextrosa Trigo Cristal Monoh HI - Roquette Francia,Dextrosa Cristal Monohidrato Trigo,Dextrosa Trigo Cristal Monoh HI - RTT,TN,No,2023-12-22,null,true,SL,MP16,MP,F006,SF019,SL,MP
+3210058321,Fructosa Trigo Líquida 95/71 - Henan Feitian China,FRUCTOSA LÍQUIDA,CONTRATO,TN,No,2023-12-22,null,true,SL,MP27,MP,40,41,LQ,MP
+61294,Mixco Sweet 68-00.5050 M1,Mixco Sweet 68-00.5050 M1,Jarabe de Azúcar invertido,TN,No,2024-01-17,null,true,BS,PA11,PA,BA,SF041,BS,PA
+5101756021,Fructor 10/77 - Copam  Portugal CUATRIMESTRAL,Fructor 10/77,Jarabe de Glucosa y Fructosa,TN,No,2023-12-27,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5201756021,Glucor 45/80 - Copam  Portugal CUATRIMESTRAL,Glucor 45/80,Jarabe de Glucosa,TN,No,2023-12-27,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5100056021,Fructor 10/81 - Copam  Portugal,Fructor 10/81,Jarabe de Glucosa y Fructosa,TN,No,2023-12-27,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5100756021,Fructor 10/81 - Copam  Portugal CUATRIMESTRAL,Fructor 10/81,Jarabe de Glucosa y Fructosa,TN,No,2023-12-27,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5100856021,Fructor 10/81 - Copam  Portugal TRIMESTRAL,Fructor 10/81,Jarabe de Glucosa y Fructosa,TN,No,2024-01-09,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5101856021,Fructor 10/77 - Copam  Portugal TRIMESTRAL,Fructor 10/77,Jarabe de Glucosa y Fructosa,TN,No,2024-01-09,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5201856021,Glucor 45/80 - Copam  Portugal TRIMESTRAL,Glucor 45/80,Jarabe de Glucosa,TN,No,2024-01-09,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+7399999991,Azúcar Blanco EEC Nº2 Caña-Mix diferentes origenes,Azúcar Blanco EEC Nº2 Caña,Mix varios origenes.,TN,No,2024-01-18,null,true,SL,MP06,MP,10,11,SL,MP
+1200060321,Sorbitol Polvo-Guangdong Huanfa China,Sorbitol Polvo,null,TN,No,2024-01-25,null,true,SL,MP13,MP,60,62,SL,MP
+61295,Mixco Sweet 70-10.4644,Mixco Sweet 70-10.4644,Jarabe de azúcar invertido,TN,No,2024-01-29,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61296,Mixco Sweet 70-00.5050 RCI,Mixco Sweet 70-00.5050 RCI,Jarabe de azúcar invertido,TN,No,2024-01-30,null,true,BS,PA05,PA,BA,SF039,BS,PA
+60134,"Azúcar PI 73,5-67C> 45 Icu- P.completo para Abejas","Azúcar PI 73,5-67C> 45 Icu- P.Completo Para Abejas","Jarabe de azúcar invertido, conservante: sorbato potásico",TN,No,2024-02-08,null,true,AP,PA14,PA,F002,SF003,AP,PA
+2210037021,Melaza Caña - Sidul  Portugal,Melaza de Caña,Melaza,TN,No,2024-02-13,null,true,LQ,MP22,MP,F010,SF032,LQ,MP
+1200049321,Sorbitol Polvo-Shandong Tianli Pharm. China,Sorbitol Polvo,null,TN,No,2024-02-21,null,true,SL,MP13,MP,F011,SF037,SL,MP
+43054,MALTITOL EN POLVO E-965i,MALTITOL EN POLVO E-965i,Destinado a la alimentación.No destinado a la venta al por menor.PARA LA OPTIMA CONSERVACION DE ESTOS PRODUCTOS:Conservar en lugar fresco y secoProteger de los rayos solares,TN,No,2024-02-26,null,true,SL,MP12,MP,F011,SF034,SL,MP
+2321002031,Fosbeet 95% 72º Brix Tereos Francia,Fibra Actilight 950S,CONTRATO,TN,No,2024-03-04,null,true,FB,PA21,MP,60,62,FB,MP
+59002,Hive Alive,Hive Alive (Suplemento apicultura),Hive Alive (Suplemento apicultura),TN,No,2024-03-07,null,true,SL,MP30,MP,90,95,SL,MP
+62033,Jarabe Hive Alive,Jarabe Hive Alive,Jarabe de azúcar parcial invertido con un extra de fructosa y el suplemento Hive Alive.,TN,No,2024-03-07,null,true,AP,PA16,PA,F001,SF001,AP,PA
+5100054011,Fructor 10/81 -Roquette España,Fructor 10/81,Jarabe de Glucosa y Fructosa,TN,No,2024-03-20,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5101054011,Fructor 10/77 - Roquette España,Fructor 10/77,Jarabe de Glucosa y Fructosa,TN,No,2024-03-20,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5200054011,Glucor 60/82 - Roquette  España,Glucor 60/82,JARABE DE GLUCOSA,TN,No,2024-03-20,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+7800059261,Azúcar BIO Caña NOP - Incauca Colombia,Azúcar BIO Caña ES-ECO-024-MU Ag No UE NOP,CONTRATO,TN,Sí,2024-03-21,null,true,SL,MP10,MP,F005,SF014,SL,MP
+5201054011,Glucor 45/80 - Roquette España,Glucor 45/80,Jarabe de Glucosa,TN,No,2024-03-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5205054011,Glucor 37/79 - Roquette España,Glucor 37/79,JARABE DE GLUCOSA,TN,No,2024-03-21,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+61297,Mixco Sweet 72-34.3333,Mixco Sweet 72-34.3333,Jarabe de azúcar invertido.,TN,No,2024-03-21,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61166,Mixco Sweet Plus-M 82-05.5537,Mixco Sweet Plus-M 82-05.5537,Jarabe de azúcar invertido,TN,No,2024-04-12,null,true,BS,PA10,PA,BA,SF040,BS,PA
+7320007131,Az Blanco EEC Nº2 Caña Bonsucro-Cassa El Salvador,Azúcar Blanco EEC Nº 2 Caña Bonsucro,CONTRATO,TN,No,2024-04-15,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7320015111,Az Blanco EEC Nº2 CÑ Bonsucro-Pantaleon Guatemala,Azúcar Blanco EEC Nº 2 Caña Bonsucro,CONTRATO,TN,No,2024-04-15,null,true,SL,MP06,MP,F005,SF013,SL,MP
+7320000000,Azúcar Blanco EEC Nº2 Caña-Bonsucro-Generalizado,Azúcar Blanco EEC Nº2 Caña-Bonsucro-Generalizado,PRODUCCIÓN,TN,No,2024-04-15,null,true,SL,MP06,MP,10,11,SL,MP
+7240007131,DC Raw Sugar >3500I - Cassa El Salvador,DC Raw Sugar >3500 icumsa,CONTRATO,TN,No,2024-04-24,null,true,SL,MP34,MP,F005,SF016,SL,MP
+32010,PREMIX Apipasta Plus-Piensa completo- Apicultura,PREMIX Apipasta Plus-Piensa completo- Apicultura,"Azucar, jarabe de glucosa",TN,No,2024-04-24,null,true,AP,PA13,SM,70,71,AP,PA
+4100061371,Dextrosa Trigo Cristal Monoh PTE DEST-Pepees PL,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Pdte. Destino PEPEES,TN,No,2024-04-29,null,true,SL,MP16,MP,10,13,SL,MP
+4120061371,Dextrosa Trigo Cristal Monoh VTA-Pepees Polonia,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Venta PEPEES,TN,No,2024-04-29,null,true,SL,MP16,MP,10,13,SL,MP
+4130061371,Dextrosa Trigo Cristal Monoh CONS-Pepees Polonia,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Cons Líquida PEPEES,TN,No,2024-04-29,null,true,SL,MP16,MP,10,13,SL,MP
+4140061371,Dextrosa Trigo Cristal Monoh. HI - Pepees Polonia,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo  Cons Liquida HI PEP,TN,No,2024-04-29,null,true,SL,MP16,MP,10,13,SL,MP
+99151,SUB RE PO REPROCESADO,SUB RE PO REPROCESADO,SUB RE PO REPROCESADO,TN,No,2024-05-08,null,true,SL,PA01,PA,10,11,SL,PA
+99152,SUB RE PO MAH,SUB RE PO MAH,SUB RE PO MAH,TN,No,2024-05-08,null,true,SL,PA01,PA,10,11,SL,PA
+99153,SUB RE PO UF,SUB RE PO UF,SUB RE PO UF,TN,No,2024-05-08,null,true,SL,PA01,PA,10,11,SL,PA
+45007,AZÚCAR BLANCO-PQ01 RETAIL-JUST SUGAR-PT,AÇUCAR BRANCO-PQ01 RETAIL JUST SUGAR-PT,null,KG,No,2024-05-09,null,true,RT,PA02,PA,10,11,RT,RT
+61298,Fosvitae 95% Plus 74º,Fosvitae 95% Plus 74º,Jarabe de Fructooligosacáridos,TN,No,2024-05-13,null,true,FB,PA24,PA,F007,SF023,FB,PA
+62091,Mix Abejorros 65-34.3333 Pienso Completo-Apicult,Mix Abejorros 65-34.3333 Pienso Completo-Apicult,Jarabe de azúcar invertido,TN,No,2024-05-14,null,true,AP,PA18,PA,F001,SF001,AP,PA
+4100062171,Dextrosa Trigo Crist.Mon.PTE DEST-Cargill Alemania,Dextrosa Cristal Monohidrato Trigo,Dextrosa Trigo Crist.Mon.PTE DEST-Cargill Alemania,TN,No,2024-05-17,null,true,SL,MP16,MP,10,13,SL,MP
+4120062171,Dextrosa Trigo Cristal Monoh.VTA-Cargill Alemania,Dextrosa Cristal Monohidrato Trigo,Dextrosa Trigo Cristal Monoh.VTA-Cargill Alemania,TN,No,2024-05-17,null,true,SL,MP16,MP,10,13,SL,MP
+4120058321,Dextrosa Trigo Crist.Mon.VTA-Henan Feitian China,Dextrosa Cristal Monohidrato Trigo,Dextrosa Trigo Crist.Mon.VTA-Henan Feitian China,TN,No,2024-05-17,null,true,SL,MP16,MP,10,13,SL,MP
+4130062171,Dextrosa Trigo Crist.Monoh.CONS-Cargill Alemania,Dextrosa Cristal Monohidrato Trigo,Dextrosa Trigo Crist.Monoh.CONS-Cargill Alemania.,TN,No,2024-05-17,null,true,SL,MP16,MP,10,13,SL,MP
+4140062171,Dextrosa Trigo Cristal Monoh.HI-Cargill Alemania,Dextrosa Cristal Monohidrato Trigo,Dextrosa Trigo Cristal Monoh.HI-Cargill Alemania,TN,No,2024-05-17,null,true,SL,MP16,MP,10,13,SL,MP
+4140058321,Dextrosa Trigo Crist.Monoh.HI-Henan Feitian China,Dextrosa Cristal Monohidrato Trigo,Dextrosa Trigo Crist.Monoh.HI-Henan Feitian China,TN,No,2024-05-17,null,true,SL,MP16,MP,10,13,SL,MP
+30041,Fuctosa Remolacha 69,Fuctosa Remolacha 69,null,TN,No,2024-05-17,null,true,LQ,null,SM,30,34,LQ,PA
+62092,Mix Abejorros 60-34.3333 Pienso Completo - Apicult,Mix Abejorros 60-34.3333 Pienso Completo - Apicult,"Jarabe de azúcar invertido, fructosa",TN,No,2024-05-20,null,true,AP,PA18,PA,F001,SF001,AP,PA
+61299,Mixco Sweet 71-00.5050 U,Mixco Sweet 71-00.5050 U,Jarabe de azúcar invertido,TN,No,2024-05-17,null,true,BS,PA12,PA,BA,SF043,BS,PA
+3100063381,Fructosa Remolacha Cristal-Danisco Finlandia,Fructosa Remolacha Cristal,CONTRATO,TN,No,2024-05-24,null,true,SL,MP31,MP,10,12,SL,MP
+7800064151,Azúcar BIO Caña <45i NO UE NOP-MRN Cane India,Azúcar BIO Caña <45i NO UE NOP,CONTRATO,TN,Sí,2024-05-27,null,true,SL,MP10,MP,20,21,SL,MP
+1110060321,Maltitol Liquido-Huangfa China,Maltitol Líquido 55/75,null,TN,No,2024-06-11,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+61300,Mixco Sweet 65-00.5050 UH,Mixco Sweet 65-00.5050 UH,Jarabe de azúcar invertido,TN,No,2024-06-26,null,true,BS,PA12,PA,BA,SF043,BS,PA
+61301,Mixco Sweet 65-00.5050 IH,Mixco Sweet 65-00.5050 IH,Jarabe de azúcar invertido,TN,No,2024-06-26,null,true,BS,PA11,PA,30,34,BS,PA
+46383,Aditivo abejas HiveAlive,Aditivo abejas HiveAlive,Aditivo abejas HiveAlive,KG,No,2024-06-26,null,true,AP,null,CO,90,95,LQ,CO
+64097,Mixco Sweet 72-30.3535 100 ICU,Mixco Sweet 72-30.3535 100 ICU,"Jarabe de azúcar invertido, azúcar",TN,No,2024-06-27,null,true,BS,PA10,PA,BA,SF040,BS,PA
+2331065321,FOS 95% Polvo-Shandong Starlight So True China,Fosvitae 95% Plus polvo,CONTRATO,TN,No,2024-07-08,null,true,FB,PA30,MP,F007,SF025,FB,MP
+7250007131,DC Raw Sugar 2000-3500i - Cassa El Salvador,Azúcar Moreno 2000-3500 icumsa,CONTRATO,TN,No,2024-09-05,null,true,SL,PA25,MP,F005,SF016,SL,MP
+7250000000,AZ 2000-3500 ICUMSA-Generalizado,AZ 2000-3500 ICUMSA-Generalizado,PRODUCCIÓN,TN,No,2024-09-05,null,true,SL,PA25,MP,10,11,SL,MP
+61302,Mixco Sweet 70-00.5050 UH,Mixco Sweet 70-00.5050 UH,Jarabe de azúcar invertido,TN,No,2024-09-10,null,true,BS,PA12,PA,BA,SF043,BS,PA
+61303,Fosvitae R 85 - 74º,Fosvitae 85 - 74º,Jarabe de fructooligosacáridos,TN,No,2024-09-17,null,true,FB,PA23,PA,F007,SF023,FB,PA
+62034,Jarabe Hive Alive C,Jarabe Hive Alive C,"Jarabe de azúcar parcial invertido con un extra de fructosa y el suplemento Hive Alive, Sorbato potásico",TN,No,2024-09-26,null,true,AP,PA16,PA,F001,SF001,AP,PA
+7620010201,Azúcar Perlado 2-Sudzucker Belgica,Azúcar Perlado 2,CONTRATO,TN,No,2024-10-10,null,true,SL,PA27,MP,F005,SF017,SL,MP
+7610010201,Azúcar Perlado 1-Sudzucker Belgica,Azúcar Perlado 1,CONTRATO,TN,No,2024-10-10,null,true,SL,PA26,MP,F005,SF017,SL,MP
+7400010171,Az. Bl. EEC nº2 Remol. PTE DEST-Sudzucker Alemania,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2024-10-16,null,true,SL,MP01,MP,F005,SF013,SL,MP
+1110066321,Maltitol Liquido-Yusweet China,Maltitol Líquido 55/75,null,TN,No,2024-11-11,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+4100067321,Dextrosa Trigo Cristal Mon.PTE DEST-Pengyuan China,Dextrosa Cristal Monohidrato Trigo,null,TN,No,2024-11-13,null,true,SL,MP16,MP,10,13,SL,MP
+4120067321,Dextrosa Trigo Cristal Monoh.VTA- Pengyuan China,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Venta Shanghai Yigu,TN,No,2024-11-13,null,true,SL,MP16,MP,10,13,SL,MP
+4130067321,Dextrosa Trigo Cristal Monoh.CONS- Pengyuan China,Dextrosa Cristal Monohidrato Trigo,Dextrosa Cristal Monoh Trigo Cons Líquida Shanghai Yigu,TN,No,2024-11-13,null,true,SL,MP16,MP,10,13,SL,MP
+4140067321,Dextrosa Trigo Cristal Monoh.HI- Pengyuan China,Dextrosa Cristal Monohidrato Trigo,Dextrosa Trigo Crist.Monoh.HI-Shanghai Yigu,TN,No,2024-11-13,null,true,SL,MP16,MP,10,13,SL,MP
+7250029261,Raw Sugar 3000-3500 IC - Mayagüez Colombia,Azúcar Moreno >3000 icumsa,CONTRATO,TN,No,2024-11-28,null,true,SL,PA25,MP,10,11,SL,MP
+61304,Mixco Sweet 72-40.3030 M1A4,Mixco Sweet 72-40.3030 M1A4,Jarabe de azúcar invertido,TN,No,2024-11-29,null,true,BS,PA11,PA,BA,SF041,BS,PA
+61305,Mixco Sweet 68-00.5050 UH,Mixco Sweet 68-00.5050 UH,Mixco Sweet 68-00.5050 U,TN,No,2024-12-02,null,true,BS,PA12,PA,BA,SF043,BS,PA
+61306,Mixco Sweet 72-40.3030 M1A3,Mixco Sweet 72-40.3030 M1A3,Jarabe de azúcar acidificado,TN,No,2024-12-05,null,true,BS,PA11,PA,BA,SF041,BS,PA
+61307,Mixco Sweet 65-50.2525,Mixco Sweet 65-50.2525,Jarabe de azúcar invertido,TN,No,2024-12-12,null,true,BS,PA05,PA,BA,SF039,BS,PA
+1110068321,Maltitol Liquido – Luzhou Bio-Chem China,Maltitol Líquido 55/75,null,TN,No,2024-12-18,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+61308,Mixco Sweet 71-00.5050 RCI,Mixco Sweet 71-00.5050 RCI,null,TN,No,2025-01-08,null,true,BS,PA05,PA,BA,SF039,BS,PA
+60225,Azúcar Invertido 72º Caña,Azúcar Invertido 72º Caña,Jarabe de azúcar invertido,TN,No,2025-01-13,null,true,BS,PA05,PA,BA,SF039,BS,PA
+60226,Azúcar Invertido 72º Remolacha,Azúcar Invertido 72º Remolacha,Jarabe de azúcar invertido,TN,No,2025-01-13,null,true,BS,PA05,PA,BA,SF039,BS,PA
+7401002031,Az. Bl. EEC nº2 Remol CON TURBIDEZ-Tereos Francia,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2025-01-21,null,true,SL,MP01,MP,F005,SF013,SL,MP
+7402002031,Az. Bl. EEC nº2 Remol SIN TURBIDEZ-Tereos Francia,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2025-01-21,null,true,SL,MP01,MP,F005,SF013,SL,MP
+61309,Mixco Sweet 63-00.5050 I,Mixco Sweet 63-00.5050 I,null,TN,No,2025-01-30,null,true,BS,PA11,PA,30,34,BS,PA
+5206002011,Maltor 70/80 – Tereos España,Maltor 70/80,JARABE DE GLUCOSA					,TN,No,2025-01-31,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+46384,CITRATO TRIPOTASICO MONOHIDRATO,CITRATO TRIPOTASICO MONOHIDRATO,CITRATO TRIPOTASICO MONOHIDRATO,KG,No,2025-02-04,null,true,LQ,null,CO,AC01,AC007,SP,SP
+61310,Mixco Sweet 72-09.6427 M6,Mixco Sweet 72-09.6427 M6,Jarabe de azúcar invertido,TN,No,2025-02-04,null,true,BS,PA08,PA,30,34,BS,PA
+64098,Mixco Sweet 72-53.2323 M5,Mixco Sweet 72-53.2323 M5,Azúcar líquido invertido,TN,No,2025-02-04,null,true,BS,PA10,PA,BA,SF040,BS,PA
+7811070401,Azúcar BIO <500i NO UE - Mitr Laos NOP,Azúcar BIO <500i ES-ECO-024-MU Ag No UE NOP,CONTRATO,TN,Sí,2025-02-05,null,true,SL,MP39,MP,F005,SF014,SL,MP
+7860064151,Azúcar BIO Caña <45i NO UE-MRN Cane India,Azúcar BIO Caña <45i ES-ECO-024-MU Ag No UE,CONTRATO,TN,Sí,2025-02-05,null,true,SL,MP38,MP,F005,SF014,SL,MP
+99154,CAMB PLO DNV,CAMB PLO DNV,CAMBOYA EN PALOTS DN,TN,No,2025-02-11,null,true,SL,MP06,PA,10,11,SL,PA
+99155,CAMB BBDNV,CAMB BBDNV,SUB RE CAMBOYA BIG BAG DN,TN,No,2025-02-11,null,true,SL,MP06,PA,10,11,SL,PA
+99156,CAMB PLO DNV > 45,CAMB PLO DNV > 45,CAMBOYA EN PALOTS DN,TN,No,2025-02-12,null,true,SL,MP06,PA,10,11,SL,PA
+99157,CAMB BBDNV > 45,CAMB BBDNV > 45,SUB RE CAMBOYA BIG BAG DN,TN,No,2025-02-12,null,true,SL,MP06,PA,10,11,SL,PA
+7401010171,Az.Bl.EEC nº2Remol CON TURBIDEZ-Sudzucker Alemania,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2025-02-18,null,true,SL,MP01,MP,10,11,SL,MP
+7402010171,Az.Bl.ECC nº2Remol SIN TURBIDEZ-Sudzucker Alemania,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2025-02-18,null,true,SL,MP01,MP,10,11,SL,MP
+7401048311,Az.Bl.EEC nº2 Remol CON TURBID-Agrana Leop Austria,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2025-02-25,null,true,SL,MP01,MP,10,11,SL,MP
+7402048311,Az.Bl.EEC nº2 Remol SIN TURBID-Agrana Leop Austria,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2025-02-25,null,true,SL,MP01,MP,10,11,SL,MP
+46385,ACIDO L-MALICO PLUS,ACIDO L-MALICO PLUS,ACIDO L-MALICO PLUS,KG,No,2025-02-28,null,true,LQ,null,CO,AC01,AC007,SP,SP
+7250069391,Az moreno 2000-3000i - Monte Rosa Nicaragua,Azúcar Moreno 2000-3000 icumsa,CONTRATO,TN,No,2025-02-28,null,true,SL,PA25,MP,10,11,SL,MP
+60251,Azúcar TIEN 67-100 R,TIEN 67-100 R,Jarabe de azúcar invertido,TN,No,2025-04-02,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+61311,Mixco Sweet 68-00.5050 RC V2 100 IC,Mixco Sweet 68-00.5050 RC V2 100 IC,Jarabe de azúcar invertido,TN,No,2025-04-02,null,true,BS,PA05,PA,BA,SF039,BS,PA
+3000000000,Fructosa Maiz Cristal Granulada-Generalizado,Fructosa Maiz Cristal Granulada-Generalizado,Genérico,TN,No,2025-04-04,null,true,SL,MP15,MP,10,12,SL,MP
+3010000000,Fructosa Maiz Cristal Polvo-Generalizado,Fructosa Maiz Cristal Polvo-Generalizado,Genérico,TN,No,2025-04-04,null,true,SL,MP15,MP,10,12,SL,MP
+3020000000,Fructosa Maiz Cristal Disolving - Generalizado,Fructosa Maiz Cristal Disolving - Generalizado,Genérico,TN,No,2025-04-04,null,true,SL,MP15,MP,10,12,SL,MP
+3100000000,Fructosa Remolacha Cristal - Generalizado,Fructosa Remolacha Cristal - Generalizado,Genérico,TN,No,2025-04-04,null,true,SL,MP31,MP,10,12,SL,MP
+3210000000,Fructosa Trigo Líquida - Generalizado,Fructosa Trigo Líquida - Generalizado,Genérico,TN,No,2025-04-04,null,true,SL,MP27,MP,10,12,SL,MP
+5100000000,Fructor 10/81-Generalizado,Fructor 10/81-Generalizado,null,TN,No,2025-04-04,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5101000000,Fructor 10/77-Generalizado,Fructor 10/77-Generalizado,null,TN,No,2025-04-04,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5102000000,Fructor 42/71-Generalizado,Fructor 42/71-Generalizado,Jarabe de glucosa y fructosa,TN,No,2025-04-04,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5200000000,Glucor 60/82-Generalizado,Glucor 60/82-Generalizado,null,TN,No,2025-04-04,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5201000000,Glucor 45/80-Generalizado,Glucor 45/80-Generalizado,null,TN,No,2025-04-04,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5202000000,Glucor 45/80 BIO-Generalizado,Glucor 45/80 BIO-Generalizado,null,TN,Sí,2025-04-04,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5205000000,Glucor 37/79-Generalizado,Glucor 37/79-Generalizado,null,TN,No,2025-04-04,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5206000000,Maltor 70/80-Generalizado,Maltor 70/80-Generalizado,null,TN,No,2025-04-04,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+5207000000,Glucor 60/79 BIO-Generalizado,Glucor 60/79 BIO-Generalizado,null,TN,Sí,2025-04-04,null,true,LQ,MP17,MP,F010,SF030,LQ,MP
+4000000000,Dextrosa Maiz Cristal Monohidrato-Generalizado,Dextrosa Maiz Cristal Monohidrato-Generalizado,null,TN,No,2025-04-04,null,true,SL,MP33,MP,10,13,SL,MP
+4100000000,Dextrosa Trigo Cristal Monoh.PTE DEST-Generalizado,Dextrosa Trigo Cristal Monoh.PTE DEST-Generalizado,null,TN,No,2025-04-04,null,true,SL,MP16,MP,10,13,SL,MP
+4120000000,Dextrosa Trigo Cristal Monoh.VTA-Generalizado,Dextrosa Trigo Cristal Monoh.VTA-Generalizado,null,TN,No,2025-04-04,null,true,SL,MP16,MP,10,13,SL,MP
+4130000000,Dextrosa Trigo Cristal Monoh.CONS -Generalizado,Dextrosa Trigo Cristal Monoh.CONS -Generalizado,null,TN,No,2025-04-04,null,true,SL,MP16,MP,10,13,SL,MP
+4140000000,Dextrosa Trigo Cristal Monoh.HI-Generalizado,Dextrosa Trigo Cristal Monoh.HI-Generalizado,null,TN,No,2025-04-04,null,true,SL,MP16,MP,10,13,SL,MP
+4110000000,"Dextrosa Trigo Líquida >=99,5%-Generalizado","Dextrosa Trigo Líquida >=99,5%-Generalizado",null,TN,No,2025-04-04,null,true,LQ,MP26,MP,40,41,LQ,MP
+4111000000,"Dextrosa Trigo líquida <99,5%-Generalizado","Dextrosa Trigo líquida <99,5%-Generalizado",null,TN,No,2025-04-04,null,true,LQ,MP26,MP,40,41,LQ,MP
+1100000000,Maltitol Polvo-Generalizado,Maltitol Polvo-Generalizado,null,TN,No,2025-04-04,null,true,SL,MP12,MP,60,63,SL,MP
+1110000000,Maltitol Liquido-Generalizado,Maltitol Liquido-Generalizado,null,TN,No,2025-04-04,null,true,LQ,MP18,MP,60,62,LQ,MP
+1210000000,Sorbitol Liquido-Generalizado,Sorbitol Liquido-Generalizado,null,TN,No,2025-04-04,null,true,LQ,MP18,MP,60,62,LQ,MP
+1200000000,Sorbitol Polvo-Generalizado,Sorbitol Polvo-Generalizado,null,TN,No,2025-04-04,null,true,SL,MP13,MP,60,63,SL,MP
+2100000000,Almidon Maiz-Generalizado,Almidon Maiz-Generalizado,null,TN,No,2025-04-04,null,true,SL,MP20,MP,90,91,SL,MP
+2210000000,Melaza Caña-Generalizado,Melaza Caña-Generalizado,null,TN,No,2025-04-04,null,true,LQ,MP22,MP,40,42,LQ,MP
+2321000000,Fibra Remolacha Líquida 95%-Generalizado,Fibra Remolacha Líquida 95%-Generalizado,null,TN,No,2025-04-04,null,true,FB,PA21,MP,60,62,FB,MP
+61312,Mixco Sweet 72-00.5050 I,Mixco Sweet 72-00.5050 I,Jarabe de Azúcar invertido,TN,No,2025-04-07,null,true,BS,PA11,PA,BA,SF041,BS,PA
+61313,Mixco Sweet 72-00.5050 M1A3,Mixco Sweet 72-00.5050 M1A3,Jarabe de azúcar invertido,TN,No,2025-04-07,null,true,BS,PA11,PA,30,34,BS,PA
+61314,Mixco Sweet 72-00.5050 M1A4,Mixco Sweet 72-00.5050 M1A4,Jarabe de azúcar invertido,TN,No,2025-04-07,null,true,BS,PA11,PA,30,34,BS,PA
+99158,AZÚCAR BLANCO DNV - APICULTURA,AZÚCAR BLANCO DNV - APICULTURA,AZÚCAR BLANCO DNV - APICULTURA,TN,No,2025-04-08,null,true,SL,null,PA,10,11,SL,PA
+64099,ATI 65º CBY,ATI 65º CBY,Jarabe de azúcar invertido,TN,No,2025-04-10,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61315,Mixco Sweet 65-00.5050 RCI,Mixco Sweet 65-00.5050 RCI,Jarabe de azúcar invertido,TN,No,2025-04-11,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61167,Mixco Sweet 80-01.7227,Mixco Sweet 80-01.7227,"Jarabe de glucosa y fructosa, fructosa, melaza de caña",TN,No,2025-04-30,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+60135,"Azúcar PI 73,5-67 VH","Azúcar PI 73,5-67 VH",JARABE DE AZUCAR INVERTIDO,TN,No,2025-05-08,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+2332065321,FOS 95% Granular-Shandong Starlight So True China,Fosvitae 95% Plus polvo,CONTRATO,TN,No,2025-05-09,null,true,FB,PA30,MP,F007,SF025,FB,MP
+60252,Azúcar TIEN 67.100 Caña,Azúcar TIEN 67.100 Caña,Jarabe de azúcar invertido,TN,No,2025-05-12,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60302,Lemonox,Lemonox,EXTRACTO DE LIMÓN (ERIOCITRINA),KG,No,2025-05-16,null,true,LQ,PA28,PA,ES,ES01,LQ,PA
+40261,Melaza de remolacha - Uso Animal y Agricultura,Melaza de remolacha,Melaza,TN,No,2025-05-20,null,true,LQ,MP22,MP,F010,SF032,LQ,MP
+61316,Mixco Sweet Plus M 82-05.5537 MC,Mixco Sweet Plus M 82-05.5537 MC,Jarabe de azúcar invertido,TN,No,2025-05-29,null,true,BS,PA05,PA,30,34,LQ,PA
+1110071320,Maltitol Liquido – Shandong Grain Rain China,Maltitol Líquido 55/75,null,TN,No,2025-06-06,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+7200000411,>45 ICUMSA-Peru,Azúcar Blanco,CONTRATO,TN,No,2025-06-12,null,true,SL,MP14,MP,F005,SF016,SL,MP
+62035,PIAPI 74 Pienso completo – Apicultura,PIAPI 74 Pienso completo – Apicultura,"Jarabe de azúcar invertido, conservante; sorbato potásico(1k202). Sciroppo di zucchero invertito, conservante; sorbato di potassio (1k202)",TN,No,2025-07-08,null,true,AP,PA16,PA,F001,SF001,AP,PA
+2340072321,FOS 95% Polvo BIO NO UE-Baolingbao Biology China,Fosvitae 95% Plus Polvo Bio ES-ECO-024-MU Ag No UE,CONTRATO,TN,Sí,2025-07-10,null,true,FB,PA30,MP,F007,SF026,FB,MP
+43006,MALTITOL 55/72,MALTITOL 55/72,Jarabe de maltitol,TN,No,2025-07-11,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+1110073320,Maltitol Liquido-Huakang China,Maltitol Líquido 55/75,null,TN,No,2025-07-17,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+43055,Maltitol,Maltitol,Destinado a la alimentación. Uso restringido en los alimentos.,TN,No,2025-08-26,null,true,SL,MP12,MP,F011,SF034,SL,MP
+64104,Mixco Sweet 70.5-53.2323 FIL 100 Icu,Mixco Sweet 70.5-53.2323 FIL 100 Icu,Jarabe de azúcar invertido,TN,No,2025-09-01,null,true,BS,PA10,PA,BA,SF040,BS,PA
+61317,Mixco Sweet 82-40.2832,Mixco Sweet 82-40.2832,null,TN,No,2025-09-05,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+64106,Mixco Sweet 72-53.2323 R,Mixco Sweet 72-53.2323 R,Azúcar líquido invertido,TN,No,2025-09-09,null,true,BS,PA10,PA,30,34,BS,PA
+99159,Apipasta PLUS – Material No recuperable,Apipasta PLUS – Material No recuperable,null,KG,No,2025-09-04,null,true,AP,null,EN,70,71,AP,EN
+99160,Apipasta PLUS – Desechos plásticos,Apipasta PLUS – Desechos plásticos,null,KG,No,2025-09-04,null,true,AP,null,EN,70,71,AP,EN
+44339,Apipasta PLUS-Pienso Apicultura (Barquetas en IBC),Apipasta PLUS - Pienso para Apicultura,null,TN,No,2025-09-04,null,true,AP,PA15,PA,70,72,AP,PA
+7600002031,Azúcar Granulado Extrafino-Tereos Francia,Azúcar Granulado Extrafino,CONTRATO,TN,No,2025-09-26,null,true,SL,MP08,MP,F005,SF015,SL,MP
+44340,Apipasta PLUS-Pienso Apicultura(Bajo Peso/Sellado),Apipasta PLUS - Pienso para Apicultura,null,TN,No,2025-09-04,null,true,AP,PA15,PA,F003,SF006,AP,PA
+44341,ApipastaPLUS-Pienso Apicultura(Rotas),Apipasta PLUS - Pienso para Apicultura (Rotas),null,TN,No,2025-09-04,null,true,AP,PA15,PA,F012,SF038,AP,PA
+61318,Mixco Sweet 82-40.2832 Caramelo,Mixco Sweet 82-40.2832 Caramelo,"Jarabe de azúcar invertido, Azúcar",TN,No,2025-09-15,null,true,LQ,PA06,PA,30,34,LQ,PA
+7400074421,Azúcar Blanco EEC Nº2 Remol-ABF British Inglaterra,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2025-09-25,null,true,SL,MP01,MP,10,11,SL,MP
+7401074421,Az.Bl. EECnº2 Remo CON TURBIDEZ-British Inglaterra,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2025-09-25,null,true,SL,MP01,MP,10,11,SL,MP
+7402074421,Az.Bl. EECnº2 Remo SIN TURBIDEZ-British Inglaterra,Azúcar Blanco EEC Nº 2 REMOLACHA,CONTRATO,TN,No,2025-09-25,null,true,SL,MP01,MP,10,11,SL,MP
+7880075151,Azúcar BIO <70ic Api NO UE-Lockmangal India,Azúcar BIO Caña <70ic Api ES-ECO-024-UM AG No UE,null,TN,Sí,2025-10-01,null,true,SL,MP40,MP,20,21,SL,MP
+64107,ATI 72º CBY,ATI 72º CBY,Jarabe de azúcar invertido,TN,No,2025-10-02,null,true,BS,PA05,PA,BA,SF039,BS,PA
+7600010031,Azúcar Granulado Extrafino XF-Sudzucker Francia,Azúcar Granulado Extrafino,CONTRATO,TN,No,2025-10-10,null,true,SL,MP08,MP,F005,SF015,SL,MP
+99957,Producto Pruebas Apícola ZK-09,Producto Pruebas Apícola ZK-09,null,TN,No,2025-10-13,null,true,AP,PA14,PA,70,78,AP,PA
+99958,Producto Pruebas Apícola ZK-10,Producto Pruebas Apícola ZK-10,null,TN,No,2025-10-13,null,true,AP,PA14,PA,F012,SF038,AP,PA
+60136,Mixco Sweet 71-01.4450,Mixco Sweet 71-01.4450,Jarabe de azúcar invertido,TN,No,2025-10-27,null,true,FB,PA29,PA,F004,SF009,LQ,PA
+64108,"Mixco Sweet 70,5-30.3535 100 ICU FIL","Mixco Sweet 70,5-30.3535 100 ICU FIL",Jarabe de azúcar invertido,TN,No,2025-11-05,null,true,BS,PA10,PA,BA,SF040,BS,PA
+60253,TIEN 67-100 R,TIEN 67-100 R,Jarabe de azúcar invertido,TN,No,2025-11-17,null,true,LQ,MP35,PA,F004,SF009,LQ,PA
+60025,Azúcar Líquida Neutra 67º - Heineken,Azúcar Líquida Neutra 67º - Heineken,Azúcar líquido,TN,No,2026-01-13,null,true,LQ,MP21,PA,F004,SF010,LQ,PA
+61319,Mixco Sweet 72-00.5050 B3,Mixco Sweet 72-00.5050 B3,Jarabe de azúcar invertido,TN,No,2025-11-17,null,true,BS,PA08,PA,BA,SF042,BS,PA
+44342,Apipasta Vitaminas 90% - Pienso Apicultura APIRIF,Apipasta Vitaminas 90% - Pienso Apicultura APIRIF,"AZUCAR, JARABE DE GLUCOSA, PROTEINAS Y VITAMINAS",TN,No,2025-11-19,null,true,AP,PA15,PA,70,72,AP,PA
+61320,Mixco Sweet 55-00.5050 A,Mixco Sweet 55-00.5050 A,Jarabe de azúcar invertido,TN,No,2025-11-20,null,true,BS,PA10,PA,BA,SF040,BS,PA
+44353,Apipasta Vitaminas 90%-Supl.Nutricional apicu(CHI),Apipasta Vitaminas 90%-Supl.Nutricional apicu(CHI),"AZUCAR, JARABE DE GLUCOSA, PROTEINAS Y VITAMINAS",TN,No,2025-11-20,null,true,AP,PA15,PA,F003,SF007,AP,PA
+44354,Apipasta PLUS - Pienso para Apicultura (CHI),Apipasta PLUS - Pienso para Apicultura (CHI),"Azúcar líquido invertido, jarabe de glucosa, levadura de cerveza, complejo vitamínico, conservante (sorbato potásico)",TN,No,2025-11-20,null,true,AP,PA15,PA,F003,SF006,AP,PA
+2321055011,Fibra Remolacha Líquida 95%-Galam España,FOSVITAE 95% 74 B,CONTRATO,TN,No,2025-11-24,null,true,FB,PA21,MP,60,62,FB,MP
+2351055011,Fibra Remolacha Líquida 85%-Galam España,FOSVITAE 85% 74 B,CONTRATO,TN,No,2025-11-24,null,true,FB,PA21,MP,60,62,FB,MP
+44355,Apipasta Nozevit,Apipasta Nozevit,"Azúcar, jarabe de glucosa, Nozevit",TN,No,2025-11-25,null,true,AP,PA13,PA,F012,SF038,AP,PA
+61321,Fosvitae 95% PLUS BIO ES-ECO-024-MU AGRIC NOP,Fosvitae 95% PLUS BIO ES-ECO-024-MU AGRIC NOP,Jarabe de fructooligosacáridos (FOS) orgánico/ Organic Fructooligosaccharides  (FOS) syrup,TN,Sí,2026-01-20,null,true,FB,PA24,PA,F007,SF024,FB,PA
+44356,Apipasta Vitaminas 90%-Pienso para Apicultura(USA),APIPASTA GO - FEED FOR BEES,"Sugar (sucrose), inverted liquid sugar, glucose syrup, fructose, hydrolysed yeast, Niacinamide (98-92-0), D-panthenol (81-13-0), vitamin B2 (83-88-5), vitamin B1 (67-03-8), vitamin B6 (58-56-0), Biotin (58-85-5)",KG,No,2026-01-29,null,true,AP,PA15,PA,70,72,AP,PA
+44357,Apipasta PLUS – Pienso para apicultura (USA),Apipasta PLUS – FEED FOR BEES,"Sugar, glucose syrup, inverted sugar syrup, inactivated yeast, acidity regulator: citric acid, preservative: potassium sorbate, vitamin B3, vitamin C, vitamin B1, vitamin A, vitamin B5, vitamin B6, vitamin B2",KG,No,2026-01-30,null,true,AP,PA15,PA,70,72,AP,PA
+61322,Mixco Sweet 70-80.1010 Caramelo,Mixco Sweet 70-80.1010 Caramelo,"Jarabe de azúcar invertido, caramelo natural",TN,No,2026-02-23,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+62037,APIMIX 75 PYV USA Pienso completo – Apicultura,APIMIX (USA)  Feed For Bees,"Jarabe de azúcar invertido, fructosa, conservante; sorbato potásico (1k202), complejo vitamínico y aminoácidos",KG,No,2026-02-25,null,true,AP,PA16,PA,70,73,AP,PA
+4010050331,Dextrosa Maiz Cristal Monoh. 300-ADM  Bulgaria,Dextrosa Cristal Monohidrato Maíz 300,CONTRATO,TN,No,2026-03-10,null,true,SL,MP33,MP,F006,SF019,SL,MP
+61323,Mixco Sweet 55-00.5050 ASK,Mixco Sweet 55-00.5050 ASK,Jarabe de azúcar invertido acidificado,TN,No,2026-03-13,null,true,BS,PA10,PA,BA,SF040,BS,PA
+61146,Mixco Sweet 75-49.2525,Mixco Sweet 75-49.2525,"Azúcar líquida invertida, Miel",TN,No,2026-03-20,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61147,Mixco Sweet 65-12.3845,Mixco Sweet 65-12.3845,"Jarabe de azúcar invertido, Azúcar, Jarabe de glucosa y fructosa, Dextrosa",TN,No,2026-03-20,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+5105050031,Fructor 20/80 - ADM Francia,Fructor 20/80,JARABE DE GLUCOSA Y FRUCTOSA,TN,No,2026-04-10,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+5104050031,Fructor 25/75-ADM Francia,Fructor 25/75,JARABE DE GLUCOSA Y FRUCTOSA,TN,No,2026-04-10,null,true,LQ,MP17,MP,F010,SF031,LQ,MP
+61324,Mixco Sweet 72-00.7030,Mixco Sweet 72-00.7030,Jarabe de azúcar invertido,TN,No,2026-04-14,null,true,BS,PA08,PA,BA,SF042,BS,PA
+61246,MIXCO SWEET PLUS-M 82-05.5738.,MIXCO SWEET PLUS-M 82-05.5738,null,TN,No,2026-04-22,null,true,BS,PA10,PA,30,34,BS,PA
+44343,APIPROTEIN20,APIPROTEIN20,null,TN,No,2026-04-22,null,true,AP,PA15,PA,F012,SF038,AP,PA
+3211002201,Fructamyl HM-Tereos Belgica,Fructosa Trigo Líquida-Tereos Belgica,CONTRATO,TN,No,2026-04-27,null,true,SL,MP27,MP,40,41,LQ,MP
+2100062011,Almidon Maiz-Cargill España,Almidon Nativo de Maíz,CONTRATO,TN,No,2026-05-15,null,true,SL,MP20,MP,90,91,SL,MP
+3212002201,Fructamyl MM-Tereos Belgica,Fructosa Trigo Líquida-Tereos Belgica,CONTRATO,TN,No,2026-05-18,null,true,SL,MP27,MP,40,41,LQ,MP
+7800077151,Azúcar BIO <45i NO UE NOP-Vitthalrao-Suminte India,Azúcar BIO Caña <45i ES-ECO-024-MU Ag NO UE NOP,CONTRATO,TN,Sí,2026-05-18,null,true,SL,MP10,MP,20,21,SL,MP
+61325,Mix Maltitol Sucralosa,Mix Maltitol Sucralosa,"Jarabe de Maltitol o (E-965 ii), Sucralosa (E955)",TN,No,2026-05-20,null,true,LQ,MP18,PA,F011,SF035,LQ,PA
+64109,ATI 72º,ATI 72º,Jarabe de azúcar invertido,TN,No,2026-05-21,null,true,BS,PA05,PA,BA,SF039,BS,PA
+2333065321,FOS 85% Polvo-Shandong Starlight So True China,FOS 85% Polvo,CONTRATO,TN,Sí,2026-05-26,null,true,FB,PA21,MP,60,62,FB,MP
+2340065321,FOS 95% Polvo BIO ES-ECO-024-MU Ag No UE So True,FOS 95% Polvo BIO ES-ECO-024-MU Ag No UE,CONTRATO,TN,Sí,2026-05-26,null,true,FB,PA21,MP,F007,SF026,FB,MP
+61326,Mixco Sweet 68-00.5050 RCI,Mixco Sweet 68-00.5050 RCI,Jarabe de azúcar invertido,TN,No,2026-06-15,null,true,BS,PA05,PA,BA,SF039,BS,PA
+61329,Mixco Sweet 69-00.9505,Mixco Sweet 69-00.9505,Jarabe de fructosa,TN,No,2026-07-16,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61327,Mixco Sweet 82-55.0002,Mixco Sweet 82-55.0002,"Azúcar, jarabe de glucosa",TN,No,2026-06-30,null,true,LQ,PA06,PA,F004,SF012,LQ,PA
+61328,Fosvitae 85 % Polvo,Fosvitae 85 % Polvo,Fructooligosacáridos,TN,No,2026-06-30,null,true,FB,PA23,PA,F007,SF025,FB,PA
+61330,MIXCO SWEET 62-00.5050 A,MIXCO SWEET 62-00.5050 A,Jarabe de azúcar invertido acidificado,TN,No,2026-07-17,null,true,BS,PA10,PA,F004,SF012,BS,PA
+61331,Mixco Sweet 72-00.5446 M7A6,Mixco Sweet 72-00.5446 M7A6,Jarabe de azúcar invertido acidificado,TN,No,2026-07-21,null,true,BS,PA11,PA,F004,SF012,BS,PA
+44344,APIPROTEIN20 Polvo,APIPROTEIN20 Polvo,Producto proteico polvo para reconstituir con agua y suministrar a las abejas en formato pasta.,TN,No,2026-07-23,null,true,AP,PA15,PA,F003,SF007,AP,PA
+49064,Concentrado de soja NO GMO,Concentrado de soja NO GMO,null,KG,No,2026-07-28,null,true,AP,PA04,MP,F002,76,SL,MP
+49065,Gluten de maíz micronizado NO GMO,Gluten de maíz micronizado NO GMO,null,KG,No,2026-07-28,null,true,AP,PA04,MP,F002,76,SL,MP
+49066,Aceite Esencial Lemongrass,Aceite Esencial Lemongrass,null,KG,No,2026-07-28,null,true,AP,PA04,MP,F002,76,SL,MP
+49067,Aceite de colza,Aceite de colza,null,KG,No,2026-07-28,null,true,AP,PA04,MP,F002,76,SL,MP
+61332,MIXCO SWEET 72-00.4753,MIXCO SWEET 72-00.4753,"Jarabe de azúcar invertido,dextrosa",TN,No,2026-08-03,null,true,BS,PA08,PA,F004,SF012,BS,PA
+1110171320,Maltitol Liquido-Shandong Grain Rain China,Maltitol Líquido 55/80,null,TN,No,2026-08-27,null,true,LQ,MP18,MP,F011,SF033,LQ,MP
+61333,Mixco Sweet 74-00.5050 RC,Mixco Sweet 74-00.5050 RC,Jarabe de azúcar invertido,TN,No,2026-09-03,null,true,BS,PA05,PA,F004,SF012,BS,PA
+44345,Apipasta PLUS- Pienso para Apicultura - CIVAN,Apipasta PLUS- Pienso para Apicultura - CIVAN,"Azúcar líquido invertido, jarabe de glucosa, levadura de cerveza, complejo vitamínico, conservante (sorbato potásico)",TN,No,2026-09-25,null,true,AP,PA15,PA,F003,SF006,AP,PA

@@ -1,0 +1,853 @@
+empresa_lead,origen,sector_lead,n_productos,jaccard,cliente_referencia,sector_cliente,fac_cliente_M_eur,ingredientes_comunes,n_ing_comunes,ingredientes_lead
+Candychoc,Comercializador,Golosinas,2,0.75,"MAK FOOD COMPANY, S.L.",zumos y nectares,42.53,"Azúcar, Azúcar Líquido Invertido, Fructosa, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",6,"Azúcar, Azúcar Líquido Invertido, Fructosa, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Bee And Cee Foods,Comercializador,Salsas y aderezos,4,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Dextrosa, Jarabe de glucosa"
+Beckys,Comercializador,"Golosinas, Chocolate, Galleteros",9,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Dextrosa, Jarabe de glucosa"
+Cacao Sampaka,Comercializador,"Chocolate, Turrón, Bollería",3,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa, Miel pura de abejas"
+Solo Italia,Fabricante,Pastelería,1,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Caramelo natural, Jarabe de glucosa"
+Bolands,Comercializador,Galleteros,1,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Fructosa, Jarabe de glucosa"
+Banketbakkerij,Fabricante,Galleteros,1,1.0,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa"
+Bubblego,Comercializador,Refrescos,3,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Fructosa, Jarabe de glucosa"
+Mccain,Comercializador,Quesos,3,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Dextrosa, Jarabe de glucosa"
+Burtons Biscuit Company,Comercializador,Galleteros,1,1.0,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa"
+Bahlsen,Comercializador,Galleteros,2,1.0,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa"
+Trolli,Fabricante,"Golosinas, Turrón",13,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa, Sorbitol"
+Eurospital,Comercializador,"Cereales, Galleteros",2,1.0,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa"
+Foxs Biscuits,Comercializador,Galleteros,2,1.0,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa"
+Raisio,Comercializador,"Cereales, Galleteros",6,1.0,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa"
+Magdalenas Lazaro,Comercializador,Bollería,2,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa, Sorbitol"
+Penalva Alimentacion,Comercializador,Helados,1,1.0,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa"
+La Dulceria De Murcia,Comercializador,"Bollería, Galleteros",10,0.75,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa, Maltitol"
+Lindt And Sprungli,Fabricante,Chocolate,16,1.0,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa"
+Lion Corporation,Comercializador,Cereales,1,1.0,"QUIRANTE FRUITS, S.L.",zumos y nectares,37.3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa"
+Tootsie Roll Industries,Comercializador,Turrón,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Cadbury,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Mondelez Cr Biscuit Production,Fabricante,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Dolci Preziosi,Comercializador,Turrón,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Action Retail,Comercializador,Chocolate,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Monster Beverage,Comercializador,Refrescos,9,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Chupa Chups,Fabricante,Golosinas,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Bip,Comercializador,"Golosinas, Chocolate",2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Coverna Gmbh,Fabricante,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Witors,Fabricante,Chocolate,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Biscotteria,Comercializador,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Biscotteria Tonon,Comercializador,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Obm Omira,Fabricante,Pastelería,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Coceda,Fabricante,"Barritas y bebidas deportivas, Cervezas, Refrescos",6,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Gebze Organize Sanayi,Fabricante,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Creaciones Jugavi,Comercializador,"Golosinas, Barritas y bebidas deportivas",6,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Palcarsa,Comercializador,Cárnico,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Solo,Fabricante,Bollería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Spar,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Dermofarm,Comercializador,Nutracéuticos,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Crest Suikerwerken,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Comercial Gallo,Comercializador,Salsas y aderezos,6,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Topps,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Tostaderos Sol De Alba,Comercializador,Frutos secos y snacks,3,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Naturalica Foods,Fabricante,Chocolate,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+St Michel Biscuits,Fabricante,"Bollería, Galleteros",3,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Derpan,Fabricante,Bollería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+E Hijos,Comercializador,Cárnico,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Dimi Dulces Iberica,Comercializador,Bollería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Dr Oetker,Fabricante,Pastelería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Brasserie D Achouffe,Fabricante,Cervezas,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Artelactico Caprino,Fabricante,Quesos,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Sweet And Lucky,Fabricante,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Sweet Tec Gmbh,Fabricante,Turrón,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Sweetpeople Confectionery,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Docile Alimentos,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Coppenrath Feingeback,Comercializador,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Cecinas Pablo,Comercializador,Cárnico,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Bedo Imex,Fabricante,Chocolate,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Emmi Dessert,Fabricante,Pastelería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Emmi Dessert Italia,Comercializador,Bollería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Panificadora De Alcala,Fabricante,Panadería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Europe Snacks,Fabricante,Frutos secos y snacks,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Delici,Fabricante,Pastelería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Riba Backwaren,Fabricante,Galleteros,5,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Ricola,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Ferrara Candy Company,Fabricante,Turrón,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Fida,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Flamische Keksfabrik,Fabricante,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Verdener Keks Und Waffelfabrik Hans Freitag,Fabricante,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Gme Oliviero,Fabricante,Chocolate,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Froneri Iberia,Fabricante,Helados,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Froneri Ice Cream.,Fabricante,Helados,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Frutos Secos Auro,Comercializador,"Frutos secos y snacks, Chocolate",4,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Galletas Asinez,Fabricante,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Granarolo,Comercializador,"Lácteos, yogures y postres lácteos",1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+R.G.S.E.A.A,Fabricante,Chocolate,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Cerealto,Comercializador,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Membrillo El Quijote,Comercializador,Turrón,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Mid Dolciaria,Fabricante,Bollería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Hojaldres Alonso,Comercializador,Bollería,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Grupo Nueva Dietetica,Comercializador,"Nutracéuticos, Panadería",2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Haudecoeur,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Ysco France,Fabricante,Helados,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Heller And Strauss,Fabricante,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Hermanos Juan Lopez,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Ias,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Impact Confections,Comercializador,Golosinas,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Industrias Confiteras Antequerana,Comercializador,"Bollería, Galleteros",3,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Jelly Belly Candy,Comercializador,Turrón,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Joaquim Alberti,Fabricante,Cárnico,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Mars Wrigley Confectionery,Fabricante,Chocolate,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Loacker,Comercializador,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Lago Group,Comercializador,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Jutro,Fabricante,Salsas y aderezos,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+SMB SAS,Fabricante,Bollería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Sanchis Mira,Fabricante,Chocolate,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+La Jara Alimentacion,Comercializador,Cárnico,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Lantmannen Axa Pjsc,Fabricante,Chocolate,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Nutkao,Fabricante,Chocolate,3,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Treets,Comercializador,Chocolate,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Zed Candy,Comercializador,Golosinas,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Aldous Bio,Comercializador,Nutracéuticos,2,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Alimentos Granix,Comercializador,Galleteros,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Zero 4 Srl,Fabricante,Pastelería,1,1.0,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,16.35,"Azúcar, Jarabe de glucosa",2,"Azúcar, Jarabe de glucosa"
+Jacobsens Bakery,Fabricante,Galleteros,2,0.75,"SCHREIBER FOODS ESPAÑA, S.L.","lacteos, yogur, postr lac",5.27,"Azúcar, Azúcar Integral, Fructooligosacaridos",3,"Azúcar, Azúcar Integral, Fructooligosacaridos"
+Veg Healthy Food,Comercializador,Frutos secos y snacks,1,1.0,"HEINEKEN ESPAÑA, S.A",cervezas,2.47,Azúcar Líquido,1,Azúcar Líquido
+Transgourmet,Comercializador,"Cárnico, Bollería, Galleteros",5,0.75,"GONZALEZ CARBALLAL, S.L.",piensos ganaderia,2.06,"Azúcar, Dextrosa, Jarabe de glucosa y fructosa",3,"Azúcar, Dextrosa, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Industrias Jijonencas,Fabricante,Helados,2,0.75,"GONZALEZ CARBALLAL, S.L.",piensos ganaderia,2.06,"Azúcar, Dextrosa, Jarabe de glucosa y fructosa",3,"Azúcar, Dextrosa, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Alpro,Comercializador,Alternativas a lácteos,13,0.75,"ALMACENES MIGUEZ 2005,S.L.",piensos ganaderia,1.76,"Azúcar, Fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Fructosa, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Perfetti Van Melle,Comercializador,"Frutos secos y snacks, Golosinas",23,0.8,"SANCHIS MIRA, S.A.",turron,1.72,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",8,"Azúcar, Caramelo natural, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol"
+Union Mels,Fabricante,"Bollería, Galleteros",3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Tradicional Panadera,Fabricante,Panadería,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Tradicional Panaderia,Fabricante,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Trigorico,Comercializador,Panadería,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Turrones Jose Garrigos,Comercializador,Turrón,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Tutichip,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bell,Fabricante,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bell Espana Alimentacion,Fabricante,Cárnico,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Besco Artesanos,Comercializador,Mermeladas y confituras,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bio Darma,Fabricante,Galleteros,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bip Holland Bv,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Biscuiterie Latour,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Black Hat Drinks,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Blanco Distribuciones,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Blanxart,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bm Food Manufacturers,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bodega De Sarria,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bombons Cudie,Comercializador,Chocolate,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bonduelle,Comercializador,Conservas vegetales,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Borggreve,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Borras,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Tostados Y Fritos,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Candy Can,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Candyfresh,Comercializador,Refrescos,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Carl Kuehne,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Brand Development,Fabricante,Turrón,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Brandt Schokoladen,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Brewery Martens,Fabricante,Cervezas,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Brioche Pasquier,Comercializador,Panadería,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Brouwerij Van Steenberge,Fabricante,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Tecnicas De Elaboracion De Salsas,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Teresa Carles Manufacturing,Fabricante,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+The Coca Cola Company,Fabricante,Barritas y bebidas deportivas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+The Coca-Cola Company,Fabricante,Barritas y bebidas deportivas,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+The Lorenz Bahlsen Snack World,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Tiger And Bean,Comercializador,Chocolate,6,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Timmfood,Comercializador,Quesos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Cafe Britt,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Campelos Do Coto,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Campodulce Curados,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Officetotal Food Brands,Comercializador,Galleteros,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Oh La France,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Oriental Industria Alimenticia,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Orkla Group,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+P And P Family Farm,Fabricante,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Packalia,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Paletas Marpa,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mrm,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Muller And Muller,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mundo Pastel,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mv Group Production,Comercializador,Licores,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+N Rgseaa 29 00822,Fabricante,Refrescos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Stollwerck,Fabricante,Galleteros,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Stubbs,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Sucesores De J Ponts,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Supermarches Match,Comercializador,Refrescos,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Carnes Y Vegetales,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Century Pacific Food,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Cervecerias Peruanas Backus,Fabricante,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Cervezas Monte Rei,Fabricante,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Chilera Tapatia,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Choc And Fruit,Comercializador,Chocolate,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Chocolate And Nuts,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Chocolates Torras,Fabricante,Chocolate,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Chocolats De Nord,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Cobodul,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Coco,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Coco Chocolatier,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Special Futures,Comercializador,Refrescos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Splendid Foods,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Comercial Logistica De Calamocha,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Comercial Valquin,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Compania Oleicola Siglo,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Compesca,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Confiserie Rohan,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Confiteria San Cristobal,Fabricante,Bollería,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Congelados De Navarra,Fabricante,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Congrupo,Comercializador,Cereales,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Conservars El Cidaros,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Conservas Calanda,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Dailycer,Fabricante,Cereales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Damm,Comercializador,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Damm Produtos Alimenticios,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Conservas El Cicados,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Conservas El Cidacos,Fabricante,"Salsas y aderezos, Conservas vegetales",2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Conservas Hijos De Manuel Sanchez Basarte,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Conservas Jorge Bujanda,Comercializador,Conservas vegetales,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Conservas Manchegas Antonio,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Conservas Tradicionales De Navarra,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Conservas Vegetales Y Salsas De Los Palacios,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Continente,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Copaval,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Schudeisky,Comercializador,Conservas vegetales,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Schweppes,Comercializador,Refrescos,5,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Silverbogeh,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Sindoni Group,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Smb Gb International House,Comercializador,"Bollería, Galleteros",2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Snackline Food Manufacturing,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Sola De Antequera,Comercializador,"Salsas y aderezos, Conservas vegetales",2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Solen,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Crepan,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Cvo International Nv,Fabricante,Chocolate,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Nawarra Susswaren,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Nectina,Comercializador,Alternativas a lácteos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Nestle Waters,Comercializador,Refrescos,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mg Destilerias,Comercializador,Licores,11,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Millano Group,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mills,Comercializador,Salsas y aderezos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mon Desir,Fabricante,Chocolate,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mondelez Polska Production,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Pan Cota,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Pan De Angel,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Panaderia Artesana Obando,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Davide Campari Milano,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Day And Night,Fabricante,Galleteros,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Delicia,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Delta Cafes,Comercializador,Café,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Delta Foods,Comercializador,Café,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Deoleo Global,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Desalimed,Fabricante,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Destil.leries Maresme Brands SLU,Fabricante,Licores,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Destilerias Espronceda,Comercializador,Licores,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Sc Dobrogea Biscuit Srl,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Eckes Granini,Fabricante,Zumos y néctares,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Develey Polska,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Dharma Foods,Comercializador,Chocolate,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Dietrich Borggreve Zwieback Und Keksfabrik,Fabricante,Galleteros,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Dinova Alimentos,Comercializador,"Salsas y aderezos, Conservas vegetales",10,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Distribuciones Y Representaciones Alimenticias,Comercializador,Conservas vegetales,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Do It,Comercializador,Quesos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Dr Gerard,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Daniel Carpeno E Hijos,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Danone,Fabricante,"Lácteos, yogures y postres lácteos",1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Embotits Salgot,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Saexma,Comercializador,Café,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Sagacor,Comercializador,Frutos secos y snacks,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Sagra,Comercializador,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+San Martin De Porres,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Sanpellegrino,Fabricante,Refrescos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Dug Foodtech,Comercializador,Alternativas a lácteos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Dulca,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Dulcesa Slu,Fabricante,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Dulia Bake,Fabricante,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Eat Easy,Comercializador,Refrescos,4,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Energy Beverages,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ennstal Milch,Fabricante,Café,5,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Es 15.00195/Gu Ce,Fabricante,"Lácteos, yogures y postres lácteos",1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Esnelat,Fabricante,Alternativas a lácteos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Coviran,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Especialidades Lacteas,Fabricante,Pastelería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ecobelda Fruits,Comercializador,Mermeladas y confituras,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+El Barranquillo,Fabricante,"Lácteos, yogures y postres lácteos",2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+El Mesias,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Elaborados Del Ason,Comercializador,Mermeladas y confituras,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Elah Dufour,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Emb 44212L,Fabricante,Pastelería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Emb 56 251 E,Fabricante,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Risi,Comercializador,Galleteros,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Roberto Industria Alimentare,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Roger And Roger,Fabricante,Frutos secos y snacks,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Rosquillas Ledesminas,Comercializador,"Bollería, Galleteros",2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Rot Front Oao,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Rubies In The Rubble,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Rufino 1949,Fabricante,Mermeladas y confituras,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ruipan,Comercializador,"Bollería, Panadería",9,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Embutidos La Hoguera,Fabricante,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Yemas De Santa Teresa,Comercializador,"Frutos secos y snacks, Galleteros",2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Vulpi Seleccion,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Emporio Foods,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Panaderia Milagros,Comercializador,Panadería,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Panaderia Milagros Diaz,Fabricante,Panadería,4,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Panaderia Ntra Sra De La Cabeza,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Panaderias Milagros Diaz,Fabricante,Panadería,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Panales Del Sur,Comercializador,Mermeladas y confituras,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Pancracio Chocolates,Comercializador,Chocolate,5,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Abaceria Del Monasterio,Comercializador,"Salsas y aderezos, Lácteos, yogures y postres lácteos",3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Panzani,Fabricante,Salsas y aderezos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Papas Argente,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mas Plus Next Generation Beverage,Comercializador,Barritas y bebidas deportivas,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+May And Raeburn,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Zps Jamar Szczepaniak,Fabricante,Pastelería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mcilhenny,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Eurofrozen,Fabricante,Quesos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Euromadi,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+3 Toques,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Europralin Sl,Fabricante,Turrón,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+West,Comercializador,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Exclusivas Barreiro,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Exclusivas La Cota,Fabricante,Quesos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ezaki Glico,Comercializador,Galleteros,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Fabricas Lusitana Produtos,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Reitzel,Comercializador,Conservas vegetales,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Remia,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Patisseries Gourmandes,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ricegrowers,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Patiswiss Cikolata Gida,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Fantasy Food Corporation,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Feastables,Comercializador,Chocolate,5,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Feiraco,Comercializador,"Lácteos, yogures y postres lácteos",3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Pellialiments,Comercializador,Conservas vegetales,4,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ferrarini,Comercializador,Cárnico,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ferrero,Fabricante,Chocolate,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Fevertree,Comercializador,Refrescos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Vicky Foods Products,Fabricante,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Aceitunas Brefer,Fabricante,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Fleer,Fabricante,Turrón,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Fonateneda,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Aceitunas Cazorla,Fabricante,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Francesc Collell,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Estilo Kiki,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Etna Confiserie,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Geback,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Especialidades Directas Gastron Micas Del Pais,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Giarola Savem,Comercializador,Vino y derivados del vino,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Glico Manufacturing,Fabricante,Galleteros,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Global Perkasa Jaya,Comercializador,Salsas y aderezos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Aceitunas Karina,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Fratelli Sacla,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Fricodan,Comercializador,Salsas y aderezos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Frigorificos Morales,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Aceitunas Sarasa,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Adpan Europa,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Frumesa,Comercializador,Frutos secos y snacks,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Agrohansa,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+G7,Comercializador,Helados,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ramapastryfood,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Raul Asencio Pastelerias,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Realfooding,Comercializador,Cereales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Refrescos Del Atlantico,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Region,Fabricante,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Galleros Artesanos,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Galleros Artesanos De Rute,Comercializador,Chocolate,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Aguas Danone,Comercializador,Refrescos,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Galletas Rifacli Mediterranean Foods,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Galvan Fernandez Hermanos,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Gamesformotion,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Gautschi Spezialitaten,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Golvan Fernandez Hnos,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Goya Europa,Fabricante,Quesos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Windel,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Greenyard Prepared,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Grupo Conservas Garavilla,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Quinta De Jugais,Fabricante,Mermeladas y confituras,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Quival,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+R G S E A A,Fabricante,"Salsas y aderezos, Conservas vegetales",5,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+R S A,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Weetabix,Comercializador,Cereales,6,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Radeberger Gruppe,Comercializador,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Oatly,Comercializador,"Alternativas a lácteos, Café",7,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Avinyo,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mendes Goncalves,Fabricante,Salsas y aderezos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mensajero,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mercader,Comercializador,Alternativas a lácteos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mexma Food,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Azienda Agricola San Salvatore,Fabricante,Pastelería,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Maison Andresy,Fabricante,Mermeladas y confituras,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Makro,Comercializador,Conservas vegetales,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Malagon Juan Hermanos,Fabricante,Bollería,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Malbi Foods,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mamachris Petfood,Comercializador,Galleteros,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Man Fong,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Manassen Foods,Comercializador,Golosinas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Marin Montejano,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mark Anthony Brands,Comercializador,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Hijos De Rivera,Fabricante,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Hirones Pico,Fabricante,Turrón,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ba Sports Nutrition,Comercializador,Barritas y bebidas deportivas,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Horno Virgen De Los Reyes,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Grupo Haricaman Esencia Manchega,Fabricante,Cereales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Grupo Herdez,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bajamar,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Gruppo Campari,Comercializador,Licores,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Guylian,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Hans Riegelein And Sohn,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Alyan Food Production,Comercializador,Chocolate,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Heineken Espana,Fabricante,Cervezas,5,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Hellema Hallum,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Hellenic Dairies,Fabricante,"Lácteos, yogures y postres lácteos",1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productos Manipulados Abellan,Fabricante,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Amc Grupo,Comercializador,Zumos y néctares,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productos Mata,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productos Pepito,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productos Rume,Comercializador,Bollería,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Progelcone Comercio And Industria,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Q Chocolate,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Queseria Lafuente,Fabricante,Quesos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Amigos Del Postre,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Hengstenberg,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Herederos De Gaspar Perez,Comercializador,Chocolate,12,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Hermanos Hernandez Gonzalez,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Anitin Panes Especiales,Fabricante,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Industrias Lacteas De Granada,Fabricante,Alternativas a lácteos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Italian Dough,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Horticola Daucy,Fabricante,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+I A N S A U,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Antiu Axona,Fabricante,Turrón,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Iberica De Jamones S,Fabricante,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Iberiga Delariones,Fabricante,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productos Churruca,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productos Congelados Selectos 3000,Comercializador,Quesos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productos La Constancia,Comercializador,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ponti,Comercializador,Salsas y aderezos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Proceli,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Proceli Europe,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productes Artesans Cal Enric,Fabricante,Galleteros,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productora Alimenticia General Espanola,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Illycaffe,Comercializador,Café,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Aperitivos Flaper,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Imperial Produtos Alimentares S.A.,Fabricante,Café,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Inbev Belgium,Fabricante,Cervezas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Industrias Alimentarias Navarra,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Industrias Carnicas Villar,Fabricante,Cárnico,4,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Aperitivos Payper,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Industrias Del Bierzo,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Aperitivos Y Extrusionados,Fabricante,Frutos secos y snacks,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+J Garcia Carrion,Comercializador,"Alternativas a lácteos, Refrescos",2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Appetizers and Extruded Products,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Jamones Duriber,Comercializador,Cárnico,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Aguas Font Vella Y Lanjaron,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Valdesiano,Fabricante,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Jordan Cereals,Comercializador,Cereales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Joselin Sobaos Pasiegos Y Quesadas,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Juan Fornes Fornes,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Jules Destrooper,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Planet A Foods,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Planta Industrial De Guatemala,Comercializador,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Pmb International,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mark Antony,Comercializador,Barritas y bebidas deportivas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Mark Walker Drinks,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Vega Baja Foods,Comercializador,"Salsas y aderezos, Conservas vegetales",3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Liven,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lnplr,Fabricante,"Lácteos, yogures y postres lácteos",5,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lnplr Guadalajara,Fabricante,"Lácteos, yogures y postres lácteos",1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lnuf Emb 14630,Fabricante,Pastelería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Vegola Iberica,Fabricante,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Loacker Konfekt,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lopez,Comercializador,Cárnico,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lotte,Comercializador,Zumos y néctares,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lupa,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+M,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Venchi,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lactalis,Fabricante,"Lácteos, yogures y postres lácteos",1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lacteos Yaranza,Fabricante,"Lácteos, yogures y postres lácteos",1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Productos Manzanares,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Arizona Beverages,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Juver Alimentacion,Fabricante,Zumos y néctares,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Kaitxo Kafe I Txokolate,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Kam,Comercializador,Salsas y aderezos,5,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Keurig Dr Pepper,Comercializador,Refrescos,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Kikkoman,Comercializador,Salsas y aderezos,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Kp Snacks,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Kri Kri,Fabricante,"Lácteos, yogures y postres lácteos",3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Arla,Comercializador,"Café, Quesos",3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Pepsico,Fabricante,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Pepsico Beverage Company,Fabricante,Barritas y bebidas deportivas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Arla Foods,Fabricante,Café,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Pham Nguyen,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Pinzgau Milch Produktions,Fabricante,Café,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Krueger,Fabricante,Café,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+L N P L R Guadalajara,Fabricante,Pastelería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+La Boulangere,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+La Canita Del Gourmet Unipessoal,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Astex,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+La Franco Argentine,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+August Storck,Comercializador,"Chocolate, Galleteros",3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+La Molisana,Fabricante,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Laboratorios Almond,Fabricante,Alternativas a lácteos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Biscuiterie La Mere Poulard,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lekkerland,Comercializador,Refrescos,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Les Maitres Laitiers Du Cotentin,Fabricante,Quesos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Levlup,Comercializador,Barritas y bebidas deportivas,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Lindt And Spruengli,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Barilla,Fabricante,Salsas y aderezos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Baronie,Comercializador,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Papes Safor,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Patatas Fatima,Comercializador,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Wesa Feinkost,Fabricante,Quesos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bavaria And Cia,Fabricante,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Al Andalus Delicatessen,Comercializador,Mermeladas y confituras,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Alberto De Miguel,Fabricante,Conservas vegetales,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bb Chocolate Grup,Comercializador,Chocolate,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Alimentos Dos En Uno,Fabricante,Chocolate,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Bcf Conserverie De Fruits De Mer,Comercializador,Refrescos,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Alimentos Polar,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Almacenes Exito,Comercializador,Salsas y aderezos,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Almondy,Fabricante,Bollería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Uniban,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Altesse Quality Food,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Alyan,Fabricante,Chocolate,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Venus Biskuvi,Fabricante,Frutos secos y snacks,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Verbau,Fabricante,Pastelería,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Patatas Fritas Torres,Fabricante,Frutos secos y snacks,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Walkers Shortbread,Comercializador,Galleteros,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Viru Iberica,Comercializador,Conservas vegetales,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Zeisner Feinkost,Comercializador,Salsas y aderezos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+"Unilever España, S.A.",Fabricante,Helados,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Zero Plus 4 Srl,Fabricante,Pastelería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Zpc Flis,Fabricante,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Ab Inbev,Fabricante,Cervezas,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Neuburge Milchwerke,Fabricante,Pastelería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+New York Bakery Company,Comercializador,Panadería,3,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Nichols,Comercializador,Refrescos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Niederrhein Gold Tersteegen,Fabricante,Zumos y néctares,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Noem,Fabricante,"Lácteos, yogures y postres lácteos",1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Novadiet,Comercializador,Nutracéuticos,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Novo Nutrition,Comercializador,Galleteros,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Nt Food,Comercializador,Panadería,1,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Julian Martin,Comercializador,Cárnico,2,1.0,"EUROGRANIZADOS, S.L.U.",helados,1.38,Azúcar,1,Azúcar
+Procell Sport Support,Comercializador,Barritas y bebidas deportivas,3,1.0,"J. GARCIA CARRION, S.A.",vino y derivados del vino,1.35,"Azúcar, Azúcar Líquido Invertido",2,"Azúcar, Azúcar Líquido Invertido"
+London Biscuits Berhad,Comercializador,Galleteros,1,1.0,"J. GARCIA CARRION, S.A.",vino y derivados del vino,1.35,"Azúcar, Azúcar Líquido Invertido",2,"Azúcar, Azúcar Líquido Invertido"
+International Vitamin Corporation,Comercializador,"Turrón, Chocolate, Galleteros",4,1.0,"J. GARCIA CARRION, S.A.",vino y derivados del vino,1.35,"Azúcar, Azúcar Líquido Invertido",2,"Azúcar, Azúcar Líquido Invertido"
+Andros,Comercializador,"Bollería, Conservas vegetales, Galleteros",3,1.0,"J. GARCIA CARRION, S.A.",vino y derivados del vino,1.35,"Azúcar, Azúcar Líquido Invertido",2,"Azúcar, Azúcar Líquido Invertido"
+Brasserie D Achouffee,Fabricante,Cervezas,2,1.0,"J. GARCIA CARRION, S.A.",vino y derivados del vino,1.35,"Azúcar, Azúcar Líquido Invertido",2,"Azúcar, Azúcar Líquido Invertido"
+Tedesco Italia,Fabricante,Bollería,1,1.0,"J. GARCIA CARRION, S.A.",vino y derivados del vino,1.35,"Azúcar, Azúcar Líquido Invertido",2,"Azúcar, Azúcar Líquido Invertido"
+D Borggreve,Fabricante,Galleteros,1,1.0,"J. GARCIA CARRION, S.A.",vino y derivados del vino,1.35,"Azúcar, Azúcar Líquido Invertido",2,"Azúcar, Azúcar Líquido Invertido"
+Grandma Wilds Biscuits,Fabricante,Galleteros,1,1.0,"J. GARCIA CARRION, S.A.",vino y derivados del vino,1.35,"Azúcar, Azúcar Líquido Invertido",2,"Azúcar, Azúcar Líquido Invertido"
+Iberia Foods,Comercializador,"Bollería, Panadería, Galleteros",13,0.8333,"LA TIENDA DEL APICULTOR, S.L.U.",piensos ganaderia,1.27,"Azúcar, Azúcar Integral, Dextrosa, Fructosa, Jarabe de glucosa y fructosa",5,"Azúcar, Azúcar Integral, Dextrosa, Fructosa, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Alimentos Naturales,Comercializador,"Chocolate, Bollería",2,0.8,"LOPEZ FOOD GROUP, S.L.",bolleria,1.23,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa, Jarabe de sorbitol",4,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa, Jarabe de sorbitol"
+Jamones Arroyo,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Queixeria Barral,Comercializador,Quesos,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Hortamed,Fabricante,Conservas vegetales,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Jermi Kasewerk,Fabricante,Quesos,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Juan,Fabricante,Bollería,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Xarcaiba,Comercializador,Cárnico,2,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+J A T S L,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Patroba Nv,Fabricante,Panadería,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Frigorificos Industriales Del Bierzo,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Esteban Espuna,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Rialto Industria Alimentar,Fabricante,Panadería,2,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Eurofrits,Fabricante,"Bollería, Quesos",3,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Emb 27 701 E,Fabricante,Quesos,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Salumifici Granterre,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Marten Fleischwarenfabrik,Fabricante,Cárnico,2,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Encarna Empresa Carnica Asociada,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Mataderos Industriales Soler,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Ramenskiy Konditerskiy Kombinat,Comercializador,Panadería,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Gourmet,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Iberfoods Premium,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Justo,Comercializador,Panadería,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Juanon Artesanos,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Lasus Marsa,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Delika Food Group,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Audens Food,Comercializador,Quesos,2,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Carlotena De Asados,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Chemnitzer Wurstspezialitaten,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Cortadores De Extremadura,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Boadas 1880,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Star Exclusivas,Fabricante,Panadería,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Camic Industries,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Oshee,Fabricante,Barritas y bebidas deportivas,2,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Conservas Martiko,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Cor Alimentacion,Fabricante,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Sierrascoy,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Costa Brava Mediterranean Foods,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Emb 85208A,Fabricante,Frutos secos y snacks,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Roler Espana,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Embutidos Farcedo,Comercializador,Cárnico,2,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Embutidos Goikoa,Comercializador,Cárnico,3,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Subirats,Comercializador,Cárnico,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Schnitzer,Comercializador,Panadería,2,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Tap Tap Food,Fabricante,Salsas y aderezos,1,1.0,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1.11,Dextrosa,1,Dextrosa
+Grupo Ral,Comercializador,Bollería,1,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Tedesco Srl,Fabricante,Bollería,1,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Bazooka Candy Brands,Comercializador,"Golosinas, Turrón",8,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Valsoia,Comercializador,"Alternativas a lácteos, Panadería",6,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Carambar And Co,Comercializador,"Golosinas, Chocolate, Turrón",8,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Sammontana,Fabricante,Helados,1,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Dmk Eis,Fabricante,Helados,1,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Balconi,Comercializador,"Bollería, Galleteros",6,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Galprenova,Comercializador,Bollería,2,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Il Vecchio Forno,Fabricante,Bollería,3,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Kervan Gida,Comercializador,Golosinas,1,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Hershey,Fabricante,Chocolate,3,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa, Sorbitol"
+Lacrem,Fabricante,Helados,1,0.75,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,1.1,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+R And A Bailey And Company,Comercializador,Galleteros,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Metro,Comercializador,"Salsas y aderezos, Mermeladas y confituras, Conservas vegetales",12,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+H And J Bruggen,Fabricante,Cereales,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Herman Kuijper,Comercializador,Pastelería,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Inter Dulces,Comercializador,Golosinas,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Pop It Gourmet,Comercializador,Frutos secos y snacks,4,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Aceites Millas,Fabricante,Salsas y aderezos,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Lambone En Casa,Fabricante,Bollería,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Klaipedos Pienas,Fabricante,Helados,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Pladis,Comercializador,Galleteros,3,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Penalva,Fabricante,Helados,2,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Alfred Ritter,Comercializador,Chocolate,5,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Frutree,Fabricante,Chocolate,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Refresco Iberia,Fabricante,"Barritas y bebidas deportivas, Refrescos",10,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Granderroble Desserts,Fabricante,Bollería,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Panrico,Comercializador,Bollería,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Crestas La Galeta,Comercializador,Helados,2,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Molinos Rio De La Plata,Comercializador,Galleteros,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Mondelez,Fabricante,Galleteros,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Dermisis Biscuit Company,Fabricante,Galleteros,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Dmk,Comercializador,Pastelería,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Elgorriaga,Fabricante,Galleteros,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Galbusera,Comercializador,Galleteros,2,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Covalco,Comercializador,"Salsas y aderezos, Alternativas a lácteos, Mermeladas y confituras, Conservas vegetales",4,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Natra Onati,Fabricante,Chocolate,2,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Confiserie Van Damme,Comercializador,Golosinas,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Compre Y Compare,Comercializador,"Salsas y aderezos, Conservas vegetales",5,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Cacaolat,Comercializador,"Alternativas a lácteos, Bollería, Café",4,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Vega Pelayo,Fabricante,Bollería,2,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Biscuit International Grabower,Fabricante,Golosinas,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Vega Del Ebro,Comercializador,"Salsas y aderezos, Conservas vegetales",3,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Valle De San Juan Palencia,Fabricante,Quesos,1,0.75,"LABORATORIOS ALMOND, S.L.",pasteleria,0.97,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Ohso Nutrition,Comercializador,Salsas y aderezos,2,1.0,"MARTIN BRAUN, S.A.",pasteleria,0.75,"Azúcar, Jarabe de sorbitol",2,"Azúcar, Jarabe de sorbitol"
+Namyang Dairy,Fabricante,Refrescos,3,0.75,"CASTY, S.A.",helados,0.74,"Azúcar, Fructosa, Jarabe de glucosa",3,"Azúcar, Fructosa, Jarabe de glucosa"
+Maina Panettoni,Comercializador,Bollería,1,0.75,"CASTY, S.A.",helados,0.74,"Azúcar, Fructosa, Jarabe de glucosa",3,"Azúcar, Fructosa, Jarabe de glucosa"
+Peiron Torrent,Comercializador,Bollería,1,0.75,"CASTY, S.A.",helados,0.74,"Azúcar, Fructosa, Jarabe de glucosa",3,"Azúcar, Fructosa, Jarabe de glucosa"
+Coloma,Comercializador,Turrón,5,0.75,"CASTY, S.A.",helados,0.74,"Azúcar, Fructosa, Jarabe de glucosa",3,"Azúcar, Fructosa, Jarabe de glucosa"
+Noel Alimentaria,Comercializador,Cárnico,6,0.75,"MELS CARLET, S.L.",piensos ganaderia,0.73,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa"
+Industrias Carnicas D Fiallo,Comercializador,Cárnico,2,0.75,"MELS CARLET, S.L.",piensos ganaderia,0.73,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa"
+Choco Moment,Comercializador,Chocolate,5,0.75,"MELS CARLET, S.L.",piensos ganaderia,0.73,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa"
+Cyl Ibersnacks,Fabricante,Frutos secos y snacks,5,0.75,"MELS CARLET, S.L.",piensos ganaderia,0.73,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa"
+Fundacion Apai,Comercializador,Bollería,3,0.75,"MELS CARLET, S.L.",piensos ganaderia,0.73,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa"
+Wmb Pringles,Fabricante,Frutos secos y snacks,6,0.75,"MELS CARLET, S.L.",piensos ganaderia,0.73,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa"
+Casa Tarradellas,Fabricante,Cárnico,5,0.75,"MELS CARLET, S.L.",piensos ganaderia,0.73,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa"
+Bimbo Donuts Iberia,Comercializador,"Bollería, Helados, Galleteros",9,0.8,"MELS CARLET, S.L.",piensos ganaderia,0.73,"Azúcar, Dextrosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",4,"Azúcar, Dextrosa, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Vidal,Comercializador,"Golosinas, Turrón",18,0.8333,MARIN GIMENEZ HNOS. S.A.,zumos y nectares,0.69,"Azúcar, Azúcar Líquido Invertido, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",5,"Azúcar, Azúcar Líquido Invertido, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Froneri,Comercializador,Helados,9,0.8333,MARIN GIMENEZ HNOS. S.A.,zumos y nectares,0.69,"Azúcar, Azúcar Líquido Invertido, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",5,"Azúcar, Azúcar Líquido Invertido, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Jacques Ijs,Fabricante,Helados,2,0.8333,MARIN GIMENEZ HNOS. S.A.,zumos y nectares,0.69,"Azúcar, Azúcar Líquido Invertido, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",5,"Azúcar, Azúcar Líquido Invertido, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa"
+Grup D Alimentacio Ecologica,Comercializador,Cereales,4,0.75,"CHOCOLATES ALGARRA, S.L.",chocolate,0.45,"Azúcar, Azúcar Integral, Maltitol",3,"Azúcar, Azúcar Integral, Jarabe de glucosa, Maltitol"
+Industria Nacional Alimenticia,Comercializador,Galleteros,1,0.75,"FRIMAR PANADEROS, S.L.",bolleria,0.45,"Azúcar, Azúcar Líquido Invertido, Dextrosa",3,"Azúcar, Azúcar Líquido Invertido, Dextrosa"
+Il Fornaio Del Casale,Comercializador,Bollería,2,0.75,"FRIMAR PANADEROS, S.L.",bolleria,0.45,"Azúcar, Azúcar Líquido Invertido, Dextrosa",3,"Azúcar, Azúcar Líquido Invertido, Dextrosa"
+Goldkenn,Comercializador,Salsas y aderezos,1,0.75,"FRIMAR PANADEROS, S.L.",bolleria,0.45,"Azúcar, Azúcar Líquido Invertido, Dextrosa",3,"Azúcar, Azúcar Líquido Invertido, Dextrosa"
+Goiko Gourmet,Comercializador,Panadería,1,0.75,"FRIMAR PANADEROS, S.L.",bolleria,0.45,"Azúcar, Azúcar Líquido Invertido, Dextrosa",3,"Azúcar, Azúcar Líquido Invertido, Dextrosa"
+Link Snacks,Comercializador,Cárnico,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Mafresa El Iberico De Confianza,Comercializador,Cárnico,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Jocarn De Valencia,Comercializador,Cárnico,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Precocinados Frisa,Fabricante,"Cárnico, Quesos",2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Lion,Fabricante,Galleteros,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+La Tahona De Utiel,Comercializador,Panadería,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Lorena Bakery,Comercializador,Bollería,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Lebros Roasteries,Fabricante,Frutos secos y snacks,3,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Montesierra,Comercializador,Cárnico,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Panamar Bakery Group,Comercializador,Bollería,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Nuova Industria Biscotti Crich,Fabricante,Galleteros,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Millano,Fabricante,Chocolate,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Agricola Filiera Fusero,Fabricante,Pastelería,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Agua Mineral San Benedetto,Comercializador,Barritas y bebidas deportivas,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Messori Ciocolateria,Fabricante,Helados,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Grupo Alejandro Miguel,Comercializador,Cárnico,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+La Alegria Riojana,Comercializador,Cárnico,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Lidl Supermercados,Fabricante,Salsas y aderezos,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Horno De Almansa,Fabricante,Panadería,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Industrias Carnicas Loriente Piqueras,Comercializador,Cárnico,15,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Iberica De Jamones,Comercializador,Cárnico,5,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Frigorificos Industriales De Bierzo,Fabricante,Cárnico,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Frimancha Industrias Carnicas,Comercializador,Cárnico,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Embutidos Canovas,Fabricante,Cárnico,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Embutidos Y Jamones Espana E Hijos,Fabricante,Cárnico,3,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Tft Food,Fabricante,Galleteros,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Brand Hatchers,Comercializador,Turrón,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Roencar,Fabricante,Helados,3,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Boortmalt,Comercializador,Frutos secos y snacks,3,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Chacinerias Diaz,Comercializador,Cárnico,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Biscuits Galicia,Comercializador,Galleteros,3,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Torre De Nunez De Conturiz,Comercializador,Cárnico,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Bimbo,Fabricante,Panadería,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Tutichips,Fabricante,Frutos secos y snacks,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+The Good Stuff Company,Comercializador,Galleteros,6,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Carlafex,Comercializador,Cárnico,4,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Croky,Comercializador,Frutos secos y snacks,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Carnicas Catala,Comercializador,Cárnico,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Gedesco,Comercializador,"Bollería, Quesos",2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Frutos Secos Medina,Fabricante,Frutos secos y snacks,4,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Family Cash,Comercializador,"Frutos secos y snacks, Salsas y aderezos, Cárnico, Chocolate, Conservas vegetales",16,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Dispravia,Comercializador,Bollería,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Socado,Fabricante,Chocolate,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+San Miguel,Comercializador,Cárnico,1,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Sacesa Seleccion,Comercializador,Conservas vegetales,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Sabores De Guijuelo,Fabricante,Cárnico,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Nico Jamones,Comercializador,Cárnico,2,1.0,"PLATOS TRADICIONALES, S.A",platos preparados,0.44,"Azúcar, Dextrosa",2,"Azúcar, Dextrosa"
+Casa Ametller,Comercializador,"Cárnico, Cereales",2,1.0,"PRODUCTOS LA PILARICA, S.A.","especias, aromas,colorant",0.4,"Azúcar, Azúcar Integral, Dextrosa",3,"Azúcar, Azúcar Integral, Dextrosa"
+Herbolario Navarro,Comercializador,"Chocolate, Lácteos, yogures y postres lácteos, Helados, Refrescos, Panadería, Galleteros",13,0.75,"PRODUCTOS LA PILARICA, S.A.","especias, aromas,colorant",0.4,"Azúcar, Azúcar Integral, Dextrosa",3,"Azúcar, Azúcar Integral, Dextrosa, Jarabe de glucosa"
+Taste Of Nature,Comercializador,Chocolate,1,1.0,"PRODUCTOS LA PILARICA, S.A.","especias, aromas,colorant",0.4,"Azúcar, Azúcar Integral, Dextrosa",3,"Azúcar, Azúcar Integral, Dextrosa"
+Emb 29247H,Fabricante,Galleteros,1,1.0,"PRODUCTOS LA PILARICA, S.A.","especias, aromas,colorant",0.4,"Azúcar, Azúcar Integral, Dextrosa",3,"Azúcar, Azúcar Integral, Dextrosa"
+Almendras Capo,Comercializador,"Frutos secos y snacks, Turrón",7,0.8,"JOSE SANDOVAL, S.L.U.",conservas vegetales,0.35,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de maltitol",4,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de maltitol"
+Biotechusa,Comercializador,Barritas y bebidas deportivas,3,0.75,"FRUTAS Y TURRONES, S.A.",turron,0.35,"Azúcar, Jarabe de glucosa, Maltitol",3,"Azúcar, Jarabe de glucosa, Maltitol"
+Antiuxixona,Fabricante,Turrón,2,0.75,"SURIVAN FEEL THE TASTE, S.L.",helados,0.31,"Azúcar, Fructosa, Jarabe de glucosa",3,"Azúcar, Fructooligosacaridos, Fructosa, Jarabe de glucosa"
+Productos Atocha,Fabricante,Bollería,6,0.75,"SURIVAN FEEL THE TASTE, S.L.",helados,0.31,"Azúcar, Fructosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Fructosa, Jarabe de glucosa"
+Life Pro Nutrition,Comercializador,"Barritas y bebidas deportivas, Bollería",15,0.75,"SURIVAN FEEL THE TASTE, S.L.",helados,0.31,"Azúcar, Fructosa, Jarabe de glucosa",3,"Azúcar, Fructosa, Jarabe de glucosa, Maltitol"
+Grupo Apex,Comercializador,Frutos secos y snacks,2,0.75,"SURIVAN FEEL THE TASTE, S.L.",helados,0.31,"Azúcar, Fructosa, Jarabe de glucosa",3,"Azúcar, Fructosa, Jarabe de glucosa, Miel pura de abejas"
+Nutrisport,Comercializador,Barritas y bebidas deportivas,12,0.8333,"MARTINEZ NIETO, S.A.",nutraceuticos,0.3,"Fructooligosacaridos, Fructosa, Jarabe de glucosa, Jarabe de sorbitol, Maltitol",5,"Azúcar, Fructooligosacaridos, Fructosa, Jarabe de glucosa, Jarabe de sorbitol, Maltitol"
+Kids,Comercializador,Frutos secos y snacks,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Koro Handels,Comercializador,"Chocolate, Barritas y bebidas deportivas, Cereales, Galleteros",6,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Les Comtes De Provence,Comercializador,Mermeladas y confituras,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Pano Fruits,Comercializador,Frutos secos y snacks,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Abafoods,Comercializador,"Alternativas a lácteos, Zumos y néctares",3,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Abbot Kinneys,Comercializador,Alternativas a lácteos,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Agrupacion De Cooperativas Lacteas,Fabricante,"Lácteos, yogures y postres lácteos, Pastelería",7,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Luis Portillo Food And Events,Comercializador,Pastelería,2,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Il Sarchio,Comercializador,Galleteros,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Iberfruta Muerza,Comercializador,Mermeladas y confituras,2,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Greenyard,Fabricante,Conservas vegetales,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Mag Job Verwaltung,Comercializador,Chocolate,2,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Neules Artesanes Sant Tirs,Comercializador,Galleteros,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Ouro,Comercializador,Salsas y aderezos,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Nutriops,Comercializador,"Salsas y aderezos, Alternativas a lácteos",3,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Bon Preu,Comercializador,Frutos secos y snacks,4,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Triballat Noyal,Comercializador,Alternativas a lácteos,2,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Via G Amendola,Fabricante,Galleteros,2,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Aneto Natural,Comercializador,Salsas y aderezos,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Viver Kombucha,Comercializador,Refrescos,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Barcelonia Vegan,Comercializador,Galleteros,4,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Barteneja Conservas,Fabricante,Mermeladas y confituras,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Alimentos Tres G,Fabricante,Quesos,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Mun Ferments,Fabricante,Refrescos,3,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Primar Iberica,Fabricante,Mermeladas y confituras,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Pln Distribucion,Comercializador,"Lácteos, yogures y postres lácteos",3,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Kombucha Republik,Comercializador,Refrescos,2,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Panes Ecologicos Del Sur,Fabricante,Bollería,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Casa Grande De Xanceda,Comercializador,"Lácteos, yogures y postres lácteos",3,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Cervesa Espiga,Comercializador,Cervezas,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Cantero De Letur,Comercializador,"Lácteos, yogures y postres lácteos, Refrescos",9,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Boulangerie Patisserie Jp Baeke,Comercializador,Galleteros,2,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Chocolate Organiko,Fabricante,"Chocolate, Galleteros",5,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Codial,Comercializador,"Pastelería, Galleteros",5,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Coronilla,Fabricante,Frutos secos y snacks,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Ecobasics,Comercializador,Cereales,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Sarchio,Comercializador,"Frutos secos y snacks, Chocolate, Galleteros",5,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Santea Products,Comercializador,Galleteros,2,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Dych,Fabricante,"Salsas y aderezos, Mermeladas y confituras",14,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Eco Finia,Comercializador,"Chocolate, Galleteros",6,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Ecoriera,Comercializador,Cárnico,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Biocop Productos Biologicos,Comercializador,Galleteros,5,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Top Single Service,Fabricante,Salsas y aderezos,3,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Vegetalia,Comercializador,Barritas y bebidas deportivas,2,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Sarteneja Conservas,Comercializador,"Salsas y aderezos, Mermeladas y confituras",5,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Essenzo Cacao,Fabricante,Chocolate,1,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Finca La Rosala,Fabricante,Frutos secos y snacks,3,1.0,"ESTUCHADOS FANNY, S.L.",estuchadores,0.25,"Azúcar, Azúcar Integral",2,"Azúcar, Azúcar Integral"
+Biogran,Comercializador,"Barritas y bebidas deportivas, Cereales",9,0.75,"TARBAL FOOD, S.L.",pasteleria,0.25,"Azúcar, Azúcar Integral, Jarabe de glucosa",3,"Azúcar, Azúcar Integral, Jarabe de glucosa, Miel pura de abejas"
+Zero Plus 4,Fabricante,Pastelería,5,1.0,"TARBAL FOOD, S.L.",pasteleria,0.25,"Azúcar, Azúcar Integral, Jarabe de glucosa",3,"Azúcar, Azúcar Integral, Jarabe de glucosa"
+Vipasana Bio,Comercializador,"Cereales, Galleteros",3,1.0,"TARBAL FOOD, S.L.",pasteleria,0.25,"Azúcar, Azúcar Integral, Jarabe de glucosa",3,"Azúcar, Azúcar Integral, Jarabe de glucosa"
+Fdf Flensburger Drageefabrik,Fabricante,Chocolate,1,0.75,"TARBAL FOOD, S.L.",pasteleria,0.25,"Azúcar, Azúcar Integral, Jarabe de glucosa",3,"Azúcar, Azúcar Integral, Caramelo natural, Jarabe de glucosa"
+Luise Handlmaier,Comercializador,Salsas y aderezos,1,1.0,"TARBAL FOOD, S.L.",pasteleria,0.25,"Azúcar, Azúcar Integral, Jarabe de glucosa",3,"Azúcar, Azúcar Integral, Jarabe de glucosa"
+Idilia Foods,Comercializador,"Chocolate, Cereales, Galleteros",23,0.8,"EUROCHOC, S.L.",chocolate,0.24,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa, Maltitol",4,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa, Maltitol"
+Europraline,Fabricante,"Chocolate, Turrón",10,0.8,"EUROCHOC, S.L.",chocolate,0.24,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa, Maltitol",4,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa, Maltitol"
+Pralinart,Comercializador,Chocolate,1,0.75,"CASTER ALIMENTACION, S.L.",salsas y aderezos,0.22,"Azúcar, Jarabe de glucosa, Jarabe de sorbitol",3,"Azúcar, Caramelo natural, Jarabe de glucosa, Jarabe de sorbitol"
+Yupi Indo Jelly Gum,Comercializador,"Golosinas, Turrón",2,1.0,"CASTER ALIMENTACION, S.L.",salsas y aderezos,0.22,"Azúcar, Jarabe de glucosa, Jarabe de sorbitol",3,"Azúcar, Jarabe de glucosa, Jarabe de sorbitol"
+Dulces La Abuela De Quesa,Fabricante,Bollería,1,1.0,"CASTER ALIMENTACION, S.L.",salsas y aderezos,0.22,"Azúcar, Jarabe de glucosa, Jarabe de sorbitol",3,"Azúcar, Jarabe de glucosa, Jarabe de sorbitol"
+Concord Confections,Comercializador,Golosinas,1,1.0,"CASTER ALIMENTACION, S.L.",salsas y aderezos,0.22,"Azúcar, Jarabe de glucosa, Jarabe de sorbitol",3,"Azúcar, Jarabe de glucosa, Jarabe de sorbitol"
+Kneipp,Comercializador,Nutracéuticos,3,0.75,"CASTER ALIMENTACION, S.L.",salsas y aderezos,0.22,"Azúcar, Jarabe de glucosa, Jarabe de sorbitol",3,"Azúcar, Jarabe de glucosa, Jarabe de maltitol, Jarabe de sorbitol"
+Grupo Haricaman,Fabricante,Cereales,1,1.0,"POSTRES DE MESA, S.L.",pasteleria,0.22,"Azúcar, Melaza de caña",2,"Azúcar, Melaza de caña"
+Coca Cola,Comercializador,"Barritas y bebidas deportivas, Refrescos",30,0.75,"SIERRAS ANDALUZAS, S.C.A.",miel,0.21,"Azúcar, Dextrosa, Fructosa",3,"Azúcar, Dextrosa, Fructosa"
+Frito Lay,Comercializador,Frutos secos y snacks,12,0.75,"SIERRAS ANDALUZAS, S.C.A.",miel,0.21,"Azúcar, Dextrosa, Fructosa",3,"Azúcar, Dextrosa, Fructosa"
+Nutriexperience,Comercializador,"Golosinas, Barritas y bebidas deportivas",4,0.75,"TORRONS VICENS, S.L.",turron,0.19,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol",6,"Azúcar, Jarabe de fructosa, Jarabe de glucosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol"
+Dan Foods,Comercializador,Bollería,1,1.0,"DADELOS AGRICOLA, S.L.",piensos ganaderia,0.18,"Azúcar, Fructosa",2,"Azúcar, Fructosa"
+Nutricer,Fabricante,Cereales,3,1.0,"DADELOS AGRICOLA, S.L.",piensos ganaderia,0.18,"Azúcar, Fructosa",2,"Azúcar, Fructosa"
+Distribuciones Juan Luna,Comercializador,Quesos,1,1.0,"DADELOS AGRICOLA, S.L.",piensos ganaderia,0.18,"Azúcar, Fructosa",2,"Azúcar, Fructosa"
+Hong Da Ma Foods,Fabricante,Refrescos,2,1.0,"DADELOS AGRICOLA, S.L.",piensos ganaderia,0.18,"Azúcar, Fructosa",2,"Azúcar, Fructosa"
+Grupo Angel Camacho,Comercializador,"Salsas y aderezos, Mermeladas y confituras, Conservas vegetales",24,1.0,"DADELOS AGRICOLA, S.L.",piensos ganaderia,0.18,"Azúcar, Fructosa",2,"Azúcar, Fructosa"
+Fonbutidos Subirats,Fabricante,Cárnico,1,1.0,"DADELOS AGRICOLA, S.L.",piensos ganaderia,0.18,"Azúcar, Fructosa",2,"Azúcar, Fructosa"
+Sibari Alimentacion De Apicio,Fabricante,Salsas y aderezos,2,1.0,"DADELOS AGRICOLA, S.L.",piensos ganaderia,0.18,"Azúcar, Fructosa",2,"Azúcar, Fructosa"
+Acrimont Foods,Fabricante,"Turrón, Bollería",4,0.8,"COLOMA GARCIA, S.L.",turron,0.15,"Azúcar, Jarabe de maltitol, Maltitol, Sorbitol",4,"Azúcar, Jarabe de maltitol, Maltitol, Sorbitol"
+Emb 01072D,Fabricante,Galleteros,3,0.8,"STOCKMEIER QUIMICA, SLU",agroquimico,0.14,"Azúcar, Dextrosa, Fructosa, Jarabe de glucosa",4,"Azúcar, Azúcar Integral, Dextrosa, Fructosa, Jarabe de glucosa"
+Neversecond Nutrition,Comercializador,Barritas y bebidas deportivas,4,1.0,"PSITTACUS CATALONIA, S.L.",piensos mascotas,0.13,Fructosa,1,Fructosa
+Weekontrol,Comercializador,Nutracéuticos,3,1.0,"PSITTACUS CATALONIA, S.L.",piensos mascotas,0.13,Fructosa,1,Fructosa
+Amanida,Fabricante,Conservas vegetales,1,1.0,"PSITTACUS CATALONIA, S.L.",piensos mascotas,0.13,Fructosa,1,Fructosa
+Bioserum Laboratorios,Comercializador,Nutracéuticos,1,1.0,"PSITTACUS CATALONIA, S.L.",piensos mascotas,0.13,Fructosa,1,Fructosa
+Crown Confectionery,Comercializador,Barritas y bebidas deportivas,5,1.0,"PSITTACUS CATALONIA, S.L.",piensos mascotas,0.13,Fructosa,1,Fructosa
+Scientiffic Nutrition,Comercializador,Barritas y bebidas deportivas,2,1.0,"PSITTACUS CATALONIA, S.L.",piensos mascotas,0.13,Fructosa,1,Fructosa
+Herbalife,Comercializador,Barritas y bebidas deportivas,1,1.0,"PSITTACUS CATALONIA, S.L.",piensos mascotas,0.13,Fructosa,1,Fructosa
+Productos Naturales Capell,Fabricante,Mermeladas y confituras,2,1.0,"PSITTACUS CATALONIA, S.L.",piensos mascotas,0.13,Fructosa,1,Fructosa
+Dulcestepa,Fabricante,"Golosinas, Bollería",3,0.75,SAMECA PRODUTOS QUIMICOS SA,vino y derivados del vino,0.13,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa y fructosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Hona Las Acacias,Fabricante,Bollería,1,0.75,SAMECA PRODUTOS QUIMICOS SA,vino y derivados del vino,0.13,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa y fructosa",3,"Azúcar, Azúcar Líquido Invertido, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+The Bazooka Companies,Comercializador,Golosinas,2,0.75,FERDINAND KREUTZER SABAMÜHLE GMBH,barritas y bebidas deport,0.09,"Azúcar, Jarabe de fructosa, Jarabe de glucosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa"
+Arcor,Comercializador,"Turrón, Chocolate",2,0.75,FERDINAND KREUTZER SABAMÜHLE GMBH,barritas y bebidas deport,0.09,"Azúcar, Jarabe de fructosa, Jarabe de glucosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa"
+Gold Nutrition,Comercializador,Barritas y bebidas deportivas,4,0.75,FERDINAND KREUTZER SABAMÜHLE GMBH,barritas y bebidas deport,0.09,"Azúcar, Jarabe de fructosa, Jarabe de glucosa",3,"Azúcar, Jarabe de fructosa, Jarabe de glucosa"
+"Calidad Pascual, SAU.",Fabricante,Barritas y bebidas deportivas,3,0.75,"TURRONES Y ESPECIALIDADES VIAR, S.A.",turron,0.09,"Jarabe de maltitol, Maltitol, Sorbitol",3,"Jarabe de maltitol, Maltitol, Sorbitol"
+Xox Geback,Fabricante,Frutos secos y snacks,1,0.8,"FRULACT, S.A.","lacteos, yogur, postr lac",0.08,"Azúcar, Azúcar Integral, Jarabe de fructosa, Jarabe de glucosa y fructosa",4,"Azúcar, Azúcar Integral, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Il Mangiarsano,Fabricante,Bollería,2,0.8,"FRULACT, S.A.","lacteos, yogur, postr lac",0.08,"Azúcar, Azúcar Integral, Jarabe de fructosa, Jarabe de glucosa y fructosa",4,"Azúcar, Azúcar Integral, Jarabe de fructosa, Jarabe de glucosa y fructosa"
+Iberlinares,Comercializador,Cárnico,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+La Jara,Fabricante,Cárnico,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+Longevitas Labs,Comercializador,Nutracéuticos,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+Nagual Alimentacion,Comercializador,Panadería,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+Cerealis Produtos,Fabricante,Cereales,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+Carnicas Dfiallo,Fabricante,Cárnico,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+Casa Flores Unimels,Comercializador,Cárnico,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+F.I.R.M.A. ITALIA SPA,Fabricante,Platos preparados,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+Duvel Moortgat,Fabricante,Cervezas,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+La Sagra Mc,Fabricante,Cervezas,1,1.0,"DULCES EL AVION, S.A.",chocolate,0.08,Jarabe de glucosa,1,Jarabe de glucosa
+United Confectionary,Fabricante,Golosinas,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+"BOSTON NUTRACEUTICAL SCIENCE, SL",Fabricante,Nutracéuticos,2,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+Ángel Camacho Alimentación S.L.,Fabricante,Mermeladas y confituras,3,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+United Confectionary S.L,Fabricante,Golosinas,3,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+Beautybears,Comercializador,Nutracéuticos,5,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+Serra Industria Dolciaria,Fabricante,Turrón,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+"EUROGRANIZADOS, S.L",Fabricante,Helados,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+Comercializadora Mexico Americana,Comercializador,Mermeladas y confituras,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+"Crestas La Galeta, S.A. Avda. Valdelaparra N°3",Fabricante,Helados,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+"HELADOS ESTIU, S.A.",Fabricante,Helados,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+Producido en Italia por SERRA INDUSTRIA DOLCIARIA S.R.L.,Fabricante,Golosinas,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+"Moreno Ruiz Hermanos, S.L.",Fabricante,Suplementos deportivos,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+"NESTLÉ ESPAÑA, S.A.",Fabricante,Cereales,4,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+Materne Confilux,Fabricante,Mermeladas y confituras,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+Membrillo Emily S.L.,Fabricante,Mermeladas y confituras,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+"Cantalou, S.A.",Fabricante,Golosinas,2,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+CASA SANTIVERI S.L.,Fabricante,Galleteros,15,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+CENTROS COMERCIALES CARREFOUR SA,Fabricante,Mermeladas y confituras,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+"Andros Granada, SLU",Fabricante,Pastelería,2,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+Balocco,Comercializador,Galleteros,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+faes farma,Fabricante,Nutracéuticos,3,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+"El Cateto, S.L.U.",Fabricante,Bollería,1,1.0,"COMORALI, S.L.",pasteleria,0.08,Jarabe de maltitol,1,Jarabe de maltitol
+Dulcesol,Comercializador,Helados,3,0.8,"ADISTAFARMA, S.L.",medicamentos,0.06,"Azúcar, Fructooligosacaridos, Jarabe de glucosa, Jarabe de maltitol",4,"Azúcar, Fructooligosacaridos, Jarabe de glucosa, Jarabe de maltitol"
+Zaphir,Comercializador,Cárnico,3,1.0,"PRODUCTOS LA MULATA, S.L.",pasteleria,0.05,"Dextrosa, Jarabe de glucosa",2,"Dextrosa, Jarabe de glucosa"
+Andros Granada,Fabricante,Pastelería,3,0.75,TURRON.Y CARAMEL. DE HELLIN SL,golosinas,0.04,"Azúcar, Jarabe de glucosa, Maltitol",3,"Azúcar, Caramelo natural, Jarabe de glucosa, Maltitol"
+"CANDYCHOC, S.A.",Fabricante,Golosinas,4,1.0,"PROBELTE, S.A.U.",agroquimico,0.04,"Dextrosa, Sorbitol",2,"Dextrosa, Sorbitol"
+Uma Investments,Fabricante,Frutos secos y snacks,9,0.75,"VIOKOX, S.A",agroquimico,0.03,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa, Miel pura de abejas"
+Montero Alimentacion,Fabricante,"Lácteos, yogures y postres lácteos, Pastelería",2,0.75,"VIOKOX, S.A",agroquimico,0.03,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa, Sorbitol"
+Bakoma,Fabricante,"Lácteos, yogures y postres lácteos",2,0.75,"VIOKOX, S.A",agroquimico,0.03,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa, Miel pura de abejas"
+Carnicas Serrano,Comercializador,Cárnico,3,0.75,"VIOKOX, S.A",agroquimico,0.03,"Azúcar, Dextrosa, Jarabe de glucosa",3,"Azúcar, Dextrosa, Jarabe de glucosa, Sorbitol"
+Harrison Sport Nutrition,Comercializador,Barritas y bebidas deportivas,20,1.0,"NEOINGREDIENTES - MATERIAS PRIMAS ALIMENTARES, LDA",bolleria,0.03,"Fructosa, Jarabe de glucosa y fructosa",2,"Fructosa, Jarabe de glucosa y fructosa"
+Amway,Comercializador,Nutracéuticos,2,1.0,"BIGMAN NUTRITION, S.L.",suplementos deportivos,0.02,"Dextrosa, Fructosa",2,"Dextrosa, Fructosa"
+Caldos Del Norte,Fabricante,"Salsas y aderezos, Pastelería",3,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Bagley,Comercializador,Galleteros,2,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Mellow,Fabricante,Pastelería,1,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Pm Sweet,Fabricante,Bollería,1,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Mitsuba,Comercializador,Frutos secos y snacks,3,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Novandie,Fabricante,Pastelería,1,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Ludwig Schokolade,Fabricante,Chocolate,1,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Queslider,Comercializador,Pastelería,1,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Pw Spomet,Fabricante,Galleteros,1,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+H West,Fabricante,Cervezas,2,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+United Chocolates,Comercializador,Chocolate,1,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Wiha,Fabricante,Chocolate,4,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Azcaray,Comercializador,"Pastelería, Bollería",3,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Spomet,Comercializador,Galleteros,2,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Dino Corsini,Fabricante,Bollería,1,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Dulymaz,Fabricante,Turrón,2,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Cloetta,Fabricante,Turrón,2,0.75,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,0.02,"Azúcar, Caramelo natural, Jarabe de glucosa",3,"Azúcar, Caramelo natural, Jarabe de glucosa"
+Navson,Comercializador,Nutracéuticos,1,0.75,"IBERIA INGREDIENTS, S.L.",vino y derivados del vino,0.01,"Azúcar, Jarabe de glucosa, Sorbitol",3,"Azúcar, Jarabe de glucosa, Sorbitol"
+Productos Mauri,Fabricante,Turrón,1,0.75,"IBERIA INGREDIENTS, S.L.",vino y derivados del vino,0.01,"Azúcar, Jarabe de glucosa, Sorbitol",3,"Azúcar, Jarabe de glucosa, Sorbitol"
+N.V Biscuiterie Thijs,Fabricante,Bollería,1,0.75,"IBERIA INGREDIENTS, S.L.",vino y derivados del vino,0.01,"Azúcar, Azúcar Líquido Invertido, Sorbitol",3,"Azúcar, Azúcar Líquido Invertido, Sorbitol"
+Mochi Luxury,Fabricante,Helados,2,0.8,"IBERIA INGREDIENTS, S.L.",vino y derivados del vino,0.01,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa, Sorbitol",4,"Azúcar, Azúcar Líquido Invertido, Fructosa, Jarabe de glucosa, Sorbitol"
+Safety Avant Farm,Comercializador,Nutracéuticos,3,0.75,"IBERIA INGREDIENTS, S.L.",vino y derivados del vino,0.01,"Azúcar, Jarabe de glucosa, Sorbitol",3,"Azúcar, Jarabe de glucosa, Sorbitol"
+Brompton House,Comercializador,Bollería,2,0.75,"IBERIA INGREDIENTS, S.L.",vino y derivados del vino,0.01,"Azúcar, Jarabe de glucosa, Sorbitol",3,"Azúcar, Jarabe de glucosa, Sorbitol"
+Slush Puppie,Comercializador,"Golosinas, Turrón",2,0.75,"IBERIA INGREDIENTS, S.L.",vino y derivados del vino,0.01,"Azúcar, Jarabe de glucosa, Sorbitol",3,"Azúcar, Jarabe de glucosa, Sorbitol"
+Tasty And Unique,Comercializador,"Chocolate, Bollería, Galleteros",6,0.75,"IBERIA INGREDIENTS, S.L.",vino y derivados del vino,0.01,"Azúcar, Azúcar Líquido Invertido, Sorbitol",3,"Azúcar, Azúcar Líquido Invertido, Sorbitol"
+Enrique Garrigos Monerris,Fabricante,Turrón,1,1.0,OBRADOR HERMANOS HIGON S.L.U.,chocolate,0.0,"Azúcar, Fructooligosacaridos",2,"Azúcar, Fructooligosacaridos"

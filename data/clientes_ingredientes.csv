@@ -1,0 +1,890 @@
+cod_cliente,nombre_comercial,Sector_3,n_ingredientes,ingredientes,facturacion_total,toneladas_total
+1,"ZUKAN, S.L.U.",miel,1,Azúcar Integral,0.0,0.003
+194,"COFRUTOS, S.A.",zumos y nectares,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",2760422.78,4619.186
+197,"J. GARCIA CARRION, S.A.",vino y derivados del vino,2,"Azúcar, Azúcar Líquido Invertido",1350573.92,1811.7
+198,"JOSE SANDOVAL, S.L.U.",conservas vegetales,4,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de maltitol",353584.8,609.694
+200,MARIN GIMENEZ HNOS. S.A.,zumos y nectares,6,"Azúcar, Azúcar Líquido Invertido, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",694968.2,742.765
+204,"PERNOD RICARD ESPAÑA, S.A.",licores,3,"Azúcar, Azúcar Líquido, Melaza de caña",7148896.14,9321.282
+208,"LICORES Y DERIVADOS, S.A.",licores,2,"Azúcar, Azúcar Líquido",581580.12,1005.48
+210,"POSTRES Y DULCES REINA, S.L.","lacteos, yogur, postr lac",2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.003
+211,"MARTINEZ NIETO, S.A.",nutraceuticos,5,"Fructooligosacaridos, Fructosa, Jarabe de glucosa, Jarabe de sorbitol, Maltitol",295939.206,246.728
+212,"JARCA TURRONES Y DULCES, S.L.",turron,2,"Azúcar, Jarabe de glucosa",4691.15,5.115
+215,"MARTIN BRAUN, S.A.",pasteleria,2,"Azúcar, Jarabe de sorbitol",748499.325,769.906
+220,"PASTELERIA GIMAR, S.L.",pasteleria,5,"Fructooligosacaridos, Jarabe de fructosa, Jarabe de sorbitol, Maltitol, Melaza de caña",0.0,0.005
+223,"PRODUCTOS CUATRO JOTAS, S.L.",pasteleria,2,"Azúcar, Jarabe de sorbitol",11408.26,11.52
+225,"FRUTAS Y CONSERVAS DE MURCIA, S.L.",conservas vegetales,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",1476795.9,3082.38
+230,"HIJOS DE ENRIQUE RECH, S.L.",turron,1,Azúcar,836.0,0.88
+233,"FAROLIVA, S.L.",conservas vegetales,1,Azúcar,13344.0,19.2
+237,"DULCES SANTA CRUZ, S.L.",pasteleria,4,"Azúcar, Azúcar Líquido Invertido, Jarabe de maltitol, Jarabe de sorbitol",84509.5,77.052
+239,"ASOCIACION DE APICULTORES DE VIZCAYA, B.E.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",63264.8,49.900000000000006
+244,"PAPISA, S.L.",helados,2,"Azúcar, Azúcar Integral",2536.0,2.801
+246,"CAMPO BETICA, S.L.",pasteleria,3,"Fructooligosacaridos, Fructosa, Jarabe de fructosa",12577.5,10.002
+247,"PEDRO GUILLEN GOMARIZ, S.L.",conservas vegetales,1,Azúcar Líquido,806872.46,1710.76
+248,"CONSERVAS EL VALLE, S.L.",conservas vegetales,5,"Azúcar Integral, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",5336.0,3.8
+252,"CONSERVAS ALGUAZAS, S.L.",conservas vegetales,1,Azúcar,8229.9,10.15
+259,"EUROGRANIZADOS, S.L.U.",helados,1,Azúcar,1382519.4,2310.0
+261,"EZTIKIDETZA, S.A.T.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",12376.5,11.1
+265,"BLENDHUB, S.L",golosinas,2,"Azúcar, Fructosa",14457.5,20.8
+266,"IBER COCKTAIL, S.L.",conservas pescado,1,Azúcar,295.5,0.4
+271,"LABORATORIOS ALMOND, S.L.",pasteleria,4,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa",974284.4,1118.194
+279,"DULCES Y GOLOSINAS GLORIA, S.L.",golosinas,1,Jarabe de glucosa,78104.182,133.70600000000002
+282,"PRODUCTOS LOZANO, S.L.",galleteros,2,"Azúcar, Jarabe de glucosa y fructosa",15060.0,13.2
+283,"BOLLERIA BJV, S.L.",bolleria,2,"Azúcar, Jarabe de glucosa y fructosa",53131.2,52.36
+284,"PRODUCTOS CABEZAS RIVAS, S.C.A.",pasteleria,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,0.03
+290,"IGH FLAVOURS TECHNOLOGY, S.A.U.",salsas y aderezos,1,Azúcar,0.0,0.005
+295,"EUROCAVIAR, S.A.",conservas pescado,1,Azúcar,95.28,0.08
+297,"TARBAL FOOD, S.L.",pasteleria,3,"Azúcar, Azúcar Integral, Jarabe de glucosa",245746.375,239.264
+302,"BODEGAS Y DESTILERIAS DEL SUR, S.A.",licores,1,Azúcar Líquido,487413.9,958.46
+303,"J.R. SABATER, S.A.",salsas y aderezos,2,"Azúcar, Dextrosa",126834.0,142.7
+304,"FRANFER, S.A.",helados,1,Jarabe de glucosa y fructosa,6161.8,6.02
+311,"PROBELTE, S.A.U.",agroquimico,2,"Dextrosa, Sorbitol",39204.75,31.75
+314,"PASDULCE, S.L.",bolleria,6,"Azúcar Líquido, Dextrosa, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de sorbitol",28526.76,21.24
+317,"ESTUCHADOS FANNY, S.L.",estuchadores,2,"Azúcar, Azúcar Integral",246383.102,363.289
+321,"PRODUCTOS PEPITO, S.L.U.",bolleria,1,Azúcar,17622.7,19.25
+330,"PASTELERIA LOS MELLIZOS, S.L.",pasteleria,2,"Azúcar, Jarabe de glucosa y fructosa",5374.0,7.6000000000000005
+340,"ARTESANOS MENDEZ, S.A.",pasteleria,2,"Azúcar, Jarabe de glucosa",0.0,0.007
+346,"PANARRO FOODS, S.L.",zumos y nectares,6,"Azúcar, Jarabe de glucosa y fructosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",408896.694,536.122
+348,"PRODUCTOS SUR, S.A.U.","especias, aromas,colorant",1,Dextrosa,311625.0,247.5
+353,"QUALITY SPICES, S.L.",conservas pescado,1,Azúcar Integral,0.0,0.002
+354,"DESTILERIAS LA HUERTANA, S.L.",licores,1,Azúcar Líquido,149890.5,282.02
+355,"AZACONSA, S.L.",estuchadores,1,Azúcar Integral,1722.0,2.0500000000000007
+361,"MARTIN GIL, EMILIA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1170.0,0.78
+367,"CASA ROJA MONTEGON, S.L.","especias, aromas,colorant",2,"Dextrosa, Jarabe de glucosa y fructosa",12876.04,15.690999999999999
+378,"FRIDUL, S.A.",chocolate,2,"Azúcar, Jarabe de glucosa y fructosa",48244.340000000004,55.455
+385,"BIOMIP BIOLOGICAL QUALITY, S.L.",abejorros,2,"Azúcar, Jarabe de glucosa y fructosa",440164.28,620.794
+390,"PASTELERIA MANDUL, S.L.",bolleria,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.002
+396,"AGROTRANSFORMADOS, S.A.",conservas vegetales,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",1852115.14,2961.204
+400,"ASOCIACION IND. ALICANTINA DEL HELADO, S.A.",helados,4,"Azúcar, Fructosa, Jarabe de glucosa y fructosa, Maltitol",1472431.53,1515.352
+401,"SOLER GIMENO, S.L.",pasteleria,2,"Azúcar, Jarabe de glucosa",327874.096,488.892
+405,"CHOVI, S.L.",salsas y aderezos,5,"Azúcar, Azúcar Líquido, Dextrosa, Jarabe de glucosa y fructosa, Melaza de caña",784655.905,1076.271
+407,"PRODUCTOS KELMY, S.A.U.",pasteleria,1,Azúcar,166111.6,163.6
+418,"MANUFACTURAS CEYLAN, S.L.","especias, aromas,colorant",4,"Azúcar, Azúcar Integral, Fructosa, Melaza de caña",414117.55,494.98199999999997
+421,"JOSE GARCIA E HIJOS, S.L.",estuchadores,1,Azúcar,113598.0,149.102
+422,"HERMANOS LOPEZ LLORET, S.A.",chocolate,1,Azúcar,68793.0,69.0
+424,"PRODUCTOS MARITOÑI, S.L.",pasteleria,3,"Fructooligosacaridos, Jarabe de fructosa, Jarabe de maltitol",0.0,0.002
+428,"PASTELERIA INDUSTRIAL MONTE TURIA, S.A.",bolleria,1,Azúcar,920318.615,1247.903
+430,"MONZO LUIS, S.L.",helados,5,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa, Jarabe de maltitol",485125.91,607.451
+431,"DICARCONO, S.L.",galleteros,1,Azúcar,1060021.6,1361.04
+432,"CHOCOLATES ALGARRA, S.L.",chocolate,3,"Azúcar, Azúcar Integral, Maltitol",453222.5,663.45
+433,"SANCHIS MIRA, S.A.",turron,9,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",1724181.67,1772.651
+435,"R. MARSILLA, S.A.",chocolate,1,Azúcar,14453.0,22.549999999999997
+436,"TURRONES JOSE GARRIGOS, S.A.",turron,6,"Azúcar, Jarabe de glucosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",790553.29,1392.835
+440,"MAZAPANES Y DULCES DE TOLEDO, S.A.",turron,4,"Azúcar, Jarabe de glucosa y fructosa, Jarabe de sorbitol, Maltitol",221113.0,264.52
+441,"LICORES DROL`S, S.L.",licores,1,Azúcar Líquido,26703.655,42.053000000000004
+444,"LICORES SINC, S.A.",licores,1,Azúcar Líquido,202261.556,328.838
+445,"PASTELERIA ARROYO SANCHEZ, S.L.U.",conservas vegetales,3,"Azúcar, Jarabe de glucosa y fructosa, Jarabe de maltitol",792688.136,1285.092
+448,"ESGIR, S.L.",cereales,6,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de maltitol, Maltitol",106730.41,154.143
+450,"LA FLOR BURGALESA, S.L.",bolleria,8,"Azúcar, Azúcar Integral, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol",368633.43,403.322
+452,"TEICHENNE, S.A.",licores,1,Azúcar Líquido,445932.26,766.54
+453,"AZUCARES LOZANO GARCIA, S.L.",estuchadores,1,Azúcar Integral,1175.0,1.0
+454,"SCKUESTRANCE, S.L.",frutos secos y snacks,1,Jarabe de glucosa,44943.72,51.403999999999996
+456,"HELADOS ESTIU, S.A.",helados,3,"Fructooligosacaridos, Jarabe de fructosa, Maltitol",0.0,0.004
+458,"CASTY, S.A.",helados,4,"Azúcar, Fructosa, Jarabe de glucosa, Jarabe de maltitol",740768.048,1125.06
+459,"VIGARTO, S.L.U.",licores,2,"Azúcar, Azúcar Líquido",10640.43,10.790000000000001
+461,"PRODUCTOS JESUS, S.L.",bolleria,1,Azúcar,16456.0,24.2
+462,"ROMEDUL, S.L.",bolleria,3,"Azúcar, Jarabe de glucosa y fructosa, Jarabe de sorbitol",93398.2,124.015
+463,"REY ALIMENTACION, S.L.",turron,3,"Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa",6120.0,12.002
+465,"INVESTIGACION Y DESARROLLO PANADERO, S.L.",panaderia,2,"Azúcar, Dextrosa",28413.75,25.3
+466,"DULCES LA PONDEROSA, S.L.",turron,1,Azúcar,109866.0,178.2
+470,"PASTELERIA INDUSTRIAL SAN NARCISO, S.A.",bolleria,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.002
+471,"FADICAMO, S.A.",bolleria,1,Azúcar,48089.6,47.2
+472,"CEREALTO VB6, S.L.",cereales,1,Azúcar,66097.2,75.075
+473,"MAZALMENDRA, S.L.",bolleria,3,"Azúcar, Jarabe de glucosa y fructosa, Jarabe de maltitol",350844.83999999997,469.29
+478,"MORENO RUIZ HERMANOS, S.L.",barritas y bebidas deport,4,"Fructooligosacaridos, Fructosa, Jarabe de fructosa, Jarabe de maltitol",417790.92,280.974
+481,"EL CATETO, S.L.",bolleria,4,"Azúcar, Jarabe de maltitol, Jarabe de sorbitol, Maltitol",57955.0,53.01
+484,"PRODUCTOS LA PILARICA, S.A.","especias, aromas,colorant",3,"Azúcar, Azúcar Integral, Dextrosa",400614.175,476.13
+485,"POSTRES LACTEOS ROMAR, S.L.",pasteleria,5,"Azúcar, Azúcar Líquido, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa",33142.4,39.954
+490,"FRUCOPASA, S.A.",conservas vegetales,1,Azúcar Líquido,482342.56,955.86
+492,"ENRIQUE GARRIGOS MONERRIS, S.A.",turron,1,Azúcar,240102.26,429.91
+496,"BODEGAS Y DESTILERIAS VIDAL, S.L.",licores,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",177401.08,420.962
+497,"LICORERA ALBELDENSE, S.L.",licores,1,Azúcar Líquido,1587.52,2.42
+499,"MELS CARLET, S.L.",piensos ganaderia,4,"Azúcar, Dextrosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",729526.31,1051.803
+511,FRUTALCARMO COMERC.IND. PROD.ALIMENTARES LTDA.,mermeladas y confituras,2,"Azúcar, Jarabe de glucosa",199243.0,337.702
+512,"SUGAR'S MAGIC, S.L.",golosinas,1,Jarabe de glucosa,52223.259999999995,87.842
+516,"PAIARROP, S.L.",mermeladas y confituras,1,Azúcar,251126.73,355.831
+517,"DUPAN, S.L.",bolleria,5,"Azúcar, Azúcar Integral, Fructooligosacaridos, Jarabe de fructosa, Jarabe de sorbitol",43292.0,43.757
+518,"PASTELERIA AMPARIN, S.L.",pasteleria,1,Azúcar,3040.0,3.2
+522,"MACROSNACKS, S.L.U.",frutos secos y snacks,1,Azúcar,139449.6,182.4
+523,"CORALIM INGREDIENTS, S.L.","especias, aromas,colorant",6,"Azúcar, Dextrosa, Fructosa, Jarabe de glucosa y fructosa, Jarabe de maltitol, Jarabe de sorbitol",19044.5,19.102
+524,"APIC. HERMANOS ANDRES NIETO, SDAD. COOP.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",25041.5,29.29
+527,"CARNICAS SERRANO, S.L.",carnico,2,"Azúcar, Dextrosa",54965.5,63.801
+528,"MANUFACTURAS COVISAL, S.L.","especias, aromas,colorant",1,Azúcar,23686.0,26.700000000000003
+531,"DESARROLLOS PANADEROS LEVANTINOS, S.L.L.",panaderia,1,Azúcar,9504.4,8.719999999999999
+534,"MC CONSTRUCTION CHEMICAL SPAIN, S.L.",cemento,2,"Azúcar, Azúcar Integral",244758.25,359.551
+535,"FRIMAR PANADEROS, S.L.",bolleria,4,"Azúcar, Azúcar Líquido Invertido, Dextrosa, Jarabe de sorbitol",449460.48,500.82
+541,"PANYPAST GRANADA, S.L.",pasteleria,2,"Azúcar, Jarabe de glucosa y fructosa",3806.4,2.4
+542,"SDAD.ESPAÑOLA COLOR. NATURALES Y AFINES, S.A.U.","especias, aromas,colorant",3,"Azúcar, Jarabe de maltitol, Melaza de caña",1879207.73,2301.662
+546,"E.MORENO, S.L.",turron,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",396982.0,647.602
+548,"LA GONDOLA CONSERVAS VEGETALES, S.L.",conservas vegetales,1,Azúcar,17640.0,24.0
+550,"REPOSTERIA PORTA, S.L.",pasteleria,2,"Azúcar Integral, Fructosa",16112.5,12.25
+551,"ICE CREAM FACTORY COMAKER, S.A.",helados,4,"Azúcar, Fructooligosacaridos, Fructosa, Jarabe de fructosa",805466.8,1121.31
+555,"FORTADUL, S.L.",turron,1,Azúcar,181630.8,297.8
+559,"DULCES OLMEDO GARCIA, S.L.",turron,1,Azúcar,72645.75,88.62
+561,"JOSE MIGUEL POVEDA, S.A.",platos preparados,1,Azúcar,1152.0,1.6
+563,"PROD.BIONATUR.DE CALASPARRA,SA",zumos y nectares,1,Azúcar,93635.13,117.01
+566,"ALMACENES MIGUEZ 2005,S.L.",piensos ganaderia,3,"Azúcar, Fructosa, Jarabe de glucosa y fructosa",1759015.425,1877.9180000000001
+570,"INDALVA, S.L.",agroquimico,1,Azúcar,42959.0,59.7
+575,HORCHATAS Y GRANIZADOS EL MAESTRAZGO SL,helados,1,Azúcar,31064.0,40.8
+577,"FARTONS POLO, S.L.",bolleria,2,"Azúcar, Jarabe de glucosa y fructosa",342495.095,480.78700000000003
+581,TURRON.Y CARAMEL. DE HELLIN SL,golosinas,3,"Azúcar, Jarabe de glucosa, Maltitol",44962.42,45.339999999999996
+582,"HIJOS DE SALVADOR COSTA, S.L.",alternativas a lacteos,2,"Azúcar, Fructosa",143088.75,165.625
+585,"COLOMA GARCIA, S.L.",turron,5,"Azúcar, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",154846.32,146.904
+587,"DESTILERIAS RIOS, S.A.",licores,1,Azúcar Líquido,1436.4,1.2
+592,"FRAMAJOVA, S.L",pasteleria,6,"Azúcar, Azúcar Integral, Azúcar Líquido, Azúcar Líquido Invertido, Fructooligosacaridos, Jarabe de fructosa",385750.65,353.12
+593,"APISOL, S.A",miel,1,Jarabe de glucosa y fructosa,0.0,0.005
+594,"CERVERO AUSINA, JULIO",licores,1,Azúcar Líquido,55915.092,57.696
+595,"ROSCRIS BENIOPA, S.L",bolleria,2,"Azúcar, Azúcar Integral",81921.55,91.755
+599,"KARSAN, C.B.",estuchadores,1,Azúcar,22200.0,24.0
+602,"DUPON BISCUITS IBERICA, S.A.U.",bolleria,1,Azúcar Líquido Invertido,32046.85,42.144999999999996
+605,PROMIEL AGRUP. DE AP.COOP.VNA.,miel,1,Azúcar,18328.0,23.2
+609,"ALBORCHATA,S.L.",helados,2,"Azúcar, Fructosa",118006.75,137.225
+610,"TURRONES DOS HERMANOS,S.L.",turron,5,"Jarabe de glucosa y fructosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",13809.2,13.459999999999999
+614,"MANUFACTURAS TABERNER,S.A.","especias, aromas,colorant",3,"Azúcar, Azúcar Integral, Dextrosa",128687.25,155.477
+615,"PRODUCTOS DE VITICULTURA, S.A.",vino y derivados del vino,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",316475.7,662.461
+712,"CARAMELOS CERDAN, S.L.",golosinas,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",816.0,0.962
+716,"PENALVA ALIMENTACION, S.A.",helados,3,"Azúcar, Dextrosa, Jarabe de glucosa y fructosa",150152.382,154.966
+734,"HORCHATAS MERCADER,S.L.",helados,2,"Azúcar, Dextrosa",80123.35,95.77499999999999
+737,"COMERCIAL IBENSE, S.L.",helados,1,Dextrosa,8606.25,8.75
+762,"VIOKOX, S.A",agroquimico,3,"Azúcar, Dextrosa, Jarabe de glucosa",28870.0,27.650000000000002
+769,"ANGEL CAMACHO ALIMENTACION, S.L.",conservas vegetales,5,"Azúcar, Fructooligosacaridos, Fructosa, Jarabe de fructosa, Maltitol",2251988.19,2450.71
+770,"CASTER ALIMENTACION, S.L.",salsas y aderezos,3,"Azúcar, Jarabe de glucosa, Jarabe de sorbitol",222400.05,235.161
+773,"IBERCACAO, S.A.U.",chocolate,3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa y fructosa",3143.4,2.929
+775,"NATRA CACAO,S.L.",chocolate,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",6621054.8,8282.601
+790,"ARLUY, S.L.",galleteros,2,"Fructooligosacaridos, Jarabe de fructosa",127515.76000000001,57.85
+827,"TOMAS JIMENEZ, IGNACIO GERMAN",miel,2,"Azúcar, Dextrosa",3515.35,3.46
+846,"PRODUCTOS ORGANICOS NAT.,S.L.",agroquimico,4,"Azúcar, Dextrosa, Fructosa, Jarabe de glucosa y fructosa",4438.0,3.5749999999999997
+847,"SORIA NATURAL, S.A.",nutraceuticos,1,Fructosa,3396.25,2.5
+874,"COMERCIAL MAPROHELCO, S.L.",helados,2,"Azúcar, Dextrosa",6326.0,7.65
+884,"INTERNAC. DE COMERCIO Y DESTILERIAS J BORRAJO, S.A",licores,2,"Azúcar, Azúcar Líquido",33041.075,41.98
+889,"ESPECIALIDADES DEL OBRADOR, S.L.",pasteleria,4,"Azúcar, Azúcar Integral, Fructosa, Jarabe de glucosa y fructosa",8163.5,6.68
+891,"MONTEALBOR ALIMENTACION, S.A.U",salsas y aderezos,2,"Azúcar, Dextrosa",12397.0,14.675
+902,"MEMBRILLO EL QUIJOTE, S.A.",conservas vegetales,4,"Azúcar, Fructooligosacaridos, Fructosa, Jarabe de fructosa",252822.25,288.853
+904,"DAMEL GROUP, S.L. ",golosinas,4,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Melaza de caña",1046976.6,1643.23
+933,"DULCESTEPA, S.A.",turron,2,"Azúcar, Jarabe de glucosa y fructosa",233568.4,386.968
+935,"MANZANO GAMITO HNOS, S.L.",turron,1,Azúcar,45012.0,72.6
+985,GIPUZKOAKO ERLEZAIN ELKARTEA,miel,2,"Azúcar, Jarabe de glucosa y fructosa",10993.5,7.3500000000000005
+1023,"TORRONS VICENS, S.L.",turron,8,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",192389.05,272.286
+1029,"INTERVAN, S.A.",golosinas,1,Azúcar,81510.0,143.0
+1036,"PANADERIA NTRA SRA DE LA CABEZA, C.B.",panaderia,1,Azúcar,3275.19,2.77
+1072,"GALVAN FERNANDEZ HERMANOS, S.L.",turron,1,Azúcar,264196.2,428.6
+1080,"VIDAL GOLOSINAS, S.A.",golosinas,4,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Melaza de caña",145296.1,125.035
+1087,"TORRELLA SANCHEZ, RAFAELA",miel,1,Azúcar,3456.0,4.8
+1116,"PARDO NAVARRO, CARLOS",miel,1,Azúcar,330.0,0.5
+1117,COMERCIAL RUIZ ARRIBAS S. XXI. S.L.,pasteleria,1,Azúcar,1616.0,2.4000000000000004
+1119,"APILORE, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",16884.0,12.39
+1173,"FRANMOSAN, S.L.","especias, aromas,colorant",2,"Fructosa, Jarabe de glucosa y fructosa",0.0,0.002
+1197,"GIMENO DONAT, JORGE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1522.5,1.05
+1202,"APIGLASS ENVAS. Y MAT. APICOLA, S.L.",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",287240.15,246.355
+1218,"RAMIRO LARRIO, JAVIER",miel,2,"Azúcar, Jarabe de glucosa y fructosa",19278.612999999998,20.171
+1233,"VALENCIANA PASTELERA, S.L.",bolleria,1,Azúcar,61160.0,74.32
+1241,"ACEITES DEL SUR-COOSUR, S.A.",salsas y aderezos,2,"Azúcar, Jarabe de maltitol",457930.8,640.401
+1247,"TURRONES Y ESPECIALIDADES VIAR, S.A.",turron,4,"Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",86052.3,55.5
+1252,"APIGALOES, S.C.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",26714.0,24.64
+1253,"HORCHATA EL COSECHERO, S.L.",helados,5,"Azúcar, Azúcar Líquido, Dextrosa, Fructosa, Jarabe de glucosa y fructosa",624817.25,903.629
+1259,"DIEGO ZAMORA, S.A.",licores,1,Azúcar Líquido,0.0,0.001
+1273,"LOPEZ ESCRIVA, GABRIEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1068.375,0.555
+1284,"FRUTAS Y TURRONES, S.A.",turron,4,"Azúcar, Jarabe de glucosa, Jarabe de maltitol, Maltitol",353484.76,372.18
+1293,"PAPRIMUR, S.L.","especias, aromas,colorant",1,Azúcar,1904.0,1.6
+1294,"SOREAL-ILOU, S.A.U.",salsas y aderezos,2,"Azúcar Líquido, Melaza de caña",80765.44,72.6
+1304,"EMPRESA DE TRANSFORMACIÓN AGRARIA, S.A., S.M.E., M.P (TRAGSA)",piensos ganaderia,1,Azúcar,186528.0,194.4
+1305,"A. CENTAZZI, LDA","especias, aromas,colorant",1,Azúcar Integral,22584.45,23.976000000000003
+1314,"MANUFACTURAS PIBERNAT, S.L.","especias, aromas,colorant",2,"Azúcar, Dextrosa",321632.0,458.34999999999997
+1325,"HIDA ALIMENTACION , S.A.",conservas vegetales,2,"Azúcar, Azúcar Integral",97712.0,124.581
+1328,"3A BIOTECH, S.L.","especias, aromas,colorant",1,Azúcar,0.0,0.05
+1339,COOP. VINICOLA LA VIÑA,vino y derivados del vino,1,Azúcar Líquido,10723.0,10.82
+1342,"ELPOZO ALIMENTACION, S.A.",carnico,1,Melaza de caña,6900.0,6.02
+1353,"DESTILERIAS VEGA ALTA, S.L.",licores,1,Azúcar Líquido,5268.0,6.0
+1386,"SCENTIUM FLAVOURS, S.L","especias, aromas,colorant",5,"Azúcar, Azúcar Líquido, Azúcar Líquido Invertido, Jarabe de glucosa y fructosa, Jarabe de maltitol",18954.495000000003,12.338
+1387,"CHERUBINO VALSANGIACOMO, S.A.",licores,0,,0.0,0.012
+1410,"RAMON SABATER, S.A.U.","especias, aromas,colorant",1,Jarabe de glucosa y fructosa,11294.1,11.745
+1415,"MEMBRILLO EMILY, S.L.",mermeladas y confituras,6,"Azúcar Integral, Azúcar Líquido, Dextrosa, Fructooligosacaridos, Jarabe de fructosa, Melaza de caña",753.5,0.45600000000000007
+1430,"BYC CHEMICAL, S.L.",agroquimico,2,"Azúcar, Dextrosa",95811.25,90.901
+1437,"CEREALTO AGUILAR, S.L.",cereales,3,"Fructooligosacaridos, Jarabe de fructosa, Melaza de caña",239647.17,246.916
+1470,"CROP SALSA, S.A.",salsas y aderezos,3,"Azúcar, Azúcar Integral, Jarabe de glucosa y fructosa",5652.0,7.207
+1481,"BARDINET, S.A.",licores,1,Azúcar Líquido,167036.28,334.84
+1513,"AGROBIO, S.L.",abejorros,2,"Azúcar, Jarabe de glucosa y fructosa",3542742.61,5428.235
+1528,"JUAN Y JUAN INDUSTRIAL, S.L.U.",bolleria,3,"Azúcar, Azúcar Integral, Melaza de caña",1740124.29,2115.136
+1529,"DULCESA, S.L. UNIPERSONAL",bolleria,1,Azúcar,746587.56,836.46
+1534,"GOMEZ SILLERO, CARLOS",miel,1,Azúcar,2240.0,3.5
+1538,"GOMEZ SILLERO, JOSE ANTONIO",miel,1,Azúcar,6080.0,9.5
+1544,"GALLEROS ARTESANOS DE RUTE, S.L",bolleria,1,Fructooligosacaridos,0.0,0.025
+1557,"APICOLA PERPIÑAN GRAU, SAT",miel,1,Azúcar,33665.0,44.75
+1609,"RAMIRO RAMIRO, CIPRIANO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1200.0,1.2
+1624,S.A.T. Nº8192 PEREGRI,miel,2,"Azúcar, Jarabe de glucosa",1548.0,1.2
+1631,"SALMERON SAN JUAN, SALVADOR",miel,2,"Azúcar, Jarabe de glucosa y fructosa",7984.5,6.21
+1635,"IMPEX EUROPA, S.L",agroquimico,1,Azúcar,2097.6,1.35
+1643,"DULCES ARTESANALES LINARES, S.L",mermeladas y confituras,2,"Azúcar, Fructosa",20775.0,22.5
+1646,"NAVARRO SALA, JOSE",miel,1,Azúcar,968.0,1.4
+1660,"BEAM SUNTORY SPAIN, S.L.",licores,1,Azúcar Líquido,1139592.4,1722.84
+1661,"DELAVIUDA ALIMENTACION, S.A",turron,7,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de maltitol, Melaza de caña",283397.638,285.61899999999997
+1728,"CEREALTO INDUSTRIAL SPAIN, S.A.",carnico,3,"Azúcar, Jarabe de glucosa y fructosa, Melaza de caña",1196.4,1.222
+1741,"APICULTORES DE GUADALAJARA, S.A",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2376.0,2.4
+1746,"PRIMITIVO PICO, S.A",turron,5,"Azúcar, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",124075.4,147.06
+1747,"FRUIT TECH NATURAL, S.A.",zumos y nectares,2,"Azúcar, Jarabe de glucosa",4064900.1,3872.71
+1751,"ANTONIO ARRAEZ, S.L",vino y derivados del vino,3,"Azúcar, Dextrosa, Fructosa",98187.539,88.729
+1752,"ROYMY 21, S.L",panaderia,5,"Azúcar, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Melaza de caña",276118.75,298.55
+1760,"GONZALEZ BYASS, S.A",licores,1,Azúcar Líquido,152065.0,199.57999999999998
+1765,"CHOST, S.L",frutos secos y snacks,1,Azúcar,5550.0,5.8
+1766,"BOD.Y VINOS ANGEL LUIS PABLO URIOL, S.L",vino y derivados del vino,2,"Azúcar, Azúcar Líquido",0.0,0.003
+1771,"EL CASERIO, S.A",golosinas,2,"Azúcar, Jarabe de maltitol",510031.32,657.8199999999999
+1773,"SOLUBLES INSTANTANEOS, S.L.",refrescos,1,Azúcar,965.25,0.975
+1774,"BODEGAS VINIVAL, S.L.",vino y derivados del vino,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",236690.06,364.454
+1786,"ANITIN PANES ESPECIALES, S.L.",panaderia,2,"Azúcar, Dextrosa",178479.2,211.68
+1787,"DULCES DEL TURIA, S.L.",bolleria,2,"Azúcar, Jarabe de glucosa y fructosa",62672.2,76.13
+1821,"CHOCOLATES DEL NORTE, S.A.",chocolate,1,Azúcar,962.325,0.975
+1825,"LOPEZ MORENAS, S.L",vino y derivados del vino,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",707543.06,1389.663
+1826,"HERO ESPAÑA, S.A",mermeladas y confituras,4,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de maltitol",1687.5,1.356
+1832,"SIERRAS ANDALUZAS, S.C.A.",miel,4,"Azúcar, Dextrosa, Fructosa, Jarabe de glucosa y fructosa",207576.5,178.05
+1845,"NATURAL D' MEZCLAS, S.L.",carnico,2,"Azúcar, Jarabe de glucosa",0.0,0.01
+1853,"GÓMEZ ROBLES, MIGUEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",9973.55,6.803
+1854,"ROYPAS BY NUTRIS, S.A.",golosinas,6,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de maltitol, Jarabe de sorbitol",3773080.387,3058.746
+1864,MELAZAHAR COOP. V.,miel,2,"Azúcar, Jarabe de glucosa y fructosa",140740.6,145.67
+1892,"BIMBO DONUTS IBERIA, S.A.U.",panaderia,3,"Azúcar Líquido, Fructooligosacaridos, Jarabe de fructosa",110357.8,112.63
+1908,"JAKE, S.A.",golosinas,4,"Azúcar, Azúcar Líquido Invertido, Fructooligosacaridos, Jarabe de fructosa",1780.8,2.401
+1918,"OLIVA SANTOS, CASTOR",miel,2,"Azúcar, Jarabe de glucosa y fructosa",10395.0,11.975000000000001
+1919,"MACIAS DE LA CORTE, MIRIAN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",9665.0,11.725
+1922,"PSITTACUS CATALONIA, S.L.",piensos mascotas,1,Fructosa,133400.0,97.5
+1951,"LOPEZ ORTIZ, JOSE ANTONIO",miel,1,Azúcar,8160.0,9.6
+1956,"MARSHMALLOWS INTERNATIONAL, S.L.U.",golosinas,1,Azúcar,78980.4,76.68
+1978,"ORUJOS PANIZO, S.L.",licores,1,Azúcar Líquido,0.0,0.003
+1987,"GOMEZ MURRIA, RAFAEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",6547.5,5.2299999999999995
+2007,"PAREDES CEREZO, MIGUEL ANGEL",golosinas,2,"Jarabe de glucosa, Jarabe de maltitol",58052.04,78.504
+2011,"BIOSUR PRODUCTOS AGRICOLAS, S.L.U.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1288.8,1.2
+2023,"GOLDEN FOODS, S.A",conservas vegetales,1,Azúcar,29138.4,45.6
+2025,"VALLE BALLINA Y FERNANDEZ, S.A.",vino y derivados del vino,2,"Azúcar, Jarabe de glucosa",27543.48,21.56
+2027,"DESTILERIAS AGUILAR, S.A.",licores,1,Azúcar Líquido,73665.1,110.21
+2037,"INDUSTRIAS ESPADAFOR, S.A",licores,2,"Azúcar, Jarabe de glucosa",0.0,0.002
+2073,"PLATOS TRADICIONALES, S.A",platos preparados,2,"Azúcar, Dextrosa",435003.375,529.9250000000001
+2074,"ALFREDO IÑESTA, S.L",carnico,1,Jarabe de glucosa y fructosa,26861.0,27.64
+2081,"ZUMOS Y FRUTAS CONCENTRADOS, S.L.",zumos y nectares,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",36258120.78,32125.906
+2103,"JOSEFA ESTELLES MAYOR, S.L.","especias, aromas,colorant",2,"Azúcar, Dextrosa",222942.325,281.964
+2112,"LACASA, S.A.U.",chocolate,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",94710.15,74.006
+2216,"APIHURDES, S.COOP.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",173187.0,151.05
+2256,"DULCES Y CONSERVAS HELIOS, S.A.",conservas vegetales,3,"Fructooligosacaridos, Jarabe de fructosa, Jarabe de maltitol",280585.6,286.271
+2272,"PIMENTON Y ESPECIAS DON SABOR, S.L.","especias, aromas,colorant",1,Azúcar,1045.25,1.225
+2278,"GRUPO YSAROZ, S.L.","especias, aromas,colorant",1,Azúcar,1064.25,0.75
+2281,"HORCHATA JUAN`S, S.L.",helados,1,Azúcar,15312.0,23.2
+2283,"ROENCAR, S.L.U.",helados,3,"Azúcar, Fructosa, Jarabe de glucosa",5525.8949999999995,5.22
+2298,"GRACOMSA ALIMENTARIA, S.A.U.",alternativas a lacteos,4,"Azúcar Integral, Azúcar Líquido, Jarabe de glucosa y fructosa, Melaza de caña",7392.0,9.607
+2337,"METAROM IBERICA, S.A.U.","especias, aromas,colorant",3,"Azúcar Líquido, Azúcar Líquido Invertido, Jarabe de glucosa y fructosa",6567.6,6.0
+2338,"PEREZ PEREZ, VALERIANO",helados,1,Jarabe de maltitol,4849.0,3.9000000000000004
+2344,"MIEL MONCABRER, S.L.",miel,2,"Azúcar, Jarabe de glucosa",17037.04,24.62
+2364,"M&C BAKERY, S.L",bolleria,1,Azúcar,251061.66999999998,245.61
+2366,"TEGAN BIPAL, S.L.",piensos mascotas,1,Fructosa,5212.5,3.75
+2392,"COATO, S.C.L.","especias, aromas,colorant",1,Azúcar,1200.2,0.94
+2402,"DESTILERIAS RICARDO ROSAS, S.L.",licores,1,Azúcar Líquido,0.0,0.001
+2411,"BAQUERO LOPEZ, JOSE",miel,1,Azúcar,673.2,0.51
+2425,"MONDEJAR AGROQUIMICOS, S.L.",agroquimico,2,"Fructooligosacaridos, Jarabe de fructosa",148.2,0.057
+2473,"TORRE ORIA, S.L.U.",licores,2,"Azúcar, Azúcar Líquido",100677.8,164.524
+2490,"CANDIDO MIRO, S.A.",conservas vegetales,1,Azúcar,12672.0,13.200999999999999
+2518,"GRANALBE, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",72460.6,67.04
+2528,"MORATALLA FERNANDEZ, RAFAEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1296.0,1.2
+2532,"ORTEGA GIMENEZ, JAVIER",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1822.125,1.635
+2570,"NATRA OÑATI, S.A.",chocolate,2,"Azúcar, Jarabe de glucosa y fructosa",834229.056,851.258
+2577,"IMPORTACO CASA PONS, S.A.U.",frutos secos y snacks,5,"Azúcar, Azúcar Integral, Fructosa, Jarabe de glucosa, Melaza de caña",263800.3,353.777
+2611,"NAVARRO SANCHEZ, RAFAEL",miel,1,Azúcar,11498.5,18.85
+2618,"CALABUIG BLASCO, MIGUEL ANGEL",miel,1,Azúcar,2640.0,4.0
+2642,"BONDIA SALVO, S.L.",panaderia,2,"Azúcar, Melaza de caña",8326.75,12.627
+2646,"PERALES RODRIGUEZ, JOSE LUIS",pasteleria,1,Jarabe de glucosa,4140.0,3.5999999999999996
+2654,"LORENTE TORRELLA, JOSE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",6845.0,6.1
+2677,"PREELABORADOS ALIMENTARIOS, S.L.",pasteleria,1,Azúcar,34002.880000000005,41.497
+2679,"REINA KILAMA, SDAD. COOP.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",255438.9,233.26500000000001
+2682,"CARO CARO, CANDELARIA",miel,1,Azúcar,1280.0,2.0
+2684,"INDUSTRIAS JIJONENCAS, S.A.",helados,4,"Dextrosa, Fructosa, Jarabe de glucosa y fructosa, Jarabe de maltitol",171759.28,243.978
+2691,"CAMPILLO MONDEJAR, C.B.","especias, aromas,colorant",1,Azúcar,1782.0,1.3499999999999999
+2708,"PROVIAGRICOLA, S.L.",miel,0,,4800.0,4.8
+2716,"DOSCADESA 2000,SL.","especias, aromas,colorant",1,Azúcar,0.0,1.0
+2722,"BUDENHEIM IBERICA, S.L.U.","especias, aromas,colorant",2,"Azúcar, Dextrosa",1180.3,1.6400000000000001
+2734,"MORENO REGOLF, MARIA JOSE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1942.5,1.05
+2737,"ALFONSO MARTINEZ TORRANO, S.L.",golosinas,1,Jarabe de glucosa,29178.0,28.799999999999997
+2748,"NAVARRO SERRA, MIGUEL ANGEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",717.75,0.495
+2763,"HERMANOS ROMAN ALAMINOS, S.L.",bolleria,1,Azúcar,317399.0,377.0
+2767,"DULCEPLUS GOLOSINAS, S.A.",golosinas,6,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa, Jarabe de maltitol, Melaza de caña",76622.5,67.588
+2792,"CODAN, S.A.",bolleria,1,Fructooligosacaridos,0.0,0.002
+2801,"JOSE MARIA BOU, S.L.",helados,1,Azúcar,10145.0,7.0
+2824,"MAINGLAS, S.L.",panaderia,1,Jarabe de glucosa y fructosa,6497.7,12.1
+2832,DULCES LA ABUELA COOP VNA,bolleria,5,"Azúcar, Azúcar Integral, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de sorbitol",423762.545,570.069
+2850,"AMC NATURAL DRINKS, S.L.",zumos y nectares,2,"Azúcar, Azúcar Líquido",1088098.67,1286.845
+2855,"AGRO CONTROL 2007, S,L.",piensos ganaderia,1,Dextrosa,96221.7,78.2
+2857,"NAVALON FRANCES, JESUS",miel,1,Azúcar,576.0,0.8
+2860,"ACEITUNAS KARINA, S.L.",conservas vegetales,1,Fructosa,106785.0,80.0
+2873,"FRUTOS SECOS AURO, S.L.",frutos secos y snacks,4,"Azúcar, Azúcar Líquido, Caramelo natural, Jarabe de glucosa",15796.75,19.426
+2887,"BIOSEARCH, S.A.U.","especias, aromas,colorant",1,Azúcar,0.0,0.002
+2891,"ALSOL IMPORT, S.L.",piensos ganaderia,2,"Azúcar, Dextrosa",38829.5,53.675
+2903,"MEDITERRANEA MELLIS, S.L.",miel,2,"Azúcar, Jarabe de glucosa",1344773.72,1078.591
+2909,"MANIPULADOS DE CEBOLLAS Y DERIVADOS, S.L.",conservas vegetales,5,"Azúcar, Azúcar Integral, Fructooligosacaridos, Jarabe de fructosa, Melaza de caña",726110.0,827.482
+2916,"SUC. DE MUÑOZ Y PUJANTE, S.L.","especias, aromas,colorant",1,Azúcar,23103.975,21.071
+2917,"CARAMEL FOOD, S.L.",mermeladas y confituras,1,Azúcar Integral,256.0,0.2
+2925,"BIGMAN NUTRITION, S.L.",suplementos deportivos,2,"Dextrosa, Fructosa",23060.0,22.5
+3014,"NAVALON REIG, JOSE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",10197.5,10.4
+3022,"LACTEOS DE NAVARRA, S.L.","lacteos, yogur, postr lac",2,"Azúcar Integral, Fructooligosacaridos",0.0,0.003
+3049,"LA GRANJA FOODS 1959, S.L.",bolleria,3,"Azúcar, Azúcar Integral, Azúcar Líquido",101865.4,127.843
+3070,"NAVARRO OLIVA, JOSE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",20148.5,20.049999999999997
+3071,"NAVARRO OLIVA, BERNABE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",13486.0,14.0
+3073,"NAVARRO NAVARRO, JOSE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",16846.8,24.08
+3075,"OLIVA ANDRES, FILIBERTO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",3864.0,4.2
+3080,"PRODUCTOS KLAM, S.A.","lacteos, yogur, postr lac",0,,0.0,0.001
+3084,ARTENAY BARS SAS,turron,3,"Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa",33471.84,25.24
+3089,"CANTIN CEBRIAN, JESUS MIGUEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",5681.0,5.65
+3111,"GOMEZ MARTIN, HUGO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",265489.5,255.76
+3140,"CELEPLAME, S.L.",nutraceuticos,1,Azúcar Integral,845.0,0.75
+3144,"DALLANT, S.A.",salsas y aderezos,4,"Azúcar, Azúcar Líquido, Fructosa, Jarabe de glucosa y fructosa",265759.08,310.947
+3154,"FRIAS NUTRICION, S.A.","lacteos, yogur, postr lac",4,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa",103629.6,95.283
+3155,"HORTAMED, S.L.",conservas vegetales,1,Jarabe de glucosa y fructosa,15256.45,17.48
+3156,"FINI GOLOSINAS ESPAÑA, S.L.U.",golosinas,4,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Melaza de caña",582286.85,475.403
+3186,"BODEGAS SANVIVER, S.L.",vino y derivados del vino,1,Azúcar,1350.0,1.0
+3195,"HEINEKEN ESPAÑA, S.A",cervezas,1,Azúcar Líquido,2466860.688,3891.048
+3200,"PEINADO HERNANDEZ, EDUARDO",miel,1,Azúcar,2112.0,2.4
+3203,ASOCIACION DE APICULTORES DE GORBEA,miel,2,"Azúcar, Jarabe de glucosa y fructosa",4431.0,3.1500000000000004
+3211,"PEREZ BARRERA, FRANCISCO",miel,0,,585.0,0.5
+3218,"DEL RIO GIL, LINDA",miel,1,Azúcar,9350.0,11.0
+3225,"SURIVAN FEEL THE TASTE, S.L.",helados,3,"Azúcar, Fructosa, Jarabe de glucosa",311370.86,329.422
+3279,"BODEGAS GONZALEZ BYASS JEREZ, S.L.U",vino y derivados del vino,1,Azúcar Líquido,1672.8,2.481
+3287,"DELAFRUIT, S.L.U","lacteos, yogur, postr lac",1,Azúcar,2430.0,1.802
+3294,"PUNTO GOFRE, S.L.",pasteleria,2,"Dextrosa, Jarabe de sorbitol",42585.25,37.95
+3302,"VINARCHY SPAIN, S.A.U.",vino y derivados del vino,2,"Azúcar, Jarabe de glucosa",101119.68000000001,104.10000000000001
+3372,"GUFRESCO, S.L.",zumos y nectares,1,Fructosa,5801.25,3.25
+3375,"EUROCHOC, S.L.",chocolate,4,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa, Maltitol",236097.52,239.745
+3408,"RUIZ LEAL, MANUEL",miel,1,Azúcar,16542.1,19.6
+3409,"MAGNOLIA PREMIUM, S.L.","lacteos, yogur, postr lac",2,"Azúcar, Jarabe de glucosa y fructosa",872911.28,807.13
+3419,"ULTIMOS PANADEROS, S.L.",panaderia,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,0.002
+3427,"DOÑATE GALINDO, FRANCISCO JOSE",miel,0,,535.0,0.5
+3478,"APICOLA LA PARRA, S.L.U.",piensos ganaderia,3,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",1099743.38,1098.897
+3479,"LA TAHONA DE UTIEL, S.L.",bolleria,4,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de sorbitol",169668.93,132.555
+3482,"GALVEZ MARTINEZ, ANGEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",186.0,0.12
+3504,"CIFRE ALMONACIL, RAFAEL",miel,1,Azúcar,357.0,0.3
+3534,"ITURRATE VEA, INES",miel,2,"Azúcar, Jarabe de glucosa y fructosa",7847.5,5.7700000000000005
+3552,"VERDU RUIZ, ANTONIO",miel,0,,282.5,0.11299999999999999
+3572,"GIL BELLES, JOSE JORGE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",3408.9300000000003,2.4939999999999998
+3610,"PINAZO MARTINEZ, JULIAN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1147.0,1.0
+3647,"NAVARRO NAVARRO, FLORENTINO AGUSTIN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",16946.2,24.22
+3658,"NAVALON FERRER, CRISTIAN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",10071.5,11.45
+3673,"LATORRE GARCIA, RAUL",miel,1,Azúcar,846.0,1.175
+3683,"MADRID JULVE, LUIS",miel,2,"Azúcar, Jarabe de glucosa y fructosa",633.5,0.5800000000000001
+3699,"GONZALEZ CARBALLAL, S.L.",piensos ganaderia,3,"Azúcar, Dextrosa, Jarabe de glucosa y fructosa",2064389.218,2187.2980000000002
+3715,"BSI BODEGAS SAN ISIDRO, S.COOP.",vino y derivados del vino,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa y fructosa",2664.0,1.803
+3752,"SON MORAGUES 1921, S.L.U.",mermeladas y confituras,1,Azúcar,424.6,0.30000000000000004
+3753,"OLIVA NAVARRO, MIRIAM",miel,2,"Azúcar, Jarabe de glucosa y fructosa",13722.0,14.347999999999999
+3777,"NATURVAL APICOLA, S.L.U.",miel,2,"Azúcar, Jarabe de glucosa",0.0,0.001
+3790,"DULYMAZ, S.L.",turron,1,Jarabe de glucosa,21190.2,22.590999999999998
+3791,"FORTEA CERAS Y MIELES, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",20664.0,14.91
+3794,"CIFRE SANZ, DIEGO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1522.5,1.05
+3805,"MONTEJANO NAVARRO, MARIA DEL CARMEN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2074.5,1.44
+3808,"DEL RIO GIL, TERESA",miel,1,Azúcar,9350.0,11.0
+3812,SIERRA MIEL SDAD. COOP.,miel,2,"Azúcar, Jarabe de glucosa y fructosa",29715.0,23.119999999999997
+3854,"ESBERGHEL DISTRIBUCIONES, S.L.",pasteleria,1,Azúcar,1668.0,1.2000000000000002
+3861,"DIEGO PEREZ RIQUELME E HIJOS, S.L.","especias, aromas,colorant",1,Azúcar,1919.325,2.575
+3863,"LA TRADICION M&T, S.L.",bolleria,4,"Azúcar, Fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",25667.25,20.965
+3868,"EMPURIA GEL, S.L.",helados,1,Azúcar,14370.5,10.85
+3891,"NESTLE ESPAÑA, S.A.","lacteos, yogur, postr lac",1,Dextrosa,37790.0,35.0
+3921,"IBERFRUTA MUERZA, S.A.",conservas vegetales,2,"Azúcar, Jarabe de maltitol",1234290.4,1333.44
+3954,"MIELES ARSE, C.B.",miel,1,Azúcar,4712.0,6.4
+3987,"GUADANATUR, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1236.0,1.2
+4030,"ATO FERNANDEZ, ALBERTO JOAQUIN",agroquimico,2,"Azúcar, Jarabe de glucosa y fructosa",592.0,0.801
+4031,"ESPECIALITATS M. MASDEU, S.L.",panaderia,4,"Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa, Jarabe de maltitol",129884.6,47.431
+4045,HEINEKEN GLOBAL PROCUREMENT B.V.,cervezas,1,Azúcar Líquido,1773718.681,2080.665
+4085,"ANDREU ZAMORA, VICENTE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",4255.2,3.2399999999999998
+4103,ASOCIACION CANTABRA DE APICULTORES,miel,2,"Azúcar, Jarabe de glucosa y fructosa",1260.0,1.05
+4187,"AMILCAR & MORGADO, LDA",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",889784.332,866.713
+4189,"MARTIN GIL, MANUEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1192.5,0.795
+4190,"DOMINGUEZ GOMEZ, MARIA TERESA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1170.0,0.78
+4203,SARL API-CULTURE,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",46194.0,45.3
+4212,"VALLEJO LOPEZ, JUAN LUIS",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1627.5,1.05
+4265,"TORRALBA MUÑOZ, MONICA",miel,1,Azúcar,3600.0,4.0
+4286,"FERNANDEZ MOYA, ANGEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",232.5,0.15
+4329,"ZAFRA SANTILLANA, ELOY",miel,2,"Azúcar, Jarabe de glucosa y fructosa",73463.2,73.235
+4350,"BARBERA NOGUES, ERIC",miel,1,Azúcar,1728.0,2.4000000000000004
+4365,"RODRIGUEZ GOMEZ, FERNANDO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1192.5,0.795
+4369,"LA TIENDA DEL APICULTOR, S.L.U.",piensos ganaderia,5,"Azúcar, Azúcar Integral, Dextrosa, Fructosa, Jarabe de glucosa y fructosa",1265420.7,1231.579
+4383,"MANUFRI, S.L.",zumos y nectares,6,"Azúcar, Azúcar Líquido, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",1564020.604,1341.96
+4429,"UMBRELLA F&FI, S.L. ",nutraceuticos,1,Fructosa,3425.0,2.5
+4436,"INTERNACIONAL GRANADINA DE ALCAPARRA, S.L.",conservas vegetales,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",2748.0,2.404
+4455,"AGRO CONSULTING DEL MEDITERRANEO, S.L.",agroquimico,1,Azúcar,6972.0,6.0009999999999994
+4469,"SEÑORIO DE BARAHONDA, S.L.",vino y derivados del vino,1,Azúcar,152826.0,195.8
+4470,"SALABERRIA TELLECHEA, XIKER",miel,2,"Azúcar, Jarabe de glucosa y fructosa",3298.4,1.69
+4505,"FIESTA COLOMBINA, S.L.U.",golosinas,5,"Azúcar, Azúcar Integral, Fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",2328419.865,2960.79
+4507,"ALMACEN DE CONFITERIA Y PASTELERIA, S.L.",pasteleria,2,"Azúcar, Jarabe de glucosa y fructosa",28181.55,22.935
+4542,"COMERCIAL FONT, C.B.",pasteleria,1,Azúcar,3061.95,2.055
+4561,"AGRICOM, S.R.L.",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",1102797.51,1105.09
+4566,"CONFETICAKES, S.L.",golosinas,2,"Azúcar, Jarabe de glucosa y fructosa",531593.5,877.963
+4567,"CARBONELL ANTICH, MARIA GRACIA",miel,2,"Azúcar, Fructosa",3731.5,2.5
+4587,"CARMAX GLASS, S.L.",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",83595.05,72.833
+4589,"MORALES LOPEZ, JUAN ANTONIO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1092.0,0.525
+4600,"JALANCINA NATURE, S.L.",conservas vegetales,1,Fructosa,1181.25,0.625
+4616,"IMPAG IBERIA, S.L.","especias, aromas,colorant",1,Dextrosa,0.0,0.003
+4619,"EUROPEA DE APICULTURA, S.L.",piensos ganaderia,3,"Azúcar, Dextrosa, Jarabe de glucosa y fructosa",32093.75,45.505
+4634,"MASQPAN EXCLUSIVAS, S.L.",pasteleria,1,Azúcar,13726.0,19.400000000000002
+4685,ABEILLE D'AUVERGNE (NATURAPI),piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,0.0
+4686,OMNIUM AGRICOLE DU SOUSS,abejorros,2,"Azúcar, Jarabe de glucosa y fructosa",73781.25,65.50999999999999
+4704,"MIGUELA MIGUELA, FRANCISCO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",195.0,0.15
+4706,"HERMINIO MENDAÑA, S.L.",estuchadores,1,Azúcar Integral,0.0,0.001
+4709,"TURRONES PICO, S.A.",turron,7,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",139881.458,195.64000000000001
+4726,CONSORZIO CON LE API,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",28140.0,24.15
+4738,"KATIGRES, S.L.",pasteleria,1,Jarabe de sorbitol,11509.0,8.7
+4744,"PEREZ PEREZ, ADRIAN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2872.0,2.6
+4753,"VICENTE SOL, BERNARDO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",56.7,0.042
+4761,"AYORA PORCAR, NESTOR",miel,1,Azúcar,1710.0,1.8
+4774,"DEL VALLE CARRION, MANUEL",miel,1,Azúcar,3600.0,4.0
+4852,"ABELLAIRES EMPORDANESOS, S.A.T.",piensos ganaderia,1,Azúcar,695.0,0.5
+4854,"FERRANDIS RIBES, JOSE ENRIQUE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1293.0,1.05
+4892,"COMEX BAKERY, S.L.U.",panaderia,1,Azúcar,9862.5,7.5
+4897,"LLOBET MARCO, MANUEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",627.75,0.405
+4908,"PEREZ BARQUERO, S.A.",licores,1,Azúcar Líquido Invertido,61336.899999999994,75.25999999999999
+4935,"SAHUQUILLO MARTINEZ, AMPARO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",147.0,0.105
+4960,"MANUEL MATEO CANDEL, S.L.",conservas vegetales,5,"Jarabe de glucosa y fructosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol, Sorbitol",7851.55,6.03
+4965,"PEREZ BURGOS, JOSE VICENTE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",870.0,0.6
+4976,"NOGUERA CANTO, GUSTAVO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",651.75,0.435
+4997,"PRODUCTOS LA MULATA, S.L.",pasteleria,2,"Dextrosa, Jarabe de glucosa",48636.56,32.704
+5000,"PROCAMP CA'N LLANERAS, S.A.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1365.8000000000002,1.04
+5002,"CERVEZAS FERNANDEZ PONS, S.L.",cervezas,1,Azúcar,3076.0,2.0
+5045,"DADELOS AGRICOLA, S.L.",piensos ganaderia,2,"Azúcar, Fructosa",176195.0,158.9
+5046,"CEREALTO SINTRA FOODS, S.A.",cereales,1,Azúcar,59988.6,66.33
+5083,"ESPECIAS EL RELOJ, S.L.","especias, aromas,colorant",1,Azúcar,24538.5,21.375
+5109,"INDUSTRIAS ROKO, S.A.",pasteleria,1,Dextrosa,4687.5,5.0
+5110,"QUISABA, S.L.",agroquimico,1,Jarabe de sorbitol,3000.0,2.4
+5128,"FERTILIZANTES Y NUTRIENTES ECOLOGICOS, S.L.",agroquimico,1,Dextrosa,6150.0,3.75
+5179,"CUSTOM DRINKS, S.L.U.",refrescos,1,Azúcar,76960.0,64.001
+5230,"MARCHUET PALMERO, CARLOS",miel,2,"Azúcar, Jarabe de glucosa y fructosa",5664.0,6.2
+5231,"CRISTOBAL E HIJO, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",4122.3,2.31
+5245,"ELGORRIAGA BRANDS, S.A.",bolleria,4,"Azúcar, Azúcar Integral, Jarabe de maltitol, Melaza de caña",43529.0,42.653
+5254,B REFRESHING COMPANY S.L. ,zumos y nectares,1,Azúcar Líquido Invertido,7128.0,4.8
+5293,"AGROKAZAN FERTILIZANTES, S.L.",agroquimico,1,Azúcar,414.0,0.6
+5314,"PROFESSIONAL DAIRY PRODUCTS, S.L.","lacteos, yogur, postr lac",2,"Azúcar, Jarabe de sorbitol",80908.0,77.6
+5346,"BODEGAS ELOSEGI, S.L.",vino y derivados del vino,2,"Azúcar, Azúcar Líquido",0.0,0.002
+5365,"COMORALI, S.L.",pasteleria,1,Jarabe de maltitol,79632.0,76.8
+5373,"VERTICE DE INNOVACION Y DESAR.DE ALIMENTOS, S.A.U.",galleteros,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",777250.486,831.741
+5393,ICKOWICZ APICULTURE SAS,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",577651.35,485.1
+5409,"TORTAJADA CAURIN, MARIO",miel,1,Jarabe de glucosa y fructosa,812.0,0.7
+5428,"CLEMENTE SANZ, AURORA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",174.24,0.11699999999999999
+5438,PURATOS NV,chocolate,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.002
+5444,"ESCOT SAIZ, EDUARDO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",94.08,0.059
+5445,COMPTOIR APICOLE LANGUEDOCIEN,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",50428.35,45.09
+5454,"ALIMENTACION Y NUTRICION FAMILIAR, S.L.",alternativas a lacteos,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",110569.95,130.253
+5489,"TECNOLOGIAS APICOLA CASTILBLANCO, S.L.",miel,2,"Azúcar, Fructosa",18917.5,24.05
+5512,"ORTA VAZ, ISABEL",miel,1,Azúcar,5040.0,8.4
+5521,"F. MORENO CANDIED FRUITS, S.L.",mermeladas y confituras,1,Jarabe de maltitol,22486.1,26.0
+5528,"FERNANDEZ LOPEZ, ANTONIO",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",479727.222,483.601
+5614,"ESCRIBANO MARTINEZ, MARTA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1092.0,0.525
+5618,"CABELLO TRASOBARES, RAMON",miel,1,Azúcar,3440.0,4.0
+5653,ASOCIACION PALENTINA DE APICULTORES,miel,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,0.057999999999999996
+5656,API WAYS SAS,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",1491.0,1.05
+5679,"AB MAURI FOOD, S.A.",panaderia,5,"Azúcar, Azúcar Integral, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa",0.0,0.045
+5680,"SALSA WOK, S.L.",salsas y aderezos,2,"Azúcar, Jarabe de glucosa y fructosa",34748.675,27.267
+5710,"BEACHOGA DHUN NA NGALL; DONEGAL BEES, LTD.",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",28497.0,26.25
+5727,"BOGNER, JOSEPH",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",30040.5,26.88
+5780,"NAVARRO SANCHEZ, PASCUAL",miel,1,Azúcar,10827.5,17.75
+5787,"FALCON, S.A.",pasteleria,5,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa, Melaza de caña",90776.05,85.256
+5794,"LOPEZ DOMINGUEZ, MARIA ANGELES",miel,2,"Azúcar, Jarabe de glucosa y fructosa",7174.5,6.85
+5822,"CIVAN ARICILIK TEKSTIL, SALIP SAN TIC LTD STI",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",37737.0,34.44
+5892,"DISTRIBUCIONES BOLLFROST, S.L.",bolleria,2,"Azúcar, Jarabe de glucosa",5328.5,7.19
+5924,"GRUPO DISTRIBUIDOR GARAU, S.L.",pasteleria,1,Azúcar,178027.2,257.31
+5930,UNION PROFESIONAL APICULTORES ZAMORA APIS DURII,miel,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,0.03
+5934,"ZEBERIO BEGIRISTAIN, AGUEDA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2887.5,2.1
+5981,"MAHOU, S.A.",cervezas,2,"Azúcar Integral, Azúcar Líquido",789642.936,736.489
+5989,"T500 PURATOS, S.A.",panaderia,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",302203.35,303.24
+5992,"CHOZAS CARRASCAL GR, S.L.",vino y derivados del vino,1,Azúcar,2700.0,2.0
+5998,"FRANCISCO ARAGON, S.L.U.",agroquimico,2,"Azúcar, Jarabe de glucosa",22174.37,15.441999999999998
+6003,"BS EDULCORANTES, S.L.U.",zumos y nectares,1,Fructosa,0.0,0.001
+6036,SARL API-BOURGOGNE,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",69573.0,56.7
+6043,COOPERATIVE APICOLE DU JURA,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",34093.5,26.25
+6045,"BODEGAS WILLIAMS & HUMBERT, S.A.",licores,1,Azúcar Líquido,1097315.46,2015.68
+6048,"BLENDAMA, S.L.","especias, aromas,colorant",1,Azúcar,6404.8,8.4
+6052,DICHEM FOODS  S.A.,galleteros,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.001
+6094,"ECOVINAL, S.L.U.",salsas y aderezos,3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",2532.0,2.404
+6130,HAPPY VALLEY HONEY LIMITED,miel,2,"Azúcar, Jarabe de glucosa y fructosa",6489.0,5.88
+6147,"ANDALUZA DE MIELES, S.L.",miel,3,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",402411.43200000003,546.676
+6151,"FRULACT, S.A.","lacteos, yogur, postr lac",5,"Azúcar, Azúcar Integral, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa",83497.724,109.273
+6162,BE ORGANIC KUWAIT FOR HEALTHY FOOD AND PLANTS COMPANY,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",16086.0,15.96
+6196,"APITIENDA SOLTAN, S.L.",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",17083.5,11.969999999999999
+6218,"BELARRA ENETERREAGA, HAIZEA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",780.0,0.375
+6235,"ATRILE 21, S.L.",pasteleria,3,"Azúcar, Azúcar Integral, Maltitol",10680.26,10.061
+6249,"ANIA BOTANICALS, S.L.","especias, aromas,colorant",1,Fructosa,12172.5,9.0
+6251,"MIX PAK SYSTEM, S.L.",barritas y bebidas deport,5,"Azúcar, Dextrosa, Fructooligosacaridos, Fructosa, Jarabe de fructosa",189931.5,156.528
+6267,"JUMEL ALIMENTARIA, S.A.",salsas y aderezos,5,"Azúcar, Azúcar Integral, Jarabe de glucosa y fructosa, Jarabe de sorbitol, Melaza de caña",298735.3,419.023
+6270,"PANADERIA NTRA.SRA.DE LA CABEZA, S.L.",pasteleria,1,Azúcar,3254.25,2.675
+6271,"ALVAREZ ROVIRA, DAVID",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1370.9,0.8500000000000001
+6278,"URRIETA ROVIRA, JOSE MANUEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",858.0,0.75
+6286,COOPERATIVE APICOP,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",21240.0,18.0
+6314,"LOPEZ AGUDO, PILAR",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1221.0,0.66
+6316,"PEREZ BAQUEDANO, BEGOÑA",miel,1,Azúcar,2150.0,2.5
+6323,SARL BABE APICULTURE ET EMBALLAGES,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",32554.5,23.85
+6365,S.C.A. CAMPO MUSEO DE LA MIEL RANCHO CORTESANO,miel,2,"Azúcar, Jarabe de glucosa y fructosa",5076.0,3.3
+6374,ASOCIACION DE APICULTORES ALAVESES (APIAL),miel,2,"Azúcar, Jarabe de glucosa y fructosa",13314.0,10.5
+6395,SEITENBACHER KG NATURKOST,cereales,2,"Fructooligosacaridos, Jarabe de fructosa",28686.0,10.86
+6399,"NOVA NOVA, GREGORIO",miel,1,Dextrosa,1764.0,1.8
+6427,"PRODUCTOS OLE Y OLE, S.L.",vino y derivados del vino,1,Azúcar,17256.0,16.8
+6449,"PRODEL AGRICOLA, S.L.",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",83183.8,71.693
+6457,"DOLÇA ABELLA, S.C.",miel,1,Azúcar,1191.0,1.0
+6460,"PARDO TOLOSA, JUAN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",232.5,0.15
+6467,"CATALINA FOOD SOLUTIONS, S.L.","especias, aromas,colorant",4,"Azúcar, Dextrosa, Fructosa, Melaza de caña",129392.125,168.903
+6468,"DULCES LA CARTUJA, S.L.",mermeladas y confituras,3,"Azúcar, Fructosa, Maltitol",22037.35,29.775
+6519,SAS IRATI INTERNATIONAL,nutraceuticos,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.005
+6557,"MAR FERTILIZANTES, S.L.",agroquimico,2,"Azúcar, Jarabe de glucosa y fructosa",9583.5,9.65
+6558,"SOC CHEF, S.L.",conservas vegetales,1,Jarabe de glucosa,15721.880000000001,17.089
+6573,"GRAU SANCHEZ, MANUEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",304.48,0.172
+6585,"GONZALEZ REVIRIEGO, OLMO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1795.35,0.9149999999999999
+6592,"LOPEZ GARCIA, FRANCISCA AURELIA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",3150.0,2.1
+6603,"INDUSTRIAS ALIMENTICIAS SUFLI, S.L.",conservas vegetales,1,Azúcar Integral,2613.6,2.0
+6621,"SILVESTRE ZAMORA, ANTONIO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",85.2,0.06
+6645,"TURRONES EL ROMERO, S.A.",turron,2,"Azúcar, Jarabe de glucosa",152303.12,267.64
+6748,"QUIMIND GREEN, LDA.",cereales,2,"Fructooligosacaridos, Jarabe de fructosa",28675.95,9.66
+6818,"DULCES LA FAVORITA FINCA OLIVAR EL RECREO, S.L.",pasteleria,1,Azúcar,26135.0,20.5
+6820,"GOLYDUL, S.L.",golosinas,2,"Fructooligosacaridos, Jarabe de fructosa",1946.4,1.2009999999999998
+6828,AGRUP.DEFENSA SANIT.APIC.REG.DE MURCIA,miel,2,"Azúcar, Jarabe de glucosa y fructosa",246563.28,248.894
+6864,"TAMAYO SANCHEZ, JOAQUIN",miel,1,Azúcar,6245.25,8.975
+6865,"TAMAYO SANCHEZ, JESUS",miel,1,Azúcar,5280.0,8.0
+6866,"TAMAYO SANCHEZ, Mª LUISA",miel,1,Azúcar,5717.25,8.175
+6869,"ALLTECH SPAIN, S.L.",piensos ganaderia,2,"Azúcar, Fructosa",26423.5,22.95
+6884,"ENVASADOS SEGOVIA, S.L.",estuchadores,1,Azúcar Integral,4224.0,4.802
+6899,"HNOS. NAVARRO AYORA, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",15250.0,25.1
+6959,"TANA, S.A.",zumos y nectares,2,"Azúcar Líquido, Azúcar Líquido Invertido",0.0,0.002
+7022,"FRUTOS SECOS EMPERADOR, S.L.",frutos secos y snacks,1,Azúcar,20832.0,25.2
+7049,"LACREM, S.A.",helados,1,Fructooligosacaridos,0.0,0.002
+7059,"NUFRI, S.A.T. Nº 1596",zumos y nectares,1,Jarabe de glucosa y fructosa,750384.08,732.18
+7060,"SUAY SOLAZ, YOLANDA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",5325.0,4.5
+7102,"MIEL LLARIA, TCEA",miel,1,Azúcar,1500.0,1.2
+7115,"RIVERBEND ESPAÑA, S.A",zumos y nectares,2,"Azúcar, Jarabe de glucosa",1286096.96,914.132
+7164,"FELIX SOLIS, S.L.",vino y derivados del vino,1,Azúcar,156044.7,204.001
+7169,"MASTRIGO BIO GOURMET, S.L.",panaderia,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.003
+7171,"QUIRANTE FRUITS, S.L.",zumos y nectares,3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa",37302986.274,32060.424
+7176,"COLOMINA LOPEZ, SOFIA",conservas vegetales,1,Jarabe de glucosa y fructosa,7080.5,5.949999999999999
+7183,"INTERCASA, S.A.",salsas y aderezos,2,"Jarabe de maltitol, Melaza de caña",15924.0,13.2
+7185,"ILE AGROCENTRO LEON, S.L.",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",19477.5,13.65
+7189,"PASTISART IBERIA, S.L.U",bolleria,4,"Azúcar, Azúcar Integral, Fructooligosacaridos, Jarabe de fructosa",166040.2,168.017
+7228,"RETHINK FOODS COMPANY, S.L.",helados,1,Azúcar,1047.6,1.2
+7245,CHESTE AGRARIA COOP. V,vino y derivados del vino,1,Azúcar Líquido,152477.7,217.04
+7267,"GIDA, S.A.",nutraceuticos,2,"Fructooligosacaridos, Jarabe de fructosa",2868.0,1.2
+7289,"CHOCODROP, S.L.",chocolate,2,"Azúcar, Azúcar Integral",200266.0,306.2
+7326,"ACTIVA FOOD TECH, S.A.","especias, aromas,colorant",2,"Fructooligosacaridos, Jarabe de fructosa",845.0,0.20500000000000002
+7372,"PASTOR TORRES, FRANCISCO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2150.4,1.68
+7394,"ACTIVIDAD APICOLA ECOLOGICA M.F., S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1824.75,1.095
+7395,VECO PHARMA SHPK,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",110586.0,97.44
+7410,"DEL OLMO CUEVAS, HECTOR",miel,2,"Azúcar, Jarabe de glucosa y fructosa",4670.4,3.178
+7440,"LOPEZ FOOD GROUP, S.L.",bolleria,5,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa, Jarabe de sorbitol",1226396.236,1585.71
+7452,"CONSERVAS EL RAAL, S.L.U.",conservas vegetales,1,Azúcar,26044.0,41.599999999999994
+7476,GOBIOTICS BV,nutraceuticos,2,"Fructooligosacaridos, Jarabe de fructosa",23317.66,8.411999999999999
+7534,"A FACTORIA ECOLOXICA, S.L.",helados,1,Fructooligosacaridos,2362.5,0.526
+7535,"DULCES LA RONDEÑA, S.L.",bolleria,1,Azúcar,16080.0,24.0
+7556,"DESTILACIONES BORDAS CHINCHURRETA, S.A.","especias, aromas,colorant",4,"Fructooligosacaridos, Fructosa, Jarabe de fructosa, Jarabe de glucosa y fructosa",3103.2,2.4259999999999997
+7558,HARINAS CASTILLA LA MANCHA S.L,cereales,7,"Azúcar, Dextrosa, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa, Jarabe de maltitol, Melaza de caña",1717764.84,2291.061
+7579,"HIJOS DE JOSE GOMARIZ LOPEZ, S.L.",conservas vegetales,1,Jarabe de glucosa y fructosa,1864.46,2.02
+7614,"HIJOS DE FRANCISCO SERRANO, S.A.",licores,1,Azúcar Líquido,239506.94,463.86
+7651,SARL API DISTRIBUTION,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",102427.5,84.6
+7699,"TEJERA MARTINEZ, DAVID ANGEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",76.8,0.06
+7706,"RUIPAN, S.L.",bolleria,1,Azúcar,184574.24,281.701
+7708,"MARTIN BERNAL, LAURA",pasteleria,1,Azúcar,4078.8,4.5
+7714,"MASIA EL CARMEN, S.L.",miel,2,"Azúcar, Dextrosa",7208.7,6.029999999999999
+7716,"FURNIELES ARANDA, PILAR",miel,2,"Azúcar, Jarabe de glucosa y fructosa",326.25,0.225
+7726,"ANKER FOOD, S.L.",conservas vegetales,1,Azúcar,29481.6,41.6
+7755,SAS LA CHENERAIE,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",255569.4,238.32
+7765,SURINVER EL GRUPO S.COOP,conservas vegetales,1,Azúcar,37264.0,44.0
+7775,"RUNAKAY PLUS, S.L.",helados,2,"Azúcar, Azúcar Integral",12494.0,11.301
+7787,"ONES MAY SABORES, S.L",salsas y aderezos,1,Azúcar,13689.0,20.0
+7800,"GASCON GASCON, BENITO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2314.0,1.6400000000000001
+7817,GENERAL MILLS,barritas y bebidas deport,6,"Azúcar, Azúcar Integral, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa, Melaza de caña",0.0,0.021
+7830,"KANKEL BEAN TO BAR, S.L.",chocolate,1,Azúcar,1420.0,1.0
+7867,"SINBLAT ALIMENTACION SALUDABLE, S.L.",bolleria,5,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",184365.0,237.383
+7868,GENBA TASTE,pasteleria,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.001
+7880,"DULCES EL AVION, S.A.",chocolate,1,Jarabe de glucosa,82504.368,143.222
+7884,"SONTRAVENTO, LLC",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",2268.0,1.68
+7897,"MANDIC OUTMILL MS4, S.L.",piensos ganaderia,4,"Azúcar, Azúcar Líquido Invertido, Dextrosa, Fructosa",40850.8,41.73
+7912,"HUELLA ECOLOGICA, S.L.",barritas y bebidas deport,3,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",0.0,0.002
+7918,"REFRESCO IBERIA, S.A.U. ",refrescos,2,"Azúcar, Azúcar Líquido",1045908.9,1010.541
+7921,"GRANIZADOS MARESME, S.L.",refrescos,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.004
+7936,"FABRICA JAEN, S.L.U.",bolleria,4,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa y fructosa",10500.0,8.405
+7950,LES RUCHERS DU TALUS,miel,2,"Azúcar, Jarabe de glucosa y fructosa",15403.5,10.23
+7956,"STOCKMEIER QUIMICA, SLU",agroquimico,4,"Azúcar, Dextrosa, Fructosa, Jarabe de glucosa",141873.65,144.805
+7972,MOCHI LUXURY S.L,helados,2,"Azúcar, Jarabe de maltitol",190290.1,220.04
+7980,"AQUAPOOL CHEMICAL, S.L.","especias, aromas,colorant",4,"Azúcar, Azúcar Líquido, Fructosa, Jarabe de glucosa y fructosa",29882.690000000002,22.194
+7987,"MATOS INDUSTRIA E COMERCIO ALIMENTAR, LDA","especias, aromas,colorant",2,"Jarabe de glucosa y fructosa, Melaza de caña",1860.0,2.2809999999999997
+8003,"OBLEAS QUINTIN, S.L.",golosinas,6,"Azúcar, Azúcar Líquido, Dextrosa, Fructooligosacaridos, Jarabe de maltitol, Maltitol",324909.525,349.052
+8011,"BRAVO FERNANDEZ, TEODORA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",891.0,0.45
+8021,"LOPEZ MARTINEZ, GABRIEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",3202.8,1.7850000000000001
+8025,"SANCHEZ BRENES, MARIA ISABEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1024.5,0.615
+8046,"COSTA CONCENTRADOS LEVANTINOS, S.L.",alternativas a lacteos,1,Azúcar,3525.0,3.0
+8084,"CRISTINA ABREU, UNIPESSOAL",pasteleria,1,Melaza de caña,34.825,0.026000000000000002
+8093,"FERTILIZANTES ORGÁNICOS DEL MEDITERRÁNEO, S.L.",agroquimico,1,Jarabe de glucosa y fructosa,8700.0,6.0
+8095,"WILD FERMENT, S.L.",vino y derivados del vino,1,Azúcar,2730.0,2.0
+8150,"BODEGAS MONASTRELL, S.L",vino y derivados del vino,1,Azúcar,135.8,0.1
+8175,"MENUDOS DUENDES, S.L.",golosinas,1,Jarabe de glucosa,64.5,0.07100000000000001
+8219,"FRUTOS SECOS EL LLANO, S.L.",frutos secos y snacks,1,Azúcar,7920.0,12.0
+8247,"ALLJUICEMED, S.L.",zumos y nectares,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",40183618.41,42882.698
+8251,APILINE DI FASSARI DOMINIQUE,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",222943.25,233.8
+8253,"ALVAREZ PONCE, ROCIO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2025.75,1.2149999999999999
+8258,"BRIOIXPAN, S.L.",bolleria,2,"Azúcar, Azúcar Integral",127394.2,139.684
+8260,OBRADOR HERMANOS HIGON S.L.U.,chocolate,2,"Azúcar, Fructooligosacaridos",0.0,0.004
+8278,"GRUPO OSBORNE, S.A.",licores,1,Azúcar Líquido,1754315.1,3009.42
+8304,"GALLEGO MOLERO,FERMIN ",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1522.5,1.05
+8344,"PA DE MEL, S.L.",bolleria,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.001
+8349,"AGOTZAINA, S.L.",bolleria,2,"Azúcar, Jarabe de glucosa",90692.5,67.275
+8350,"MIGA FOODS COMMERCE, S.L.","lacteos, yogur, postr lac",7,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa, Jarabe de maltitol, Jarabe de sorbitol",168774.14,176.591
+8352,ASOCIACION PROVINCIAL DE APICULTORES BURGALESES,miel,2,"Azúcar, Jarabe de glucosa y fructosa",5638.5,3.9899999999999998
+8372,"IFF MURCIA NATURAL INGREDIENTS, SAU",nutraceuticos,1,Jarabe de glucosa,0.0,0.001
+8377,ALHANASHIR FARMING REQUIREMENTS CO. LTD,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",16401.0,11.55
+8389,"CASCALES SANCHEZ, JESUS MANUEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2025.75,1.2149999999999999
+8424,"MISSION FOODS IBERIA, S.A.U.",cereales,1,Dextrosa,48350.0,50.002
+8462,"CAPEL VINOS, S.A.",vino y derivados del vino,3,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa",153779.58000000002,219.099
+8476,"ANITIN JEREZ, S.L.U.",panaderia,1,Azúcar,68783.0,82.0
+8479,FA. BLIESGAUBEUTE,miel,2,"Azúcar, Jarabe de glucosa y fructosa",10243.5,8.91
+8480,"FLORGALA, S.L.",pasteleria,2,"Azúcar, Jarabe de glucosa y fructosa",116071.74,110.715
+8494,"GALVEZ PRADAS, MIGUEL ",miel,2,"Azúcar, Jarabe de glucosa y fructosa",287.5,0.25
+8519,"PAULINO SOLANELLAS, S.L.",frutos secos y snacks,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.002
+8523,"CRUZ ZAMBRANO, MARÍA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",9607.5,6.69
+8553,"NATURAL BEE SPAIN, S.L",miel,1,Azúcar,11555.0,16.1
+8561,"PERPIÑÁN GRAU, JAVIER",miel,1,Azúcar,6002.5,8.575
+8562,"PERPIÑÁN GRAU, MARIA VTA.",miel,1,Azúcar,6002.5,8.575
+8563,"PERPIÑÁN GRAU, ISMAEL",miel,1,Azúcar,6002.5,8.575
+8621,"JUAN FERRI, JUAN JOSE",licores,1,Azúcar,11195.25,10.75
+8629,"CASCALES GALVEZ, ANTONIO JESUS",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1213.5,0.72
+8639,ADS APICOLA UPA GUADALAJARA,miel,2,"Azúcar, Jarabe de glucosa y fructosa",36401.7,28.41
+8641,"GALLETAS GULLÓN, S.A.",galleteros,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",1738318.61,1631.086
+8668,FERDINAND KREUTZER SABAMÜHLE GMBH,barritas y bebidas deport,4,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa",92643.2,73.333
+8734,"VMPS AGUAS E TURISMO, S.A",refrescos,1,Jarabe de glucosa y fructosa,1492102.56,1586.08
+8778,"IDILIA FOODS, S.L.",chocolate,1,Azúcar,69269.2,76.12
+8787,"NOARA MEDITERRANEAN DISTILLERY, S.L.",licores,1,Azúcar Líquido,240682.1,406.7
+8795,"ADISTAFARMA, S.L.",medicamentos,5,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de maltitol",63557.4,45.702
+8836,"AGROCENTROS LEON, S.L.",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",676201.16,689.03
+8837,"AMARITTA FOOD, S.L.",panaderia,2,"Fructooligosacaridos, Jarabe de fructosa",42061.6,42.931
+8854,JOHANNES LÜHDERS KG,nutraceuticos,2,"Fructooligosacaridos, Jarabe de fructosa",43615.8,12.001
+8888,"N. KRALLIS, S.A.",galleteros,2,"Fructooligosacaridos, Jarabe de fructosa",1785.0,0.852
+8889,COOP. AGRICOLA DE VILLAR DEL ARZOBISPO,vino y derivados del vino,2,"Azúcar, Jarabe de glucosa",26796.0,46.202
+8890,"AGROTAN NATURA, S.L.",agroquimico,1,Melaza de caña,1620.6399999999999,1.588
+8912,MAISON VERGNON,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",9500.4,5.88
+8971,"MASTER BUILDERS SOLUTIONS ESPAÑA, S.L.U.",cemento,1,Azúcar,501302.0,511.5
+8994,"NATURECO, S.L.",galleteros,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.003
+8996,"RAMYMAR FRUITS, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2271.0,2.25
+9047,"CUÉTARA, S.L.U.",galleteros,5,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",639.0,0.306
+9067,"SCHREIBER FOODS ESPAÑA, S.L.","lacteos, yogur, postr lac",4,"Azúcar, Azúcar Integral, Fructooligosacaridos, Jarabe de fructosa",5274219.95,5235.242
+9068,GEENG GINGERS INTERNATIONAL,refrescos,2,"Azúcar Integral, Azúcar Líquido",0.0,0.001
+9091,"STOLLER EUROPE, S.L.U.",agroquimico,2,"Azúcar, Azúcar Líquido",48063.2,76.90100000000001
+9097,"CAFES MIÑANA, S.A.",cafe,1,Azúcar,14636.8,14.88
+9107,"MARTIN PAVON, MARIA JOSE",miel,2,"Azúcar, Jarabe de glucosa y fructosa",3225.45,1.8599999999999999
+9113,"VILLAR MARTINEZ, CLAUDIO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",127.12,0.084
+9123,S.A.T. Nº9779 CARREÑO PEÑALVER HNOS,vino y derivados del vino,1,Fructosa,2708.0,1.575
+9151,SARL L'ABEILLE DU MIDI,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",6604.5,5.25
+9155,"CRESTAS LA GALETA, S.A.",helados,1,Fructosa,3412.5,2.5
+9157,"MAK FOOD COMPANY, S.L.",zumos y nectares,8,"Azúcar, Azúcar Líquido, Azúcar Líquido Invertido, Fructooligosacaridos, Fructosa, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa",42530772.449,42381.601
+9159,"APISALCER, SLU",piensos ganaderia,1,Azúcar,113.5,0.1
+9168,"BIO ALIMENTOS DE MURCIA, S.L.",mermeladas y confituras,1,Azúcar,79152.8,66.1
+9183,"VIVER KOMBUCHA, S.L.",refrescos,2,"Azúcar, Jarabe de glucosa",0.0,0.004
+9185,"GARCIA GARCIA, JOSE LUIS",miel,2,"Azúcar, Jarabe de glucosa y fructosa",3282.75,2.915
+9194,"HELADOS JOP, S.L.",helados,4,"Dextrosa, Fructosa, Jarabe de glucosa, Jarabe de sorbitol",58201.8,43.019999999999996
+9195,"ASM NATURAL EXPERIENCE FRANCHISES, S.L.",helados,2,"Azúcar, Dextrosa",8433.72,6.06
+9202,"NAVARRO PALLARES, ROBERTO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1012.0,0.8
+9206,"TRIAS GALLETES-BISCUITS, S.A.",galleteros,1,Azúcar,200695.5,266.58
+9214,"CANDELA BELTRA, IVAN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",965.85,0.705
+9217,"LLANO YARRITU, GOIKO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",472.65,0.345
+9226,"LOPEZ LAMADRID, MERCEDES",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1224.0,1.2
+9257,"VHUMANA, S.A.",barritas y bebidas deport,1,Azúcar,226403.68,273.51
+9263,"LOPEZ 1920 PASTELERÍA, S.L.",bolleria,1,Azúcar,259649.65,347.65
+9272,FIRMENICH BELGIUM S.A,pasteleria,1,Azúcar Líquido Invertido,76582.47,53.81
+9273,"AGROQUIMICA CODIAGRO, S.L.",agroquimico,2,"Azúcar, Jarabe de maltitol",13202.0,17.801
+9274,SUSTAINABLE APIARIES,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",18198.4,13.651
+9286,"LAQTIA, S.L.","lacteos, yogur, postr lac",1,Azúcar,257452.1,320.6
+9309,"GUTSY CAPTAIN SPAIN, S.L.",barritas y bebidas deport,1,Azúcar,15291.0,11.8
+9330,"AMUZA, SILVIU DANIEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2791.8,2.04
+9337,"ORTEGA MARTORELL, JAVIER",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1613.625,1.56
+9349,"GAVILA SOLER, JUAN MIGUEL",miel,1,Azúcar,1757.5,2.375
+9360,"GOMEZ CASTELL, RAFAEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2752.5,2.25
+9361,"IBERLIQUIDOS, S.L.",piensos ganaderia,1,Jarabe de glucosa y fructosa,6175.0,24.7
+9365,MIELLERIE VAUDOISE,miel,2,"Azúcar, Jarabe de glucosa y fructosa",5976.0,6.0
+9377,"CHAIX BORIS, JEAN-BAPTISTE SEBASTIEN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",3585.6,3.6
+9385,SMART ORGANIC AD,galleteros,2,"Fructooligosacaridos, Jarabe de fructosa",1.0,0.003
+9410,"NORDMANN, RASSMANN POLSKA SP. Z O.O.",barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",746326.85,336.308
+9429,TARTAS ANCANO S.L.,bolleria,2,"Azúcar, Jarabe de sorbitol",86597.98,66.94
+9434," ÁGUA SÃO SILVESTRE INDÚSTRIA DE BEBIDAS E PRODUTOS ALIMENTARES, S.A.",refrescos,1,Azúcar Líquido,3816.0,3.6
+9443,ANTONIO NADAL DESTIL.LERIES S.L.,licores,1,Azúcar Líquido,335405.72,517.16
+9446,"ALIMENTARIA ADIN, S.L.",panaderia,1,Azúcar,48409.575,50.629999999999995
+9449,"CASALTA CERISUELO, SALVADOR",miel,2,"Azúcar, Jarabe de glucosa y fructosa",287.5,0.25
+9453,"COMERCIAL ALPAMATIAN, S.L.",agroquimico,1,Jarabe de glucosa y fructosa,2266.6,2.42
+9463,"ADIEGO HERMANOS, S.A.",agroquimico,3,"Jarabe de glucosa y fructosa, Jarabe de sorbitol, Sorbitol",194607.395,197.028
+9473,"TÉCNICAS DEL CAMPO, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1559.25,1.05
+9476,BRASS EMPANADAS S.L.,panaderia,1,Azúcar,24288.0,35.2
+9504,POWER NATURAL LIFE S.L.,"especias, aromas,colorant",1,Fructosa,0.0,0.001
+9515,"INDUSTRIAS LACTEAS PASCUAL, S.L.U.","lacteos, yogur, postr lac",1,Fructosa,33440.0,20.0
+9520,"GOLOSINAS MININOLAS, S.L.U.",nutraceuticos,4,"Jarabe de glucosa, Jarabe de maltitol, Jarabe de sorbitol, Maltitol",289879.2,293.35699999999997
+9524,"PRONAT, S.C.",salsas y aderezos,1,Azúcar,970.0,1.0
+9535,"COMPAÑIA CERVECERA DAMM, S.L.",refrescos,2,"Azúcar, Azúcar Líquido",2660335.0,3459.465
+9539,"ARTIPA FLECA, S.L",turron,2,"Fructooligosacaridos, Jarabe de fructosa",30265.94,9.152999999999999
+9562,"BIO DARMA, S.L.",galleteros,1,Fructooligosacaridos,0.0,0.001
+9565,NORDIK BUCKFAST,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",56830.75,51.03
+9567,SIKA S.A.U.,cemento,1,Azúcar,52462.2,61.65
+9575,"GREEN BEVERAGES ESPAÑA, SL",refrescos,1,Azúcar,16090.5,14.350000000000001
+9576,TRINOVA AG,cereales,3,"Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa",21077.0,7.527
+9604,"PASTISART, S.A.",bolleria,1,Azúcar,209885.0,198.34
+9609,"VAMINTER, S.L.",suplementos deportivos,4,"Azúcar, Fructosa, Jarabe de maltitol, Sorbitol",44478.25,38.276
+9620,"BRAVA DRINKS, S.L.",refrescos,1,Azúcar,834.45,0.625
+9625,"VILALCORTA GARCIA, JOSEBA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1248.0,0.6
+9627,"CONEJO NUÑEZ, FRANCISCO JOSE",miel,1,Azúcar,945.0,0.7
+9628,"CERVERA DIAGO, JOSE MARIA",vino y derivados del vino,1,Azúcar,337.5,0.25
+9629,JULIA JIMENEZ BERMEJO,miel,2,"Azúcar, Jarabe de glucosa y fructosa",1296.0,1.2
+9636,SOMA RHUM DESTILERIE,cervezas,1,Melaza de caña,1494.0,1.2
+9653,BEENICE.DK,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",1522.5,1.05
+9664,"JGH SOLUCIONES LOGISTICAS, S.L.",zumos y nectares,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.0
+9673,"SANTOS CASTILLA, HERMINIA MARIA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2097.9,1.11
+9677,"PEBEMA FOODS, S.L.","especias, aromas,colorant",2,"Azúcar, Azúcar Integral",2883.5,2.3499999999999996
+9683,SCHWARTAUER WERKE GMBH & CO. KG,barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",153366.34,95.628
+9685,ANTONIO RAMÍREZ CASTILLO,conservas vegetales,1,Azúcar Integral,968.0,0.8
+9691,SARL POCQUET APICULTURE,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",6615.0,4.5
+9728,"SALAZAR CARDONA, CLAUDIA MARCELA ",helados,1,Azúcar,119.0,0.1
+9738,"ROMERO ROMERO, ANGEL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1543.5,1.05
+9743,SAS NORDMANN FRANCE,nutraceuticos,2,"Fructooligosacaridos, Jarabe de fructosa",4017.6,2.46
+9744,"NOVASYS PHARMA, S.L.U.",agroquimico,1,Azúcar,1455.5,1.5
+9765,"MUNDAKA HELADOS, S.L.","lacteos, yogur, postr lac",1,Azúcar,5648.0,6.4
+9768,"SHAR PRODUCTOS ALIMENTARIOS, S.L.",panaderia,1,Azúcar,15360.0,17.6
+9770,HALO FOODS LTD,barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",85552.6,47.421
+9781,ADVANCE SCIENCE LIMITED,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",78525.6,78.26
+9792,OROSKER KFT.,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",18500.825,17.187
+9796,"DULCES GIL, S.A.",golosinas,1,Jarabe de glucosa,21648.62,35.226
+9810,"ALLTECH CROP SCIENCE, S.L.U",agroquimico,2,"Dextrosa, Melaza de caña",17075.0,20.027
+9811,"IDEAGRO, S.L.",agroquimico,2,"Azúcar, Dextrosa",94887.45,112.28
+9816,AGRO APICULTURA,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",79800.0,71.19
+9825,"KOMVIDA KOMBUCHA, S.L.",refrescos,1,Azúcar,74354.0,65.802
+9828,"GOODBEER, S.L.",cervezas,4,"Azúcar, Azúcar Líquido, Dextrosa, Jarabe de maltitol",64774.0,78.202
+9832,FRANCISCO J. RUBIO JIMENEZ,miel,1,Azúcar,210.0,0.15
+9833,DONNY G APICOLE SRL,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",49180.95,41.6
+9840,"FIESTA INGREDIENTS, S.L.U.",golosinas,1,Azúcar,846.0,1.0750000000000002
+9849,MORALCO S.R.L.,galleteros,2,"Fructooligosacaridos, Jarabe de fructosa",7546.5,2.714
+9852,"DISTRIBUCIONES VERDE 21, S.L.",agroquimico,1,Dextrosa,1112.5,1.25
+9855,"MOLEFRANK, S.L.",salsas y aderezos,0,,7437.5,12.5
+9858,"CITRIBLAT, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",103.32,0.056
+9867,"ALETTA DEVELOPMENTS, S.L.",vino y derivados del vino,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",16067935.848,13767.174
+9879,"SCHREIBER FOODS PORTUGAL, S.A.","lacteos, yogur, postr lac",1,Azúcar,22605.0,22.0
+9905,GAEC A C BON,miel,2,"Azúcar, Jarabe de glucosa y fructosa",1195.2,1.2
+9906,LE RUCHER DE CALIE,miel,2,"Azúcar, Jarabe de glucosa y fructosa",1195.2,1.2
+9908,COMES BRUNO,miel,2,"Azúcar, Jarabe de glucosa y fructosa",1195.2,1.2
+9910,"HERNANDEZ ORTIZ, DIOSDADO",refrescos,1,Azúcar,1552.0,1.6
+9913,DENIS DESMOINEAUX,miel,2,"Azúcar, Jarabe de glucosa y fructosa",2390.4,2.4
+9919,NATURACOSM SARL,miel,2,"Azúcar, Jarabe de glucosa y fructosa",5745.0,4.35
+9921,"PRODUCTOS SUR, S.L.","especias, aromas,colorant",1,Dextrosa,1108976.5,1199.975
+9955,"TORNERO TORNERO, FRANCISCO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,0.79
+9956,"NORDMANN, RASSMANN GMBH","lacteos, yogur, postr lac",3,"Fructooligosacaridos, Jarabe de fructosa, Jarabe de maltitol",0.0,0.049
+9966,"LUIS MARTIN, SEBASTIAN",miel,2,"Azúcar, Jarabe de glucosa y fructosa",926.1,0.48
+9985,APIRIF SARL,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",142177.4184,138.345
+9990,"POSTRES DE MESA, S.L.",pasteleria,2,"Azúcar, Melaza de caña",215638.5,308.153
+9994,AUDE API,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",46654.25,41.845
+10001,TERNY CLEMENT,miel,2,"Azúcar, Jarabe de glucosa y fructosa",1125.0,0.9
+10008,"AR MELIT SALAMANCA, SLU",miel,1,Azúcar,700.0,1.0
+10012,"HERMEN EUROPA, S.R.L.",piensos ganaderia,3,"Azúcar, Dextrosa, Fructosa",0.0,0.0
+10025,"PRO ELITE BAITS INTERNATIONAL, S.L.",piensos ganaderia,1,Jarabe de glucosa y fructosa,2760.0,2.4
+10029,"ACHOUITI ACHOUITI, MUSTAPHA",miel,2,"Azúcar, Jarabe de glucosa y fructosa",2982.0,3.526
+10039,"FULLERTON LOGISTICS, S.L.U.","lacteos, yogur, postr lac",2,"Azúcar, Jarabe de glucosa y fructosa",1045193.625,1548.435
+10044,"CREACIONES JUGAVI, S.L.",golosinas,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",8628.6,12.822
+10045,"GARCID GESTION FORESTAL, S.L.",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1569.0,1.08
+10046,"SEÑORIO DEL JUCAR, S.L.",vino y derivados del vino,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",40228.32,59.739999999999995
+10069,ORXUJO SETABENSE S.L.,licores,1,Azúcar Integral,24.5,0.025
+10079,"APIGLASS ENVASES Y MATERIAL APICOLA, S.L.U.",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",717800.5,698.745
+10080,"GOMEZ MURCIA, MARCO ANTONIO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1365.0,1.05
+10081,"GHISLAIN, ANDRIEU",miel,2,"Azúcar, Jarabe de glucosa y fructosa",3375.0,2.7
+10082,"LUTTGE, PAUL",miel,2,"Azúcar, Jarabe de glucosa y fructosa",5625.0,4.5
+10083,THENE JULIEN,miel,2,"Azúcar, Jarabe de glucosa y fructosa",3375.0,2.7
+10084,NOYEZ BRIGITTE,miel,2,"Azúcar, Jarabe de glucosa y fructosa",2250.0,1.8
+10085,BELLOT SIMON,miel,2,"Azúcar, Jarabe de glucosa y fructosa",1125.0,0.9
+10099,"AGUARDIENTES DE GALICIA, S. A.",licores,1,Azúcar Líquido,9460.8,14.4
+10107,SAMECA PRODUTOS QUIMICOS SA,vino y derivados del vino,3,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa y fructosa",125545.86,173.108
+10109,DETRIGO PADARIA PASTELARIA LDA,pasteleria,4,"Azúcar, Jarabe de glucosa, Jarabe de glucosa y fructosa, Melaza de caña",47855.19,35.691
+10163,EROSKI SOCIEDAD COOPERATIVA,panaderia,1,Azúcar,0.0,0.01
+10165,"CEREALTO VB1, S.L.U.",cereales,1,Azúcar,8736.975,10.725
+10167,HILLCO BEES,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,1.05
+10179,REACTA GROUP S.R.L.,barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",520.0,0.225
+10180,"GREEN ALCHEMY, S.L.U.",agroquimico,1,Dextrosa,1612.5,1.25
+10187,"SCHMIDLI, DOMINIQUE SEBASTIEN",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",93548.955,89.205
+10190,"FOOD REBELS, S.L.",bolleria,9,"Azúcar, Dextrosa, Fructooligosacaridos, Fructosa, Jarabe de fructosa, Jarabe de glucosa, Jarabe de glucosa y fructosa, Maltitol, Sorbitol",417007.56,631.275
+10192,"NEW GARDEN SYSTEM, S.L.",agroquimico,4,"Azúcar, Dextrosa, Jarabe de glucosa, Melaza de caña",35193.0,36.455
+10222,"CHRISTIAN GRAZE, FABRIK FUR BIENENZUCHTGERATE UN MOBEL, OHG",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",2247.0,1.8900000000000001
+10226,AFRICAN BEEKEEPERS LIMITED,miel,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,0.435
+10234,"GELATS EL VETERA, S.L.",helados,1,Azúcar,7208.0,10.4
+10250,"ANTICH SPANISH FOOD, S.L.",mermeladas y confituras,2,"Azúcar, Fructosa",1820.625,1.175
+10256,VELAMAR IMPORTACION-EXPORTACION SL,"lacteos, yogur, postr lac",1,Azúcar,33540.0,39.0
+10257,"B-ORGANIC, S.L.",nutraceuticos,2,"Azúcar, Jarabe de glucosa",1908.4,2.0
+10259,"NUTRIS, WE CARE ABOUT YOU, S.L.",nutraceuticos,6,"Azúcar, Fructooligosacaridos, Jarabe de fructosa, Jarabe de glucosa, Jarabe de maltitol, Jarabe de sorbitol",4515796.14,4997.112
+10261,"ECOVISTABELLA, S.L.",agroquimico,1,Jarabe de glucosa y fructosa,1068.0,1.2
+10262,"SIDORENKO INGREDIENTS, LTD.",barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",7463.8,3.2720000000000002
+10264,G. G. CONSTANTINOU LTD,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",2409.0,1.89
+10265,"OFFSETSAN, LTD",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",24948.0,22.689999999999998
+10268,MILCHWERKE MITTELELBE GMBH,barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.004
+10269,"ENERYETI COMPANY, S.L.",refrescos,1,Azúcar,2484.0,3.6
+10271,"LA NEWYORKINA, S.L.",cereales,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.01
+10274,"ALVAREZ DIAZ, JACINTO",miel,2,"Azúcar, Jarabe de glucosa y fructosa",1536.75,0.84
+10276,"OLYRA GREEK NUTRITION PRODUCTS SINGLE MEMBER, S.A.",galleteros,3,"Azúcar, Fructooligosacaridos, Jarabe de fructosa",389355.3,159.625
+10277,AUSTRALIAN HONEYBEE PTY LTD,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",55411.649999999994,40.95
+10278,INGREDION INCORPORATED,barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.009000000000000001
+10285,"CAMPO REAL VITIVINICOLA, S.L.",vino y derivados del vino,2,"Azúcar, Jarabe de glucosa",16352653.525,13459.403
+10286,"BIOTECHNOLOGY AND SPECIALITIES, S.L.",agroquimico,1,Azúcar,102.3,0.111
+10302,"MARTINEZ REINA, SALVADOR ",miel,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,1.6653345369377348e-16
+10306,"IBERIA INGREDIENTS, S.L.",vino y derivados del vino,4,"Azúcar, Azúcar Líquido Invertido, Jarabe de glucosa, Sorbitol",12724.06,12.948
+10309,ASOCIACION PROVINCIAL DE APICULTORES DE ALBACETE,miel,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,6.333
+10310,RISCOSSA LTD,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",1800.0,1.8
+10323,"GARCIA MARTINEZ, ANTONIO BONIFACIO",agroquimico,1,Melaza de caña,7939.5,23.7
+10332,"PRODUCTOS NATURALES CAPELL, S.A.",mermeladas y confituras,1,Fructosa,15031.25,12.5
+10337,AMERO FOODS MFG CORP DBA PASTRYSTAR,mermeladas y confituras,2,"Fructooligosacaridos, Jarabe de fructosa",3420.0,1.2009999999999998
+10338,KADERES PEASANT DEVELOPMENT PLC,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",874.0,0.8600000000000001
+10346,BODEGAS MURVIEDRO S.A.,vino y derivados del vino,1,Azúcar Líquido,136932.88,215.684
+10348,"SCHREIBER DE CANARIAS, S.L.","lacteos, yogur, postr lac",1,Fructooligosacaridos,6513.75,2.25
+10354,GENERAL MILLS INTERNATIONAL SARL,barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",2006.0,1.1809999999999998
+10383,"SIETEM, S.L.",pasteleria,1,Azúcar,3215.325,3.225
+10387,"MUREDA ALIMENTACION, S.L.",vino y derivados del vino,1,Azúcar,1550.0,1.0
+10393,APIS BEE SUPPLIES LTD,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",4200.0,4.2
+10397,"SIMON THE BEEKEEPER, LTD",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",238250.4,274.75600000000003
+10433,IL MONDO DELLE API,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",85354.5,91.08
+10436,"PRODUCCIONES BIOLOGICAS, S.L.U.",abejorros,2,"Azúcar, Jarabe de glucosa y fructosa",924.0,1.2
+10454,"GONZALEZ BYASS CHINCHON, S.A.",licores,1,Azúcar Líquido,98266.92,189.1
+10457,APICOMP SRLS,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",21555.0,22.2
+10471,"MIELES IBERICAS, S.L.U",piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",108904.6,113.899
+10484,SEIRINGER ROLAND HERMANN ERICH,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,0.349
+10491,MIGADI MONOPROSOPI IKE,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",53940.0,58.164
+10494,GARTNERBUTIKKEN APS,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",6069.5,5.88
+10500,APIS INTERNATIONAL B.V.,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",5801.15,4.945
+10512,"SPECIAL FOOD FACTORY, S.L.",pasteleria,1,Fructooligosacaridos,72.5,0.026000000000000002
+10514,"ARTESANOS VIRGEN DE EXTREMADURA, S.L.",miel,1,Jarabe de glucosa,1380.0,1.2
+10516,"AGROMEDITERRANEA CABO DE GATA, S.L.",vino y derivados del vino,1,Azúcar Líquido Invertido,78056.22,149.82
+10522,CARL FRITZ IMKERTECHNIK GMBH & CO. KG,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",27787.5,22.794999999999998
+10533,"MARIE BRIZARD WINE & SPIRITS ESPAÑA, S.A.",licores,1,Azúcar Líquido,15240.0,24.003
+10540,"LIBERTINE BARCELONA, S.L",licores,1,Azúcar Líquido,4622.4,7.2
+10541,DOSMILNUEVE MIEL TCEA,miel,2,"Azúcar, Jarabe de glucosa y fructosa",11385.0,15.18
+10542,"CINCO TENEDORES, S.L.",platos preparados,1,Azúcar,1120.0,1.6
+10545,"CONCENTRADOS FRUTEROS, S.L.",zumos y nectares,2,"Azúcar, Jarabe de glucosa",982377.72,848.34
+10547,FRULACT USA LLC,mermeladas y confituras,2,"Fructooligosacaridos, Jarabe de fructosa",303407.45999999996,101.61
+10578,APITRADE LTD,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",2289.0,1.8900000000000001
+10599,"WACKER LEON, S.L.U.",medicamentos,1,Azúcar,3448.8,4.375
+10600,GONZALO RIOS S.L.,galleteros,2,"Fructooligosacaridos, Jarabe de fructosa",2362.5,0.801
+10610,"EL PASTORET DE LA SEGARRA, S.L.","lacteos, yogur, postr lac",1,Fructooligosacaridos,0.0,0.001
+10619,"RON MONTERO, S.L.",licores,1,Azúcar,1800.0,2.4
+10621,"SAVI AGRICOLA DEL SUR, S.L.",agroquimico,1,Azúcar,0.0,0.001
+10623,DAAN'S HONING,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",2913.75,2.73
+10626,ALBERTA HONEY PRODUCERS CO-OPERATIVE LTD.,miel,2,"Azúcar, Jarabe de glucosa y fructosa",28938.0,22.68
+10630,"BODEVICI, S.L.",helados,1,Fructooligosacaridos,0.0,0.001
+10637,"SOLINA, S.L.U.","especias, aromas,colorant",1,Fructooligosacaridos,0.0,0.001
+10645,ASTERISCOS E RETICENCIAS S.A.,barritas y bebidas deport,1,Azúcar Líquido Invertido,17460.3,24.05
+10657,"GASCON VERMUYTEN, S.L.","lacteos, yogur, postr lac",1,Jarabe de sorbitol,18786.6,17.1
+10660,HIVEIQ PTY LTD,miel,2,"Azúcar, Jarabe de glucosa y fructosa",52925.04,45.3408
+10662,"AIROS DELICATESSEN, S.L.",panaderia,3,"Azúcar Integral, Fructooligosacaridos, Jarabe de fructosa",1530.0,1.2329999999999999
+10666,"AURORA VEIL, S.L.",suplementos deportivos,2,"Azúcar, Fructosa",51440.0,44.8
+10674,"RIVERA JOVE, JORDI ",helados,2,"Fructooligosacaridos, Jarabe de fructosa",3870.0,1.2
+10681,TFT FOOD S.L.,pasteleria,2,"Fructooligosacaridos, Jarabe de fructosa",7.0,0.015
+10687,BRIOCHE PASQUIER ETOILE,panaderia,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.002
+10694,ARCHROMA IBERICA S.L.,agroquimico,1,Fructosa,0.0,0.001
+10698,"VIDA BRANDS FOOD, S.L.",golosinas,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.002
+10699,"BALLARA, S.L.",pasteleria,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.004
+10706,APITEC JERZY RUGALA,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",3137.9,3.165
+10716,"BUSTAMANTE LIRIA, JORGE",abejorros,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,0.004
+10736,"G&G SPIRITS, S.L.",licores,1,Azúcar Líquido,841.34,1.18
+10739,REPOSTERIA KETYDUL S.L.,pasteleria,1,Jarabe de sorbitol,1548.0,1.2
+10743,BLISS POINT S.L.,barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",45787.375,22.490000000000002
+10753,"TIRMA, S.A.",galleteros,1,Jarabe de glucosa,0.0,0.001
+10754,"BODEGAS VEREDA REAL, S.L.",vino y derivados del vino,3,"Azúcar, Azúcar Líquido, Jarabe de glucosa",0.0,0.003
+10767,"EXPLOTACIONES HERMANOS DELGADO, S.L.",vino y derivados del vino,1,Azúcar,0.0,0.003
+10775,"CEREALTO VB1, S.L.U.",cereales,1,Azúcar,0.0,0.0
+10777,APILINE S.R.L.,piensos ganaderia,2,"Azúcar, Jarabe de glucosa y fructosa",143402.4,158.43
+10779,AZELIS CROATIA D.O.O.,suplementos deportivos,1,Fructooligosacaridos,0.0,0.01
+10786,"DIBAQ DIPROTEG, S.A.",piensos mascotas,3,"Dextrosa, Fructooligosacaridos, Jarabe de fructosa",0.0,0.003
+10791,"CHOCOLATES & NUTS, S.L.",chocolate,2,"Azúcar, Jarabe de glucosa y fructosa",0.0,-4.440892098500626e-16
+10794,BIEMME SRL,barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",700.0,0.4
+10805,F CHOICE P.C.,barritas y bebidas deport,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.002
+10808,"ARTTPA, S.L.",panaderia,2,"Fructooligosacaridos, Jarabe de fructosa",0.0,0.002
+10818,"NEOINGREDIENTES - MATERIAS PRIMAS ALIMENTARES, LDA",bolleria,2,"Fructosa, Jarabe de glucosa y fructosa",25717.5,22.501
+10819,INFINITE CHOICE LDA.,pasteleria,1,Fructosa,1555.0,1.25
+10821,BLAGDEN SPECIALTY CHEMICALS LTD,"especias, aromas,colorant",1,Fructooligosacaridos,0.0,0.001
+10822,"HANNA ENTERPRISES ESPAÑA, S.L.",vino y derivados del vino,1,Azúcar Líquido,780.0,1.0
+10834,"JOINT CELLARS, S.L.",licores,1,Azúcar Líquido,15850.08,24.46
+10837,HERBA RICEMILLS S.L.U.,platos preparados,1,Azúcar Integral,0.0,0.001

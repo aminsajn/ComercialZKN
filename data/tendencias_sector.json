@@ -1,0 +1,162 @@
+{
+  "bolleria": {
+    "tendencias": ["clean label sin aditivos artificiales", "reducción azúcar y grasa", "masa madre y fermentación lenta", "alto contenido en proteína y fibra", "ingredientes locales y ecológicos"],
+    "productos_teoricos": ["fibra de avena funcional", "edulcorantes naturales (eritritol, estevia)", "proteína de guisante texturizada", "masa madre en polvo", "harina de legumbre"],
+    "fuente": "Alimentaria 2024, Anuga 2025, FoodIngredientsfirst.com, Puratos Taste Tomorrow 2025"
+  },
+  "panaderia": {
+    "tendencias": ["masa madre artesanal en alza", "fermentación lenta y panes de larga conservación", "reducción de sal", "harinas alternativas (espelta, centeno, kamut)", "salud intestinal y prebióticos"],
+    "productos_teoricos": ["cultivos iniciadores de masa madre", "fibras prebióticas (inulina, FOS)", "harinas de legumbre (garbanzo, lenteja)", "enzimas panaderas clean label", "emulsionantes naturales (DATEM vegetal)"],
+    "fuente": "Alimentaria 2024, Anuga 2025, Intersicop 2025, ABmauri 2025, FoodIngredientsfirst.com"
+  },
+  "pasteleria": {
+    "tendencias": ["premiumización y experiencia sensorial", "aromas florales (lavanda, flor de cerezo, rosa, violeta)", "reducción de azúcar sin perder indulgencia", "fusión de culturas (K-pastry, Dubai chocolate)", "sostenibilidad en ingredientes"],
+    "productos_teoricos": ["extractos florales naturales", "cacao premium de origen único", "edulcorantes naturales (alulosa, eritritol)", "cremas vegetales para rellenos", "colorantes naturales de alto rendimiento"],
+    "fuente": "Alimentaria 2024, SIAL 2024, Puratos 2025, Anuga 2025, foodingredientsfirst.com"
+  },
+  "galleteros": {
+    "tendencias": ["galletas high-protein y alto en fibra", "reducción de azúcar y sal", "ingredientes funcionales (beta-glucanos de avena)", "formatos snack y conveniencia", "sabores globales (matcha, miso, pistacho)"],
+    "productos_teoricos": ["proteína de guisante para galletas", "fibra de avena beta-glucano", "aceites vegetales sostenibles (girasol alto oleico)", "edulcorantes naturales (alulosa)", "aromas funcionales de nueva generación"],
+    "fuente": "Alimentaria 2024, FiE 2025, Anuga 2025, Innova Market Insights 2025"
+  },
+  "chocolate": {
+    "tendencias": ["chocolate bajo en azúcar (oligofructosa, eritritol)", "opciones veganas y plant-based en alza", "cacao sostenible y trazabilidad (certificaciones)", "sabores emergentes (pistacho, gianduja, yuzu, haba tonka)", "chocolate funcional con añadidos de salud"],
+    "productos_teoricos": ["polvo de cacao de origen certificado", "alternativas al cacao (algarroba)", "lecitina de girasol (sin soja)", "edulcorantes clean label sin azúcar", "rellenos proteicos para tabletas"],
+    "fuente": "ISM 2024, Alimentaria 2024, Anuga 2025, Innova Market Insights, foodingredientsfirst.com"
+  },
+  "golosinas": {
+    "tendencias": ["reducción de azúcar y colorantes artificiales", "sabores globales y exóticos (frutas tropicales, K-food)", "formatos premium y artesanales", "funcionalidad (vitaminas, minerales añadidos)", "vegano y sin gelatina animal"],
+    "productos_teoricos": ["colorantes naturales alta intensidad (antocianinas, cúrcuma, espirulina)", "edulcorantes clean label (alulosa, eritritol)", "pectinas vegetales en sustitución de gelatina animal", "aromas naturales exóticos (frutas tropicales)", "activos funcionales encapsulados (vitamina C, zinc)"],
+    "fuente": "ISM 2024, Anuga 2025, SIAL 2024, Innova Market Insights 2025"
+  },
+  "turron": {
+    "tendencias": ["reducción de azúcar manteniendo sabor", "vegano y sin lácteos", "ingredientes premium (pistacho, cacao fino de origen)", "formatos innovadores más allá del turrón clásico", "etiqueta limpia sin conservantes"],
+    "productos_teoricos": ["eritritol y alulosa para reducción de azúcar", "frutos secos premium (pistacho, macadamia)", "chocolate oscuro certificado con trazabilidad", "miel ecológica como edulcorante natural", "aromas naturales de vainilla bourbon"],
+    "fuente": "Alimentaria 2024, ISM 2024, Anuga 2025"
+  },
+  "lacteos, yogur, postr lac": {
+    "tendencias": ["yogures ricos en proteína y bajos en azúcar", "probióticos y prebióticos para salud intestinal (Innova #1 trend 2026)", "funcionalidad (omega-3, colágeno, vitamina D)", "formatos convenientes y snack", "sabores premium globales"],
+    "productos_teoricos": ["cultivos probióticos especializados (Lactobacillus reuteri, BB-12)", "proteína láctea concentrada (WPC80, MPC85)", "fibras prebióticas (inulina, FOS, GOS)", "omega-3 microencapsulado sin sabor a pescado", "colorantes y aromas naturales clean label"],
+    "fuente": "Anuga 2025, FiE 2025, The Food Tech 2025, Alimentaria 2024, Innova Market Insights 2026"
+  },
+  "alternativas a lacteos": {
+    "tendencias": ["bebidas de avena y guisante liderando el mercado", "proteínas vegetales de nueva generación (habas, quinoa, cáñamo)", "híbridos lácteos+vegetal para flexitarianos", "fermentación de precisión para análogos de queso", "clean label sin aditivos innecesarios"],
+    "productos_teoricos": ["proteína de avena funcional texturizante", "proteína de guisante aislada (90%+)", "proteína de haba (sin alérgenos soja)", "cultivos para fermentación vegetal", "grasas vegetales texturizantes (aceite de coco fraccionado)"],
+    "fuente": "Anuga 2025, FiE 2025, Alimentaria 2024, Euromonitor 2025"
+  },
+  "carnico": {
+    "tendencias": ["reducción de sal y grasas saturadas (-30%)", "clean label sin nitritos ni conservantes artificiales", "cárnico de ave de alto valor proteico en alza", "productos híbridos carne+vegetal para flexitarianos", "origen trazable y bienestar animal certificado"],
+    "productos_teoricos": ["antioxidantes naturales (extracto de romero, tocoferoles, vitamina C)", "fosfatos reducidos y sales texturizantes limpias", "proteínas vegetales para productos híbridos (guisante, soja)", "especias naturales para curado sin nitritos", "almidones modificados clean label para retención de agua"],
+    "fuente": "Anuga 2025, Alimentaria 2026, IFFA 2025, foodingredientsfirst.com, Molendum 2026"
+  },
+  "cereales": {
+    "tendencias": ["cereales de desayuno high-protein en fuerte crecimiento", "reducción de azúcares añadidos", "granos ancestrales (avena, espelta, amaranto, teff)", "funcionalidad digestiva (beta-glucanos, fibra)", "snack de cereales saludable para el day-to-day"],
+    "productos_teoricos": ["proteína de guisante para enriquecimiento", "fibra de avena beta-glucano (>3g por ración)", "edulcorantes naturales (eritritol, alulosa)", "aromas naturales de frutos secos y miel", "vitaminas y minerales encapsulados termoestables"],
+    "fuente": "Anuga 2025, FiE 2025, Alimentaria 2024, Innova Market Insights 2025"
+  },
+  "barritas y bebidas deport": {
+    "tendencias": ["proteína accesible para consumidor general (no solo atletas)", "barritas con adaptógenos y antioxidantes", "formatos snack de proteína para el día a día", "sabores premium e indulgentes (chocolate-avellana, cookie dough)", "ingredientes funcionales (electrolitos naturales, cafeína natural)"],
+    "productos_teoricos": ["proteína de guisante aislada (sabor neutro)", "proteína de arroz integral", "adaptógenos encapsulados (ashwagandha, rhodiola)", "electrolitos naturales (sales minerales de coco)", "fibras funcionales para textura y saciedad"],
+    "fuente": "Anuga 2025, FiE 2025, Vitafoods 2025, foodingredientsfirst.com, Innova 2025"
+  },
+  "suplementos deportivos": {
+    "tendencias": ["mercado mainstream más allá del deporte de élite", "formulaciones sin ingredientes artificiales", "proteínas de nueva generación (microbiana, algas, insecto)", "colágeno deportivo para recuperación articular", "aromas spray-dry innovadores de alta pureza"],
+    "productos_teoricos": ["proteína de guisante ultra-purificada (sabor optimizado)", "colágeno hidrolizado bovino/marino (tipo I y III)", "creatina monohidrato micronizada", "leucina y BCAA de alta pureza", "extractos naturales de remolacha (nitratos) y beta-alanina"],
+    "fuente": "Vitafoods 2025, FiE 2025, Anuga 2025, foodingredientsfirst.com"
+  },
+  "nutraceuticos": {
+    "tendencias": ["salud intestinal y microbioma como foco #1 (Innova Trends 2026)", "gestión del estrés y nootropicos (salud mental)", "colágeno y salud articular-piel", "omega-3 y salud cardiovascular", "inmunidad post-COVID en foco sostenido"],
+    "productos_teoricos": ["postbióticos y probióticos de nueva generación (Lacticaseibacillus)", "extractos botánicos adaptógenos (ashwagandha KSM-66, rhodiola)", "omega-3 microencapsulado con sabor neutro", "colágeno de origen marino (más sostenible)", "vitamina D3 + K2 co-encapsulada"],
+    "fuente": "Vitafoods 2025-2026, FiE 2025, Anuga 2025, Innova Market Insights 2026, foodingredientsfirst.com"
+  },
+  "helados": {
+    "tendencias": ["helados con inclusiones premium (brownie artesanal, galleta, caramelo salado)", "aromas florales y sabores exóticos", "helados high-protein y low-sugar para adultos", "formatos snack y conveniencia (sticks, miniaturas)", "clean label sin colorantes artificiales"],
+    "productos_teoricos": ["edulcorantes funcionales (eritritol, alulosa para textura cremosa)", "estabilizantes clean (goma de tara, guar, carragenatos)", "proteína láctea para enriquecimiento sin afectar textura", "aromas naturales premium (vainilla bourbon, cacao fino)", "colorantes naturales estables al congelado (antocianinas, betacaroteno)"],
+    "fuente": "Sigep 2025, Anuga 2025, Alimentaria 2026, foodingredientsfirst.com"
+  },
+  "conservas pescado": {
+    "tendencias": ["conservas gourmet de origen trazable y sostenible", "formatos ready-to-eat premium (tartar, ceviche en conserva)", "reducción de sal (sodio -25%)", "aceites premium para conservas (AOVE, aceite de aguacate)", "nuevas especies sostenibles y diversificación"],
+    "productos_teoricos": ["aceite de oliva virgen extra de alta calidad", "sal marina reducida en sodio (sal potásica)", "especias y aromas naturales para marinados gourmet", "antioxidantes naturales (tocoferoles, romero) para prolongar vida útil", "hierbas aromáticas deshidratadas de calidad"],
+    "fuente": "Alimentaria 2024, SIAL 2024, Anuga 2025"
+  },
+  "conservas vegetales": {
+    "tendencias": ["conservas plant-based como fuente de proteína (legumbres en auge)", "reducción de sal y azúcar en salsas de tomate", "fermentados vegetales (kimchi, sauerkraut, encurtidos)", "ingredientes locales y de temporada", "formatos convenience listos para consumir"],
+    "productos_teoricos": ["mezclas de especias para fermentados naturales", "acidulantes naturales (ácido cítrico, vinagre de manzana)", "pectinas vegetales texturizantes para salsas", "aromas naturales de vegetales asados", "extractos de hierbas conservantes (tomillo, orégano)"],
+    "fuente": "Alimentaria 2024, Anuga 2025, FiE 2025"
+  },
+  "especias, aromas,colorant": {
+    "tendencias": ["colorantes naturales en sustitución de artificiales (presión regulatoria EU)", "aromas globales K-food (gochujang, miso, kimchi) y pistacho, yuzu, haba tonka", "especias funcionales con claims de salud (cúrcuma, jengibre, canela)", "microencapsulación para mayor estabilidad al calor y luz", "clean label y transparencia total de origen"],
+    "productos_teoricos": ["extractos de cúrcuma alta curcumina (95%)", "colorantes de espirulina azul y antocianinas estabilizadas", "aromas de K-food auténticos (gochujang, kimchi)", "extractos de pistacho y yuzu prémium", "microencápsulas de aromas resistentes al calor y pH"],
+    "fuente": "FiE 2025, Anuga 2025, Alimentaria 2024, SIAL 2024, foodingredientsfirst.com"
+  },
+  "frutos secos y snacks": {
+    "tendencias": ["snacks high-protein con frutos secos como base natural", "clean label sin sabores artificiales ni aceites de palma", "snacks funcionales con adaptógenos y antioxidantes", "sabores globales y experiencias (wasabi, barbacoa ahumada, tajín)", "snacks de legumbres (garbanzos, habas tostadas) como alternativa de proteína"],
+    "productos_teoricos": ["coberturas de chocolate funcional sin azúcar añadida", "especias y condimentos naturales para recubrimiento", "proteína de garbanzo o haba para snacks extruidos", "aceites premium para tostado (girasol alto oleico)", "extractos antioxidantes naturales para prolongar frescura"],
+    "fuente": "Anuga 2025, Alimentaria 2024-2026, Innova Market Insights 2025, foodingredientsfirst.com"
+  },
+  "mermeladas y confituras": {
+    "tendencias": ["reducción de azúcar con pectinas y fibras naturales", "sabores y combinaciones innovadoras (floral, picante-dulce, fermentado)", "sin azúcar añadido con edulcorantes naturales (fruta del monje)", "ingredientes locales y km0", "confituras artesanales premium y de pequeño lote"],
+    "productos_teoricos": ["pectinas de alta y baja metoxilación para productos low-sugar", "fibra de inulina para reducción de azúcar sin pérdida textura", "edulcorantes naturales (estevia, fruta del monje, eritritol)", "aromas florales naturales (flor de saúco, lavanda, violeta)", "ácido cítrico y tartárico naturales para equilibrio de sabor"],
+    "fuente": "Alimentaria 2024, SIAL 2024, Anuga 2025, FiE 2025"
+  },
+  "miel": {
+    "tendencias": ["mieles monoflorales premium y de origen geográfico certificado", "miel como edulcorante natural en reformulaciones saludables", "miel funcional con propóleo y jalea real", "storytelling de biodiversidad y polinización sostenible", "formatos innovadores (miel en polvo, crema, honeygar)"],
+    "productos_teoricos": ["miel en polvo para aplicaciones industriales de panadería y pastelería", "extracto de propóleo natural como conservante limpio", "miel cristalizada texturizante para coberturas", "perfiles de sabor únicos por origen botánico (azahar, romero, tomillo)", "combinaciones miel+especias premium para salsas y marinados"],
+    "fuente": "Alimentaria 2024, SIAL 2024, Anuga 2025"
+  },
+  "platos preparados": {
+    "tendencias": ["platos preparados high-protein y funcionales en fuerte crecimiento (+5,7%)", "clean label sin aditivos artificiales ni conservantes", "gastronomía global en formato conveniente (platos étnicos)", "congelados premium con ingredientes de calidad reconocible", "plant-based ready meals en expansión"],
+    "productos_teoricos": ["almidones modificados clean label para textura estable", "especias y aromas naturales para marinados auténticos", "proteínas de calidad para rellenos (pollo, legumbres)", "salsas base naturales concentradas", "conservantes naturales (extracto de romero, tocoferoles vitamina E)"],
+    "fuente": "Alimentaria 2026, Anuga 2025, Tutti Food Group 2026, foodingredientsfirst.com"
+  },
+  "refrescos": {
+    "tendencias": ["zero azúcar con sabores naturales auténticos (no artificiales)", "bebidas funcionales con nootrópicos, adaptógenos y colágeno", "kombucha y bebidas fermentadas de base vegetal", "hard seltzer y bebidas bajas en calorías con alcohol", "aromas florales y botánicos emergentes"],
+    "productos_teoricos": ["edulcorantes clean (alulosa, eritritol, Reb-A alta pureza)", "aromas de flores (lavanda, hibisco, flor de azahar, violeta)", "extractos botánicos funcionales (ashwagandha, ginkgo, ginseng)", "colorantes naturales para bebidas estables (antocianinas, betacaroteno)", "acidulantes naturales (ácido cítrico, málico, láctico)"],
+    "fuente": "Alimentaria 2024, Anuga 2025, SIAL 2024, Kerry Flavour Trends 2024"
+  },
+  "zumos y nectares": {
+    "tendencias": ["zumos cold-press y HPP mínimamente procesados", "funcionalización con vitaminas, adaptógenos y superfrutos", "reducción de azúcar añadido (< 4g/100ml)", "nuevos superfrutos emergentes (açaí, noni, maracuyá, morinda)", "mezclas frutas+verduras en formato booster"],
+    "productos_teoricos": ["concentrados de superfrutos estabilizados (açaí, granada, arándano)", "vitamina C de acerola natural", "extractos de jengibre y cúrcuma", "fibra soluble (pectina de manzana o cítrica)", "ácido ascórbico encapsulado para mayor estabilidad"],
+    "fuente": "Alimentaria 2024, Anuga 2025, drinktec 2022, FiE 2025"
+  },
+  "cafe": {
+    "tendencias": ["cold brew y café frío premium en alza (Anuga 2025 destaca haba tonka, yuzu)", "café de especialidad y origen único", "RTD (ready-to-drink) conquista Generación Z y Millennials", "café funcional con adaptógenos (ashwagandha, lion's mane)", "sostenibilidad y certificaciones (Rainforest, Fair Trade)"],
+    "productos_teoricos": ["extractos de café verde funcional (ácido clorogénico)", "aromas naturales de café especialidad (notas caramel, floral, frutal)", "café liofilizado de especialidad de alta solubilidad", "añadidos funcionales para café (colágeno, ashwagandha, MCT)", "edulcorantes naturales para RTD café sin azúcar"],
+    "fuente": "Anuga 2025, HOST 2025, Alimentaria 2024, foodingredientsfirst.com, Kerry Trends 2024"
+  },
+  "vino y derivados del vino": {
+    "tendencias": ["vinos bajos en alcohol y sin alcohol en fuerte crecimiento", "vinos naturales y biodinámicos con menor intervención", "etiqueta limpia sin sulfitos añadidos o reducidos", "varietales autóctonos emergentes y locales", "packaging sostenible (vidrio ligero, lata, bag-in-box)"],
+    "productos_teoricos": ["levaduras vínicas especializadas de baja producción de SO2", "enzimas enológicas (lacasas, beta-glucosidasas)", "taninos enológicos naturales (de roble, de uva)", "ácido tartárico para corrección de acidez natural", "antioxidantes sin SO2 (glutatión, ácido ascórbico)"],
+    "fuente": "Prowein 2025, Alimentaria 2024, SIAL 2024"
+  },
+  "cervezas": {
+    "tendencias": ["cervezas sin alcohol y baja graduación liderando crecimiento de doble dígito", "craft beer premium con ingredientes locales y exóticos", "cervezas funcionales (probióticos, electrolitos, vitaminas)", "nuevos lúpulos aromáticos (tropical, frutal, herbal)", "cervezas de frutas y especias para nuevos consumidores"],
+    "productos_teoricos": ["extractos de lúpulo aromático (Citra, Mosaic, Simcoe)", "levaduras artesanales especializadas (belga, weizen, Kveik)", "maltas premium de especialidad (chocolate, tostadas, caramelo)", "aromas naturales para cervezas craft (frutas, especias)", "prebióticos y probióticos específicos para cervezas funcionales"],
+    "fuente": "BrauBeviale 2024, drinktec 2022, Anuga 2025"
+  },
+  "licores": {
+    "tendencias": ["premium y ultra-premium spirits en auge", "licores sin alcohol y bajos en alcohol (categoría de mayor crecimiento)", "gin premium con botánicos locales y exóticos", "licores artesanales con ingredientes naturales y locales", "cócteles RTD (ready-to-drink) con premium spirits"],
+    "productos_teoricos": ["botánicos y extractos para destilados (enebro, cardamomo, cítricos, angélica)", "caramelo natural para coloración de whisky y ron (E150a)", "aromas naturales premium para licores de frutas y herbales", "azúcares naturales de caña para corrección de perfil", "extractos de madera y chip de roble para envejecimiento acelerado"],
+    "fuente": "Alimentaria 2024, SIAL 2024, Anuga 2025"
+  },
+  "salsas y aderezos": {
+    "tendencias": ["sabores globales y picantes emergentes (gochugaru, salsa macha, sambal oelek, tajín)", "clean label sin conservantes ni espesantes artificiales", "salsas premium artesanales y gourmet", "reducción de sal y azúcar manteniendo sabor", "opciones veganas y sin alérgenos habituales"],
+    "productos_teoricos": ["extractos de chile y pimiento picante natural graded", "vinagres premium funcionales (balsámico, manzana, Jerez)", "mezclas de especias exóticas clean (gochugaru, za'atar, ras el hanout)", "almidones modificados clean label para textura y estabilidad", "conservantes naturales (extracto de romero, ácido acético, ácido cítrico)"],
+    "fuente": "Alimentaria 2026, SIAL 2024, Anuga 2025, Kerry Flavour Trends 2024"
+  },
+  "piensos mascotas": {
+    "tendencias": ["humanización del pet food (ingredientes premium como en alimentación humana)", "piensos high-protein con proteínas de calidad y origen trazable", "clean label sin subproductos ni aditivos artificiales", "pet food funcional (articulaciones, digestión, pelaje, cerebro)", "proteínas alternativas sostenibles (insecto, algas, carne cultivada)"],
+    "productos_teoricos": ["proteína de pollo hidrolizada de alta digestibilidad", "proteína de insecto (hermetia illucens, BSF)", "omega-3 de algas marinas (DHA, EPA sin pescado)", "probióticos específicos para mascotas (Enterococcus faecium)", "extractos funcionales (condroitina-glucosamina, extracto de arándano)"],
+    "fuente": "Zoomark 2025, Anuga 2025, FiE 2025, foodingredientsfirst.com"
+  },
+  "piensos ganaderia": {
+    "tendencias": ["reducción de antibióticos promotores de crecimiento (regulación EU)", "aditivos naturales para bienestar animal y salud intestinal", "nutrición de precisión por especie y fase productiva", "mejora de eficiencia digestiva y FCR", "trazabilidad y sostenibilidad en toda la cadena"],
+    "productos_teoricos": ["fitogénicos y extractos de plantas (timol, carvacrol, orégano)", "enzimas digestivas (fitasas, xilanasas, amilasas)", "probióticos y prebióticos para ganadería (MOS, FOS, Beta-glucanos)", "aminoácidos funcionales protegidos (lisina, metionina, treonina)", "ácidos orgánicos para control microbiológico (fórmico, propiónico, láctico)"],
+    "fuente": "Eurotier 2024, Anuga 2025, VIV Europe 2024"
+  },
+  "estuchadores": {
+    "tendencias": ["packaging sostenible y reciclable 100% (obligación regulatoria EU 2025+)", "reducción de plástico en envases alimentarios", "envases activos e inteligentes (control temperatura, frescura)", "personalización y small-batch para marcas nicho", "eficiencia y automatización en líneas de co-packing"],
+    "productos_teoricos": [],
+    "fuente": "Alimentaria 2024, Empack 2024, Interpack 2023"
+  }
+}
