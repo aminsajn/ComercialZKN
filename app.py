@@ -1311,12 +1311,12 @@ elif st.session_state["pagina"] == "variacion":
     # ── Filtros ───────────────────────────────────────────────────────────────
     fc1, fc2 = st.columns([1, 3])
     with fc1:
-        transiciones = [f"{ANOS[i-1]}→{ANOS[i]}" for i in range(1, len(ANOS))]
-        trans_sel    = st.selectbox("Año", transiciones,
+        transiciones = [f"{ANOS[i]} - {ANOS[i-1]}" for i in range(1, len(ANOS))]
+        trans_sel    = st.selectbox("Año de estudio - Año anterior", transiciones,
                                     index=len(transiciones) - 2, key="var_trans")
 
-    ano_ant = int(trans_sel.split("→")[0])
-    ano_act = int(trans_sel.split("→")[1])
+    ano_act = int(trans_sel.split(" - ")[0])
+    ano_ant = int(trans_sel.split(" - ")[1])
 
     # Resetear selección de clientes cuando cambia el año
     if st.session_state.get("_var_last_trans") != trans_sel:
