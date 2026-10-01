@@ -3043,16 +3043,19 @@ elif st.session_state["pagina"] == "impacto":
                 f"<span style='font-weight:400;color:#bbb;'>Máx. {eu(gap_a,2)} M€ · {n_ag} clientes</span></div>",
                 unsafe_allow_html=True,
             )
-            _sca, _nca = st.columns([5, 1])
+            _sca, _nca, _pca = st.columns([5, 1, 0.25])
             with _sca:
                 st.slider("gap_lbl", 0, 100, step=5, format="%d%%", label_visibility="collapsed",
                           key="_sl_imp_gap", value=st.session_state["imp_gap"],
                           on_change=_sl_changed, args=("imp_gap",))
             with _nca:
-                st.number_input("gap_n", 0, 100, step=5, format="%d%%",
+                st.number_input("gap_n", 0, 100, step=5,
                                 label_visibility="collapsed",
                                 key="_ni_imp_gap", value=st.session_state["imp_gap"],
                                 on_change=_ni_changed, args=("imp_gap",))
+            with _pca:
+                st.markdown("<div style='padding-top:30px;color:#888;font-weight:600'>%</div>",
+                            unsafe_allow_html=True)
             pct_gap = st.session_state["imp_gap"]
 
         with _fc2:
@@ -3062,16 +3065,19 @@ elif st.session_state["pagina"] == "impacto":
                 f"<span style='font-weight:400;color:#bbb;'>Máx. {eu(rec_p,2)} M€ · {n_p} clientes</span></div>",
                 unsafe_allow_html=True,
             )
-            _scb, _ncb = st.columns([5, 1])
+            _scb, _ncb, _pcb = st.columns([5, 1, 0.25])
             with _scb:
                 st.slider("past_lbl", 0, 100, step=5, format="%d%%", label_visibility="collapsed",
                           key="_sl_imp_past", value=st.session_state["imp_past"],
                           on_change=_sl_changed, args=("imp_past",))
             with _ncb:
-                st.number_input("past_n", 0, 100, step=5, format="%d%%",
+                st.number_input("past_n", 0, 100, step=5,
                                 label_visibility="collapsed",
                                 key="_ni_imp_past", value=st.session_state["imp_past"],
                                 on_change=_ni_changed, args=("imp_past",))
+            with _pcb:
+                st.markdown("<div style='padding-top:30px;color:#888;font-weight:600'>%</div>",
+                            unsafe_allow_html=True)
             pct_past = st.session_state["imp_past"]
 
         # Fila 2: leads Cluster 1 por nivel de potencial estimado
@@ -3099,13 +3105,18 @@ elif st.session_state["pagina"] == "impacto":
                     f"{int(_nr['n_leads'])}</span> leads · {eu(_nr['potencial_M'],2)} M€ máx.</div>",
                     unsafe_allow_html=True,
                 )
-                st.number_input(
-                    _ss_k, 0, 100, step=5, format="%d%%",
-                    label_visibility="collapsed",
-                    key=_ni_k, value=st.session_state[_ss_k],
-                    on_change=lambda k=_ss_k: st.session_state.__setitem__(
-                        k, int(st.session_state[f"_ni_{k}"])),
-                )
+                _inp_col, _pct_col = st.columns([4, 1])
+                with _inp_col:
+                    st.number_input(
+                        _ss_k, 0, 100, step=5,
+                        label_visibility="collapsed",
+                        key=_ni_k, value=st.session_state[_ss_k],
+                        on_change=lambda k=_ss_k: st.session_state.__setitem__(
+                            k, int(st.session_state[f"_ni_{k}"])),
+                    )
+                with _pct_col:
+                    st.markdown("<div style='padding-top:30px;color:#888;font-weight:600'>%</div>",
+                                unsafe_allow_html=True)
 
     # ── Cálculo del escenario ajustado ────────────────────────────────────────
     gap_adj  = gap_a  * pct_gap  / 100
