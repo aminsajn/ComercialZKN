@@ -862,6 +862,171 @@ def load_impacto_data():
     }
 
 
+@st.cache_data(show_spinner="Calculando resumen ejecutivo...")
+def load_resumen_ejecutivo():
+    df = pd.read_csv("data/Maestro_Análisis_Comercial.csv", encoding="utf-8", low_memory=False)
+    df = df[df["ejercicio"].between(2021, 2026)].copy()
+    df["sector"] = df["Sector_3"].fillna("Sin sector").str.strip().str.title()
+    df["sector_key"] = df["Sector_3"].map(lambda x: _norm(x) if pd.notna(x) else "sin sector")
+    df["fac_M"] = df["total_base_neto"] / 1e6
+
+    # Sector por cliente (más frecuente)
+    cli_sector = (df.groupby("cod_cliente")
+                  .agg(sector=("sector", lambda x: x.mode()[0] if x.notna().any() else "Sin sector"),
+                       sector_key=("sector_key", lambda x: x.mode()[0] if x.notna().any() else "sin sector"))
+                  .reset_index())
+
+    # Facturación actual 2026
+    fac_actual = float(df[df["ejercicio"] == 2026]["fac_M"].sum())
+
+    # ── Clientes actuales: gap = peak_hist - fac_2026 ────────────────────────
+    fac_hist_yr = (df[df["ejercicio"].between(2021, 2025)]
+                   .groupby(["cod_cliente", "ejercicio"], as_index=False)
+                   .agg(fac_anual=("fac_M", "sum")))
+    idx_max = fac_hist_yr.groupby("cod_cliente")["fac_anual"].idxmax()
+    fac_peak = fac_hist_yr.loc[idx_max].set_index("cod_cliente")["fac_anual"]
+
+    fac_2026 = (df[df["ejercicio"] == 2026]
+                .groupby("cod_cliente", as_index=False)
+                .agg(fac_act=("fac_M", "sum")))
+    fac_2026 = fac_2026.merge(cli_sector, on="cod_cliente", how="left")
+    fac_2026["fac_max"] = fac_2026["cod_cliente"].map(fac_peak).fillna(0)
+    fac_2026["gap"] = (fac_2026["fac_max"] - fac_2026["fac_act"]).clip(lower=0)
+    fac_2026 = fac_2026[fac_2026["fac_act"] > 0]
+    cli_act = set(fac_2026["cod_cliente"])
+
+    gap_act_total = float(fac_2026["gap"].sum())
+    gap_act_sec = (fac_2026.groupby("sector_key")
+                   .agg(gap_act=("gap", "sum"), n_act=("cod_cliente", "nunique"))
+                   .reset_index())
+
+    # ── Clientes anteriores: peak de clientes sin ventas en 2026 ─────────────
+    fac_past = fac_hist_yr[~fac_hist_yr["cod_cliente"].isin(cli_act)].copy()
+    idx_past = fac_past.groupby("cod_cliente")["fac_anual"].idxmax()
+    fac_past_peak = (fac_past.loc[idx_past][["cod_cliente", "fac_anual"]]
+                    .rename(columns={"fac_anual": "fac_max"}).reset_index(drop=True))
+    fac_past_peak = fac_past_peak.merge(cli_sector, on="cod_cliente", how="left")
+
+    rec_total = float(fac_past_peak["fac_max"].sum())
+    gap_ant_sec = (fac_past_peak.groupby("sector_key")
+                   .agg(gap_ant=("fac_max", "sum"), n_ant=("cod_cliente", "nunique"))
+                   .reset_index())
+
+    # Máximos históricos = suma del mejor año individual de cada cliente (activos + anteriores)
+    max_historico = float(fac_2026["fac_max"].sum()) + rec_total
+
+    # ── Leads cluster 1 (Alta similitud) únicamente ───────────────────────────
+    leads_df = load_leads_cluster_data()
+    leads_df = leads_df[
+        (leads_df["cluster"] == "1 - Alta") & (leads_df["potencial_est"] > 0)
+    ].copy()
+    leads_df["sector_key"] = leads_df["sector_key"].fillna("sin sector")
+    leads_sec = (leads_df.groupby("sector_key")
+                 .agg(pot_leads=("potencial_est", lambda x: x.sum() / 1e6),
+                      n_leads=("potencial_est", "count"))
+                 .reset_index())
+
+    pot_leads_total = float(leads_sec["pot_leads"].sum())
+    potencial_total = gap_act_total + rec_total + pot_leads_total
+
+    # ── Tabla combinada por sector ────────────────────────────────────────────
+    all_keys = sorted(
+        set(gap_act_sec["sector_key"]) | set(gap_ant_sec["sector_key"]) | set(leads_sec["sector_key"])
+    )
+    sector_display = {
+        _norm(row["sector"]): row["sector"]
+        for _, row in cli_sector.iterrows()
+        if pd.notna(row.get("sector"))
+    }
+    tabla = pd.DataFrame({"sector_key": all_keys})
+    tabla = (tabla
+             .merge(gap_act_sec, on="sector_key", how="left")
+             .merge(gap_ant_sec, on="sector_key", how="left")
+             .merge(leads_sec,   on="sector_key", how="left"))
+    for c in ["gap_act", "gap_ant", "pot_leads", "n_act", "n_ant", "n_leads"]:
+        tabla[c] = tabla[c].fillna(0)
+    tabla["total"] = tabla["gap_act"] + tabla["gap_ant"] + tabla["pot_leads"]
+    tabla["sector_label"] = tabla["sector_key"].map(
+        lambda k: sector_display.get(k, k.title())
+    )
+    tabla = tabla.sort_values("total", ascending=False).reset_index(drop=True)
+
+    return {
+        "fac_actual":       fac_actual,
+        "max_historico":    max_historico,
+        "gap_act_total":    gap_act_total,
+        "rec_total":        rec_total,
+        "pot_leads_total":  pot_leads_total,
+        "potencial_total":  potencial_total,
+        "tabla":            tabla,
+    }
+
+
+@st.cache_data(show_spinner=False)
+def load_lqfb_insights():
+    xls = pd.read_excel("data/Productos_ValorAnadido_Zukan_Actualizado.xlsx")
+    xls = xls[xls["Cód. Producto"].notna()].copy()
+    xls["cod"] = pd.to_numeric(xls["Cód. Producto"], errors="coerce")
+    xls = xls[
+        xls["cod"].notna() &
+        ~xls["Descripción Comercial"].astype(str).str.startswith("TOTAL")
+    ].copy()
+    lqfb_codes = set(xls["cod"].astype(int))
+
+    mac = pd.read_csv("data/Maestro_Análisis_Comercial.csv", encoding="utf-8", low_memory=False)
+    mac = mac[mac["ejercicio"].between(2021, 2026)].copy()
+    mac["fac_M"] = mac["total_base_neto"] / 1e6
+    lqfb = mac[mac["cod_producto"].isin(lqfb_codes)].copy()
+
+    tot_yr  = mac.groupby("ejercicio")["fac_M"].sum()
+    lqfb_yr = lqfb.groupby("ejercicio")["fac_M"].sum()
+    mix_pct = {yr: float(lqfb_yr.get(yr, 0) / tot_yr.get(yr, 1) * 100) for yr in ANOS}
+
+    cli_act_2026 = set(mac[(mac["ejercicio"] == 2026) & (mac["fac_M"] > 0)]["cod_cliente"])
+    cli_2026_tot  = mac[mac["ejercicio"] == 2026].groupby("cod_cliente")["fac_M"].sum()
+    cli_2026_tot  = cli_2026_tot[cli_2026_tot > 0]
+    cli_2026_lqfb = lqfb[lqfb["ejercicio"] == 2026].groupby("cod_cliente")["fac_M"].sum()
+    cli_2026_lqfb = cli_2026_lqfb.reindex(cli_2026_tot.index).fillna(0)
+    pct_lqfb_2026 = cli_2026_lqfb / cli_2026_tot * 100
+    n_cero_lqfb  = int((pct_lqfb_2026 == 0).sum())
+    fac_cero_lqfb = float(cli_2026_tot[pct_lqfb_2026 == 0].sum())
+    n_bajo_lqfb  = int(((pct_lqfb_2026 > 0) & (pct_lqfb_2026 < 20)).sum())
+
+    lqfb_hist    = lqfb[lqfb["ejercicio"].between(2021, 2025)]
+    lqfb_hist_yr = lqfb_hist.groupby(["cod_cliente", "ejercicio"])["fac_M"].sum().reset_index()
+    lqfb_hist_act = lqfb_hist_yr[lqfb_hist_yr["cod_cliente"].isin(cli_act_2026)]
+    gap_lqfb_act_total = 0.0
+    n_gap_lqfb_act = 0
+    if len(lqfb_hist_act) > 0:
+        idx = lqfb_hist_act.groupby("cod_cliente")["fac_M"].idxmax()
+        peak = lqfb_hist_act.loc[idx].set_index("cod_cliente")["fac_M"]
+        lqfb_2026_cli = lqfb[lqfb["ejercicio"] == 2026].groupby("cod_cliente")["fac_M"].sum()
+        lqfb_2026_cli = lqfb_2026_cli.reindex(peak.index).fillna(0)
+        gap = (peak - lqfb_2026_cli).clip(lower=0)
+        gap_lqfb_act_total = float(gap.sum())
+        n_gap_lqfb_act = int((gap > 0).sum())
+
+    lqfb_hist_past = lqfb_hist_yr[~lqfb_hist_yr["cod_cliente"].isin(cli_act_2026)]
+    rec_lqfb_total = 0.0
+    n_rec_lqfb = 0
+    if len(lqfb_hist_past) > 0:
+        idx2 = lqfb_hist_past.groupby("cod_cliente")["fac_M"].idxmax()
+        peak2 = lqfb_hist_past.loc[idx2].set_index("cod_cliente")["fac_M"]
+        rec_lqfb_total = float(peak2.sum())
+        n_rec_lqfb = int(len(peak2))
+
+    return {
+        "mix_pct":             mix_pct,
+        "n_cero_lqfb":         n_cero_lqfb,
+        "fac_cero_lqfb":       fac_cero_lqfb,
+        "n_bajo_lqfb":         n_bajo_lqfb,
+        "gap_lqfb_act_total":  gap_lqfb_act_total,
+        "n_gap_lqfb_act":      n_gap_lqfb_act,
+        "rec_lqfb_total":      rec_lqfb_total,
+        "n_rec_lqfb":          n_rec_lqfb,
+    }
+
+
 # ── Helpers donut (módulo) ────────────────────────────────────────────────────
 _PIE_COLORS = [
     "#0082CA","#00AD68","#CC003D","#F4A261","#2A9D8F","#E9C46A",
@@ -904,6 +1069,16 @@ def _donut_fig(labels, values, colors, title, unit, height=380):
         paper_bgcolor="white", height=height,
     )
     return fig
+
+
+def _yellow_block(title, content_html):
+    return (
+        f'<div style="background:#FFFDE7;border-left:4px solid #F9A825;border-radius:8px;'
+        f'padding:14px 18px;margin:14px 0;">'
+        f'<div style="font-size:10px;color:#F57F17;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:.6px;margin-bottom:7px;">&#9889; {title}</div>'
+        f'{content_html}</div>'
+    )
 
 
 fac = load_data()
@@ -1022,6 +1197,26 @@ if st.session_state["pagina"] == "home":
         if st.button("Abrir Impacto Zukán", key="btn_impacto"):
             st.session_state["pagina"] = "impacto"
             st.rerun()
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    _ins = load_lqfb_insights()
+    _mix_trend = " → ".join(
+        f"{yr}: {_ins['mix_pct'][yr]:.1f}%".replace(".", ",")
+        for yr in [2021, 2022, 2023, 2024, 2025]
+    )
+    st.markdown(_yellow_block(
+        "Oportunidad estratégica: Líquidos &amp; Fibras",
+        f"<p style='font-size:12px;color:#555;margin:0 0 5px 0;'>"
+        f"El mix LQ/FB sobre facturación total ha evolucionado así (2021→2025): "
+        f"<b>{_mix_trend}</b>. "
+        f"Siendo los productos de mayor margen y diferenciación frente a los grandes azucareros, "
+        f"el mix estratégico no avanza al ritmo de la estrategia declarada.</p>"
+        f"<p style='font-size:12px;color:#555;margin:0;'>"
+        f"Potencial LQ/FB recuperable: "
+        f"<b>{eu(_ins['gap_lqfb_act_total'] + _ins['rec_lqfb_total'], 2)} M€</b> "
+        f"({_ins['n_gap_lqfb_act']} clientes activos + {_ins['n_rec_lqfb']} anteriores). "
+        f"La nueva línea de producción de Fibras tiene demanda identificada.</p>"
+    ), unsafe_allow_html=True)
 
 # ══════════════════════════════════════════════════════════════════════════════
 # PAGINA EVOLUTIVO
@@ -1630,7 +1825,7 @@ elif st.session_state["pagina"] == "activacion":
 
     st.markdown(f"<h2 style='color:{ZUKAN_BLACK}'>Activación Comercial</h2>", unsafe_allow_html=True)
 
-    sub = st.radio("Segmento", ["Clientes actuales", "Clientes pasados", "No clientes"],
+    sub = st.radio("Segmento", ["Resumen ejecutivo", "Clientes actuales", "Clientes pasados", "No clientes"],
                    horizontal=True, label_visibility="collapsed")
 
     st.markdown("---")
@@ -1724,7 +1919,174 @@ elif st.session_state["pagina"] == "activacion":
                         cols=("Producto", "TN pico", "TN act.", "Gap €"))
         return html_pico, html_act, html_gap
 
-    if sub == "Clientes actuales":
+    if sub == "Resumen ejecutivo":
+
+        res = load_resumen_ejecutivo()
+        fac_a  = res["fac_actual"]
+        max_yr = res["max_historico"]
+        gap_a  = res["gap_act_total"]
+        rec_p  = res["rec_total"]
+        pot_l  = res["pot_leads_total"]
+        pot_t  = res["potencial_total"]
+        tabla  = res["tabla"]
+
+        # ── KPI cards ─────────────────────────────────────────────────────────
+        def _kpi_card(label, value, sub_label, color, bg):
+            return (
+                f'<div style="background:{bg};border-radius:10px;padding:16px 20px;'
+                f'border-top:4px solid {color};height:100%">'
+                f'<div style="font-size:10px;color:#888;font-weight:700;text-transform:uppercase;'
+                f'letter-spacing:.7px;margin-bottom:4px">{label}</div>'
+                f'<div style="font-size:26px;font-weight:700;color:{color}">{value}</div>'
+                f'<div style="font-size:11px;color:#aaa;margin-top:2px">{sub_label}</div>'
+                f'</div>'
+            )
+
+        k1, k2, k3 = st.columns(3)
+        with k1:
+            st.markdown(_kpi_card(
+                "Máximos históricos",
+                f"{eu(max_yr, 2)} M€",
+                "Suma del mejor año de cada cliente",
+                ZUKAN_BLACK, "#f8f9fa"
+            ), unsafe_allow_html=True)
+        with k2:
+            st.markdown(_kpi_card(
+                "Zukán hoy (2026)",
+                f"{eu(fac_a, 2)} M€",
+                f"Gap vs máximos: {eu(max_yr - fac_a, 2)} M€",
+                ZUKAN_BLUE, "#f0f7ff"
+            ), unsafe_allow_html=True)
+        with k3:
+            st.markdown(_kpi_card(
+                "Potencial incremental",
+                f"{eu(pot_t, 2)} M€",
+                f"Gap activos + recuperación anteriores + leads cluster 1",
+                ZUKAN_GREEN, "#f0fff8"
+            ), unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # Fila desglose potencial
+        b1, b2, b3, b4 = st.columns(4)
+        _sub_style = (
+            "font-size:11px;background:#f8f9fa;border-radius:8px;padding:10px 14px;"
+            "border-left:3px solid {c}"
+        )
+        for col, label, val, color in [
+            (b1, "Facturación base 2026",       fac_a, ZUKAN_BLUE),
+            (b2, "Gap clientes actuales",        gap_a, "#F4A261"),
+            (b3, "Recuperación anteriores",      rec_p, "#9B59B6"),
+            (b4, "Potencial leads",              pot_l, ZUKAN_GREEN),
+        ]:
+            with col:
+                st.markdown(
+                    f'<div style="{_sub_style.format(c=color)}">'
+                    f'<div style="font-size:9px;color:#888;font-weight:700;text-transform:uppercase;'
+                    f'letter-spacing:.5px">{label}</div>'
+                    f'<div style="font-size:18px;font-weight:700;color:{color};margin-top:2px">'
+                    f'{eu(val, 2)} M€</div></div>',
+                    unsafe_allow_html=True,
+                )
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # ── Mapa de calor ─────────────────────────────────────────────────────
+        st.markdown(
+            "<div style='font-size:11px;color:#6c757d;font-weight:700;text-transform:uppercase;"
+            "letter-spacing:.7px;margin-bottom:8px'>Mapa de calor: gap por tipo de cliente × sector</div>",
+            unsafe_allow_html=True,
+        )
+
+        _top_n = 15
+        top_tabla = tabla.head(_top_n)
+        _sectors = top_tabla["sector_label"].tolist()
+        _rows = ["Clientes activos", "Clientes anteriores", "Leads"]
+        _matrix = [
+            top_tabla["gap_act"].tolist(),
+            top_tabla["gap_ant"].tolist(),
+            top_tabla["pot_leads"].tolist(),
+        ]
+        _text_matrix = [
+            [f"{eu(v, 2)} M€" if v > 0 else "—" for v in row]
+            for row in _matrix
+        ]
+        _hm_fig = go.Figure(data=go.Heatmap(
+            z=_matrix,
+            x=_sectors,
+            y=_rows,
+            text=_text_matrix,
+            texttemplate="%{text}",
+            colorscale=[[0, "#f0f7ff"], [0.5, "#4dbae8"], [1, ZUKAN_BLUE]],
+            showscale=True,
+            hovertemplate="Sector: %{x}<br>Tipo: %{y}<br>Gap: %{text}<extra></extra>",
+        ))
+        _hm_fig.update_layout(
+            height=280,
+            margin=dict(l=120, r=20, t=10, b=120),
+            xaxis=dict(tickangle=-35, tickfont=dict(size=11)),
+            yaxis=dict(tickfont=dict(size=12)),
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+        )
+        st.plotly_chart(_hm_fig, use_container_width=True, key="heatmap_resumen")
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # ── Tabla resumen por sector ───────────────────────────────────────────
+        st.markdown(
+            "<div style='font-size:11px;color:#6c757d;font-weight:700;text-transform:uppercase;"
+            "letter-spacing:.7px;margin-bottom:8px'>Potencial por sector</div>",
+            unsafe_allow_html=True,
+        )
+        tbl_display = pd.DataFrame({
+            "Sector":               tabla["sector_label"],
+            "Gap clientes activos (M€)": tabla["gap_act"].map(lambda v: eu(v, 2) if v > 0 else "—"),
+            "N activos":            tabla["n_act"].map(lambda v: str(int(v)) if v > 0 else "—"),
+            "Recuper. anteriores (M€)":  tabla["gap_ant"].map(lambda v: eu(v, 2) if v > 0 else "—"),
+            "N anteriores":         tabla["n_ant"].map(lambda v: str(int(v)) if v > 0 else "—"),
+            "Potencial leads (M€)": tabla["pot_leads"].map(lambda v: eu(v, 2) if v > 0 else "—"),
+            "N leads":              tabla["n_leads"].map(lambda v: str(int(v)) if v > 0 else "—"),
+            "TOTAL GAP (M€)":       tabla["total"].map(lambda v: eu(v, 2) if v > 0 else "—"),
+        })
+        tot_row = pd.DataFrame([{
+            "Sector": "TOTAL",
+            "Gap clientes activos (M€)": eu(gap_a, 2),
+            "N activos": str(int(tabla["n_act"].sum())),
+            "Recuper. anteriores (M€)": eu(rec_p, 2),
+            "N anteriores": str(int(tabla["n_ant"].sum())),
+            "Potencial leads (M€)": eu(pot_l, 2),
+            "N leads": str(int(tabla["n_leads"].sum())),
+            "TOTAL GAP (M€)": eu(gap_a + rec_p + pot_l, 2),
+        }])
+        tbl_display = pd.concat([tbl_display, tot_row], ignore_index=True)
+
+        def _highlight_total(row):
+            if row["Sector"] == "TOTAL":
+                return ["font-weight:700;background:#f0f7ff"] * len(row)
+            return [""] * len(row)
+
+        st.dataframe(
+            tbl_display.style.apply(_highlight_total, axis=1),
+            use_container_width=True, hide_index=True,
+        )
+
+        _ins2 = load_lqfb_insights()
+        _tot_gap = _ins2["gap_lqfb_act_total"] + _ins2["rec_lqfb_total"]
+        st.markdown(_yellow_block(
+            "Gap estratégico en productos de alto valor (LQ/FB)",
+            f"<p style='font-size:12px;color:#555;margin:0 0 5px 0;'>"
+            f"Del potencial total, <b>{eu(_tot_gap, 2)} M€</b> corresponden a productos Líquidos &amp; Fibras: "
+            f"<b>{eu(_ins2['gap_lqfb_act_total'], 2)} M€</b> en "
+            f"{_ins2['n_gap_lqfb_act']} clientes activos que compraban más antes, "
+            f"más <b>{eu(_ins2['rec_lqfb_total'], 2)} M€</b> en "
+            f"{_ins2['n_rec_lqfb']} clientes anteriores con histórico LQ/FB.</p>"
+            f"<p style='font-size:12px;color:#555;margin:0;'>"
+            f"Priorizar estos clientes alinea la recuperación comercial con la estrategia de margen: "
+            f"mayor diferenciación frente a grandes azucareros y mayor valor por tonelada.</p>"
+        ), unsafe_allow_html=True)
+
+    elif sub == "Clientes actuales":
 
         # ── Tabla base ────────────────────────────────────────────────────────
         fac_2026 = (fac[fac["ejercicio"] == 2026]
@@ -1744,6 +2106,21 @@ elif st.session_state["pagina"] == "activacion":
         df_act["gap"] = (df_act["fac_max"] - df_act["fac_act"]).clip(lower=0)
         df_act["pct"] = (df_act["fac_act"] / df_act["fac_max"] * 100).clip(0, 100)
         df_act = df_act[df_act["fac_act"] > 0].reset_index(drop=True)
+
+        _ins3 = load_lqfb_insights()
+        st.markdown(_yellow_block(
+            "287 clientes activos sin ningún producto LQ/FB",
+            f"<p style='font-size:12px;color:#555;margin:0 0 5px 0;'>"
+            f"<b>{_ins3['n_cero_lqfb']} clientes activos</b> ({eu(_ins3['fac_cero_lqfb'], 2)} M€ en 2026) "
+            f"compran exclusivamente azúcar sólido — el segmento de menor margen y mayor presión "
+            f"de grandes azucareros. Son el target prioritario de <i>upsell</i> hacia "
+            f"Líquidos &amp; Fibras.</p>"
+            f"<p style='font-size:12px;color:#555;margin:0;'>"
+            f"Adicionalmente, <b>{_ins3['n_bajo_lqfb']} clientes</b> tienen LQ/FB por debajo del 20% "
+            f"de su mix — con conversación comercial ya abierta, hay margen de ampliación. "
+            f"Gap recuperable en clientes activos con historial LQ/FB: "
+            f"<b>{eu(_ins3['gap_lqfb_act_total'], 2)} M€</b>.</p>"
+        ), unsafe_allow_html=True)
 
         # ── Precomputar TN/PvP 2026 para todos los clientes ──────────────────
         cpx_all  = load_bridge_data()
@@ -2130,6 +2507,20 @@ elif st.session_state["pagina"] == "activacion":
                 f"{_niv_badges}</div>",
                 unsafe_allow_html=True,
             )
+
+            _ins4 = load_lqfb_insights()
+            st.markdown(_yellow_block(
+                "Leads con mayor afinidad LQ/FB: reducción de azúcar y enriquecimiento de fibra",
+                f"<p style='font-size:12px;color:#555;margin:0 0 5px 0;'>"
+                f"Sectores como lácteos, bebidas, confitería industrial y nutrición deportiva "
+                f"concentran la mayor demanda de edulcorantes líquidos (sustitución de azúcar sólido) "
+                f"y fibras solubles (enriquecimiento nutricional). Los leads cluster 1 de estos sectores "
+                f"son los más afines a la gama estratégica de Zukán.</p>"
+                f"<p style='font-size:12px;color:#555;margin:0;'>"
+                f"Referencia interna: hay <b>{_ins4['n_rec_lqfb']} clientes anteriores</b> con historial "
+                f"LQ/FB que ya no compran — su <i>propuesta de valor probada</i> puede transferirse "
+                f"directamente a leads en los mismos sectores.</p>"
+            ), unsafe_allow_html=True)
 
             tidx1, tidx2, tidx3 = st.tabs([
                 f"Cluster 1 — Alta similitud ({n1})",
@@ -2880,3 +3271,19 @@ elif st.session_state["pagina"] == "impacto":
         ],
     })
     st.dataframe(resumen_df, use_container_width=True, hide_index=True)
+
+    _ins5 = load_lqfb_insights()
+    _pipeline_lqfb = _ins5["gap_lqfb_act_total"] + _ins5["rec_lqfb_total"]
+    _n_pipeline = _ins5["n_gap_lqfb_act"] + _ins5["n_rec_lqfb"]
+    st.markdown(_yellow_block(
+        "Inversión en planta de Fibras: pipeline de demanda identificado",
+        f"<p style='font-size:12px;color:#555;margin:0 0 5px 0;'>"
+        f"La nueva línea de producción de Fibras responde a una tendencia real de mercado: "
+        f"demanda creciente de reducción de azúcar y enriquecimiento de fibra en alimentación industrial. "
+        f"El pipeline interno identificado es de <b>{eu(_pipeline_lqfb, 2)} M€</b> entre "
+        f"{_n_pipeline} clientes con historial LQ/FB (activos con gap + anteriores recuperables).</p>"
+        f"<p style='font-size:12px;color:#555;margin:0;'>"
+        f"A esto se añaden los leads cluster 1 en sectores afines. "
+        f"El mix LQ/FB en 2025 fue del 10,3% de la facturación total — "
+        f"el objetivo estratégico de premiumización tiene recorrido significativo.</p>"
+    ), unsafe_allow_html=True)
