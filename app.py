@@ -214,6 +214,62 @@ def load_provincia_pvp_evol():
     vol = df.groupby(["provincia","ejercicio"]).agg(toneladas=("Cantidad_TN","sum")).reset_index()
     return pvp.merge(vol, on=["provincia","ejercicio"], how="outer")
 
+@st.cache_data(show_spinner=False)
+def load_diagnostico_data():
+    df = pd.read_csv("data/Maestro_Análisis_Comercial.csv", encoding="utf-8", low_memory=False)
+    df = df[df["ejercicio"].between(2021, 2026)].copy()
+    df["fac_M"] = df["total_base_neto"] / 1e6
+    df = df[df["fac_M"] > 0]
+
+    tot_yr = df.groupby("ejercicio")["fac_M"].sum().round(2)
+    cli_yr = df.groupby("ejercicio")["cod_cliente"].nunique()
+
+    top20_pct = {}
+    for y in ANOS:
+        _d = df[df["ejercicio"] == y].groupby("cod_cliente")["fac_M"].sum()
+        _t = _d.sum()
+        top20_pct[y] = float(_d.nlargest(20).sum() / _t * 100) if _t > 0 else 0.0
+
+    cli_sets   = {y: set(df[df["ejercicio"] == y]["cod_cliente"]) for y in ANOS}
+    churn_new  = {ANOS[i]: len(cli_sets[ANOS[i]] - cli_sets[ANOS[i-1]]) for i in range(1, len(ANOS))}
+    churn_lost = {ANOS[i]: len(cli_sets[ANOS[i-1]] - cli_sets[ANOS[i]]) for i in range(1, len(ANOS))}
+
+    fam_yr = df.groupby(["ejercicio", "familia"])["fac_M"].sum().reset_index()
+
+    xls = pd.read_excel("data/Productos_ValorAnadido_Zukan_Actualizado.xlsx")
+    xls = xls[xls["Cód. Producto"].notna()].copy()
+    xls["cod"] = pd.to_numeric(xls["Cód. Producto"], errors="coerce")
+    xls = xls[xls["cod"].notna() & ~xls["Descripción Comercial"].astype(str).str.startswith("TOTAL")]
+    lqfb_codes = set(xls["cod"].astype(int))
+    lqfb_yr = df[df["cod_producto"].isin(lqfb_codes)].groupby("ejercicio")["fac_M"].sum()
+    lqfb_pct = {y: float(lqfb_yr.get(y, 0) / tot_yr.get(y, 1) * 100) for y in ANOS}
+    lqfb_val = {y: float(lqfb_yr.get(y, 0)) for y in ANOS}
+
+    def _top_drops(yr_a, yr_b, n=6):
+        ca = df[df["ejercicio"] == yr_a].groupby(["cod_cliente", "nombre_comercial"])["fac_M"].sum().reset_index().set_index("cod_cliente")
+        cb = df[df["ejercicio"] == yr_b].groupby(["cod_cliente", "nombre_comercial"])["fac_M"].sum().reset_index().set_index("cod_cliente")
+        ca_v = ca.set_index("nombre_comercial")["fac_M"]
+        cb_v = cb["fac_M"].reindex(ca_v.index).fillna(0) if len(cb) > 0 else pd.Series(0.0, index=ca_v.index)
+        return (ca_v - cb_v).clip(lower=0).nlargest(n)
+
+    drops_2425 = _top_drops(2024, 2025)
+    drops_2526 = _top_drops(2025, 2026)
+    nutra_yr   = df[df["Sector_1"] == "nutraceuticos"].groupby("ejercicio")["fac_M"].sum()
+
+    return {
+        "tot_yr":     {int(k): float(v) for k, v in tot_yr.items()},
+        "cli_yr":     {int(k): int(v)   for k, v in cli_yr.items()},
+        "top20_pct":  top20_pct,
+        "churn_new":  churn_new,
+        "churn_lost": churn_lost,
+        "fam_yr":     fam_yr,
+        "lqfb_pct":   lqfb_pct,
+        "lqfb_val":   lqfb_val,
+        "drops_2425": drops_2425,
+        "drops_2526": drops_2526,
+        "nutra_yr":   {int(k): float(v) for k, v in nutra_yr.items()},
+    }
+
 @st.cache_data(show_spinner="Calculando scoring de leads...")
 def load_leads_data():
     leads = pd.read_csv("data/Maestro Leads.csv", encoding="utf-8", low_memory=False)
@@ -1209,265 +1265,465 @@ elif st.session_state["pagina"] == "evolutivo":
 
     st.markdown(f"<h2 style='color:{ZUKAN_BLACK}'>Detalle evolutivo general</h2>", unsafe_allow_html=True)
 
-    pivot = fac.pivot_table(index=["cod_cliente","nombre_comercial"],
-                            columns="ejercicio", values="fac_M", aggfunc="sum").reset_index()
-    pivot.columns.name = None
+    _tab_evo, _tab_diag = st.tabs(["📊  Análisis evolutivo", "🔍  Diagnóstico estratégico"])
 
-    for i in range(1, len(ANOS)):
-        ant, act = ANOS[i-1], ANOS[i]
-        tag = f"{str(act)[-2:]}vs{str(ant)[-2:]}pct"
-        ca  = pivot[ant] if ant in pivot.columns else None
-        cb  = pivot[act] if act in pivot.columns else None
-        pivot[tag] = (np.where(ca > 0, ((cb.fillna(0) - ca) / ca * 100).round(1), np.nan)
-                      if ca is not None and cb is not None else np.nan)
+    with _tab_evo:
+        pivot = fac.pivot_table(index=["cod_cliente","nombre_comercial"],
+                                columns="ejercicio", values="fac_M", aggfunc="sum").reset_index()
+        pivot.columns.name = None
 
-    col_ord = ["cod_cliente","nombre_comercial"]
-    for i, ano in enumerate(ANOS):
-        if ano in pivot.columns: col_ord.append(ano)
-        if i > 0:
-            tag = f"{str(ano)[-2:]}vs{str(ANOS[i-1])[-2:]}pct"
-            if tag in pivot.columns: col_ord.append(tag)
-    pivot = pivot[[c for c in col_ord if c in pivot.columns]]
+        for i in range(1, len(ANOS)):
+            ant, act = ANOS[i-1], ANOS[i]
+            tag = f"{str(act)[-2:]}vs{str(ant)[-2:]}pct"
+            ca  = pivot[ant] if ant in pivot.columns else None
+            cb  = pivot[act] if act in pivot.columns else None
+            pivot[tag] = (np.where(ca > 0, ((cb.fillna(0) - ca) / ca * 100).round(1), np.nan)
+                          if ca is not None and cb is not None else np.nan)
 
-    opciones = sorted(pivot["nombre_comercial"].dropna().unique().tolist())
-    fc1, fc2 = st.columns([3, 1])
-    with fc1:
-        seleccion = st.multiselect("Filtrar clientes", opciones,
-                                   placeholder="Todos los clientes (selecciona uno o varios)...")
-    with fc2:
-        ordenar = st.selectbox("Ordenar por", [
-            "Facturación 2025", "Facturación 2026", "Nombre A-Z", "Variación 25vs24"])
-
-    df_show = pivot.copy()
-    if seleccion:
-        df_show = df_show[df_show["nombre_comercial"].isin(seleccion)]
-
-    if ordenar == "Facturación 2025" and 2025 in df_show.columns:
-        df_show = df_show.sort_values(2025, ascending=False, na_position="last")
-    elif ordenar == "Facturación 2026" and 2026 in df_show.columns:
-        df_show = df_show.sort_values(2026, ascending=False, na_position="last")
-    elif ordenar == "Nombre A-Z":
-        df_show = df_show.sort_values("nombre_comercial")
-    elif ordenar == "Variación 25vs24" and "25vs24pct" in df_show.columns:
-        df_show = df_show.sort_values("25vs24pct", ascending=False, na_position="last")
-
-    tot = {"cod_cliente":"","nombre_comercial":"TOTAL"}
-    for ano in ANOS:
-        tot[ano] = round(df_show[ano].sum(), 3) if ano in df_show.columns else np.nan
-    for i in range(1, len(ANOS)):
-        ant, act = ANOS[i-1], ANOS[i]
-        tag = f"{str(act)[-2:]}vs{str(ant)[-2:]}pct"
-        if tag in df_show.columns:
-            ta, tb = tot.get(ant) or 0, tot.get(act) or 0
-            tot[tag] = round((tb - ta) / ta * 100, 1) if ta > 0 else np.nan
-
-    df_final = pd.concat([df_show, pd.DataFrame([tot])], ignore_index=True)
-    ano_cols = [c for c in df_final.columns if c in ANOS]
-    pct_cols = [c for c in df_final.columns if str(c).endswith("pct")]
-
-    ren = {"cod_cliente":"Codigo","nombre_comercial":"Cliente"}
-    ren.update({a: f"{a} (M€)" for a in ano_cols})
-    pct_labels = {}
-    for c in pct_cols:
-        parts = c.replace("pct","")
-        a2, a1 = parts.split("vs")
-        pct_labels[c] = f"{a2}vs{a1}%"
-    ren.update(pct_labels)
-
-    df_r   = df_final.rename(columns=ren)
-    ano_r  = [f"{a} (M€)" for a in ano_cols]
-    pct_r  = [pct_labels[c] for c in pct_cols]
-
-    def color_pct(col):
-        out = []
-        for v in col:
-            if pd.isna(v): out.append("")
-            elif v > 0:    out.append(f"color:{ZUKAN_GREEN};font-weight:600")
-            elif v < 0:    out.append(f"color:{ZUKAN_RED};font-weight:600")
-            else:          out.append(f"color:{ZUKAN_GOLD};font-weight:600")
-        return out
-    def hl_total(row):
-        if row["Cliente"] == "TOTAL":
-            return [f"background-color:{ZUKAN_BLACK};color:white;font-weight:700"] * len(row)
-        return [""] * len(row)
-
-    fmt = {c: eu for c in ano_r}
-    fmt.update({c: eupct for c in pct_r})
-
-    styled = (df_r.style
-        .apply(hl_total, axis=1)
-        .apply(color_pct, subset=pct_r)
-        .format(fmt, na_rep="-")
-        .set_properties(**{"font-size":"12.5px","text-align":"right"}, subset=ano_r+pct_r)
-        .set_properties(**{"text-align":"left","font-weight":"500"}, subset=["Cliente"])
-    )
-
-    def delta_s(act, ant):
-        if ant and ant > 0: return eupct((act - ant) / ant * 100)
-        return None
-
-    totales = {ano: (df_show[ano].sum() if ano in df_show.columns else 0.0) for ano in ANOS}
-    kcols   = st.columns(6)
-    for i, (kc, ano) in enumerate(zip(kcols, ANOS)):
-        v   = totales.get(ano, 0.0)
-        ant = totales.get(ANOS[i-1]) if i > 0 else None
-        kc.metric(str(ano), f"{eu(v, 2)} M€",
-                  delta=(delta_s(v, ant) if i > 0 and ano != 2026 else None))
-
-    st.markdown("---")
-    st.caption(f"{len(df_show)} clientes")
-    st.dataframe(styled, use_container_width=True, hide_index=True, height=600)
-
-    # ── Evolutivo PvP medio y Volumen por sector ──────────────────────────────
-    st.markdown("---")
-    st.markdown(f"<h3 style='color:{ZUKAN_BLACK}'>Evolutivo por sector · PvP medio y Volumen (TN)</h3>",
-                unsafe_allow_html=True)
-
-    sect_evol = load_sector_pvp_evol()
-    _anos_se  = sorted(int(a) for a in sect_evol["ejercicio"].dropna().unique())
-
-    # Pivots separados, columnas renombradas a strings desde el principio
-    pvp_piv = (sect_evol.pivot_table(index="Sector_3", columns="ejercicio",
-                                     values="pvp_medio", aggfunc="mean")
-               .rename(columns=lambda a: f"pvp_{a}").reset_index())
-    tn_piv  = (sect_evol.pivot_table(index="Sector_3", columns="ejercicio",
-                                     values="toneladas", aggfunc="sum")
-               .rename(columns=lambda a: f"tn_{a}").reset_index())
-    comb = pvp_piv.merge(tn_piv, on="Sector_3", how="outer").rename(columns={"Sector_3":"Sector"})
-
-    # Columnas de variación interanual
-    col_ord = ["Sector"]
-    for i, ano in enumerate(_anos_se):
-        col_ord.append(f"pvp_{ano}")
-        col_ord.append(f"tn_{ano}")
-        if i > 0:
-            ant = _anos_se[i-1]
-            pvp_tag = f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"
-            tn_tag  = f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"
-            comb[pvp_tag] = np.where(comb[f"pvp_{ant}"] > 0,
-                ((comb[f"pvp_{ano}"].fillna(0) - comb[f"pvp_{ant}"]) / comb[f"pvp_{ant}"] * 100).round(1), np.nan)
-            comb[tn_tag]  = np.where(comb[f"tn_{ant}"] > 0,
-                ((comb[f"tn_{ano}"].fillna(0) - comb[f"tn_{ant}"]) / comb[f"tn_{ant}"] * 100).round(1), np.nan)
-            col_ord += [pvp_tag, tn_tag]
-    comb = comb[[c for c in col_ord if c in comb.columns]]
-
-    last_tn = f"tn_{_anos_se[-1]}" if _anos_se else "Sector"
-    if last_tn in comb.columns:
-        comb = comb.sort_values(last_tn, ascending=False, na_position="last")
-
-    # Labels de display
-    pvp_cols  = [c for c in comb.columns if c.startswith("pvp_")]
-    tn_cols   = [c for c in comb.columns if c.startswith("tn_")]
-    pvpd_cols = [c for c in comb.columns if c.startswith("pvpΔ_")]
-    tnd_cols  = [c for c in comb.columns if c.startswith("tnΔ_")]
-    disp_ren  = {}
-    disp_ren.update({c: c.replace("pvp_","") + " €/TN"   for c in pvp_cols})
-    disp_ren.update({c: c.replace("tn_","")  + " TN"     for c in tn_cols})
-    disp_ren.update({c: c.replace("pvpΔ_","PvP Δ ") + "%" for c in pvpd_cols})
-    disp_ren.update({c: c.replace("tnΔ_","TN Δ ")   + "%" for c in tnd_cols})
-    comb2 = comb.rename(columns=disp_ren)
-
-    val_pvp  = [disp_ren[c] for c in pvp_cols  if c in disp_ren]
-    val_tn   = [disp_ren[c] for c in tn_cols   if c in disp_ren]
-    val_pctd = [disp_ren[c] for c in pvpd_cols + tnd_cols if c in disp_ren]
-
-    fmt_se = {}
-    fmt_se.update({c: lambda v: (eutn(v) + " €/TN") if pd.notna(v) else "-" for c in val_pvp})
-    fmt_se.update({c: lambda v: (eutn(v) + " TN")   if pd.notna(v) else "-" for c in val_tn})
-    fmt_se.update({c: eupct for c in val_pctd})
-
-    def _cpct_se(col):
-        out = []
-        for v in col:
-            if pd.isna(v): out.append("")
-            elif v > 0:    out.append(f"color:{ZUKAN_GREEN};font-weight:600")
-            elif v < 0:    out.append(f"color:{ZUKAN_RED};font-weight:600")
-            else:          out.append("")
-        return out
-
-    sect_styled = (comb2.style
-        .apply(_cpct_se, subset=val_pctd)
-        .format(fmt_se, na_rep="-")
-        .set_properties(**{"font-size":"12px","text-align":"right"}, subset=val_pvp+val_tn+val_pctd)
-        .set_properties(**{"text-align":"left","font-weight":"500"}, subset=["Sector"]))
-    st.dataframe(sect_styled, use_container_width=True, hide_index=True)
-
-    # ── Helper: construye pivot ancho + columnas delta ────────────────────────
-    def _build_evol_pivot(raw_df, dim_col, dim_label):
-        _anos = sorted(int(a) for a in raw_df["ejercicio"].dropna().unique())
-        pvp_p = (raw_df.pivot_table(index=dim_col, columns="ejercicio",
-                                    values="pvp_medio", aggfunc="mean")
-                 .rename(columns=lambda a: f"pvp_{a}").reset_index())
-        tn_p  = (raw_df.pivot_table(index=dim_col, columns="ejercicio",
-                                    values="toneladas", aggfunc="sum")
-                 .rename(columns=lambda a: f"tn_{a}").reset_index())
-        cm = pvp_p.merge(tn_p, on=dim_col, how="outer").rename(columns={dim_col: dim_label})
-        ord_ = [dim_label]
-        for i, ano in enumerate(_anos):
-            ord_.append(f"pvp_{ano}"); ord_.append(f"tn_{ano}")
+        col_ord = ["cod_cliente","nombre_comercial"]
+        for i, ano in enumerate(ANOS):
+            if ano in pivot.columns: col_ord.append(ano)
             if i > 0:
-                ant = _anos[i-1]
-                cm[f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = np.where(
-                    cm[f"pvp_{ant}"] > 0,
-                    ((cm[f"pvp_{ano}"].fillna(0) - cm[f"pvp_{ant}"]) / cm[f"pvp_{ant}"] * 100).round(1),
-                    np.nan)
-                cm[f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = np.where(
-                    cm[f"tn_{ant}"] > 0,
-                    ((cm[f"tn_{ano}"].fillna(0) - cm[f"tn_{ant}"]) / cm[f"tn_{ant}"] * 100).round(1),
-                    np.nan)
-                ord_ += [f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}", f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"]
-        cm = cm[[c for c in ord_ if c in cm.columns]]
-        last_tn = f"tn_{_anos[-1]}" if _anos else dim_label
-        if last_tn in cm.columns:
-            cm = cm.sort_values(last_tn, ascending=False, na_position="last")
-        pvp_c  = [c for c in cm.columns if c.startswith("pvp_")]
-        tn_c   = [c for c in cm.columns if c.startswith("tn_")]
-        pvpd_c = [c for c in cm.columns if c.startswith("pvpΔ_")]
-        tnd_c  = [c for c in cm.columns if c.startswith("tnΔ_")]
-        ren = {}
-        ren.update({c: c.replace("pvp_","") + " €/TN" for c in pvp_c})
-        ren.update({c: c.replace("tn_","")  + " TN"   for c in tn_c})
-        ren.update({c: "PvP Δ " + c.replace("pvpΔ_","") + "%" for c in pvpd_c})
-        ren.update({c: "TN Δ "  + c.replace("tnΔ_","")  + "%" for c in tnd_c})
-        cm2 = cm.rename(columns=ren)
-        val_pv = [ren[c] for c in pvp_c if c in ren]
-        val_tn = [ren[c] for c in tn_c  if c in ren]
-        val_dt = [ren[c] for c in pvpd_c + tnd_c if c in ren]
-        fmt_   = {}
-        fmt_.update({c: lambda v: (eutn(v) + " €/TN") if pd.notna(v) else "-" for c in val_pv})
-        fmt_.update({c: lambda v: (eutn(v) + " TN")   if pd.notna(v) else "-" for c in val_tn})
-        fmt_.update({c: eupct for c in val_dt})
-        styled_ = (cm2.style
-            .apply(_cpct_se, subset=val_dt)
-            .format(fmt_, na_rep="-")
-            .set_properties(**{"font-size":"12px","text-align":"right"}, subset=val_pv+val_tn+val_dt)
-            .set_properties(**{"text-align":"left","font-weight":"500"}, subset=[dim_label]))
-        return styled_, len(cm2)
+                tag = f"{str(ano)[-2:]}vs{str(ANOS[i-1])[-2:]}pct"
+                if tag in pivot.columns: col_ord.append(tag)
+        pivot = pivot[[c for c in col_ord if c in pivot.columns]]
 
-    # ── Evolutivo por familia de producto ─────────────────────────────────────
-    st.markdown("---")
-    st.markdown(f"<h3 style='color:{ZUKAN_BLACK}'>Evolutivo por familia de producto · PvP medio y Volumen (TN)</h3>",
-                unsafe_allow_html=True)
-    fam_evol = load_familia_pvp_evol()
-    _fam_styled, _fam_n = _build_evol_pivot(fam_evol, "familia", "Familia")
-    st.caption(f"{_fam_n} familias")
-    st.dataframe(_fam_styled, use_container_width=True, hide_index=True)
+        opciones = sorted(pivot["nombre_comercial"].dropna().unique().tolist())
+        fc1, fc2 = st.columns([3, 1])
+        with fc1:
+            seleccion = st.multiselect("Filtrar clientes", opciones,
+                                       placeholder="Todos los clientes (selecciona uno o varios)...")
+        with fc2:
+            ordenar = st.selectbox("Ordenar por", [
+                "Facturación 2025", "Facturación 2026", "Nombre A-Z", "Variación 25vs24"])
 
-    # ── Evolutivo por zona geográfica ─────────────────────────────────────────
-    st.markdown("---")
-    st.markdown(f"<h3 style='color:{ZUKAN_BLACK}'>Evolutivo por zona geográfica · PvP medio y Volumen (TN)</h3>",
-                unsafe_allow_html=True)
-    _zona_tab1, _zona_tab2 = st.tabs(["🌍  Por país", "📍  Por provincia (España)"])
-    with _zona_tab1:
-        _pais_evol = load_pais_pvp_evol()
-        _pais_styled, _pais_n = _build_evol_pivot(_pais_evol, "pais", "País")
-        st.caption(f"{_pais_n} países")
-        st.dataframe(_pais_styled, use_container_width=True, hide_index=True)
-    with _zona_tab2:
-        _prov_evol = load_provincia_pvp_evol()
-        _prov_styled, _prov_n = _build_evol_pivot(_prov_evol, "provincia", "Provincia")
-        st.caption(f"{_prov_n} provincias")
-        st.dataframe(_prov_styled, use_container_width=True, hide_index=True)
+        df_show = pivot.copy()
+        if seleccion:
+            df_show = df_show[df_show["nombre_comercial"].isin(seleccion)]
+
+        if ordenar == "Facturación 2025" and 2025 in df_show.columns:
+            df_show = df_show.sort_values(2025, ascending=False, na_position="last")
+        elif ordenar == "Facturación 2026" and 2026 in df_show.columns:
+            df_show = df_show.sort_values(2026, ascending=False, na_position="last")
+        elif ordenar == "Nombre A-Z":
+            df_show = df_show.sort_values("nombre_comercial")
+        elif ordenar == "Variación 25vs24" and "25vs24pct" in df_show.columns:
+            df_show = df_show.sort_values("25vs24pct", ascending=False, na_position="last")
+
+        tot = {"cod_cliente":"","nombre_comercial":"TOTAL"}
+        for ano in ANOS:
+            tot[ano] = round(df_show[ano].sum(), 3) if ano in df_show.columns else np.nan
+        for i in range(1, len(ANOS)):
+            ant, act = ANOS[i-1], ANOS[i]
+            tag = f"{str(act)[-2:]}vs{str(ant)[-2:]}pct"
+            if tag in df_show.columns:
+                ta, tb = tot.get(ant) or 0, tot.get(act) or 0
+                tot[tag] = round((tb - ta) / ta * 100, 1) if ta > 0 else np.nan
+
+        df_final = pd.concat([df_show, pd.DataFrame([tot])], ignore_index=True)
+        ano_cols = [c for c in df_final.columns if c in ANOS]
+        pct_cols = [c for c in df_final.columns if str(c).endswith("pct")]
+
+        ren = {"cod_cliente":"Codigo","nombre_comercial":"Cliente"}
+        ren.update({a: f"{a} (M€)" for a in ano_cols})
+        pct_labels = {}
+        for c in pct_cols:
+            parts = c.replace("pct","")
+            a2, a1 = parts.split("vs")
+            pct_labels[c] = f"{a2}vs{a1}%"
+        ren.update(pct_labels)
+
+        df_r   = df_final.rename(columns=ren)
+        ano_r  = [f"{a} (M€)" for a in ano_cols]
+        pct_r  = [pct_labels[c] for c in pct_cols]
+
+        def color_pct(col):
+            out = []
+            for v in col:
+                if pd.isna(v): out.append("")
+                elif v > 0:    out.append(f"color:{ZUKAN_GREEN};font-weight:600")
+                elif v < 0:    out.append(f"color:{ZUKAN_RED};font-weight:600")
+                else:          out.append(f"color:{ZUKAN_GOLD};font-weight:600")
+            return out
+        def hl_total(row):
+            if row["Cliente"] == "TOTAL":
+                return [f"background-color:{ZUKAN_BLACK};color:white;font-weight:700"] * len(row)
+            return [""] * len(row)
+
+        fmt = {c: eu for c in ano_r}
+        fmt.update({c: eupct for c in pct_r})
+
+        styled = (df_r.style
+            .apply(hl_total, axis=1)
+            .apply(color_pct, subset=pct_r)
+            .format(fmt, na_rep="-")
+            .set_properties(**{"font-size":"12.5px","text-align":"right"}, subset=ano_r+pct_r)
+            .set_properties(**{"text-align":"left","font-weight":"500"}, subset=["Cliente"])
+        )
+
+        def delta_s(act, ant):
+            if ant and ant > 0: return eupct((act - ant) / ant * 100)
+            return None
+
+        totales = {ano: (df_show[ano].sum() if ano in df_show.columns else 0.0) for ano in ANOS}
+        kcols   = st.columns(6)
+        for i, (kc, ano) in enumerate(zip(kcols, ANOS)):
+            v   = totales.get(ano, 0.0)
+            ant = totales.get(ANOS[i-1]) if i > 0 else None
+            kc.metric(str(ano), f"{eu(v, 2)} M€",
+                      delta=(delta_s(v, ant) if i > 0 and ano != 2026 else None))
+
+        st.markdown("---")
+        st.caption(f"{len(df_show)} clientes")
+        st.dataframe(styled, use_container_width=True, hide_index=True, height=600)
+
+        # ── Evolutivo PvP medio y Volumen por sector ──────────────────────────
+        st.markdown("---")
+        st.markdown(f"<h3 style='color:{ZUKAN_BLACK}'>Evolutivo por sector · PvP medio y Volumen (TN)</h3>",
+                    unsafe_allow_html=True)
+
+        sect_evol = load_sector_pvp_evol()
+        _anos_se  = sorted(int(a) for a in sect_evol["ejercicio"].dropna().unique())
+
+        pvp_piv = (sect_evol.pivot_table(index="Sector_3", columns="ejercicio",
+                                         values="pvp_medio", aggfunc="mean")
+                   .rename(columns=lambda a: f"pvp_{a}").reset_index())
+        tn_piv  = (sect_evol.pivot_table(index="Sector_3", columns="ejercicio",
+                                         values="toneladas", aggfunc="sum")
+                   .rename(columns=lambda a: f"tn_{a}").reset_index())
+        comb = pvp_piv.merge(tn_piv, on="Sector_3", how="outer").rename(columns={"Sector_3":"Sector"})
+
+        col_ord = ["Sector"]
+        for i, ano in enumerate(_anos_se):
+            col_ord.append(f"pvp_{ano}")
+            col_ord.append(f"tn_{ano}")
+            if i > 0:
+                ant = _anos_se[i-1]
+                pvp_tag = f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"
+                tn_tag  = f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"
+                comb[pvp_tag] = np.where(comb[f"pvp_{ant}"] > 0,
+                    ((comb[f"pvp_{ano}"].fillna(0) - comb[f"pvp_{ant}"]) / comb[f"pvp_{ant}"] * 100).round(1), np.nan)
+                comb[tn_tag]  = np.where(comb[f"tn_{ant}"] > 0,
+                    ((comb[f"tn_{ano}"].fillna(0) - comb[f"tn_{ant}"]) / comb[f"tn_{ant}"] * 100).round(1), np.nan)
+                col_ord += [pvp_tag, tn_tag]
+        comb = comb[[c for c in col_ord if c in comb.columns]]
+
+        last_tn = f"tn_{_anos_se[-1]}" if _anos_se else "Sector"
+        if last_tn in comb.columns:
+            comb = comb.sort_values(last_tn, ascending=False, na_position="last")
+
+        pvp_cols  = [c for c in comb.columns if c.startswith("pvp_")]
+        tn_cols   = [c for c in comb.columns if c.startswith("tn_")]
+        pvpd_cols = [c for c in comb.columns if c.startswith("pvpΔ_")]
+        tnd_cols  = [c for c in comb.columns if c.startswith("tnΔ_")]
+        disp_ren  = {}
+        disp_ren.update({c: c.replace("pvp_","") + " €/TN"   for c in pvp_cols})
+        disp_ren.update({c: c.replace("tn_","")  + " TN"     for c in tn_cols})
+        disp_ren.update({c: c.replace("pvpΔ_","PvP Δ ") + "%" for c in pvpd_cols})
+        disp_ren.update({c: c.replace("tnΔ_","TN Δ ")   + "%" for c in tnd_cols})
+        comb2 = comb.rename(columns=disp_ren)
+
+        val_pvp  = [disp_ren[c] for c in pvp_cols  if c in disp_ren]
+        val_tn   = [disp_ren[c] for c in tn_cols   if c in disp_ren]
+        val_pctd = [disp_ren[c] for c in pvpd_cols + tnd_cols if c in disp_ren]
+
+        fmt_se = {}
+        fmt_se.update({c: lambda v: (eutn(v) + " €/TN") if pd.notna(v) else "-" for c in val_pvp})
+        fmt_se.update({c: lambda v: (eutn(v) + " TN")   if pd.notna(v) else "-" for c in val_tn})
+        fmt_se.update({c: eupct for c in val_pctd})
+
+        def _cpct_se(col):
+            out = []
+            for v in col:
+                if pd.isna(v): out.append("")
+                elif v > 0:    out.append(f"color:{ZUKAN_GREEN};font-weight:600")
+                elif v < 0:    out.append(f"color:{ZUKAN_RED};font-weight:600")
+                else:          out.append("")
+            return out
+
+        sect_styled = (comb2.style
+            .apply(_cpct_se, subset=val_pctd)
+            .format(fmt_se, na_rep="-")
+            .set_properties(**{"font-size":"12px","text-align":"right"}, subset=val_pvp+val_tn+val_pctd)
+            .set_properties(**{"text-align":"left","font-weight":"500"}, subset=["Sector"]))
+        st.dataframe(sect_styled, use_container_width=True, hide_index=True)
+
+        def _build_evol_pivot(raw_df, dim_col, dim_label):
+            _anos = sorted(int(a) for a in raw_df["ejercicio"].dropna().unique())
+            pvp_p = (raw_df.pivot_table(index=dim_col, columns="ejercicio",
+                                        values="pvp_medio", aggfunc="mean")
+                     .rename(columns=lambda a: f"pvp_{a}").reset_index())
+            tn_p  = (raw_df.pivot_table(index=dim_col, columns="ejercicio",
+                                        values="toneladas", aggfunc="sum")
+                     .rename(columns=lambda a: f"tn_{a}").reset_index())
+            cm = pvp_p.merge(tn_p, on=dim_col, how="outer").rename(columns={dim_col: dim_label})
+            ord_ = [dim_label]
+            for i, ano in enumerate(_anos):
+                ord_.append(f"pvp_{ano}"); ord_.append(f"tn_{ano}")
+                if i > 0:
+                    ant = _anos[i-1]
+                    cm[f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = np.where(
+                        cm[f"pvp_{ant}"] > 0,
+                        ((cm[f"pvp_{ano}"].fillna(0) - cm[f"pvp_{ant}"]) / cm[f"pvp_{ant}"] * 100).round(1),
+                        np.nan)
+                    cm[f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = np.where(
+                        cm[f"tn_{ant}"] > 0,
+                        ((cm[f"tn_{ano}"].fillna(0) - cm[f"tn_{ant}"]) / cm[f"tn_{ant}"] * 100).round(1),
+                        np.nan)
+                    ord_ += [f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}", f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"]
+            cm = cm[[c for c in ord_ if c in cm.columns]]
+            last_tn = f"tn_{_anos[-1]}" if _anos else dim_label
+            if last_tn in cm.columns:
+                cm = cm.sort_values(last_tn, ascending=False, na_position="last")
+            pvp_c  = [c for c in cm.columns if c.startswith("pvp_")]
+            tn_c   = [c for c in cm.columns if c.startswith("tn_")]
+            pvpd_c = [c for c in cm.columns if c.startswith("pvpΔ_")]
+            tnd_c  = [c for c in cm.columns if c.startswith("tnΔ_")]
+            ren = {}
+            ren.update({c: c.replace("pvp_","") + " €/TN" for c in pvp_c})
+            ren.update({c: c.replace("tn_","")  + " TN"   for c in tn_c})
+            ren.update({c: "PvP Δ " + c.replace("pvpΔ_","") + "%" for c in pvpd_c})
+            ren.update({c: "TN Δ "  + c.replace("tnΔ_","")  + "%" for c in tnd_c})
+            cm2 = cm.rename(columns=ren)
+            val_pv = [ren[c] for c in pvp_c if c in ren]
+            val_tn = [ren[c] for c in tn_c  if c in ren]
+            val_dt = [ren[c] for c in pvpd_c + tnd_c if c in ren]
+            fmt_   = {}
+            fmt_.update({c: lambda v: (eutn(v) + " €/TN") if pd.notna(v) else "-" for c in val_pv})
+            fmt_.update({c: lambda v: (eutn(v) + " TN")   if pd.notna(v) else "-" for c in val_tn})
+            fmt_.update({c: eupct for c in val_dt})
+            styled_ = (cm2.style
+                .apply(_cpct_se, subset=val_dt)
+                .format(fmt_, na_rep="-")
+                .set_properties(**{"font-size":"12px","text-align":"right"}, subset=val_pv+val_tn+val_dt)
+                .set_properties(**{"text-align":"left","font-weight":"500"}, subset=[dim_label]))
+            return styled_, len(cm2)
+
+        st.markdown("---")
+        st.markdown(f"<h3 style='color:{ZUKAN_BLACK}'>Evolutivo por familia de producto · PvP medio y Volumen (TN)</h3>",
+                    unsafe_allow_html=True)
+        fam_evol = load_familia_pvp_evol()
+        _fam_styled, _fam_n = _build_evol_pivot(fam_evol, "familia", "Familia")
+        st.caption(f"{_fam_n} familias")
+        st.dataframe(_fam_styled, use_container_width=True, hide_index=True)
+
+        st.markdown("---")
+        st.markdown(f"<h3 style='color:{ZUKAN_BLACK}'>Evolutivo por zona geográfica · PvP medio y Volumen (TN)</h3>",
+                    unsafe_allow_html=True)
+        _zona_tab1, _zona_tab2 = st.tabs(["🌍  Por país", "📍  Por provincia (España)"])
+        with _zona_tab1:
+            _pais_evol = load_pais_pvp_evol()
+            _pais_styled, _pais_n = _build_evol_pivot(_pais_evol, "pais", "País")
+            st.caption(f"{_pais_n} países")
+            st.dataframe(_pais_styled, use_container_width=True, hide_index=True)
+        with _zona_tab2:
+            _prov_evol = load_provincia_pvp_evol()
+            _prov_styled, _prov_n = _build_evol_pivot(_prov_evol, "provincia", "Provincia")
+            st.caption(f"{_prov_n} provincias")
+            st.dataframe(_prov_styled, use_container_width=True, hide_index=True)
+
+    # ── TAB DIAGNÓSTICO ───────────────────────────────────────────────────────
+    with _tab_diag:
+        _dg = load_diagnostico_data()
+        _anos_d = [y for y in ANOS if y in _dg["tot_yr"]]
+
+        def _diag_block(num, titulo, texto):
+            st.markdown(
+                f'<div style="border-left:4px solid {ZUKAN_BLUE};background:#F0F4FF;'
+                f'border-radius:8px;padding:14px 18px;margin:22px 0 6px 0;">'
+                f'<div style="font-size:9px;color:{ZUKAN_BLUE};font-weight:700;text-transform:uppercase;'
+                f'letter-spacing:.7px;margin-bottom:5px;">PUNTO {num}</div>'
+                f'<div style="font-size:14px;font-weight:700;color:{ZUKAN_BLACK};margin-bottom:6px;">{titulo}</div>'
+                f'<div style="font-size:12px;color:#444;line-height:1.65;">{texto}</div>'
+                f'</div>', unsafe_allow_html=True)
+
+        # ── P1: Trayectoria ───────────────────────────────────────────────────
+        _diag_block(1, "Crecimiento real, base de clientes en contracción permanente",
+            "La facturación creció de <b>95M€ a 178M€</b> entre 2021 y 2024 (+87%). "
+            "Sin embargo, la base de clientes activos cayó de <b>1.218 a 680</b> en el mismo periodo. "
+            "La facturación por cliente pasó de 78K€ a 262K€: el crecimiento fue concentración, no expansión.")
+
+        _tot_v = [_dg["tot_yr"].get(y, 0) for y in _anos_d]
+        _cli_v = [_dg["cli_yr"].get(y, 0) for y in _anos_d]
+        _fig1 = go.Figure()
+        _fig1.add_trace(go.Bar(
+            x=_anos_d, y=_tot_v, name="Facturación (M€)",
+            marker_color=ZUKAN_BLUE, opacity=0.85,
+            text=[f"{v:.1f}" for v in _tot_v], textposition="outside",
+        ))
+        _fig1.add_trace(go.Scatter(
+            x=_anos_d, y=_cli_v, name="Clientes activos", yaxis="y2",
+            mode="lines+markers", line=dict(color=ZUKAN_RED, width=2.5), marker=dict(size=8),
+        ))
+        _fig1.update_layout(
+            yaxis=dict(title="Facturación (M€)", showgrid=True),
+            yaxis2=dict(title="Clientes activos", overlaying="y", side="right", showgrid=False),
+            legend=dict(orientation="h", y=1.1), height=320,
+            margin=dict(t=30, b=30), plot_bgcolor="white", paper_bgcolor="white",
+        )
+        st.plotly_chart(_fig1, use_container_width=True)
+
+        # ── P2: Concentración ─────────────────────────────────────────────────
+        _diag_block(2, "Concentración creciente: el top-20 pasa del 58% al 73%",
+            "En 2021, los 20 mayores clientes representaban el <b>57,6%</b> de la facturación. "
+            "En 2024 y 2025 ya suponen el <b>72-73%</b>. Cuanto mayor la concentración, "
+            "más catastrófico es el impacto cuando una cuenta grande cambia su comportamiento.")
+
+        _t20_v = [_dg["top20_pct"].get(y, 0) for y in _anos_d]
+        _fig2 = go.Figure()
+        _fig2.add_trace(go.Scatter(
+            x=_anos_d, y=_t20_v, mode="lines+markers+text",
+            line=dict(color=ZUKAN_GOLD, width=2.5), marker=dict(size=8),
+            text=[f"{v:.1f}%" for v in _t20_v], textposition="top center",
+            fill="tozeroy", fillcolor="rgba(249,168,37,0.10)",
+        ))
+        _fig2.add_hline(y=60, line_dash="dash", line_color="#ccc",
+                        annotation_text="Umbral 60%", annotation_position="right")
+        _fig2.update_layout(
+            yaxis=dict(title="% facturación top-20 clientes", range=[0, 100]),
+            height=280, margin=dict(t=20, b=30),
+            plot_bgcolor="white", paper_bgcolor="white",
+        )
+        st.plotly_chart(_fig2, use_container_width=True)
+
+        # ── P3: Churn ─────────────────────────────────────────────────────────
+        _diag_block(3, "Churn estructural: cada año se pierde más de lo que entra",
+            "Sin excepción, cada año desde 2021 se han perdido más clientes de los captados. "
+            "El neto acumulado 2021-2026 es de <b>-783 clientes</b>. "
+            "Y los nuevos no retienen: solo el 16-28% de los captados en 2022-23 seguían activos 3 años después.")
+
+        _ch_yrs  = [y for y in ANOS if y in _dg["churn_new"]]
+        _ch_new  = [_dg["churn_new"].get(y, 0)  for y in _ch_yrs]
+        _ch_lost = [-_dg["churn_lost"].get(y, 0) for y in _ch_yrs]
+        _fig3 = go.Figure()
+        _fig3.add_trace(go.Bar(
+            x=_ch_yrs, y=_ch_new, name="Nuevos captados",
+            marker_color=ZUKAN_GREEN, text=_ch_new, textposition="outside",
+        ))
+        _fig3.add_trace(go.Bar(
+            x=_ch_yrs, y=_ch_lost, name="Clientes perdidos",
+            marker_color=ZUKAN_RED, text=[abs(v) for v in _ch_lost], textposition="outside",
+        ))
+        _fig3.update_layout(
+            barmode="group", yaxis=dict(title="Clientes"),
+            height=300, margin=dict(t=20, b=30),
+            plot_bgcolor="white", paper_bgcolor="white",
+            legend=dict(orientation="h", y=1.1),
+        )
+        st.plotly_chart(_fig3, use_container_width=True)
+
+        # ── P4: BASES ─────────────────────────────────────────────────────────
+        _diag_block(4, "BASES/Mixco Sweet: el motor del crecimiento y el origen del riesgo",
+            "La familia BASES pasó de <b>9M€ (2021) a 82M€ (2025)</b>: es prácticamente todo el crecimiento. "
+            "El problema es que está sostenida por 4-5 cuentas grandes de alimentación y bebidas. "
+            "En 2026 (ene-sep) ya ha perdido 55M€ respecto al mismo periodo de 2025.")
+
+        _fam = _dg["fam_yr"]
+        _f_bases = _fam[_fam["familia"] == "BASES"].set_index("ejercicio")["fac_M"]
+        _f_azs   = _fam[_fam["familia"] == "AZUCAR SOLIDO"].set_index("ejercicio")["fac_M"]
+        _f_tot   = _fam.groupby("ejercicio")["fac_M"].sum()
+        _f_rest  = (_f_tot - _f_bases.reindex(_anos_d).fillna(0)
+                           - _f_azs.reindex(_anos_d).fillna(0))
+        _fig4 = go.Figure()
+        _fig4.add_trace(go.Bar(x=_anos_d, y=_f_bases.reindex(_anos_d).fillna(0).tolist(),
+                               name="BASES (Mixco Sweet)", marker_color=ZUKAN_BLUE))
+        _fig4.add_trace(go.Bar(x=_anos_d, y=_f_azs.reindex(_anos_d).fillna(0).tolist(),
+                               name="Azúcar Sólido", marker_color="#90A4AE"))
+        _fig4.add_trace(go.Bar(x=_anos_d, y=_f_rest.reindex(_anos_d).fillna(0).tolist(),
+                               name="Resto familias", marker_color=ZUKAN_GOLD))
+        _fig4.update_layout(
+            barmode="stack", yaxis=dict(title="Facturación (M€)"),
+            height=320, margin=dict(t=20, b=30),
+            plot_bgcolor="white", paper_bgcolor="white",
+            legend=dict(orientation="h", y=1.1),
+        )
+        st.plotly_chart(_fig4, use_container_width=True)
+
+        # ── P5 & P6: Caídas clave ─────────────────────────────────────────────
+        _diag_block(5, "La caída de 2025: un solo cliente explica el 86%",
+            "<b>Zumos y Frutas Concentrados</b> cae de 33,5M€ a 2,9M€ en un año (−30,6M€). "
+            "La caída total de Zukán fue de 35,5M€. Un cliente = 86% del impacto. "
+            "El resto del negocio solo cayó 5M€, ritmo normal de churn.")
+
+        _d5n = [n[:32] for n in _dg["drops_2425"].index.tolist()]
+        _d5v = _dg["drops_2425"].values.tolist()
+        _fig5 = go.Figure(go.Bar(
+            x=_d5v, y=_d5n, orientation="h",
+            marker_color=[ZUKAN_RED if i == 0 else "#FFCDD2" for i in range(len(_d5v))],
+            text=[f"-{v:.2f} M€" for v in _d5v], textposition="outside",
+        ))
+        _fig5.update_layout(
+            xaxis=dict(title="Caída M€ (2024 → 2025)"),
+            height=280, margin=dict(t=10, b=30, l=230),
+            plot_bgcolor="white", paper_bgcolor="white",
+            yaxis=dict(autorange="reversed"),
+        )
+        st.plotly_chart(_fig5, use_container_width=True)
+
+        _diag_block(6, "La caída de 2026: tres clientes más, mismo patrón",
+            "<b>Quirante Fruits</b> (−15,3M€), <b>MAK Food Company</b> (−14,0M€) y "
+            "<b>Aletta Developments</b> (−12,8M€) explican 42M€ de caída en ene-sep 2026. "
+            "Los tres son compradores intensivos de BASES/Mixco Sweet con demanda concentrada en campañas.")
+
+        _d6n = [n[:32] for n in _dg["drops_2526"].index.tolist()]
+        _d6v = _dg["drops_2526"].values.tolist()
+        _fig6 = go.Figure(go.Bar(
+            x=_d6v, y=_d6n, orientation="h",
+            marker_color=[ZUKAN_RED if i < 3 else "#FFCDD2" for i in range(len(_d6v))],
+            text=[f"-{v:.2f} M€" for v in _d6v], textposition="outside",
+        ))
+        _fig6.update_layout(
+            xaxis=dict(title="Caída M€ (2025 → 2026, ene-sep)"),
+            height=280, margin=dict(t=10, b=30, l=230),
+            plot_bgcolor="white", paper_bgcolor="white",
+            yaxis=dict(autorange="reversed"),
+        )
+        st.plotly_chart(_fig6, use_container_width=True)
+
+        # ── P7: LQ/FB mix ────────────────────────────────────────────────────
+        _diag_block(7, "Mix LQ/FB estratégico: porcentaje estancado en el 10-12%",
+            "Los 125 productos de la cartera estratégica LQ/FB representan entre el <b>10-12%</b> "
+            "de la facturación durante 4 años. El 16,9% de 2026 es óptico: el azúcar sólido se ha hundido, "
+            "no es que LQ/FB haya crecido. En valor absoluto, pasó de 11,8M€ (2021) a 14,7M€ (2025) — casi plano en 5 años.")
+
+        _lq_v = [_dg["lqfb_val"].get(y, 0) for y in _anos_d]
+        _lq_p = [_dg["lqfb_pct"].get(y, 0) for y in _anos_d]
+        _fig7 = go.Figure()
+        _fig7.add_trace(go.Bar(x=_anos_d, y=_lq_v, name="LQ/FB M€",
+                               marker_color=ZUKAN_GREEN, opacity=0.8))
+        _fig7.add_trace(go.Scatter(
+            x=_anos_d, y=_lq_p, name="% sobre total", yaxis="y2",
+            mode="lines+markers+text", line=dict(color=ZUKAN_GOLD, width=2),
+            marker=dict(size=7),
+            text=[f"{v:.1f}%" for v in _lq_p], textposition="top center",
+        ))
+        _fig7.update_layout(
+            yaxis=dict(title="Facturación LQ/FB (M€)"),
+            yaxis2=dict(title="% sobre total", overlaying="y", side="right",
+                        showgrid=False, range=[0, 25]),
+            height=300, margin=dict(t=30, b=30),
+            plot_bgcolor="white", paper_bgcolor="white",
+            legend=dict(orientation="h", y=1.1),
+        )
+        st.plotly_chart(_fig7, use_container_width=True)
+
+        # ── P8: Nutraceutical ────────────────────────────────────────────────
+        _diag_block(8, "Nutraceutical: la única señal de crecimiento real en 2026",
+            "De prácticamente cero en 2021 (23K€) a <b>2,6M€ en 2026</b>, con aceleración visible. "
+            "Clientes de mayor fidelidad (producto formulado, especificaciones técnicas), "
+            "natural afinidad a la cartera LQ/FB. Es el vector de crecimiento más relevante para los próximos años.")
+
+        _nt_v = [_dg["nutra_yr"].get(y, 0) for y in _anos_d]
+        _fig8 = go.Figure(go.Bar(
+            x=_anos_d, y=_nt_v, marker_color=ZUKAN_GREEN,
+            text=[f"{v:.2f}" for v in _nt_v], textposition="outside",
+        ))
+        _fig8.update_layout(
+            yaxis=dict(title="Facturación nutraceutical (M€)"),
+            height=260, margin=dict(t=20, b=30),
+            plot_bgcolor="white", paper_bgcolor="white",
+        )
+        st.plotly_chart(_fig8, use_container_width=True)
 
 # ══════════════════════════════════════════════════════════════════════════════
 # PAGINA VARIACION
