@@ -180,6 +180,40 @@ def load_sector_pvp_evol():
              .reset_index())
     return pvp.merge(vol, on=["Sector_3","ejercicio"], how="outer")
 
+@st.cache_data(show_spinner=False)
+def load_familia_pvp_evol():
+    df = pd.read_csv("data/Maestro_Análisis_Comercial.csv", encoding="utf-8", low_memory=False)
+    df = df[df["ejercicio"].between(2021, 2026) & df["familia"].notna()].copy()
+    pvp = (df[df["eur_por_tn"].notna() & (df["Cantidad_TN"] > 0)]
+           .groupby(["familia","ejercicio"])["eur_por_tn"]
+           .mean().round(2).reset_index().rename(columns={"eur_por_tn":"pvp_medio"}))
+    vol = df.groupby(["familia","ejercicio"]).agg(toneladas=("Cantidad_TN","sum")).reset_index()
+    return pvp.merge(vol, on=["familia","ejercicio"], how="outer")
+
+@st.cache_data(show_spinner=False)
+def load_pais_pvp_evol():
+    df = pd.read_csv("data/Maestro_Análisis_Comercial.csv", encoding="utf-8", low_memory=False)
+    df = df[df["ejercicio"].between(2021, 2026) & df["cod_pais"].notna()].copy()
+    df["pais"] = df["cod_pais"].str.strip().str.upper()
+    pvp = (df[df["eur_por_tn"].notna() & (df["Cantidad_TN"] > 0)]
+           .groupby(["pais","ejercicio"])["eur_por_tn"]
+           .mean().round(2).reset_index().rename(columns={"eur_por_tn":"pvp_medio"}))
+    vol = df.groupby(["pais","ejercicio"]).agg(toneladas=("Cantidad_TN","sum")).reset_index()
+    return pvp.merge(vol, on=["pais","ejercicio"], how="outer")
+
+@st.cache_data(show_spinner=False)
+def load_provincia_pvp_evol():
+    df = pd.read_csv("data/Maestro_Análisis_Comercial.csv", encoding="utf-8", low_memory=False)
+    df = df[(df["ejercicio"].between(2021, 2026)) &
+            (df["cod_pais"] == "ES") &
+            df["provincia"].notna()].copy()
+    df["provincia"] = df["provincia"].str.strip().str.title()
+    pvp = (df[df["eur_por_tn"].notna() & (df["Cantidad_TN"] > 0)]
+           .groupby(["provincia","ejercicio"])["eur_por_tn"]
+           .mean().round(2).reset_index().rename(columns={"eur_por_tn":"pvp_medio"}))
+    vol = df.groupby(["provincia","ejercicio"]).agg(toneladas=("Cantidad_TN","sum")).reset_index()
+    return pvp.merge(vol, on=["provincia","ejercicio"], how="outer")
+
 @st.cache_data(show_spinner="Calculando scoring de leads...")
 def load_leads_data():
     leads = pd.read_csv("data/Maestro Leads.csv", encoding="utf-8", low_memory=False)
@@ -1182,6 +1216,83 @@ elif st.session_state["pagina"] == "evolutivo":
         .set_properties(**{"font-size":"12px","text-align":"right"}, subset=val_pvp+val_tn+val_pctd)
         .set_properties(**{"text-align":"left","font-weight":"500"}, subset=["Sector"]))
     st.dataframe(sect_styled, use_container_width=True, hide_index=True)
+
+    # ── Helper: construye pivot ancho + columnas delta ────────────────────────
+    def _build_evol_pivot(raw_df, dim_col, dim_label):
+        _anos = sorted(int(a) for a in raw_df["ejercicio"].dropna().unique())
+        pvp_p = (raw_df.pivot_table(index=dim_col, columns="ejercicio",
+                                    values="pvp_medio", aggfunc="mean")
+                 .rename(columns=lambda a: f"pvp_{a}").reset_index())
+        tn_p  = (raw_df.pivot_table(index=dim_col, columns="ejercicio",
+                                    values="toneladas", aggfunc="sum")
+                 .rename(columns=lambda a: f"tn_{a}").reset_index())
+        cm = pvp_p.merge(tn_p, on=dim_col, how="outer").rename(columns={dim_col: dim_label})
+        ord_ = [dim_label]
+        for i, ano in enumerate(_anos):
+            ord_.append(f"pvp_{ano}"); ord_.append(f"tn_{ano}")
+            if i > 0:
+                ant = _anos[i-1]
+                cm[f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = np.where(
+                    cm[f"pvp_{ant}"] > 0,
+                    ((cm[f"pvp_{ano}"].fillna(0) - cm[f"pvp_{ant}"]) / cm[f"pvp_{ant}"] * 100).round(1),
+                    np.nan)
+                cm[f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = np.where(
+                    cm[f"tn_{ant}"] > 0,
+                    ((cm[f"tn_{ano}"].fillna(0) - cm[f"tn_{ant}"]) / cm[f"tn_{ant}"] * 100).round(1),
+                    np.nan)
+                ord_ += [f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}", f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"]
+        cm = cm[[c for c in ord_ if c in cm.columns]]
+        last_tn = f"tn_{_anos[-1]}" if _anos else dim_label
+        if last_tn in cm.columns:
+            cm = cm.sort_values(last_tn, ascending=False, na_position="last")
+        pvp_c  = [c for c in cm.columns if c.startswith("pvp_")]
+        tn_c   = [c for c in cm.columns if c.startswith("tn_")]
+        pvpd_c = [c for c in cm.columns if c.startswith("pvpΔ_")]
+        tnd_c  = [c for c in cm.columns if c.startswith("tnΔ_")]
+        ren = {}
+        ren.update({c: c.replace("pvp_","") + " €/TN" for c in pvp_c})
+        ren.update({c: c.replace("tn_","")  + " TN"   for c in tn_c})
+        ren.update({c: "PvP Δ " + c.replace("pvpΔ_","") + "%" for c in pvpd_c})
+        ren.update({c: "TN Δ "  + c.replace("tnΔ_","")  + "%" for c in tnd_c})
+        cm2 = cm.rename(columns=ren)
+        val_pv = [ren[c] for c in pvp_c if c in ren]
+        val_tn = [ren[c] for c in tn_c  if c in ren]
+        val_dt = [ren[c] for c in pvpd_c + tnd_c if c in ren]
+        fmt_   = {}
+        fmt_.update({c: lambda v: f"{v:,.0f} €/TN" if pd.notna(v) else "-" for c in val_pv})
+        fmt_.update({c: lambda v: f"{v:,.0f} TN"   if pd.notna(v) else "-" for c in val_tn})
+        fmt_.update({c: eupct for c in val_dt})
+        styled_ = (cm2.style
+            .apply(_cpct_se, subset=val_dt)
+            .format(fmt_, na_rep="-")
+            .set_properties(**{"font-size":"12px","text-align":"right"}, subset=val_pv+val_tn+val_dt)
+            .set_properties(**{"text-align":"left","font-weight":"500"}, subset=[dim_label]))
+        return styled_, len(cm2)
+
+    # ── Evolutivo por familia de producto ─────────────────────────────────────
+    st.markdown("---")
+    st.markdown(f"<h3 style='color:{ZUKAN_BLACK}'>Evolutivo por familia de producto · PvP medio y Volumen (TN)</h3>",
+                unsafe_allow_html=True)
+    fam_evol = load_familia_pvp_evol()
+    _fam_styled, _fam_n = _build_evol_pivot(fam_evol, "familia", "Familia")
+    st.caption(f"{_fam_n} familias")
+    st.dataframe(_fam_styled, use_container_width=True, hide_index=True)
+
+    # ── Evolutivo por zona geográfica ─────────────────────────────────────────
+    st.markdown("---")
+    st.markdown(f"<h3 style='color:{ZUKAN_BLACK}'>Evolutivo por zona geográfica · PvP medio y Volumen (TN)</h3>",
+                unsafe_allow_html=True)
+    _zona_tab1, _zona_tab2 = st.tabs(["🌍  Por país", "📍  Por provincia (España)"])
+    with _zona_tab1:
+        _pais_evol = load_pais_pvp_evol()
+        _pais_styled, _pais_n = _build_evol_pivot(_pais_evol, "pais", "País")
+        st.caption(f"{_pais_n} países")
+        st.dataframe(_pais_styled, use_container_width=True, hide_index=True)
+    with _zona_tab2:
+        _prov_evol = load_provincia_pvp_evol()
+        _prov_styled, _prov_n = _build_evol_pivot(_prov_evol, "provincia", "Provincia")
+        st.caption(f"{_prov_n} provincias")
+        st.dataframe(_prov_styled, use_container_width=True, hide_index=True)
 
 # ══════════════════════════════════════════════════════════════════════════════
 # PAGINA VARIACION
