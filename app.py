@@ -1552,7 +1552,7 @@ elif st.session_state["pagina"] == "variacion":
 
                 # ── TAB 2: Timeline A (todos los años) ──────────────────────────
                 with tab_evo:
-                    for i in range(1, len(ANOS)):
+                    for i in range(len(ANOS) - 1, 0, -1):
                         a_ant, a_act = ANOS[i - 1], ANOS[i]
                         bt = compute_bridge(cpx, cod, a_ant, a_act)
 
