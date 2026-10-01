@@ -1198,27 +1198,6 @@ if st.session_state["pagina"] == "home":
             st.session_state["pagina"] = "impacto"
             st.rerun()
 
-    st.markdown("<br>", unsafe_allow_html=True)
-    _ins = load_lqfb_insights()
-    _mix_trend = " → ".join(
-        f"{yr}: {_ins['mix_pct'][yr]:.1f}%".replace(".", ",")
-        for yr in [2021, 2022, 2023, 2024, 2025]
-    )
-    st.markdown(_yellow_block(
-        "Oportunidad estratégica: gama de alto valor LQ/FB",
-        f"<p style='font-size:12px;color:#555;margin:0 0 5px 0;'>"
-        f"El mix de la <b>cartera de alto valor</b> (125 productos LQ/FB estratégicos) "
-        f"sobre facturación total ha evolucionado así (2021→2025): "
-        f"<b>{_mix_trend}</b>. "
-        f"Son los productos de mayor margen y diferenciación frente a los grandes azucareros — "
-        f"su peso no avanza al ritmo de la estrategia declarada.</p>"
-        f"<p style='font-size:12px;color:#555;margin:0;'>"
-        f"Potencial recuperable en la gama de alto valor: "
-        f"<b>{eu(_ins['gap_lqfb_act_total'] + _ins['rec_lqfb_total'], 2)} M€</b> "
-        f"({_ins['n_gap_lqfb_act']} clientes activos + {_ins['n_rec_lqfb']} anteriores). "
-        f"La nueva línea de producción de Fibras tiene demanda identificada.</p>"
-    ), unsafe_allow_html=True)
-
 # ══════════════════════════════════════════════════════════════════════════════
 # PAGINA EVOLUTIVO
 # ══════════════════════════════════════════════════════════════════════════════
