@@ -1205,14 +1205,15 @@ if st.session_state["pagina"] == "home":
         for yr in [2021, 2022, 2023, 2024, 2025]
     )
     st.markdown(_yellow_block(
-        "Oportunidad estratégica: Líquidos &amp; Fibras",
+        "Oportunidad estratégica: gama de alto valor LQ/FB",
         f"<p style='font-size:12px;color:#555;margin:0 0 5px 0;'>"
-        f"El mix LQ/FB sobre facturación total ha evolucionado así (2021→2025): "
+        f"El mix de la <b>cartera de alto valor</b> (125 productos LQ/FB estratégicos) "
+        f"sobre facturación total ha evolucionado así (2021→2025): "
         f"<b>{_mix_trend}</b>. "
-        f"Siendo los productos de mayor margen y diferenciación frente a los grandes azucareros, "
-        f"el mix estratégico no avanza al ritmo de la estrategia declarada.</p>"
+        f"Son los productos de mayor margen y diferenciación frente a los grandes azucareros — "
+        f"su peso no avanza al ritmo de la estrategia declarada.</p>"
         f"<p style='font-size:12px;color:#555;margin:0;'>"
-        f"Potencial LQ/FB recuperable: "
+        f"Potencial recuperable en la gama de alto valor: "
         f"<b>{eu(_ins['gap_lqfb_act_total'] + _ins['rec_lqfb_total'], 2)} M€</b> "
         f"({_ins['n_gap_lqfb_act']} clientes activos + {_ins['n_rec_lqfb']} anteriores). "
         f"La nueva línea de producción de Fibras tiene demanda identificada.</p>"
@@ -1933,15 +1934,16 @@ elif st.session_state["pagina"] == "activacion":
         _ins_re = load_lqfb_insights()
         _tot_lqfb = _ins_re["gap_lqfb_act_total"] + _ins_re["rec_lqfb_total"]
         st.markdown(_yellow_block(
-            "Gap estratégico en productos de alto valor (LQ/FB)",
+            "Gap estratégico en la cartera de alto valor (LQ/FB)",
             f"<p style='font-size:12px;color:#555;margin:0;'>"
-            f"Del potencial total, <b>{eu(_tot_lqfb, 2)} M€</b> son LQ/FB "
-            f"(<b>{eu(_ins_re['gap_lqfb_act_total'], 2)} M€</b> en "
-            f"{_ins_re['n_gap_lqfb_act']} clientes activos + "
-            f"<b>{eu(_ins_re['rec_lqfb_total'], 2)} M€</b> en "
-            f"{_ins_re['n_rec_lqfb']} clientes anteriores). "
-            f"Priorizar estos clientes alinea la recuperación comercial con la estrategia de margen: "
-            f"mayor diferenciación frente a grandes azucareros y mayor valor por tonelada.</p>"
+            f"Del potencial total, <b>{eu(_tot_lqfb, 2)} M€</b> corresponden a la "
+            f"<b>cartera de alto valor</b> (125 productos LQ/FB estratégicos): "
+            f"<b>{eu(_ins_re['gap_lqfb_act_total'], 2)} M€</b> en "
+            f"{_ins_re['n_gap_lqfb_act']} clientes activos que compraban más antes, "
+            f"más <b>{eu(_ins_re['rec_lqfb_total'], 2)} M€</b> en "
+            f"{_ins_re['n_rec_lqfb']} clientes anteriores. "
+            f"Priorizar estos clientes alinea la recuperación con la estrategia de margen: "
+            f"mayor diferenciación y mayor valor por tonelada.</p>"
         ), unsafe_allow_html=True)
 
         st.markdown("<br>", unsafe_allow_html=True)
@@ -2110,22 +2112,22 @@ elif st.session_state["pagina"] == "activacion":
 
         _ins3 = load_lqfb_insights()
         st.markdown(_yellow_block(
-            "287 clientes activos sin ningún producto LQ/FB",
+            "Clientes activos sin ningún producto de la cartera estratégica LQ/FB",
             f"<p style='font-size:12px;color:#555;margin:0 0 5px 0;'>"
             f"<b>{_ins3['n_cero_lqfb']} clientes activos</b> ({eu(_ins3['fac_cero_lqfb'], 2)} M€ en 2026) "
-            f"compran exclusivamente azúcar sólido — el segmento de menor margen y mayor presión "
-            f"de grandes azucareros. Son el target prioritario de <i>upsell</i> hacia "
-            f"Líquidos &amp; Fibras.</p>"
+            f"no tienen comprado ninguno de los <b>125 productos de alto valor añadido</b> "
+            f"(gama LQ/FB estratégica). Pueden estar comprando líquidos commodity, pero no los "
+            f"productos de mayor margen y diferenciación. Son el target prioritario de <i>upsell</i>.</p>"
             f"<p style='font-size:12px;color:#555;margin:0;'>"
-            f"Adicionalmente, <b>{_ins3['n_bajo_lqfb']} clientes</b> tienen LQ/FB por debajo del 20% "
-            f"de su mix — con conversación comercial ya abierta, hay margen de ampliación. "
-            f"Gap recuperable en clientes activos con historial LQ/FB: "
+            f"Adicionalmente, <b>{_ins3['n_bajo_lqfb']} clientes</b> tienen productos LQ/FB de alto valor "
+            f"por debajo del 20% de su mix — con relación ya establecida, hay recorrido de ampliación. "
+            f"Gap recuperable en la cartera estratégica: "
             f"<b>{eu(_ins3['gap_lqfb_act_total'], 2)} M€</b>.</p>"
         ), unsafe_allow_html=True)
 
-        # ── Desplegable: 287 clientes solo azúcar sólido ─────────────────────
+        # ── Desplegable: clientes sin cartera estratégica LQ/FB ──────────────
         with st.expander(
-            f"Ver {_ins3['n_cero_lqfb']} clientes activos sin ningún producto LQ/FB",
+            f"Ver {_ins3['n_cero_lqfb']} clientes activos sin ningún producto de la cartera estratégica LQ/FB",
             expanded=False
         ):
             _xls_c = pd.read_excel("data/Productos_ValorAnadido_Zukan_Actualizado.xlsx")
@@ -2558,16 +2560,17 @@ elif st.session_state["pagina"] == "activacion":
 
             _ins4 = load_lqfb_insights()
             st.markdown(_yellow_block(
-                "Leads con mayor afinidad LQ/FB: reducción de azúcar y enriquecimiento de fibra",
+                "Leads con mayor afinidad a la cartera de alto valor LQ/FB",
                 f"<p style='font-size:12px;color:#555;margin:0 0 5px 0;'>"
                 f"Sectores como lácteos, bebidas, confitería industrial y nutrición deportiva "
-                f"concentran la mayor demanda de edulcorantes líquidos (sustitución de azúcar sólido) "
-                f"y fibras solubles (enriquecimiento nutricional). Los leads cluster 1 de estos sectores "
-                f"son los más afines a la gama estratégica de Zukán.</p>"
+                f"concentran la mayor demanda de la <b>cartera estratégica</b>: edulcorantes líquidos "
+                f"de alto valor (soluciones a medida frente a commodity) y fibras solubles "
+                f"(enriquecimiento nutricional). Los leads cluster 1 de estos sectores son el encaje "
+                f"más directo con los 125 productos de alto valor añadido de Zukán.</p>"
                 f"<p style='font-size:12px;color:#555;margin:0;'>"
                 f"Referencia interna: hay <b>{_ins4['n_rec_lqfb']} clientes anteriores</b> con historial "
-                f"LQ/FB que ya no compran — su <i>propuesta de valor probada</i> puede transferirse "
-                f"directamente a leads en los mismos sectores.</p>"
+                f"en la cartera estratégica que ya no compran — su propuesta de valor probada puede "
+                f"transferirse directamente a leads en los mismos sectores.</p>"
             ), unsafe_allow_html=True)
 
             tidx1, tidx2, tidx3 = st.tabs([
