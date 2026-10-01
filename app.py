@@ -3016,8 +3016,15 @@ elif st.session_state["pagina"] == "impacto":
         if _nk not in st.session_state:
             st.session_state[_nk] = 100
 
-    def _sl_changed(k): st.session_state[k] = st.session_state[f"_sl_{k}"]
-    def _ni_changed(k): st.session_state[k] = int(st.session_state[f"_ni_{k}"])
+    def _sl_changed(k):
+        v = st.session_state[f"_sl_{k}"]
+        st.session_state[k] = v
+        st.session_state[f"_ni_{k}"] = v   # sync number input
+
+    def _ni_changed(k):
+        v = int(st.session_state[f"_ni_{k}"])
+        st.session_state[k] = v
+        st.session_state[f"_sl_{k}"] = v   # sync slider
 
     # ── Parámetros del escenario (área principal, arriba) ────────────────────
     with st.container(border=True):
@@ -3042,7 +3049,8 @@ elif st.session_state["pagina"] == "impacto":
                           key="_sl_imp_gap", value=st.session_state["imp_gap"],
                           on_change=_sl_changed, args=("imp_gap",))
             with _nca:
-                st.number_input("gap_n", 0, 100, step=5, label_visibility="collapsed",
+                st.number_input("gap_n", 0, 100, step=5, format="%d%%",
+                                label_visibility="collapsed",
                                 key="_ni_imp_gap", value=st.session_state["imp_gap"],
                                 on_change=_ni_changed, args=("imp_gap",))
             pct_gap = st.session_state["imp_gap"]
@@ -3060,7 +3068,8 @@ elif st.session_state["pagina"] == "impacto":
                           key="_sl_imp_past", value=st.session_state["imp_past"],
                           on_change=_sl_changed, args=("imp_past",))
             with _ncb:
-                st.number_input("past_n", 0, 100, step=5, label_visibility="collapsed",
+                st.number_input("past_n", 0, 100, step=5, format="%d%%",
+                                label_visibility="collapsed",
                                 key="_ni_imp_past", value=st.session_state["imp_past"],
                                 on_change=_ni_changed, args=("imp_past",))
             pct_past = st.session_state["imp_past"]
@@ -3091,7 +3100,8 @@ elif st.session_state["pagina"] == "impacto":
                     unsafe_allow_html=True,
                 )
                 st.number_input(
-                    _ss_k, 0, 100, step=5, label_visibility="collapsed",
+                    _ss_k, 0, 100, step=5, format="%d%%",
+                    label_visibility="collapsed",
                     key=_ni_k, value=st.session_state[_ss_k],
                     on_change=lambda k=_ss_k: st.session_state.__setitem__(
                         k, int(st.session_state[f"_ni_{k}"])),
