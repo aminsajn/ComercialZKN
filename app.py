@@ -1197,8 +1197,8 @@ elif st.session_state["pagina"] == "evolutivo":
     val_pctd = [disp_ren[c] for c in pvpd_cols + tnd_cols if c in disp_ren]
 
     fmt_se = {}
-    fmt_se.update({c: lambda v: f"{v:,.0f} €/TN" if pd.notna(v) else "-" for c in val_pvp})
-    fmt_se.update({c: lambda v: f"{v:,.0f} TN"   if pd.notna(v) else "-" for c in val_tn})
+    fmt_se.update({c: lambda v: (eutn(v) + " €/TN") if pd.notna(v) else "-" for c in val_pvp})
+    fmt_se.update({c: lambda v: (eutn(v) + " TN")   if pd.notna(v) else "-" for c in val_tn})
     fmt_se.update({c: eupct for c in val_pctd})
 
     def _cpct_se(col):
@@ -1259,8 +1259,8 @@ elif st.session_state["pagina"] == "evolutivo":
         val_tn = [ren[c] for c in tn_c  if c in ren]
         val_dt = [ren[c] for c in pvpd_c + tnd_c if c in ren]
         fmt_   = {}
-        fmt_.update({c: lambda v: f"{v:,.0f} €/TN" if pd.notna(v) else "-" for c in val_pv})
-        fmt_.update({c: lambda v: f"{v:,.0f} TN"   if pd.notna(v) else "-" for c in val_tn})
+        fmt_.update({c: lambda v: (eutn(v) + " €/TN") if pd.notna(v) else "-" for c in val_pv})
+        fmt_.update({c: lambda v: (eutn(v) + " TN")   if pd.notna(v) else "-" for c in val_tn})
         fmt_.update({c: eupct for c in val_dt})
         styled_ = (cm2.style
             .apply(_cpct_se, subset=val_dt)
