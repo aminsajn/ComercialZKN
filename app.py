@@ -1523,7 +1523,11 @@ elif st.session_state["pagina"] == "variacion":
                 continue
 
             pct_str    = f"({eupct(b['pct_fac'])})" if not np.isnan(b["pct_fac"]) else ""
-            header_lbl = f"{nombre}  ·  {eu_s(b['delta_fac']/1e6)} M€ {pct_str}"
+            delta_sign = "▲" if b["delta_fac"] >= 0 else "▼"
+            header_lbl = (
+                f"{nombre}  ·  {eu(b['fac_ant']/1e6, 2)} M€ → {eu(b['fac_act']/1e6, 2)} M€"
+                f"  {delta_sign} {eu_s(b['delta_fac']/1e6)} M€ {pct_str}"
+            )
 
             with st.expander(header_lbl, expanded=True):
                 tab_res, tab_evo = st.tabs(["\U0001f4ca  Resumen año", "\U0001f4c8  Evolución histórica"])
