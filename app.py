@@ -272,6 +272,48 @@ def load_diagnostico_data():
 
     bridge_2425 = _bridge(2024, 2025)
     bridge_2526 = _bridge(2025, 2026)
+
+    def _cli_decomp(yr_a, yr_b, cod_list):
+        rows = []
+        for cod in cod_list:
+            a = df[(df["ejercicio"] == yr_a) & (df["cod_cliente"] == cod)].copy()
+            b = df[(df["ejercicio"] == yr_b) & (df["cod_cliente"] == cod)].copy()
+            if len(a) == 0 and len(b) == 0:
+                continue
+            nombre = (a["nombre_comercial"].iloc[0] if len(a) else b["nombre_comercial"].iloc[0])
+            pa = a.groupby("cod_producto").agg(fac=("fac_M","sum"), tn=("Cantidad_TN","sum")).reset_index()
+            pb = b.groupby("cod_producto").agg(fac=("fac_M","sum"), tn=("Cantidad_TN","sum")).reset_index()
+            pa["pvp"] = pa["fac"] * 1e6 / pa["tn"].clip(lower=0.001)
+            pb["pvp"] = pb["fac"] * 1e6 / pb["tn"].clip(lower=0.001)
+            m = pa.merge(pb, on="cod_producto", suffixes=("_a","_b"), how="outer").fillna(0)
+            both    = m[(m["fac_a"] > 0) & (m["fac_b"] > 0)]
+            ganado  = m[(m["fac_a"] == 0) & (m["fac_b"] > 0)]
+            perdido = m[(m["fac_b"] == 0) & (m["fac_a"] > 0)]
+            e_vol  = float(((both["tn_b"] - both["tn_a"]) * both["pvp_a"] / 1e6).sum())
+            e_pvp  = float(((both["pvp_b"] - both["pvp_a"]) * both["tn_b"] / 1e6).sum())
+            e_new  = float(ganado["fac_b"].sum())
+            e_lost = float(-perdido["fac_a"].sum())
+            rows.append({
+                "cliente": nombre[:28],
+                "fac_ant": float(a["fac_M"].sum()),
+                "fac_act": float(b["fac_M"].sum()),
+                "volumen": round(e_vol, 2),
+                "precio":  round(e_pvp, 2),
+                "nuevos":  round(e_new, 2),
+                "perdidos":round(e_lost, 2),
+            })
+        return rows
+
+    _fac24 = df[df["ejercicio"]==2024].groupby("cod_cliente")["fac_M"].sum()
+    _fac25 = df[df["ejercicio"]==2025].groupby("cod_cliente")["fac_M"].sum().reindex(_fac24.index).fillna(0)
+    _drop_cods_2425 = (_fac24 - _fac25).clip(lower=0).nlargest(6).index.tolist()
+    decomp_2425 = _cli_decomp(2024, 2025, _drop_cods_2425)
+
+    _fac25b = df[df["ejercicio"]==2025].groupby("cod_cliente")["fac_M"].sum()
+    _fac26  = df[df["ejercicio"]==2026].groupby("cod_cliente")["fac_M"].sum().reindex(_fac25b.index).fillna(0)
+    _drop_cods_2526 = (_fac25b - _fac26).clip(lower=0).nlargest(6).index.tolist()
+    decomp_2526 = _cli_decomp(2025, 2026, _drop_cods_2526)
+
     nutra_yr   = df[df["Sector_1"] == "nutraceuticos"].groupby("ejercicio")["fac_M"].sum()
 
     return {
@@ -285,6 +327,8 @@ def load_diagnostico_data():
         "lqfb_val":    lqfb_val,
         "bridge_2425": bridge_2425,
         "bridge_2526": bridge_2526,
+        "decomp_2425": decomp_2425,
+        "decomp_2526": decomp_2526,
         "nutra_yr":   {int(k): float(v) for k, v in nutra_yr.items()},
     }
 
@@ -1754,6 +1798,70 @@ elif st.session_state["pagina"] == "evolutivo":
             "<b>No hay relevos.</b>",
             "Datos 2026 hasta septiembre (9 meses). La comparativa con 2025 completo sobreestima la caída."
         )
+
+        # ── P6b: Descomposición volumen / precio / mix por cliente ───────────
+        st.markdown("<br>", unsafe_allow_html=True)
+        _diag_block(None,
+            "¿Por qué han caído? Descomposición Volumen · Precio · Mix por cliente clave",
+            "Para cada cliente con mayor caída se descompone el delta en cuatro efectos: "
+            "<b>Volumen</b> (hemos vendido menos toneladas al mismo precio), "
+            "<b>Precio</b> (hemos vendido al mismo volumen pero más barato), "
+            "<b>Nuevos productos</b> (referencias que aparecen en el año posterior) y "
+            "<b>Productos perdidos</b> (referencias que desaparecen). "
+            "Identificar cuál domina marca la acción correctiva: un problema de volumen exige retención comercial; "
+            "un problema de precio exige revisión de márgenes; un mix negativo apunta a sustitución de referencias."
+        )
+
+        def _render_decomp(decomp_rows, title_period):
+            if not decomp_rows:
+                st.info("Sin datos de descomposición.")
+                return
+            df_dc = pd.DataFrame(decomp_rows)
+            df_dc = df_dc.sort_values("fac_ant", ascending=False).reset_index(drop=True)
+            clients = df_dc["cliente"].tolist()
+
+            fig_dc = go.Figure()
+            fig_dc.add_trace(go.Bar(
+                name="Volumen", y=clients, x=df_dc["volumen"],
+                orientation="h", marker_color=ZUKAN_BLUE,
+                hovertemplate="%{y}<br>Volumen: %{x:.2f} M€<extra></extra>",
+            ))
+            fig_dc.add_trace(go.Bar(
+                name="Precio", y=clients, x=df_dc["precio"],
+                orientation="h", marker_color=ZUKAN_GOLD,
+                hovertemplate="%{y}<br>Precio: %{x:.2f} M€<extra></extra>",
+            ))
+            fig_dc.add_trace(go.Bar(
+                name="Nuevos prods.", y=clients, x=df_dc["nuevos"],
+                orientation="h", marker_color=ZUKAN_GREEN,
+                hovertemplate="%{y}<br>Nuevos: %{x:.2f} M€<extra></extra>",
+            ))
+            fig_dc.add_trace(go.Bar(
+                name="Prods. perdidos", y=clients, x=df_dc["perdidos"],
+                orientation="h", marker_color=ZUKAN_RED,
+                hovertemplate="%{y}<br>Perdidos: %{x:.2f} M€<extra></extra>",
+            ))
+            fig_dc.update_layout(
+                title=dict(text=title_period, font=dict(size=14, color=ZUKAN_BLACK)),
+                barmode="relative",
+                height=max(280, len(clients) * 48 + 80),
+                xaxis=dict(title="Impacto en facturación (M€)", zeroline=True,
+                           zerolinecolor="#aaa", zerolinewidth=1),
+                yaxis=dict(autorange="reversed"),
+                legend=dict(orientation="h", yanchor="bottom", y=1.01, x=0),
+                margin=dict(l=10, r=10, t=60, b=40),
+                plot_bgcolor="white", paper_bgcolor="white",
+                font=dict(color=ZUKAN_BLACK),
+            )
+            st.plotly_chart(fig_dc, use_container_width=True)
+
+        _col_dc1, _col_dc2 = st.columns(2)
+        with _col_dc1:
+            _render_decomp(_dg["decomp_2425"], "Descomposición 2024 → 2025")
+        with _col_dc2:
+            _render_decomp(_dg["decomp_2526"], "Descomposición 2025 → 2026")
+
+        st.markdown("<br>", unsafe_allow_html=True)
 
         # ── P7: LQ/FB mix ────────────────────────────────────────────────────
         _diag_block(7, "Mix LQ/FB estratégico: porcentaje estancado en el 10-12%",
