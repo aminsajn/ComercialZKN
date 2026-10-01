@@ -245,15 +245,33 @@ def load_diagnostico_data():
     lqfb_pct = {y: float(lqfb_yr.get(y, 0) / tot_yr.get(y, 1) * 100) for y in ANOS}
     lqfb_val = {y: float(lqfb_yr.get(y, 0)) for y in ANOS}
 
-    def _top_drops(yr_a, yr_b, n=6):
+    def _bridge(yr_a, yr_b, n=6):
         ca = df[df["ejercicio"] == yr_a].groupby(["cod_cliente", "nombre_comercial"])["fac_M"].sum().reset_index().set_index("cod_cliente")
         cb = df[df["ejercicio"] == yr_b].groupby(["cod_cliente", "nombre_comercial"])["fac_M"].sum().reset_index().set_index("cod_cliente")
-        ca_v = ca.set_index("nombre_comercial")["fac_M"]
-        cb_v = cb["fac_M"].reindex(ca_v.index).fillna(0) if len(cb) > 0 else pd.Series(0.0, index=ca_v.index)
-        return (ca_v - cb_v).clip(lower=0).nlargest(n)
+        all_idx = ca.index.union(cb.index)
+        ant = ca["fac_M"].reindex(all_idx).fillna(0)
+        act = cb["fac_M"].reindex(all_idx).fillna(0)
+        nombres = ca["nombre_comercial"].reindex(all_idx).combine_first(cb["nombre_comercial"].reindex(all_idx))
+        delta = act - ant
+        # Componentes agregados
+        comp = {
+            "tot_ant":      float(ant.sum()),
+            "tot_act":      float(act.sum()),
+            "bajan":        float(delta[(ant > 0) & (act > 0) & (delta < 0)].sum()),
+            "suben":        float(delta[(ant > 0) & (act > 0) & (delta > 0)].sum()),
+            "nuevos":       float(act[(ant == 0) & (act > 0)].sum()),
+            "se_van":       float(-ant[(act == 0) & (ant > 0)].sum()),
+        }
+        # Top caídas y subidas de clientes existentes
+        exist_mask = (ant > 0) & (act > 0)
+        top_caidas = (delta[exist_mask & (delta < 0)]
+                      .rename(nombres).nsmallest(n))
+        top_subidas = (delta[exist_mask & (delta > 0)]
+                       .rename(nombres).nlargest(n))
+        return comp, top_caidas, top_subidas
 
-    drops_2425 = _top_drops(2024, 2025)
-    drops_2526 = _top_drops(2025, 2026)
+    bridge_2425 = _bridge(2024, 2025)
+    bridge_2526 = _bridge(2025, 2026)
     nutra_yr   = df[df["Sector_1"] == "nutraceuticos"].groupby("ejercicio")["fac_M"].sum()
 
     return {
@@ -264,9 +282,9 @@ def load_diagnostico_data():
         "churn_lost": churn_lost,
         "fam_yr":     fam_yr,
         "lqfb_pct":   lqfb_pct,
-        "lqfb_val":   lqfb_val,
-        "drops_2425": drops_2425,
-        "drops_2526": drops_2526,
+        "lqfb_val":    lqfb_val,
+        "bridge_2425": bridge_2425,
+        "bridge_2526": bridge_2526,
         "nutra_yr":   {int(k): float(v) for k, v in nutra_yr.items()},
     }
 
@@ -1527,12 +1545,18 @@ elif st.session_state["pagina"] == "evolutivo":
         _dg = load_diagnostico_data()
         _anos_d = [y for y in ANOS if y in _dg["tot_yr"]]
 
+        _diag_counter = [0]
         def _diag_block(num, titulo, texto):
+            if num is not None:
+                _diag_counter[0] = num
+            else:
+                _diag_counter[0] += 1
+            _label = f"PUNTO {_diag_counter[0]}"
             st.markdown(
                 f'<div style="border-left:4px solid {ZUKAN_BLUE};background:#F0F4FF;'
                 f'border-radius:8px;padding:14px 18px;margin:22px 0 6px 0;">'
                 f'<div style="font-size:9px;color:{ZUKAN_BLUE};font-weight:700;text-transform:uppercase;'
-                f'letter-spacing:.7px;margin-bottom:5px;">PUNTO {num}</div>'
+                f'letter-spacing:.7px;margin-bottom:5px;">{_label}</div>'
                 f'<div style="font-size:14px;font-weight:700;color:{ZUKAN_BLACK};margin-bottom:6px;">{titulo}</div>'
                 f'<div style="font-size:12px;color:#444;line-height:1.65;">{texto}</div>'
                 f'</div>', unsafe_allow_html=True)
@@ -1639,46 +1663,97 @@ elif st.session_state["pagina"] == "evolutivo":
         )
         st.plotly_chart(_fig4, use_container_width=True)
 
-        # ── P5 & P6: Caídas clave ─────────────────────────────────────────────
-        _diag_block(5, "La caída de 2025: un solo cliente explica el 86%",
-            "<b>Zumos y Frutas Concentrados</b> cae de 33,5M€ a 2,9M€ en un año (−30,6M€). "
-            "La caída total de Zukán fue de 35,5M€. Un cliente = 86% del impacto. "
-            "El resto del negocio solo cayó 5M€, ritmo normal de churn.")
+        # ── P5 & P6: Waterfall bridge ─────────────────────────────────────────
+        def _render_bridge(bridge_data, label_ant, label_act, titulo, texto, nota_pie=""):
+            _diag_block(None, titulo, texto)
+            comp, top_caidas, top_subidas = bridge_data
 
-        _d5n = [n[:32] for n in _dg["drops_2425"].index.tolist()]
-        _d5v = _dg["drops_2425"].values.tolist()
-        _fig5 = go.Figure(go.Bar(
-            x=_d5v, y=_d5n, orientation="h",
-            marker_color=[ZUKAN_RED if i == 0 else "#FFCDD2" for i in range(len(_d5v))],
-            text=[f"-{v:.2f} M€" for v in _d5v], textposition="outside",
-        ))
-        _fig5.update_layout(
-            xaxis=dict(title="Caída M€ (2024 → 2025)"),
-            height=280, margin=dict(t=10, b=30, l=230),
-            plot_bgcolor="white", paper_bgcolor="white",
-            yaxis=dict(autorange="reversed"),
+            # ── Waterfall superior: 4 componentes agregados ───────────────────
+            _wf_x = [label_ant, "Bajan", "Nuevos", "Se van", "Suben", label_act]
+            _wf_y = [
+                comp["tot_ant"],
+                comp["bajan"],
+                comp["nuevos"],
+                comp["se_van"],
+                comp["suben"],
+                comp["tot_act"],
+            ]
+            _wf_measure = ["absolute", "relative", "relative", "relative", "relative", "total"]
+            _wf_colors  = [ZUKAN_BLUE, ZUKAN_RED, ZUKAN_GREEN, ZUKAN_RED, ZUKAN_GREEN, ZUKAN_BLUE]
+            _wf_text    = [
+                f"{comp['tot_ant']:.1f}",
+                f"{comp['bajan']:.1f}",
+                f"+{comp['nuevos']:.1f}",
+                f"{comp['se_van']:.1f}",
+                f"+{comp['suben']:.1f}",
+                f"{comp['tot_act']:.1f}",
+            ]
+            _figw = go.Figure(go.Waterfall(
+                x=_wf_x, y=_wf_y, measure=_wf_measure,
+                text=_wf_text, textposition="outside",
+                connector=dict(line=dict(color="#ddd", width=1)),
+                increasing=dict(marker_color=ZUKAN_GREEN),
+                decreasing=dict(marker_color=ZUKAN_RED),
+                totals=dict(marker_color=ZUKAN_BLUE),
+            ))
+            _figw.update_layout(
+                yaxis=dict(title="M€"), height=300,
+                margin=dict(t=20, b=10),
+                plot_bgcolor="white", paper_bgcolor="white",
+            )
+            st.plotly_chart(_figw, use_container_width=True)
+
+            # ── Detalle: top caídas y subidas side-by-side ───────────────────
+            _col_c, _col_s = st.columns(2)
+            with _col_c:
+                st.markdown(
+                    f"<div style='font-size:10px;font-weight:700;color:{ZUKAN_RED};"
+                    f"text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;'>"
+                    f"Top caídas (clientes existentes)</div>", unsafe_allow_html=True)
+                for nm, v in top_caidas.items():
+                    st.markdown(
+                        f"<div style='display:flex;justify-content:space-between;"
+                        f"font-size:12px;padding:3px 0;border-bottom:1px solid #f0f0f0;'>"
+                        f"<span style='color:#333'>{nm[:28]}</span>"
+                        f"<span style='color:{ZUKAN_RED};font-weight:600'>{v:.2f} M€</span>"
+                        f"</div>", unsafe_allow_html=True)
+            with _col_s:
+                st.markdown(
+                    f"<div style='font-size:10px;font-weight:700;color:{ZUKAN_GREEN};"
+                    f"text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;'>"
+                    f"Top subidas (clientes existentes)</div>", unsafe_allow_html=True)
+                for nm, v in top_subidas.items():
+                    st.markdown(
+                        f"<div style='display:flex;justify-content:space-between;"
+                        f"font-size:12px;padding:3px 0;border-bottom:1px solid #f0f0f0;'>"
+                        f"<span style='color:#333'>{nm[:28]}</span>"
+                        f"<span style='color:{ZUKAN_GREEN};font-weight:600'>+{v:.2f} M€</span>"
+                        f"</div>", unsafe_allow_html=True)
+            if nota_pie:
+                st.caption(nota_pie)
+
+        _render_bridge(
+            _dg["bridge_2425"], "2024", "2025",
+            "Caída 2024 → 2025: Zumos y Frutas explica el 86%, pero el movimiento bruto es enorme",
+            "La facturación bruta que <b>baja en clientes existentes</b> es de −72,3M€, "
+            "parcialmente compensada por +26,8M€ en subidas y +17,2M€ en nuevos. "
+            "<b>Zumos y Frutas</b> (−30,6M€) domina la caída, pero Alljuicemed, Sugar Global, "
+            "Fruit Tech y otros suman otros −15M€. Sin los tres entrantes clave "
+            "(Aletta, Campo Real, MAK) el año habría sido mucho peor.",
         )
-        st.plotly_chart(_fig5, use_container_width=True)
 
-        _diag_block(6, "La caída de 2026: tres clientes más, mismo patrón",
-            "<b>Quirante Fruits</b> (−15,3M€), <b>MAK Food Company</b> (−14,0M€) y "
-            "<b>Aletta Developments</b> (−12,8M€) explican 42M€ de caída en ene-sep 2026. "
-            "Los tres son compradores intensivos de BASES/Mixco Sweet con demanda concentrada en campañas.")
+        st.markdown("<br>", unsafe_allow_html=True)
 
-        _d6n = [n[:32] for n in _dg["drops_2526"].index.tolist()]
-        _d6v = _dg["drops_2526"].values.tolist()
-        _fig6 = go.Figure(go.Bar(
-            x=_d6v, y=_d6n, orientation="h",
-            marker_color=[ZUKAN_RED if i < 3 else "#FFCDD2" for i in range(len(_d6v))],
-            text=[f"-{v:.2f} M€" for v in _d6v], textposition="outside",
-        ))
-        _fig6.update_layout(
-            xaxis=dict(title="Caída M€ (2025 → 2026, ene-sep)"),
-            height=280, margin=dict(t=10, b=30, l=230),
-            plot_bgcolor="white", paper_bgcolor="white",
-            yaxis=dict(autorange="reversed"),
+        _render_bridge(
+            _dg["bridge_2526"], "2025", "2026",
+            "Caída 2025 → 2026: los relevos del año anterior ahora son los que más caen",
+            "Los tres clientes que habían compensado en 2025 — <b>MAK Food</b> (−14,0M€), "
+            "<b>Quirante Fruits</b> (−15,3M€) y <b>Aletta Developments</b> (−12,8M€) — "
+            "son ahora las principales caídas. Y lo más crítico: "
+            "las subidas de clientes existentes solo suman +5,6M€ vs +26,8M€ en 2025. "
+            "<b>No hay relevos.</b>",
+            "Datos 2026 hasta septiembre (9 meses). La comparativa con 2025 completo sobreestima la caída."
         )
-        st.plotly_chart(_fig6, use_container_width=True)
 
         # ── P7: LQ/FB mix ────────────────────────────────────────────────────
         _diag_block(7, "Mix LQ/FB estratégico: porcentaje estancado en el 10-12%",
