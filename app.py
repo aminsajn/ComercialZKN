@@ -1778,10 +1778,10 @@ elif st.session_state["pagina"] == "evolutivo":
 
         _render_bridge(
             _dg["bridge_2425"], "2024", "2025",
-            "Caída 2024 → 2025: Zumos y Frutas explica el 86%, pero el movimiento bruto es enorme",
+            "Caída 2024 → 2025: Zumos y Frutas Concentrados explica el 86%, pero el movimiento bruto es enorme",
             "La facturación bruta que <b>baja en clientes existentes</b> es de −72,3M€, "
             "parcialmente compensada por +26,8M€ en subidas y +17,2M€ en nuevos. "
-            "<b>Zumos y Frutas</b> (−30,6M€) domina la caída, pero Alljuicemed, Sugar Global, "
+            "<b>Zumos y Frutas Concentrados, S.L.</b> (−30,6M€) domina la caída, pero Alljuicemed, Sugar Global, "
             "Fruit Tech y otros suman otros −15M€. Sin los tres entrantes clave "
             "(Aletta, Campo Real, MAK) el año habría sido mucho peor.",
         )
