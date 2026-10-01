@@ -1807,9 +1807,7 @@ elif st.session_state["pagina"] == "evolutivo":
             "<b>Volumen</b> (hemos vendido menos toneladas al mismo precio), "
             "<b>Precio</b> (hemos vendido al mismo volumen pero más barato), "
             "<b>Nuevos productos</b> (referencias que aparecen en el año posterior) y "
-            "<b>Productos perdidos</b> (referencias que desaparecen). "
-            "Identificar cuál domina marca la acción correctiva: un problema de volumen exige retención comercial; "
-            "un problema de precio exige revisión de márgenes; un mix negativo apunta a sustitución de referencias."
+            "<b>Productos perdidos</b> (referencias que desaparecen)."
         )
 
         def _render_decomp(decomp_rows, title_period):
