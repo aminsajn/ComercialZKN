@@ -128,12 +128,11 @@ def compute_bridge(cpx, cod_cliente, ano_ant, ano_act):
     gained = merged[mask_gained].copy()
     lost   = merged[mask_lost].copy()
 
-    tn_ant = both["toneladas_ant"].fillna(0).sum()
-    tn_act = both["toneladas_act"].fillna(0).sum()
-
-    # PvP medio: media aritmética de los PvP por línea de pedido (no ponderada por volumen)
-    pvp_ant = both["pvp_medio_ant"].mean() if both["pvp_medio_ant"].notna().any() else np.nan
-    pvp_act = both["pvp_medio_act"].mean() if both["pvp_medio_act"].notna().any() else np.nan
+    # TN y PvP totales del cliente (todos los productos, no solo los comunes)
+    tn_ant = ant["toneladas"].fillna(0).sum()
+    tn_act = act["toneladas"].fillna(0).sum()
+    pvp_ant = fac_ant_total / tn_ant if tn_ant > 0 else np.nan
+    pvp_act = fac_act_total / tn_act if tn_act > 0 else np.nan
 
     both["delta_tn"]  = both["toneladas_act"]  - both["toneladas_ant"]
     both["delta_pvp"] = both["pvp_medio_act"].fillna(both["pvp_act"]) - both["pvp_medio_ant"].fillna(both["pvp_ant"])
@@ -2210,74 +2209,62 @@ elif st.session_state["pagina"] == "variacion":
                                     st.dataframe(e67["dist_act"].style.format(_pct_fmt),
                                                  use_container_width=True, hide_index=True)
 
-                # ── TAB 2: Timeline A (todos los años) ──────────────────────────
+                # ── TAB 2: Tabla resumen histórica ───────────────────────────
                 with tab_evo:
+                    _rows_evo = []
                     for i in range(len(ANOS) - 1, 0, -1):
                         a_ant, a_act = ANOS[i - 1], ANOS[i]
                         bt = compute_bridge(cpx, cod, a_ant, a_act)
-
                         if bt["fac_ant"] == 0 and bt["fac_act"] == 0:
                             continue
-
-                        border_col = ZUKAN_GREEN if bt["delta_fac"] >= 0 else ZUKAN_RED
-                        pct_s  = f"({eupct(bt['pct_fac'])})" if not np.isnan(bt["pct_fac"]) else ""
-                        tn_d   = bt["tn_act"] - bt["tn_ant"]
-                        tn_col = ZUKAN_GREEN if tn_d >= 0 else ZUKAN_RED
-                        pvp_d_s = ""
-                        pvp_col = ZUKAN_BLACK
-                        if not (np.isnan(bt["pvp_ant"]) or np.isnan(bt["pvp_act"])):
-                            pvp_d   = bt["pvp_act"] - bt["pvp_ant"]
-                            pvp_d_s = f"{eutn(pvp_d, signed=True)} €/TN"
-                            pvp_col = ZUKAN_GREEN if pvp_d >= 0 else ZUKAN_RED
-
-                        st.markdown(f"""
-<div style='border-left:4px solid {border_col};padding:10px 16px;
-            background:white;border-radius:6px;margin-bottom:8px;'>
-  <div style='font-size:11px;font-weight:700;color:#888;margin-bottom:8px;'>
-    {a_ant} → {a_act}
-  </div>
-  <div style='display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;'>
-    <div>
-      <div style='font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;'>
-        ΔFac</div>
-      <div style='font-size:15px;font-weight:800;color:{border_col};'>
-        {eu_s(bt['delta_fac']/1e6)} M€ {pct_s}</div>
-    </div>
-    <div>
-      <div style='font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;'>
-        E1 · Volumen</div>
-      <div style='font-size:13px;font-weight:700;'>
-        {eutn(bt['tn_ant'])} → {eutn(bt['tn_act'])} TN
-        <span style='color:{tn_col}'>({eutn(tn_d, signed=True)})</span>
-      </div>
-    </div>
-    <div>
-      <div style='font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;'>
-        E2 · PvP medio</div>
-      <div style='font-size:13px;font-weight:700;'>
-        {eutn(bt['pvp_ant']) if bt['pvp_ant'] and not np.isnan(bt['pvp_ant']) else '-'}
-        →
-        {eutn(bt['pvp_act']) if bt['pvp_act'] and not np.isnan(bt['pvp_act']) else '-'}
-        €/TN
-        <span style='color:{pvp_col}'>{pvp_d_s}</span>
-      </div>
-    </div>
-    <div>
-      <div style='font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;'>
-        E3 · Amb. cambios</div>
-      <div style='font-size:13px;font-weight:700;'>{len(bt['e3'])} prods</div>
-    </div>
-    <div>
-      <div style='font-size:9px;color:#aaa;font-weight:600;text-transform:uppercase;'>
-        Cartera</div>
-      <div style='font-size:11px;font-weight:600;'>
-        <span style='color:{ZUKAN_GREEN}'>+{len(bt['e4'])} ganados</span>
-        &nbsp;
-        <span style='color:{ZUKAN_RED}'>−{len(bt['e5'])} perdidos</span>
-      </div>
-    </div>
-  </div>
-</div>""", unsafe_allow_html=True)
+                        _pvp_d = (bt["pvp_act"] - bt["pvp_ant"]
+                                  if not (np.isnan(bt["pvp_ant"]) or np.isnan(bt["pvp_act"]))
+                                  else np.nan)
+                        _rows_evo.append({
+                            "Período":        f"{a_ant} → {a_act}",
+                            "Fac ant (M€)":   round(bt["fac_ant"] / 1e6, 2),
+                            "Fac act (M€)":   round(bt["fac_act"] / 1e6, 2),
+                            "Δ Fac (M€)":     round(bt["delta_fac"] / 1e6, 2),
+                            "Δ Fac %":        round(bt["pct_fac"], 1) if not np.isnan(bt["pct_fac"]) else np.nan,
+                            "TN ant":         round(bt["tn_ant"], 0),
+                            "TN act":         round(bt["tn_act"], 0),
+                            "Δ TN":           round(bt["tn_act"] - bt["tn_ant"], 0),
+                            "PvP ant (€/TN)": round(bt["pvp_ant"], 0) if not np.isnan(bt["pvp_ant"]) else np.nan,
+                            "PvP act (€/TN)": round(bt["pvp_act"], 0) if not np.isnan(bt["pvp_act"]) else np.nan,
+                            "Δ PvP (€/TN)":   round(_pvp_d, 0) if not np.isnan(_pvp_d) else np.nan,
+                            "+ Prods":        len(bt["e4"]),
+                            "- Prods":        len(bt["e5"]),
+                        })
+                    if _rows_evo:
+                        _df_evo = pd.DataFrame(_rows_evo)
+                        _dcols  = ["Δ Fac (M€)", "Δ Fac %", "Δ TN", "Δ PvP (€/TN)"]
+                        def _color_d(col):
+                            return ["" if pd.isna(v) else
+                                    f"color:{ZUKAN_GREEN};font-weight:600" if v > 0 else
+                                    f"color:{ZUKAN_RED};font-weight:600"   if v < 0 else ""
+                                    for v in col]
+                        _fmt_evo = {
+                            "Fac ant (M€)":   lambda v: eu(v, 2)   + " M€"    if pd.notna(v) else "-",
+                            "Fac act (M€)":   lambda v: eu(v, 2)   + " M€"    if pd.notna(v) else "-",
+                            "Δ Fac (M€)":     lambda v: eu_s(v, 2) + " M€"    if pd.notna(v) else "-",
+                            "Δ Fac %":        lambda v: eupct(v)               if pd.notna(v) else "-",
+                            "TN ant":         lambda v: eutn(v)     + " TN"    if pd.notna(v) else "-",
+                            "TN act":         lambda v: eutn(v)     + " TN"    if pd.notna(v) else "-",
+                            "Δ TN":           lambda v: eu_s(v, 0)  + " TN"   if pd.notna(v) else "-",
+                            "PvP ant (€/TN)": lambda v: eutn(v)     + " €/TN" if pd.notna(v) else "-",
+                            "PvP act (€/TN)": lambda v: eutn(v)     + " €/TN" if pd.notna(v) else "-",
+                            "Δ PvP (€/TN)":   lambda v: eu_s(v, 0)  + " €/TN" if pd.notna(v) else "-",
+                            "+ Prods":        lambda v: f"+{int(v)}"           if pd.notna(v) else "-",
+                            "- Prods":        lambda v: f"-{int(v)}"           if pd.notna(v) else "-",
+                        }
+                        _num_cols = [c for c in _df_evo.columns if c != "Período"]
+                        _styled_evo = (_df_evo.style
+                            .apply(_color_d, subset=_dcols)
+                            .format(_fmt_evo, na_rep="-")
+                            .set_properties(**{"font-size":"12px","text-align":"right"}, subset=_num_cols)
+                            .set_properties(**{"text-align":"left","font-weight":"600"}, subset=["Período"])
+                        )
+                        st.dataframe(_styled_evo, use_container_width=True, hide_index=True)
 
 # ══════════════════════════════════════════════════════════════════════════════
 # PAGINA ACTIVACION COMERCIAL
