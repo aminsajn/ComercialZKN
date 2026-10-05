@@ -215,6 +215,17 @@ def load_provincia_pvp_evol():
     return pvp.merge(vol, on=["provincia","ejercicio"], how="outer")
 
 @st.cache_data(show_spinner=False)
+def load_tn_pvp_cli():
+    df = pd.read_csv("data/Maestro_Análisis_Comercial.csv", encoding="utf-8", low_memory=False)
+    df = df[df["ejercicio"].between(2021, 2026)].copy()
+    tn  = (df.groupby(["cod_cliente","ejercicio"])["Cantidad_TN"]
+             .sum().reset_index().rename(columns={"Cantidad_TN":"tn"}))
+    pvp = (df[df["eur_por_tn"].notna() & (df["Cantidad_TN"] > 0)]
+           .groupby(["cod_cliente","ejercicio"])["eur_por_tn"]
+           .mean().round(2).reset_index().rename(columns={"eur_por_tn":"pvp"}))
+    return tn.merge(pvp, on=["cod_cliente","ejercicio"], how="left")
+
+@st.cache_data(show_spinner=False)
 def load_diagnostico_data():
     df = pd.read_csv("data/Maestro_Análisis_Comercial.csv", encoding="utf-8", low_memory=False)
     df = df[df["ejercicio"].between(2021, 2026)].copy()
@@ -1342,12 +1353,31 @@ elif st.session_state["pagina"] == "evolutivo":
             pivot[tag] = (np.where(ca > 0, ((cb.fillna(0) - ca) / ca * 100).round(1), np.nan)
                           if ca is not None and cb is not None else np.nan)
 
+        _tp = load_tn_pvp_cli()
+        _tn_piv  = _tp.pivot_table(index="cod_cliente", columns="ejercicio", values="tn",  aggfunc="sum").reset_index()
+        _pvp_piv = _tp.pivot_table(index="cod_cliente", columns="ejercicio", values="pvp", aggfunc="mean").reset_index()
+        _tn_piv.columns.name  = None
+        _pvp_piv.columns.name = None
+        _tn_piv  = _tn_piv.rename(columns={c: f"tn_{c}"  for c in _tn_piv.columns  if c != "cod_cliente"})
+        _pvp_piv = _pvp_piv.rename(columns={c: f"pvp_{c}" for c in _pvp_piv.columns if c != "cod_cliente"})
+        pivot = pivot.merge(_tn_piv,  on="cod_cliente", how="left")
+        pivot = pivot.merge(_pvp_piv, on="cod_cliente", how="left")
+
         col_ord = ["cod_cliente","nombre_comercial"]
         for i, ano in enumerate(ANOS):
             if ano in pivot.columns: col_ord.append(ano)
             if i > 0:
-                tag = f"{str(ano)[-2:]}vs{str(ANOS[i-1])[-2:]}pct"
-                if tag in pivot.columns: col_ord.append(tag)
+                ant = ANOS[i-1]
+                pct_tag = f"{str(ano)[-2:]}vs{str(ant)[-2:]}pct"
+                tn_tag  = f"ΔTN_{str(ano)[-2:]}vs{str(ant)[-2:]}"
+                pvp_tag = f"ΔPvP_{str(ano)[-2:]}vs{str(ant)[-2:]}"
+                if pct_tag in pivot.columns: col_ord.append(pct_tag)
+                if f"tn_{ant}" in pivot.columns and f"tn_{ano}" in pivot.columns:
+                    pivot[tn_tag]  = (pivot[f"tn_{ano}"].fillna(0) - pivot[f"tn_{ant}"]).round(0)
+                    col_ord.append(tn_tag)
+                if f"pvp_{ant}" in pivot.columns and f"pvp_{ano}" in pivot.columns:
+                    pivot[pvp_tag] = (pivot[f"pvp_{ano}"].fillna(0) - pivot[f"pvp_{ant}"]).round(1)
+                    col_ord.append(pvp_tag)
         pivot = pivot[[c for c in col_ord if c in pivot.columns]]
 
         opciones = sorted(pivot["nombre_comercial"].dropna().unique().tolist())
@@ -1377,14 +1407,19 @@ elif st.session_state["pagina"] == "evolutivo":
             tot[ano] = round(df_show[ano].sum(), 3) if ano in df_show.columns else np.nan
         for i in range(1, len(ANOS)):
             ant, act = ANOS[i-1], ANOS[i]
-            tag = f"{str(act)[-2:]}vs{str(ant)[-2:]}pct"
-            if tag in df_show.columns:
+            pct_tag = f"{str(act)[-2:]}vs{str(ant)[-2:]}pct"
+            tn_tag  = f"ΔTN_{str(act)[-2:]}vs{str(ant)[-2:]}"
+            if pct_tag in df_show.columns:
                 ta, tb = tot.get(ant) or 0, tot.get(act) or 0
-                tot[tag] = round((tb - ta) / ta * 100, 1) if ta > 0 else np.nan
+                tot[pct_tag] = round((tb - ta) / ta * 100, 1) if ta > 0 else np.nan
+            if tn_tag in df_show.columns:
+                tot[tn_tag] = round(df_show[tn_tag].sum(), 0)
 
         df_final = pd.concat([df_show, pd.DataFrame([tot])], ignore_index=True)
-        ano_cols = [c for c in df_final.columns if c in ANOS]
-        pct_cols = [c for c in df_final.columns if str(c).endswith("pct")]
+        ano_cols  = [c for c in df_final.columns if c in ANOS]
+        pct_cols  = [c for c in df_final.columns if str(c).endswith("pct")]
+        dtn_cols  = [c for c in df_final.columns if str(c).startswith("ΔTN_")]
+        dpvp_cols = [c for c in df_final.columns if str(c).startswith("ΔPvP_")]
 
         ren = {"cod_cliente":"Codigo","nombre_comercial":"Cliente"}
         ren.update({a: f"{a} (M€)" for a in ano_cols})
@@ -1394,10 +1429,16 @@ elif st.session_state["pagina"] == "evolutivo":
             a2, a1 = parts.split("vs")
             pct_labels[c] = f"{a2}vs{a1}%"
         ren.update(pct_labels)
+        dtn_labels  = {c: "Δ TN "  + c.replace("ΔTN_","")  for c in dtn_cols}
+        dpvp_labels = {c: "Δ PvP " + c.replace("ΔPvP_","") for c in dpvp_cols}
+        ren.update(dtn_labels)
+        ren.update(dpvp_labels)
 
-        df_r   = df_final.rename(columns=ren)
-        ano_r  = [f"{a} (M€)" for a in ano_cols]
-        pct_r  = [pct_labels[c] for c in pct_cols]
+        df_r      = df_final.rename(columns=ren)
+        ano_r     = [f"{a} (M€)" for a in ano_cols]
+        pct_r     = [pct_labels[c]  for c in pct_cols]
+        dtn_r     = [dtn_labels[c]  for c in dtn_cols]
+        dpvp_r    = [dpvp_labels[c] for c in dpvp_cols]
 
         def color_pct(col):
             out = []
@@ -1414,12 +1455,15 @@ elif st.session_state["pagina"] == "evolutivo":
 
         fmt = {c: eu for c in ano_r}
         fmt.update({c: eupct for c in pct_r})
+        fmt.update({c: lambda v: (eu_s(v, 0) + " TN")   if pd.notna(v) else "-" for c in dtn_r})
+        fmt.update({c: lambda v: (eu_s(v, 1) + " €/TN") if pd.notna(v) else "-" for c in dpvp_r})
 
+        delta_cols_r = pct_r + dtn_r + dpvp_r
         styled = (df_r.style
             .apply(hl_total, axis=1)
-            .apply(color_pct, subset=pct_r)
+            .apply(color_pct, subset=delta_cols_r)
             .format(fmt, na_rep="-")
-            .set_properties(**{"font-size":"12.5px","text-align":"right"}, subset=ano_r+pct_r)
+            .set_properties(**{"font-size":"12.5px","text-align":"right"}, subset=ano_r + delta_cols_r)
             .set_properties(**{"text-align":"left","font-weight":"500"}, subset=["Cliente"])
         )
 
@@ -1463,10 +1507,8 @@ elif st.session_state["pagina"] == "evolutivo":
                 ant = _anos_se[i-1]
                 pvp_tag = f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"
                 tn_tag  = f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"
-                comb[pvp_tag] = np.where(comb[f"pvp_{ant}"] > 0,
-                    ((comb[f"pvp_{ano}"].fillna(0) - comb[f"pvp_{ant}"]) / comb[f"pvp_{ant}"] * 100).round(1), np.nan)
-                comb[tn_tag]  = np.where(comb[f"tn_{ant}"] > 0,
-                    ((comb[f"tn_{ano}"].fillna(0) - comb[f"tn_{ant}"]) / comb[f"tn_{ant}"] * 100).round(1), np.nan)
+                comb[pvp_tag] = (comb[f"pvp_{ano}"].fillna(0) - comb[f"pvp_{ant}"]).round(1)
+                comb[tn_tag]  = (comb[f"tn_{ano}"].fillna(0)  - comb[f"tn_{ant}"]).round(0)
                 col_ord += [pvp_tag, tn_tag]
         comb = comb[[c for c in col_ord if c in comb.columns]]
 
@@ -1481,8 +1523,8 @@ elif st.session_state["pagina"] == "evolutivo":
         disp_ren  = {}
         disp_ren.update({c: c.replace("pvp_","") + " €/TN"   for c in pvp_cols})
         disp_ren.update({c: c.replace("tn_","")  + " TN"     for c in tn_cols})
-        disp_ren.update({c: c.replace("pvpΔ_","PvP Δ ") + "%" for c in pvpd_cols})
-        disp_ren.update({c: c.replace("tnΔ_","TN Δ ")   + "%" for c in tnd_cols})
+        disp_ren.update({c: "Δ PvP " + c.replace("pvpΔ_","") for c in pvpd_cols})
+        disp_ren.update({c: "Δ TN "  + c.replace("tnΔ_","")  for c in tnd_cols})
         comb2 = comb.rename(columns=disp_ren)
 
         val_pvp  = [disp_ren[c] for c in pvp_cols  if c in disp_ren]
@@ -1492,7 +1534,10 @@ elif st.session_state["pagina"] == "evolutivo":
         fmt_se = {}
         fmt_se.update({c: lambda v: (eutn(v) + " €/TN") if pd.notna(v) else "-" for c in val_pvp})
         fmt_se.update({c: lambda v: (eutn(v) + " TN")   if pd.notna(v) else "-" for c in val_tn})
-        fmt_se.update({c: eupct for c in val_pctd})
+        _pvpd_d = [disp_ren[c] for c in pvpd_cols if c in disp_ren]
+        _tnd_d  = [disp_ren[c] for c in tnd_cols  if c in disp_ren]
+        fmt_se.update({c: lambda v: (eu_s(v, 1) + " €/TN") if pd.notna(v) else "-" for c in _pvpd_d})
+        fmt_se.update({c: lambda v: (eu_s(v, 0) + " TN")   if pd.notna(v) else "-" for c in _tnd_d})
 
         def _cpct_se(col):
             out = []
@@ -1524,14 +1569,10 @@ elif st.session_state["pagina"] == "evolutivo":
                 ord_.append(f"pvp_{ano}"); ord_.append(f"tn_{ano}")
                 if i > 0:
                     ant = _anos[i-1]
-                    cm[f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = np.where(
-                        cm[f"pvp_{ant}"] > 0,
-                        ((cm[f"pvp_{ano}"].fillna(0) - cm[f"pvp_{ant}"]) / cm[f"pvp_{ant}"] * 100).round(1),
-                        np.nan)
-                    cm[f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = np.where(
-                        cm[f"tn_{ant}"] > 0,
-                        ((cm[f"tn_{ano}"].fillna(0) - cm[f"tn_{ant}"]) / cm[f"tn_{ant}"] * 100).round(1),
-                        np.nan)
+                    cm[f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = (
+                        cm[f"pvp_{ano}"].fillna(0) - cm[f"pvp_{ant}"]).round(1)
+                    cm[f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"] = (
+                        cm[f"tn_{ano}"].fillna(0)  - cm[f"tn_{ant}"]).round(0)
                     ord_ += [f"pvpΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}", f"tnΔ_{str(ano)[-2:]}vs{str(ant)[-2:]}"]
             cm = cm[[c for c in ord_ if c in cm.columns]]
             last_tn = f"tn_{_anos[-1]}" if _anos else dim_label
@@ -1544,8 +1585,8 @@ elif st.session_state["pagina"] == "evolutivo":
             ren = {}
             ren.update({c: c.replace("pvp_","") + " €/TN" for c in pvp_c})
             ren.update({c: c.replace("tn_","")  + " TN"   for c in tn_c})
-            ren.update({c: "PvP Δ " + c.replace("pvpΔ_","") + "%" for c in pvpd_c})
-            ren.update({c: "TN Δ "  + c.replace("tnΔ_","")  + "%" for c in tnd_c})
+            ren.update({c: "Δ PvP " + c.replace("pvpΔ_","") for c in pvpd_c})
+            ren.update({c: "Δ TN "  + c.replace("tnΔ_","")  for c in tnd_c})
             cm2 = cm.rename(columns=ren)
             val_pv = [ren[c] for c in pvp_c if c in ren]
             val_tn = [ren[c] for c in tn_c  if c in ren]
@@ -1553,7 +1594,10 @@ elif st.session_state["pagina"] == "evolutivo":
             fmt_   = {}
             fmt_.update({c: lambda v: (eutn(v) + " €/TN") if pd.notna(v) else "-" for c in val_pv})
             fmt_.update({c: lambda v: (eutn(v) + " TN")   if pd.notna(v) else "-" for c in val_tn})
-            fmt_.update({c: eupct for c in val_dt})
+            _pvpd_d2 = [ren[c] for c in pvpd_c if c in ren]
+            _tnd_d2  = [ren[c] for c in tnd_c  if c in ren]
+            fmt_.update({c: lambda v: (eu_s(v, 1) + " €/TN") if pd.notna(v) else "-" for c in _pvpd_d2})
+            fmt_.update({c: lambda v: (eu_s(v, 0) + " TN")   if pd.notna(v) else "-" for c in _tnd_d2})
             styled_ = (cm2.style
                 .apply(_cpct_se, subset=val_dt)
                 .format(fmt_, na_rep="-")
