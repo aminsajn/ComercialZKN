@@ -145,6 +145,7 @@ def compute_bridge(cpx, cod_cliente, ano_ant, ano_act):
         "delta_fac": delta_fac,   "pct_fac": pct_fac,
         "tn_ant": tn_ant,         "tn_act": tn_act,
         "pvp_ant": pvp_ant,       "pvp_act": pvp_act,
+        "n_prods_ant": len(ant),  "n_prods_act": len(act),
         "e3": e3, "e4": gained,   "e5": lost,
     }
 
@@ -2232,6 +2233,7 @@ elif st.session_state["pagina"] == "variacion":
                             "PvP ant (€/TN)": round(bt["pvp_ant"], 0) if not np.isnan(bt["pvp_ant"]) else np.nan,
                             "PvP act (€/TN)": round(bt["pvp_act"], 0) if not np.isnan(bt["pvp_act"]) else np.nan,
                             "Δ PvP (€/TN)":   round(_pvp_d, 0) if not np.isnan(_pvp_d) else np.nan,
+                            "Prods act":      bt["n_prods_act"],
                             "+ Prods":        len(bt["e4"]),
                             "- Prods":        len(bt["e5"]),
                         })
@@ -2254,6 +2256,7 @@ elif st.session_state["pagina"] == "variacion":
                             "PvP ant (€/TN)": lambda v: eutn(v)     + " €/TN" if pd.notna(v) else "-",
                             "PvP act (€/TN)": lambda v: eutn(v)     + " €/TN" if pd.notna(v) else "-",
                             "Δ PvP (€/TN)":   lambda v: eu_s(v, 0)  + " €/TN" if pd.notna(v) else "-",
+                            "Prods act":      lambda v: f"{int(v)}"            if pd.notna(v) else "-",
                             "+ Prods":        lambda v: f"+{int(v)}"           if pd.notna(v) else "-",
                             "- Prods":        lambda v: f"-{int(v)}"           if pd.notna(v) else "-",
                         }
