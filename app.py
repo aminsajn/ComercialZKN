@@ -848,8 +848,9 @@ def load_nocomm_ranking():
         "totals": {
             "nc_activos_M": float(df_cli["gap_nc_eur"].sum()) / 1e6,
             "nc_pasados_M": float(df_past["fac_nc_ult"].sum()) / 1e6,
-            "tot_leads_M":    float(df_leads_1["pot_tot_eur"].sum()) / 1e6 if len(df_leads_1) > 0 else 0.0,
-        "leads_con_nc":  int((df_leads_1["n_ings_nc"] > 0).sum()) if len(df_leads_1) > 0 else 0,
+            "tot_leads_M":      float(df_leads_1["pot_tot_eur"].sum()) / 1e6 if len(df_leads_1) > 0 else 0.0,
+            "tot_leads_top50_M": float(df_leads_1.head(50)["pot_tot_eur"].sum()) / 1e6 if len(df_leads_1) > 0 else 0.0,
+            "leads_con_nc":     int((df_leads_1["n_ings_nc"] > 0).sum()) if len(df_leads_1) > 0 else 0,
         }
     }
 
@@ -3748,15 +3749,14 @@ elif st.session_state["pagina"] == "impacto":
             unsafe_allow_html=True,
         )
 
-        _k1, _k2, _k3, _k4 = st.columns(4)
+        _k1, _k2, _k3, _k4, _k5 = st.columns(5)
         _total_nc = _t["nc_activos_M"] + _t["nc_pasados_M"]
         for _col, _lbl, _val, _sub, _bg, _brd, _extra in [
-            (_k1, "Potencial NC total",       _total_nc,           "Activos + ex-clientes + leads",                                "#f8f9fa", "#2E2A25", ""),
-            (_k2, "Gap NC clientes activos",  _t["nc_activos_M"],  f"{len(_df_cli[_df_cli['gap_nc_eur']>0])} clientes con gap NC", "#f0f7ff", "#0082CA", ""),
-            (_k3, "NC recuperación pasados",  _t["nc_pasados_M"],  f"{len(_df_past[_df_past['fac_nc_ult']>0])} ex-clientes",      "#f0fff8", "#00AD68", ""),
-            (_k4, "Potencial total leads C1",  _t["tot_leads_M"],
-             f"{_t['leads_con_nc']} leads con ≥1 ingrediente NC detectado",
-             "#fff5f7", "#CC003D", ""),
+            (_k1, "Potencial NC total",         _total_nc,                    "Activos + ex-clientes",                                    "#f8f9fa", "#2E2A25", ""),
+            (_k2, "Gap NC clientes activos",    _t["nc_activos_M"],           f"{len(_df_cli[_df_cli['gap_nc_eur']>0])} clientes con gap NC", "#f0f7ff", "#0082CA", ""),
+            (_k3, "NC recuperación pasados",    _t["nc_pasados_M"],           f"{len(_df_past[_df_past['fac_nc_ult']>0])} ex-clientes",      "#f0fff8", "#00AD68", ""),
+            (_k4, "Potencial total leads C1",   _t["tot_leads_M"],            f"Todos los leads C1 detectados",                             "#fff5f7", "#CC003D", ""),
+            (_k5, "Potencial top 50 leads C1",  _t["tot_leads_top50_M"],      f"{_t['leads_con_nc']} con ≥1 ing. NC · top 50 por volumen",   "#fdf5ff", "#8E44AD", ""),
         ]:
             with _col:
                 st.markdown(
