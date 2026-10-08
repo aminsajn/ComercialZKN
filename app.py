@@ -800,36 +800,36 @@ def load_nocomm_ranking():
             leads["sectores_zukan"] = leads["sectores_zukan_x"].fillna(leads.get("sectores_zukan_y", ""))
         leads["ings_str"] = leads["ingredientes_zukan_detectados"].fillna(leads["ingredientes_lead"])
 
+        _NC_INGS_KW = ("fructooligosac", "fos", "glucosido", "esteviol", "caramelo natural", "miel")
+
         def _lead_pot(row):
             ings_str = row.get("ings_str", "")
             if not ings_str or pd.isna(ings_str):
-                return 0.0, 0.0, 0
+                return 0.0, 0
             secs = []
             if pd.notna(row.get("sectores_zukan")):
                 secs = [_norm(s.strip()) for s in str(row["sectores_zukan"]).split(",") if s.strip()]
             ings = [i.strip() for i in str(ings_str).split(",") if i.strip()]
-            total, nc_total, n_nc = 0.0, 0.0, 0
+            total = 0.0
+            n_nc = 0
             for ing in ings:
                 ing_n = _norm(ing)
-                is_nc = not es_ingrediente_commodity(ing)
+                # count NC ingredients regardless of PvP lookup
+                if any(kw in ing_n for kw in _NC_INGS_KW):
+                    n_nc += 1
                 best = 0.0
                 for sk in (secs or [""]):
                     v = pvp_lkp.get((ing_n, sk))
                     if v:
                         best = max(best, v[0] * v[1])
                 total += best
-                if is_nc:
-                    nc_total += best
-                    if best > 0:
-                        n_nc += 1
-            return nc_total, total, n_nc
+            return total, n_nc
 
         _res = leads.apply(_lead_pot, axis=1)
-        leads["pot_nc_eur"]  = _res.apply(lambda x: x[0])
-        leads["pot_tot_eur"] = _res.apply(lambda x: x[1])
-        leads["n_ings_nc"]   = _res.apply(lambda x: x[2])
-        leads["pct_nc"]      = (leads["pot_nc_eur"] / leads["pot_tot_eur"].replace(0, np.nan) * 100).fillna(0)
-        leads = leads.sort_values("pot_nc_eur", ascending=False).reset_index(drop=True)
+        leads["pot_tot_eur"] = _res.apply(lambda x: x[0])
+        leads["n_ings_nc"]   = _res.apply(lambda x: x[1])
+        # Sort by total potential; n_ings_nc is a secondary indicator
+        leads = leads.sort_values("pot_tot_eur", ascending=False).reset_index(drop=True)
         leads["rank"] = leads.index + 1
         df_leads_1 = leads[leads["cluster"] == "1 - Alta"].reset_index(drop=True)
         df_leads_1["rank"] = df_leads_1.index + 1
@@ -844,7 +844,8 @@ def load_nocomm_ranking():
         "totals": {
             "nc_activos_M": float(df_cli["gap_nc_eur"].sum()) / 1e6,
             "nc_pasados_M": float(df_past["fac_nc_ult"].sum()) / 1e6,
-            "nc_leads_M": float(df_leads_1["pot_nc_eur"].sum()) / 1e6 if len(df_leads_1) > 0 else 0.0,
+            "tot_leads_M":    float(df_leads_1["pot_tot_eur"].sum()) / 1e6 if len(df_leads_1) > 0 else 0.0,
+        "leads_con_nc":  int((df_leads_1["n_ings_nc"] > 0).sum()) if len(df_leads_1) > 0 else 0,
         }
     }
 
@@ -3744,12 +3745,14 @@ elif st.session_state["pagina"] == "impacto":
         )
 
         _k1, _k2, _k3, _k4 = st.columns(4)
-        _total_nc = _t["nc_activos_M"] + _t["nc_pasados_M"] + _t["nc_leads_M"]
-        for _col, _lbl, _val, _sub, _bg, _brd in [
-            (_k1, "Potencial NC total",       _total_nc,           "Activos + ex-clientes + leads",     "#f8f9fa", "#2E2A25"),
-            (_k2, "Gap NC clientes activos",  _t["nc_activos_M"],  f"{len(_df_cli[_df_cli['gap_nc_eur']>0])} clientes con gap NC",  "#f0f7ff", "#0082CA"),
-            (_k3, "NC recuperación pasados",  _t["nc_pasados_M"],  f"{len(_df_past[_df_past['fac_nc_ult']>0])} ex-clientes",       "#f0fff8", "#00AD68"),
-            (_k4, "NC potencial leads C1",    _t["nc_leads_M"],    f"{len(_df_lds)} leads cluster 1",   "#fff5f7", "#CC003D"),
+        _total_nc = _t["nc_activos_M"] + _t["nc_pasados_M"]
+        for _col, _lbl, _val, _sub, _bg, _brd, _extra in [
+            (_k1, "Potencial NC total",       _total_nc,           "Activos + ex-clientes + leads",                                "#f8f9fa", "#2E2A25", ""),
+            (_k2, "Gap NC clientes activos",  _t["nc_activos_M"],  f"{len(_df_cli[_df_cli['gap_nc_eur']>0])} clientes con gap NC", "#f0f7ff", "#0082CA", ""),
+            (_k3, "NC recuperación pasados",  _t["nc_pasados_M"],  f"{len(_df_past[_df_past['fac_nc_ult']>0])} ex-clientes",      "#f0fff8", "#00AD68", ""),
+            (_k4, "Potencial total leads C1",  _t["tot_leads_M"],
+             f"{_t['leads_con_nc']} leads con ≥1 ingrediente NC detectado",
+             "#fff5f7", "#CC003D", ""),
         ]:
             with _col:
                 st.markdown(
@@ -3759,6 +3762,7 @@ elif st.session_state["pagina"] == "impacto":
                     f'letter-spacing:.7px;margin-bottom:4px">{_lbl}</div>'
                     f'<div style="font-size:24px;font-weight:700;color:{_brd}">{eu(_val,2)} M€</div>'
                     f'<div style="font-size:10px;color:#aaa;margin-top:2px">{_sub}</div>'
+                    f'{_extra}'
                     f'</div>',
                     unsafe_allow_html=True,
                 )
@@ -3844,40 +3848,44 @@ elif st.session_state["pagina"] == "impacto":
 
         # ── Leads top 50 ────────────────────────────────────────────────────────
         st.markdown(
-            f"<h4 style='color:#CC003D;margin-bottom:4px;'>Leads Cluster 1 — Top 50 por Potencial NC</h4>"
-            f"<p style='color:#888;font-size:12px;margin:0 0 8px 0'>Leads con similitud alta (≥75%) "
-            f"ordenados por potencial estimado en ingredientes no commodity "
-            f"(FOS, Glucósidos de esteviol, Miel, Caramelo natural).</p>",
+            f"<h4 style='color:#CC003D;margin-bottom:4px;'>Leads Cluster 1 — Top 50 por Potencial Total</h4>"
+            f"<p style='color:#888;font-size:12px;margin:0 0 8px 0'>"
+            f"Ordenados por <strong>potencial total</strong> (suma de todos los ingredientes detectados, "
+            f"commodities + NC). La columna <strong># ings NC</strong> indica cuántos de esos ingredientes "
+            f"son no commodity (FOS, Miel, Caramelo natural, Glucósidos de esteviol).</p>",
             unsafe_allow_html=True,
         )
         if len(_df_lds) > 0:
             _df_lds_d = _df_lds.head(50).copy()
-            _df_lds_d["pot_nc_M"]  = (_df_lds_d["pot_nc_eur"]  / 1e6).round(3)
             _df_lds_d["pot_tot_M"] = (_df_lds_d["pot_tot_eur"] / 1e6).round(3)
-            _df_lds_d["pct_nc"]    = _df_lds_d["pct_nc"].round(0).astype(int)
             _df_lds_d["jaccard"]   = (_df_lds_d["jaccard_max"] * 100).round(0).astype(int)
-            _ali_col = _df_lds_d["alimarket_ventas_eur"] if "alimarket_ventas_eur" in _df_lds_d.columns else _df_lds_d.get("alimarket_ventas_eur_x", pd.Series(0.0, index=_df_lds_d.index))
+            _df_lds_d["n_ings_nc"] = _df_lds_d["n_ings_nc"].fillna(0).astype(int)
+            _ali_col = _df_lds_d["alimarket_ventas_eur"] if "alimarket_ventas_eur" in _df_lds_d.columns else pd.Series(0.0, index=_df_lds_d.index)
             _df_lds_d["alimarket"] = (_ali_col.fillna(0) / 1e6).round(1)
             _sec_col = "sectores_zukan" if "sectores_zukan" in _df_lds_d.columns else "sectores_zukan_x"
-            _show_lds_cols = ["rank","empresa_lead","jaccard","pot_nc_M","pot_tot_M","pct_nc","n_ings_nc","alimarket"]
+            _show_lds_cols = ["rank","empresa_lead","jaccard","pot_tot_M","n_ings_nc","alimarket"]
             if _sec_col in _df_lds_d.columns:
                 _df_lds_d["sectores_zukan"] = _df_lds_d[_sec_col]
                 _show_lds_cols.insert(2, "sectores_zukan")
             _show_lds = _df_lds_d[_show_lds_cols].copy()
+
+            def _style_nc(row):
+                if row.get("n_ings_nc", 0) > 0:
+                    return ["background-color:#fff0f5"] * len(row)
+                return [""] * len(row)
+
             st.dataframe(
-                _show_lds,
+                _show_lds.style.apply(_style_nc, axis=1),
                 use_container_width=True, hide_index=True,
                 height=420,
                 column_config={
-                    "rank":         st.column_config.NumberColumn("#",               width="small"),
-                    "empresa_lead": st.column_config.TextColumn("Lead / Empresa"),
+                    "rank":           st.column_config.NumberColumn("#",              width="small"),
+                    "empresa_lead":   st.column_config.TextColumn("Lead / Empresa"),
                     "sectores_zukan": st.column_config.TextColumn("Sector"),
-                    "jaccard":      st.column_config.NumberColumn("Similitud %",     format="%d%%", width="small"),
-                    "pot_nc_M":     st.column_config.NumberColumn("Pot. NC M€",      format="%.2f"),
-                    "pot_tot_M":    st.column_config.NumberColumn("Pot. total M€",   format="%.2f"),
-                    "pct_nc":       st.column_config.NumberColumn("% NC",            format="%.0f%%"),
-                    "n_ings_nc":    st.column_config.NumberColumn("# ings NC",       width="small"),
-                    "alimarket":    st.column_config.NumberColumn("Ventas Ali. M€",  format="%.1f"),
+                    "jaccard":        st.column_config.NumberColumn("Similitud %",    format="%d%%", width="small"),
+                    "pot_tot_M":      st.column_config.NumberColumn("Pot. total M€",  format="%.2f"),
+                    "n_ings_nc":      st.column_config.NumberColumn("# ings NC",      width="small"),
+                    "alimarket":      st.column_config.NumberColumn("Ventas Ali. M€", format="%.1f"),
                 },
             )
         else:
