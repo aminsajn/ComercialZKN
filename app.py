@@ -749,24 +749,28 @@ def load_nocomm_ranking():
 
     # ── Ex-clientes ───────────────────────────────────────────────────────────
     ex_cli = set(df["cod_cliente"].unique()) - cli_2026
+    # Último año activo (para mostrar en tabla)
     last_yr = (df[df["cod_cliente"].isin(ex_cli) & df["ejercicio"].between(2021, 2025)]
                .groupby("cod_cliente")["ejercicio"].max().reset_index()
                .rename(columns={"ejercicio": "ano_ult"}))
-
-    ex_last = (prod_yr[prod_yr["cod_cliente"].isin(ex_cli)]
-               .merge(last_yr, on="cod_cliente"))
-    ex_last = ex_last[ex_last["ejercicio"] == ex_last["ano_ult"]].copy()
-    ex_last["fac_nc"] = ex_last["fac"] * ex_last["_nc"].astype(float)
-
-    ex_agg = (ex_last.groupby("cod_cliente", as_index=False)
-              .agg(fac_nc_ult=("fac_nc", "sum"),
-                   fac_total_ult=("fac", "sum"),
-                   n_prods_nc=("_nc", "sum")))
-    ex_agg["n_prods_nc"] = ex_agg["n_prods_nc"].astype(int)
+    # Año pico NC: el año en que mayor NC facturaron (mismo criterio que clientes activos)
+    ex_prod_yr = prod_yr[prod_yr["cod_cliente"].isin(ex_cli)].copy()
+    ex_prod_yr["fac_nc"] = ex_prod_yr["fac"] * ex_prod_yr["_nc"].astype(float)
+    ex_nc_yr = (ex_prod_yr.groupby(["cod_cliente", "ejercicio"], as_index=False)
+                .agg(fac_nc_yr=("fac_nc", "sum"), fac_total_yr=("fac", "sum"), n_prods_nc_yr=("_nc", "sum")))
+    idx_nc_pk = ex_nc_yr.groupby("cod_cliente")["fac_nc_yr"].idxmax()
+    peak_nc_yr = ex_nc_yr.loc[idx_nc_pk].rename(columns={
+        "ejercicio": "ano_pico_nc",
+        "fac_nc_yr": "fac_nc_ult",
+        "fac_total_yr": "fac_total_ult",
+        "n_prods_nc_yr": "n_prods_nc",
+    })
+    peak_nc_yr["n_prods_nc"] = peak_nc_yr["n_prods_nc"].astype(int)
 
     df_past = (cli_info[cli_info["cod_cliente"].isin(ex_cli)]
                .merge(last_yr, on="cod_cliente", how="left")
-               .merge(ex_agg, on="cod_cliente", how="left"))
+               .merge(peak_nc_yr[["cod_cliente", "ano_pico_nc", "fac_nc_ult", "fac_total_ult", "n_prods_nc"]],
+                      on="cod_cliente", how="left"))
     for c in ["fac_nc_ult", "fac_total_ult"]:
         df_past[c] = df_past[c].fillna(0)
     df_past["n_prods_nc"] = df_past["n_prods_nc"].fillna(0).astype(int)
@@ -3818,29 +3822,31 @@ elif st.session_state["pagina"] == "impacto":
         st.markdown(
             f"<h4 style='color:#00AD68;margin-bottom:4px;'>Ex-Clientes — Top 50 por Potencial de Recuperación NC</h4>"
             f"<p style='color:#888;font-size:12px;margin:0 0 8px 0'>Clientes sin actividad en 2026 ordenados "
-            f"por facturación de no commodities en su último año activo.</p>",
+            f"por facturación de no commodities en su <strong>año pico NC</strong> (mismo criterio que clientes activos).</p>",
             unsafe_allow_html=True,
         )
         _df_past_d = _df_past.head(50).copy()
-        _df_past_d["fac_nc_M"]   = (_df_past_d["fac_nc_ult"]   / 1e6).round(3)
-        _df_past_d["fac_tot_M"]  = (_df_past_d["fac_total_ult"]/ 1e6).round(3)
-        _df_past_d["pct_nc"]     = _df_past_d["pct_nc"].round(0).astype(int)
-        _df_past_d["sector"]     = _df_past_d["sector"].fillna("—")
-        _df_past_d["ano_ult"]    = _df_past_d["ano_ult"].fillna(0).astype(int)
-        _show_past = _df_past_d[["rank","nombre_comercial","sector","ano_ult","fac_nc_M","fac_tot_M","pct_nc","n_prods_nc"]].copy()
+        _df_past_d["fac_nc_M"]    = (_df_past_d["fac_nc_ult"]   / 1e6).round(3)
+        _df_past_d["fac_tot_M"]   = (_df_past_d["fac_total_ult"]/ 1e6).round(3)
+        _df_past_d["pct_nc"]      = _df_past_d["pct_nc"].round(0).astype(int)
+        _df_past_d["sector"]      = _df_past_d["sector"].fillna("—")
+        _df_past_d["ano_ult"]     = _df_past_d["ano_ult"].fillna(0).astype(int)
+        _df_past_d["ano_pico_nc"] = _df_past_d["ano_pico_nc"].fillna(0).astype(int)
+        _show_past = _df_past_d[["rank","nombre_comercial","sector","ano_ult","ano_pico_nc","fac_nc_M","fac_tot_M","pct_nc","n_prods_nc"]].copy()
         st.dataframe(
             _show_past,
             use_container_width=True, hide_index=True,
             height=420,
             column_config={
-                "rank":             st.column_config.NumberColumn("#",                  width="small"),
+                "rank":             st.column_config.NumberColumn("#",                   width="small"),
                 "nombre_comercial": st.column_config.TextColumn("Ex-cliente"),
                 "sector":           st.column_config.TextColumn("Sector"),
-                "ano_ult":          st.column_config.NumberColumn("Último año",         width="small"),
-                "fac_nc_M":         st.column_config.NumberColumn("NC recuperable M€",  format="%.2f"),
-                "fac_tot_M":        st.column_config.NumberColumn("Total último año M€",format="%.2f"),
-                "pct_nc":           st.column_config.NumberColumn("% NC",               format="%.0f%%"),
-                "n_prods_nc":       st.column_config.NumberColumn("# prods NC",         width="small"),
+                "ano_ult":          st.column_config.NumberColumn("Último año",          width="small"),
+                "ano_pico_nc":      st.column_config.NumberColumn("Año pico NC",         width="small"),
+                "fac_nc_M":         st.column_config.NumberColumn("NC año pico M€",      format="%.2f"),
+                "fac_tot_M":        st.column_config.NumberColumn("Total año pico M€",   format="%.2f"),
+                "pct_nc":           st.column_config.NumberColumn("% NC",                format="%.0f%%"),
+                "n_prods_nc":       st.column_config.NumberColumn("# prods NC",          width="small"),
             },
         )
 
