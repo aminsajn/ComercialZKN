@@ -5,3 +5,4 @@ __pycache__/
 venv/
 *.log
 .streamlit/secrets.toml
+data/lead_similitud.csv

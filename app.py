@@ -75,6 +75,47 @@ def _norm_sector(s):
     k = _norm(s)
     return _SECTOR_ALIAS.get(k, k)
 
+
+def es_commodity(nombre_producto: str) -> bool:
+    """True si el producto es commodity (equivalente disponible en el mercado general).
+    Orden de prioridad: NO commodity primero (Mix/Mixco y marcas Zukán), luego commodity.
+    Por defecto devuelve False (conservador: si no se reconoce, se trata como no commodity)."""
+    n = _norm(str(nombre_producto))
+    # NO commodity: blends/formulaciones propias Zukán
+    if re.search(r'\bmix\b|\bmixco\b', n):
+        return False
+    _nc = (
+        'fosvitae', 'fosfruit', 'fos y stevia', 'apimix', 'apipasta',
+        'beesucre', 'apifonda', 'fondant', 'nectar base',
+        'cobertura', 'sirope sabor', 'siropes de', 'jarabe sabor',
+        'stevia & fibra', 'stevia zero', 'xilitol & stevia',
+        'compo manz', 'compo al', 'compo hca', 'compo rae', 'compo le',
+        'base neutra', 'ca1956',
+    )
+    for kw in _nc:
+        if kw in n:
+            return False
+    # COMMODITY: ingredientes estándar de mercado
+    _c = (
+        'azucar', 'fructosa', 'dextrosa', 'maltitol', 'sorbitol',
+        'glucor', 'fructor', 'maltor', 'melaza',
+        'glucosa atomizada', 'almidon', 'acido citrico',
+        'sorbato potasico', 'sucralosa', 'xilitol',
+    )
+    for kw in _c:
+        if kw in n:
+            return True
+    return False
+
+
+def es_ingrediente_commodity(ing: str) -> bool:
+    """True si el ingrediente canónico detectado en leads es commodity.
+    NOT commodity: FOS, Glucósidos de esteviol, Miel, Caramelo natural."""
+    n = _norm(str(ing).strip())
+    _nc_ings = ("fructooligosac", "fos", "glucosido", "esteviol", "caramelo natural", "miel")
+    return not any(kw in n for kw in _nc_ings)
+
+
 if "pagina" not in st.session_state:
     st.session_state["pagina"] = "home"
 
@@ -642,6 +683,160 @@ def _resolve_all_sectors(sectores_zukan_raw, pvp_sectors):
             seen.add(sk)
             result.append(sk)
     return result
+
+
+@st.cache_data(show_spinner="Calculando ranking no commodity...")
+def load_nocomm_ranking():
+    """Calcula ranking NC para: clientes actuales (gap), ex-clientes (recuperación), leads (potencial)."""
+    df = pd.read_csv("data/Maestro_Análisis_Comercial.csv", encoding="utf-8", low_memory=False)
+    df = df[df["ejercicio"].between(2021, 2026)].copy()
+    df["_nc"] = ~df["descripcion_producto"].apply(es_commodity)
+
+    cli_info = (df.groupby("cod_cliente", as_index=False)
+                .agg(nombre_comercial=("nombre_comercial", "first"),
+                     sector=("Sector_3", lambda x: x.mode()[0] if x.notna().any() else None)))
+
+    cli_2026 = set(df[df["ejercicio"] == 2026]["cod_cliente"])
+
+    fac_yr = (df[df["ejercicio"].between(2021, 2025)]
+              .groupby(["cod_cliente", "ejercicio"])["total_base_neto"].sum().reset_index())
+    idx_pk = fac_yr.groupby("cod_cliente")["total_base_neto"].idxmax()
+    peak_yr = (fac_yr.loc[idx_pk, ["cod_cliente", "ejercicio"]]
+               .rename(columns={"ejercicio": "ano_pico"}))
+
+    prod_yr = (df.groupby(["cod_cliente", "ejercicio", "descripcion_producto", "_nc"], as_index=False)
+               .agg(tn=("Cantidad_TN", "sum"), fac=("total_base_neto", "sum")))
+    prod_yr["pvp"] = prod_yr["fac"] / prod_yr["tn"].replace(0, np.nan)
+    prod_yr = prod_yr.merge(peak_yr, on="cod_cliente", how="left")
+
+    # ── Clientes actuales ──────────────────────────────────────────────────────
+    peak = prod_yr[prod_yr["ejercicio"] == prod_yr["ano_pico"]].copy()
+    peak = peak.rename(columns={"tn": "tn_peak", "fac": "fac_peak", "pvp": "pvp_peak"})
+    y26  = (prod_yr[prod_yr["ejercicio"] == 2026][["cod_cliente", "descripcion_producto", "tn"]]
+            .rename(columns={"tn": "tn_2026"}))
+
+    ga = (peak[peak["cod_cliente"].isin(cli_2026)]
+          .merge(y26, on=["cod_cliente", "descripcion_producto"], how="left"))
+    ga["tn_2026"]   = ga["tn_2026"].fillna(0)
+    ga["delta_tn"]  = (ga["tn_peak"] - ga["tn_2026"]).clip(lower=0)
+    ga["gap_eur"]   = ga["delta_tn"] * ga["pvp_peak"].fillna(0)
+    ga["gap_nc"]    = ga["gap_eur"]  * ga["_nc"].astype(float)
+
+    ga_pos = ga[ga["delta_tn"] > 0]
+    cli_ga = (ga_pos.groupby("cod_cliente", as_index=False)
+              .agg(gap_nc_eur=("gap_nc", "sum"),
+                   gap_total_eur=("gap_eur", "sum"),
+                   n_prods_nc=("_nc", "sum"),
+                   n_prods_gap=("descripcion_producto", "nunique")))
+    cli_ga["n_prods_nc"]  = cli_ga["n_prods_nc"].astype(int)
+    cli_ga["n_prods_gap"] = cli_ga["n_prods_gap"].astype(int)
+
+    fac26 = (df[df["ejercicio"] == 2026]
+             .groupby("cod_cliente", as_index=False)["total_base_neto"]
+             .sum().rename(columns={"total_base_neto": "fac_act_eur"}))
+
+    df_cli = (cli_info[cli_info["cod_cliente"].isin(cli_2026)]
+              .merge(fac26, on="cod_cliente", how="left")
+              .merge(peak_yr, on="cod_cliente", how="left")
+              .merge(cli_ga, on="cod_cliente", how="left"))
+    for c in ["gap_nc_eur", "gap_total_eur", "fac_act_eur"]:
+        df_cli[c] = df_cli[c].fillna(0)
+    for c in ["n_prods_nc", "n_prods_gap"]:
+        df_cli[c] = df_cli[c].fillna(0).astype(int)
+    df_cli["pct_nc"] = (df_cli["gap_nc_eur"] / df_cli["gap_total_eur"].replace(0, np.nan) * 100).fillna(0)
+    df_cli = df_cli.sort_values("gap_nc_eur", ascending=False).reset_index(drop=True)
+    df_cli["rank"] = df_cli.index + 1
+
+    # ── Ex-clientes ───────────────────────────────────────────────────────────
+    ex_cli = set(df["cod_cliente"].unique()) - cli_2026
+    last_yr = (df[df["cod_cliente"].isin(ex_cli) & df["ejercicio"].between(2021, 2025)]
+               .groupby("cod_cliente")["ejercicio"].max().reset_index()
+               .rename(columns={"ejercicio": "ano_ult"}))
+
+    ex_last = (prod_yr[prod_yr["cod_cliente"].isin(ex_cli)]
+               .merge(last_yr, on="cod_cliente"))
+    ex_last = ex_last[ex_last["ejercicio"] == ex_last["ano_ult"]].copy()
+    ex_last["fac_nc"] = ex_last["fac"] * ex_last["_nc"].astype(float)
+
+    ex_agg = (ex_last.groupby("cod_cliente", as_index=False)
+              .agg(fac_nc_ult=("fac_nc", "sum"),
+                   fac_total_ult=("fac", "sum"),
+                   n_prods_nc=("_nc", "sum")))
+    ex_agg["n_prods_nc"] = ex_agg["n_prods_nc"].astype(int)
+
+    df_past = (cli_info[cli_info["cod_cliente"].isin(ex_cli)]
+               .merge(last_yr, on="cod_cliente", how="left")
+               .merge(ex_agg, on="cod_cliente", how="left"))
+    for c in ["fac_nc_ult", "fac_total_ult"]:
+        df_past[c] = df_past[c].fillna(0)
+    df_past["n_prods_nc"] = df_past["n_prods_nc"].fillna(0).astype(int)
+    df_past["pct_nc"] = (df_past["fac_nc_ult"] / df_past["fac_total_ult"].replace(0, np.nan) * 100).fillna(0)
+    df_past = df_past.sort_values("fac_nc_ult", ascending=False).reset_index(drop=True)
+    df_past["rank"] = df_past.index + 1
+
+    # ── Leads ─────────────────────────────────────────────────────────────────
+    try:
+        pvp_df = pd.read_csv("data/ingrediente_sector_pvp.csv", encoding="utf-8", low_memory=False)
+        pvp_df["ing_n"] = pvp_df["ingrediente"].apply(_norm)
+        pvp_lkp = {(r["ing_n"], r["sector_key"]): (r["pvp_medio"], r["tn_media"])
+                   for _, r in pvp_df.iterrows()}
+
+        leads_c = pd.read_csv("data/leads_clusters.csv", encoding="utf-8", low_memory=False)
+        leads_e = pd.read_csv("data/leads_fuentes_externas.csv", encoding="utf-8", low_memory=False)
+        leads = leads_c.merge(
+            leads_e[["empresa", "origen", "ingredientes_zukan_detectados",
+                      "alimarket_ventas_eur", "sectores_zukan"]],
+            left_on=["empresa_lead", "origen"], right_on=["empresa", "origen"], how="left"
+        )
+        leads["ings_str"] = leads["ingredientes_zukan_detectados"].fillna(leads["ingredientes_lead"])
+
+        def _lead_pot(row):
+            ings_str = row.get("ings_str", "")
+            if not ings_str or pd.isna(ings_str):
+                return 0.0, 0.0, 0
+            secs = []
+            if pd.notna(row.get("sectores_zukan")):
+                secs = [_norm(s.strip()) for s in str(row["sectores_zukan"]).split(",") if s.strip()]
+            ings = [i.strip() for i in str(ings_str).split(",") if i.strip()]
+            total, nc_total, n_nc = 0.0, 0.0, 0
+            for ing in ings:
+                ing_n = _norm(ing)
+                is_nc = not es_ingrediente_commodity(ing)
+                best = 0.0
+                for sk in (secs or [""]):
+                    v = pvp_lkp.get((ing_n, sk))
+                    if v:
+                        best = max(best, v[0] * v[1])
+                total += best
+                if is_nc:
+                    nc_total += best
+                    if best > 0:
+                        n_nc += 1
+            return nc_total, total, n_nc
+
+        _res = leads.apply(_lead_pot, axis=1)
+        leads["pot_nc_eur"]  = _res.apply(lambda x: x[0])
+        leads["pot_tot_eur"] = _res.apply(lambda x: x[1])
+        leads["n_ings_nc"]   = _res.apply(lambda x: x[2])
+        leads["pct_nc"]      = (leads["pot_nc_eur"] / leads["pot_tot_eur"].replace(0, np.nan) * 100).fillna(0)
+        leads = leads.sort_values("pot_nc_eur", ascending=False).reset_index(drop=True)
+        leads["rank"] = leads.index + 1
+        df_leads_1 = leads[leads["cluster"] == "1 - Alta"].reset_index(drop=True)
+        df_leads_1["rank"] = df_leads_1.index + 1
+    except Exception:
+        df_leads_1 = pd.DataFrame()
+        leads = pd.DataFrame()
+
+    return {
+        "clientes": df_cli,
+        "exclientes": df_past,
+        "leads_1": df_leads_1,
+        "totals": {
+            "nc_activos_M": float(df_cli["gap_nc_eur"].sum()) / 1e6,
+            "nc_pasados_M": float(df_past["fac_nc_ult"].sum()) / 1e6,
+            "nc_leads_M": float(df_leads_1["pot_nc_eur"].sum()) / 1e6 if len(df_leads_1) > 0 else 0.0,
+        }
+    }
 
 
 @st.cache_data(show_spinner="Cargando leads por similitud...")
@@ -2285,8 +2480,11 @@ elif st.session_state["pagina"] == "activacion":
 
     st.markdown("---")
 
-    def _three_tables(cod, ano_pico, ano_act_yr, label_act, pvp_ref, cpx_all):
-        """Devuelve (html_pico, html_act, html_gap) para 3 tablas paralelas."""
+    def _three_tables(cod, ano_pico, ano_act_yr, label_act, pvp_ref, cpx_all,
+                      include_commodities=True):
+        """Devuelve (html_pico, html_act, html_gap) para 3 tablas paralelas.
+        include_commodities: si False, los commodities se muestran atenuados y
+        NO se suman al total del gap (solo cuentan productos no commodity)."""
 
         def _tbl(rows_html, header, bg, border_color, cols=("Producto","Fac.","TN","PvP")):
             ths = "".join(
@@ -2311,20 +2509,29 @@ elif st.session_state["pagina"] == "activacion":
             html = ""
             prods = set()
             for __, p in df_yr.iterrows():
-                d  = str(p["descripcion_producto"])
-                d  = d[:32] + "…" if len(d) > 32 else d
+                prod_raw = str(p["descripcion_producto"])
+                comm = es_commodity(prod_raw)
+                d  = prod_raw[:32] + "…" if len(prod_raw) > 32 else prod_raw
                 f  = eu(p["facturacion"] / 1e6, 2)
                 t  = eutn(p["toneladas"])
                 pv = eutn(p["pvp"]) if not (isinstance(p["pvp"], float) and np.isnan(p["pvp"])) else "—"
+                if comm:
+                    name_style = "color:#999"
+                    val_style  = "color:#bbb"
+                    opacity    = "opacity:0.7"
+                else:
+                    name_style = "color:#2E2A25;font-weight:500"
+                    val_style  = "color:#444"
+                    opacity    = ""
                 html += (
-                    f'<tr style="border-top:1px solid #ebebeb">'
-                    f'<td style="padding:2px 6px 2px 0;color:#444">{d}</td>'
-                    f'<td style="text-align:right;padding:2px 4px;white-space:nowrap">{f} M€</td>'
-                    f'<td style="text-align:right;padding:2px 4px;white-space:nowrap">{t} TN</td>'
-                    f'<td style="text-align:right;padding:2px 0;white-space:nowrap">{pv}</td>'
+                    f'<tr style="border-top:1px solid #ebebeb;{opacity}">'
+                    f'<td style="padding:2px 6px 2px 0;{name_style}">{d}</td>'
+                    f'<td style="text-align:right;padding:2px 4px;white-space:nowrap;{val_style}">{f} M€</td>'
+                    f'<td style="text-align:right;padding:2px 4px;white-space:nowrap;{val_style}">{t} TN</td>'
+                    f'<td style="text-align:right;padding:2px 0;white-space:nowrap;{val_style}">{pv}</td>'
                     f'</tr>'
                 )
-                prods.add(str(p["descripcion_producto"]))
+                prods.add(prod_raw)
             return html, prods
 
         rows_pico, prods_pico = _rows_for_year(ano_pico)
@@ -2335,15 +2542,18 @@ elif st.session_state["pagina"] == "activacion":
         html_act  = _tbl(rows_act  or '<tr><td colspan="4" style="color:#ccc;font-size:0.9em">Sin datos</td></tr>',
                          f"Productos · {label_act}", "#f0f7ff", ZUKAN_BLUE)
 
-        # Opción B: todos los productos del pico con delta TN > 0
+        # Gap: productos del pico con delta TN > 0
         df_pico_all = (cpx_all[(cpx_all["cod_cliente"] == cod) & (cpx_all["ejercicio"] == ano_pico)]
                        .sort_values("toneladas", ascending=False))
         tn_act_dict = (cpx_all[(cpx_all["cod_cliente"] == cod) & (cpx_all["ejercicio"] == ano_act_yr)]
                        .set_index("descripcion_producto")["toneladas"].to_dict())
 
         gap_rows = ""
+        gap_total_nc = 0.0   # gap solo no commodity
+        gap_total_all = 0.0  # gap total (incluyendo commodity)
         for __, p in df_pico_all.iterrows():
             prod_name = str(p["descripcion_producto"])
+            comm      = es_commodity(prod_name)
             tn_pico   = p["toneladas"] or 0.0
             tn_now    = tn_act_dict.get(prod_name, 0.0)
             delta_tn  = tn_pico - tn_now
@@ -2352,25 +2562,51 @@ elif st.session_state["pagina"] == "activacion":
             pvp_pico = p["pvp"] if not (isinstance(p["pvp"], float) and np.isnan(p["pvp"])) else None
             pvp_now  = pvp_ref.get(prod_name, pvp_pico)
             gap_eur  = (delta_tn * pvp_now / 1e6) if pvp_now else np.nan
+            gap_valid = pvp_now and not (isinstance(gap_eur, float) and np.isnan(gap_eur))
+            if gap_valid:
+                gap_total_all += gap_eur
+                if not comm:
+                    gap_total_nc += gap_eur
             d_short  = prod_name[:28] + "…" if len(prod_name) > 28 else prod_name
             tn_p_str = eutn(tn_pico)
             tn_n_str = eutn(tn_now) if tn_now > 0 else "0"
-            pvp_str2 = eutn(pvp_now) if pvp_now else "—"
-            gap_str  = eu(gap_eur, 2) + " M€" if pvp_now and not (isinstance(gap_eur, float) and np.isnan(gap_eur)) else "—"
-            row_color = ZUKAN_RED if tn_now == 0 else "#E76F51"
+            gap_str  = eu(gap_eur, 2) + " M€" if gap_valid else "—"
+            if comm:
+                # Commodity: gris apagado, sin énfasis en el gap
+                name_col = "#aaa"
+                gap_col  = "#ccc"
+                fw       = "normal"
+                opacity  = "opacity:0.6"
+            else:
+                # No commodity: colores normales de alerta
+                name_col = "#444"
+                gap_col  = ZUKAN_RED if tn_now == 0 else "#E76F51"
+                fw       = "600"
+                opacity  = ""
             gap_rows += (
-                f'<tr style="border-top:1px solid #ebebeb">'
-                f'<td style="padding:2px 6px 2px 0;color:#444">{d_short}</td>'
-                f'<td style="text-align:right;padding:2px 4px;white-space:nowrap;color:#999">{tn_p_str}</td>'
-                f'<td style="text-align:right;padding:2px 4px;white-space:nowrap;color:#999">{tn_n_str}</td>'
+                f'<tr style="border-top:1px solid #ebebeb;{opacity}">'
+                f'<td style="padding:2px 6px 2px 0;color:{name_col}">{d_short}</td>'
+                f'<td style="text-align:right;padding:2px 4px;white-space:nowrap;color:#bbb">{tn_p_str}</td>'
+                f'<td style="text-align:right;padding:2px 4px;white-space:nowrap;color:#bbb">{tn_n_str}</td>'
                 f'<td style="text-align:right;padding:2px 0;white-space:nowrap;'
-                f'color:{row_color};font-weight:600">{gap_str}</td>'
+                f'color:{gap_col};font-weight:{fw}">{gap_str}</td>'
                 f'</tr>'
             )
         if not gap_rows:
             gap_rows = '<tr><td colspan="4" style="color:#aaa;font-size:0.9em">Sin gap de productos</td></tr>'
 
-        html_gap = _tbl(gap_rows, "Productos gap · PvP actual", "#fff5f7", ZUKAN_RED,
+        # Pie de la tabla gap: mostrar total según filtro
+        gap_display = gap_total_nc if not include_commodities else gap_total_all
+        gap_label   = "Gap no commodity" if not include_commodities else "Gap total"
+        gap_footer  = (
+            f'<tr><td colspan="3" style="padding:4px 4px 0;color:#888;font-size:0.65em;'
+            f'text-align:right;border-top:1px solid #f0c0c0">{gap_label}</td>'
+            f'<td style="padding:4px 0 0;text-align:right;font-weight:700;font-size:0.8em;'
+            f'color:{ZUKAN_RED};border-top:1px solid #f0c0c0">{eu(gap_display,2)} M€</td></tr>'
+        ) if gap_display > 0 else ""
+
+        html_gap = _tbl(gap_rows + gap_footer,
+                        "Productos gap · PvP actual", "#fff5f7", ZUKAN_RED,
                         cols=("Producto", "TN pico", "TN act.", "Gap €"))
         return html_pico, html_act, html_gap
 
@@ -2652,6 +2888,15 @@ elif st.session_state["pagina"] == "activacion":
             .to_dict()
         )
 
+        incl_comm_act = st.checkbox(
+            "Incluir commodities en el cálculo de gap",
+            value=True,
+            key="incl_comm_act",
+            help="Cuando está desactivado, el gap potencial solo cuenta productos no commodity "
+                 "(Mixco Sweet, Fondants, Nectar Bases, Fosvitae…). Los commodities se muestran "
+                 "en gris atenuado pero siguen apareciendo como referencia.",
+        )
+
         for _, row in df_act.iterrows():
             cod   = row["cod_cliente"]
             cli_n = row["nombre_comercial"]
@@ -2782,7 +3027,8 @@ elif st.session_state["pagina"] == "activacion":
                 if ano_m:
                     t1, t2, t3 = st.columns(3)
                     h_pico, h_act, h_gap = _three_tables(
-                        cod, ano_m, 2026, "2026", pvp_ref_act, cpx_all
+                        cod, ano_m, 2026, "2026", pvp_ref_act, cpx_all,
+                        include_commodities=incl_comm_act,
                     )
                     t1.markdown(h_pico, unsafe_allow_html=True)
                     t2.markdown(h_act,  unsafe_allow_html=True)
@@ -2843,6 +3089,15 @@ elif st.session_state["pagina"] == "activacion":
             .apply(lambda g: g["facturacion"].sum() / g["toneladas"].sum()
                    if g["toneladas"].sum() > 0 else np.nan)
             .to_dict()
+        )
+
+        incl_comm_past = st.checkbox(
+            "Incluir commodities en el cálculo de gap",
+            value=True,
+            key="incl_comm_past",
+            help="Cuando está desactivado, el gap potencial solo cuenta productos no commodity "
+                 "(Mixco Sweet, Fondants, Nectar Bases, Fosvitae…). Los commodities se muestran "
+                 "en gris atenuado pero siguen apareciendo como referencia.",
         )
 
         for _, row in df_past.iterrows():
@@ -2942,7 +3197,8 @@ elif st.session_state["pagina"] == "activacion":
                 if ano_m and ano_ult:
                     t1, t2, t3 = st.columns(3)
                     h_pico, h_act, h_gap = _three_tables(
-                        cod, ano_m, ano_ult, str(ano_ult), pvp_ref_past, cpx_all
+                        cod, ano_m, ano_ult, str(ano_ult), pvp_ref_past, cpx_all,
+                        include_commodities=incl_comm_past,
                     )
                     t1.markdown(h_pico, unsafe_allow_html=True)
                     t2.markdown(h_act,  unsafe_allow_html=True)
@@ -3460,340 +3716,492 @@ elif st.session_state["pagina"] == "impacto":
         st.session_state["pagina"] = "home"
         st.rerun()
 
-    imp  = load_impacto_data()
-    fac_a = imp["fac_actual"]
-    gap_a = imp["gap_actuales"]
-    rec_p = imp["recuperacion_pasados"]
-    pot_l = imp["potencial_leads"]
-    n_ag  = imp["n_act_gap"]
-    n_p   = imp["n_pasados"]
-    n_l1  = imp["n_leads_1"]
-    _leads_niv = imp["leads_nivel_df"]
-    _NIV_COLORS = {n[0]: n[4] for n in _POT_NIVELES}
-    _NIV_LABELS = {n[0]: n[1] for n in _POT_NIVELES}
+    _tab_nc, _tab_imp = st.tabs(["🎯 Oportunidad No Commodity", "📊 Simulación de Impacto"])
 
-    # ── Cabecera ──────────────────────────────────────────────────────────────
-    st.markdown(
-        f"<h2 style='color:{ZUKAN_BLACK};margin-bottom:4px;'>Plan Comercial 2027 — Simulación de Impacto</h2>"
-        f"<p style='color:#888;font-size:13px;margin-top:0;'>"
-        f"Estimación de la facturación alcanzable en 2027 ejecutando las tres palancas comerciales: "
-        f"recuperar el máximo histórico de clientes activos, reactivar clientes pasados y convertir "
-        f"leads prioritarios. Ajusta los parámetros para explorar distintos escenarios.</p>",
-        unsafe_allow_html=True,
-    )
+    with _tab_nc:
+        _nc = load_nocomm_ranking()
+        _t = _nc["totals"]
+        _df_cli  = _nc["clientes"].copy()
+        _df_past = _nc["exclientes"].copy()
+        _df_lds  = _nc["leads_1"].copy()
 
-    # ── Session state ─────────────────────────────────────────────────────────
-    for _k, _v in [("imp_gap", 100), ("imp_past", 100)]:
-        if _k not in st.session_state:
-            st.session_state[_k] = _v
-    for _, _nrow in _leads_niv.iterrows():
-        _nk = f"imp_niv_{_nrow['_nivel']}"
-        if _nk not in st.session_state:
-            st.session_state[_nk] = 100
-
-    def _sl_changed(k):
-        v = st.session_state[f"_sl_{k}"]
-        st.session_state[k] = v
-        st.session_state[f"_ni_{k}"] = v   # sync number input
-
-    def _ni_changed(k):
-        v = int(st.session_state[f"_ni_{k}"])
-        st.session_state[k] = v
-        st.session_state[f"_sl_{k}"] = v   # sync slider
-
-    # ── Parámetros del escenario (área principal, arriba) ────────────────────
-    with st.container(border=True):
         st.markdown(
-            "<div style='font-size:10px;color:#6c757d;font-weight:700;text-transform:uppercase;"
-            "letter-spacing:.7px;margin-bottom:10px;'>Parámetros del escenario</div>",
+            "<h3 style='color:#2E2A25;margin-bottom:4px;'>Priorización Estratégica · No Commodity</h3>"
+            "<p style='color:#888;font-size:13px;margin-top:0'>Oportunidad total de venta de productos "
+            "exclusivos Zukán (Mix Sweet, Fondants, Fosvitae, Nectar Bases…) ordenada por potencial "
+            "recuperable. Commodities excluidos del cálculo.</p>",
             unsafe_allow_html=True,
         )
 
-        # Fila 1: gap + pasados con slider+número
-        _fc1, _fc2 = st.columns(2)
-        with _fc1:
-            st.markdown(
-                f"<div style='font-size:10px;color:#888;font-weight:600;margin-bottom:2px;'>"
-                f"Recuperación gap clientes activos &nbsp;"
-                f"<span style='font-weight:400;color:#bbb;'>Máx. {eu(gap_a,2)} M€ · {n_ag} clientes</span></div>",
-                unsafe_allow_html=True,
-            )
-            _sca, _nca, _pca = st.columns([5, 1, 0.25])
-            with _sca:
-                st.slider("gap_lbl", 0, 100, step=5, format="%d%%", label_visibility="collapsed",
-                          key="_sl_imp_gap", value=st.session_state["imp_gap"],
-                          on_change=_sl_changed, args=("imp_gap",))
-            with _nca:
-                st.number_input("gap_n", 0, 100, step=5,
-                                label_visibility="collapsed",
-                                key="_ni_imp_gap", value=st.session_state["imp_gap"],
-                                on_change=_ni_changed, args=("imp_gap",))
-            with _pca:
-                st.markdown("<div style='padding-top:30px;color:#888;font-weight:600'>%</div>",
-                            unsafe_allow_html=True)
-            pct_gap = st.session_state["imp_gap"]
-
-        with _fc2:
-            st.markdown(
-                f"<div style='font-size:10px;color:#888;font-weight:600;margin-bottom:2px;'>"
-                f"Reactivación clientes pasados &nbsp;"
-                f"<span style='font-weight:400;color:#bbb;'>Máx. {eu(rec_p,2)} M€ · {n_p} clientes</span></div>",
-                unsafe_allow_html=True,
-            )
-            _scb, _ncb, _pcb = st.columns([5, 1, 0.25])
-            with _scb:
-                st.slider("past_lbl", 0, 100, step=5, format="%d%%", label_visibility="collapsed",
-                          key="_sl_imp_past", value=st.session_state["imp_past"],
-                          on_change=_sl_changed, args=("imp_past",))
-            with _ncb:
-                st.number_input("past_n", 0, 100, step=5,
-                                label_visibility="collapsed",
-                                key="_ni_imp_past", value=st.session_state["imp_past"],
-                                on_change=_ni_changed, args=("imp_past",))
-            with _pcb:
-                st.markdown("<div style='padding-top:30px;color:#888;font-weight:600'>%</div>",
-                            unsafe_allow_html=True)
-            pct_past = st.session_state["imp_past"]
-
-        # Fila 2: leads Cluster 1 por nivel de potencial estimado
-        st.markdown(
-            "<div style='font-size:10px;color:#6c757d;font-weight:700;text-transform:uppercase;"
-            "letter-spacing:.6px;margin-top:10px;margin-bottom:8px;'>"
-            "Leads Cluster 1 — % conversión por nivel de potencial estimado</div>",
-            unsafe_allow_html=True,
-        )
-        _niv_cols = st.columns(4)
-        for _ci, (_, _nr) in enumerate(_leads_niv.iterrows()):
-            _nk    = _nr["_nivel"]
-            _ss_k  = f"imp_niv_{_nk}"
-            _ni_k  = f"_ni_{_ss_k}"
-            _col   = _NIV_COLORS.get(_nk, "#888")
-            _rng   = _NIV_LABELS.get(_nk, "")
-            with _niv_cols[_ci]:
+        _k1, _k2, _k3, _k4 = st.columns(4)
+        _total_nc = _t["nc_activos_M"] + _t["nc_pasados_M"] + _t["nc_leads_M"]
+        for _col, _lbl, _val, _sub, _bg, _brd in [
+            (_k1, "Potencial NC total",       _total_nc,           "Activos + ex-clientes + leads",     "#f8f9fa", "#2E2A25"),
+            (_k2, "Gap NC clientes activos",  _t["nc_activos_M"],  f"{len(_df_cli[_df_cli['gap_nc_eur']>0])} clientes con gap NC",  "#f0f7ff", "#0082CA"),
+            (_k3, "NC recuperación pasados",  _t["nc_pasados_M"],  f"{len(_df_past[_df_past['fac_nc_ult']>0])} ex-clientes",       "#f0fff8", "#00AD68"),
+            (_k4, "NC potencial leads C1",    _t["nc_leads_M"],    f"{len(_df_lds)} leads cluster 1",   "#fff5f7", "#CC003D"),
+        ]:
+            with _col:
                 st.markdown(
-                    f"<div style='font-size:10px;font-weight:700;color:{_col};"
-                    f"line-height:1.3;'>{_nk}</div>"
-                    f"<div style='font-size:8px;color:#bbb;margin-bottom:2px;'>"
-                    f"<span style='font-size:9px;color:#999;'>{_rng}</span></div>"
-                    f"<div style='font-size:8px;color:#bbb;'>"
-                    f"<span style='font-size:11px;font-weight:700;color:{_col};'>"
-                    f"{int(_nr['n_leads'])}</span> leads · {eu(_nr['potencial_M'],2)} M€ máx.</div>",
+                    f'<div style="background:{_bg};border-radius:10px;padding:14px 16px;'
+                    f'border-top:4px solid {_brd};height:100%">'
+                    f'<div style="font-size:9px;color:#888;font-weight:700;text-transform:uppercase;'
+                    f'letter-spacing:.7px;margin-bottom:4px">{_lbl}</div>'
+                    f'<div style="font-size:24px;font-weight:700;color:{_brd}">{eu(_val,2)} M€</div>'
+                    f'<div style="font-size:10px;color:#aaa;margin-top:2px">{_sub}</div>'
+                    f'</div>',
                     unsafe_allow_html=True,
                 )
-                _inp_col, _pct_col = st.columns([4, 1])
-                with _inp_col:
-                    st.number_input(
-                        _ss_k, 0, 100, step=5,
-                        label_visibility="collapsed",
-                        key=_ni_k, value=st.session_state[_ss_k],
-                        on_change=lambda k=_ss_k: st.session_state.__setitem__(
-                            k, int(st.session_state[f"_ni_{k}"])),
-                    )
-                with _pct_col:
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # ── Clientes actuales ──────────────────────────────────────────────────
+        st.markdown(
+            f"<h4 style='color:#0082CA;margin-bottom:4px;'>Clientes Actuales — Gap en Productos No Commodity</h4>"
+            f"<p style='color:#888;font-size:12px;margin:0 0 8px 0'>Todos los clientes activos en 2026 ordenados "
+            f"por gap recuperable en productos no commodity (año pico vs 2026). "
+            f"Amarillo = top 20% por facturación 2026.</p>",
+            unsafe_allow_html=True,
+        )
+        _df_cli_d = _df_cli.copy()
+        _df_cli_d["fac_act_M"]  = (_df_cli_d["fac_act_eur"]  / 1e6).round(3)
+        _df_cli_d["gap_nc_M"]   = (_df_cli_d["gap_nc_eur"]   / 1e6).round(3)
+        _df_cli_d["gap_tot_M"]  = (_df_cli_d["gap_total_eur"]/ 1e6).round(3)
+        _df_cli_d["pct_nc"]     = _df_cli_d["pct_nc"].round(0).astype(int)
+        _df_cli_d["sector"]     = _df_cli_d["sector"].fillna("—")
+        _thr80 = _df_cli_d["fac_act_M"].quantile(0.80)
+        _show_cli = _df_cli_d[["rank","nombre_comercial","sector","fac_act_M","gap_nc_M","gap_tot_M","pct_nc","n_prods_nc","n_prods_gap"]].copy()
+
+        def _style_cli(row):
+            if row["fac_act_M"] >= _thr80:
+                return ["background-color:#fffde7;font-weight:600" if i > 0 else "background-color:#fffde7;font-weight:600" for i in range(len(row))]
+            return [""] * len(row)
+
+        _styled_cli = (_show_cli.style
+                       .apply(_style_cli, axis=1)
+                       .format({"fac_act_M": "{:.2f}", "gap_nc_M": "{:.2f}", "gap_tot_M": "{:.2f}",
+                                "pct_nc": "{:.0f}%", "rank": "{:.0f}", "n_prods_nc": "{:.0f}", "n_prods_gap": "{:.0f}"}))
+        st.dataframe(
+            _styled_cli,
+            use_container_width=True, hide_index=True,
+            height=450,
+            column_config={
+                "rank":           st.column_config.NumberColumn("#",                width="small"),
+                "nombre_comercial": st.column_config.TextColumn("Cliente"),
+                "sector":         st.column_config.TextColumn("Sector"),
+                "fac_act_M":      st.column_config.NumberColumn("Fac. 2026 M€",    format="%.2f"),
+                "gap_nc_M":       st.column_config.NumberColumn("Gap NC M€",        format="%.2f"),
+                "gap_tot_M":      st.column_config.NumberColumn("Gap total M€",     format="%.2f"),
+                "pct_nc":         st.column_config.NumberColumn("% NC en gap",      format="%.0f%%"),
+                "n_prods_nc":     st.column_config.NumberColumn("# prods NC",       width="small"),
+                "n_prods_gap":    st.column_config.NumberColumn("# prods gap",      width="small"),
+            },
+        )
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # ── Ex-clientes top 50 ──────────────────────────────────────────────────
+        st.markdown(
+            f"<h4 style='color:#00AD68;margin-bottom:4px;'>Ex-Clientes — Top 50 por Potencial de Recuperación NC</h4>"
+            f"<p style='color:#888;font-size:12px;margin:0 0 8px 0'>Clientes sin actividad en 2026 ordenados "
+            f"por facturación de no commodities en su último año activo.</p>",
+            unsafe_allow_html=True,
+        )
+        _df_past_d = _df_past.head(50).copy()
+        _df_past_d["fac_nc_M"]   = (_df_past_d["fac_nc_ult"]   / 1e6).round(3)
+        _df_past_d["fac_tot_M"]  = (_df_past_d["fac_total_ult"]/ 1e6).round(3)
+        _df_past_d["pct_nc"]     = _df_past_d["pct_nc"].round(0).astype(int)
+        _df_past_d["sector"]     = _df_past_d["sector"].fillna("—")
+        _df_past_d["ano_ult"]    = _df_past_d["ano_ult"].fillna(0).astype(int)
+        _show_past = _df_past_d[["rank","nombre_comercial","sector","ano_ult","fac_nc_M","fac_tot_M","pct_nc","n_prods_nc"]].copy()
+        st.dataframe(
+            _show_past,
+            use_container_width=True, hide_index=True,
+            height=420,
+            column_config={
+                "rank":             st.column_config.NumberColumn("#",                  width="small"),
+                "nombre_comercial": st.column_config.TextColumn("Ex-cliente"),
+                "sector":           st.column_config.TextColumn("Sector"),
+                "ano_ult":          st.column_config.NumberColumn("Último año",         width="small"),
+                "fac_nc_M":         st.column_config.NumberColumn("NC recuperable M€",  format="%.2f"),
+                "fac_tot_M":        st.column_config.NumberColumn("Total último año M€",format="%.2f"),
+                "pct_nc":           st.column_config.NumberColumn("% NC",               format="%.0f%%"),
+                "n_prods_nc":       st.column_config.NumberColumn("# prods NC",         width="small"),
+            },
+        )
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        # ── Leads top 50 ────────────────────────────────────────────────────────
+        st.markdown(
+            f"<h4 style='color:#CC003D;margin-bottom:4px;'>Leads Cluster 1 — Top 50 por Potencial NC</h4>"
+            f"<p style='color:#888;font-size:12px;margin:0 0 8px 0'>Leads con similitud alta (≥75%) "
+            f"ordenados por potencial estimado en ingredientes no commodity "
+            f"(FOS, Glucósidos de esteviol, Miel, Caramelo natural).</p>",
+            unsafe_allow_html=True,
+        )
+        if len(_df_lds) > 0:
+            _df_lds_d = _df_lds.head(50).copy()
+            _df_lds_d["pot_nc_M"]  = (_df_lds_d["pot_nc_eur"]  / 1e6).round(3)
+            _df_lds_d["pot_tot_M"] = (_df_lds_d["pot_tot_eur"] / 1e6).round(3)
+            _df_lds_d["pct_nc"]    = _df_lds_d["pct_nc"].round(0).astype(int)
+            _df_lds_d["jaccard"]   = (_df_lds_d["jaccard_max"] * 100).round(0).astype(int)
+            _df_lds_d["alimarket"] = (_df_lds_d["alimarket_ventas_eur"].fillna(0) / 1e6).round(1)
+            _show_lds = _df_lds_d[["rank","empresa_lead","sectores_zukan","jaccard","pot_nc_M","pot_tot_M","pct_nc","n_ings_nc","alimarket"]].copy()
+            st.dataframe(
+                _show_lds,
+                use_container_width=True, hide_index=True,
+                height=420,
+                column_config={
+                    "rank":         st.column_config.NumberColumn("#",               width="small"),
+                    "empresa_lead": st.column_config.TextColumn("Lead / Empresa"),
+                    "sectores_zukan": st.column_config.TextColumn("Sector"),
+                    "jaccard":      st.column_config.NumberColumn("Similitud %",     format="%d%%", width="small"),
+                    "pot_nc_M":     st.column_config.NumberColumn("Pot. NC M€",      format="%.2f"),
+                    "pot_tot_M":    st.column_config.NumberColumn("Pot. total M€",   format="%.2f"),
+                    "pct_nc":       st.column_config.NumberColumn("% NC",            format="%.0f%%"),
+                    "n_ings_nc":    st.column_config.NumberColumn("# ings NC",       width="small"),
+                    "alimarket":    st.column_config.NumberColumn("Ventas Ali. M€",  format="%.1f"),
+                },
+            )
+        else:
+            st.info("No hay datos de leads disponibles.")
+
+    with _tab_imp:
+        imp  = load_impacto_data()
+        fac_a = imp["fac_actual"]
+        gap_a = imp["gap_actuales"]
+        rec_p = imp["recuperacion_pasados"]
+        pot_l = imp["potencial_leads"]
+        n_ag  = imp["n_act_gap"]
+        n_p   = imp["n_pasados"]
+        n_l1  = imp["n_leads_1"]
+        _leads_niv = imp["leads_nivel_df"]
+        _NIV_COLORS = {n[0]: n[4] for n in _POT_NIVELES}
+        _NIV_LABELS = {n[0]: n[1] for n in _POT_NIVELES}
+    
+        # ── Cabecera ──────────────────────────────────────────────────────────────
+        st.markdown(
+            f"<h2 style='color:{ZUKAN_BLACK};margin-bottom:4px;'>Plan Comercial 2027 — Simulación de Impacto</h2>"
+            f"<p style='color:#888;font-size:13px;margin-top:0;'>"
+            f"Estimación de la facturación alcanzable en 2027 ejecutando las tres palancas comerciales: "
+            f"recuperar el máximo histórico de clientes activos, reactivar clientes pasados y convertir "
+            f"leads prioritarios. Ajusta los parámetros para explorar distintos escenarios.</p>",
+            unsafe_allow_html=True,
+        )
+    
+        # ── Session state ─────────────────────────────────────────────────────────
+        for _k, _v in [("imp_gap", 100), ("imp_past", 100)]:
+            if _k not in st.session_state:
+                st.session_state[_k] = _v
+        for _, _nrow in _leads_niv.iterrows():
+            _nk = f"imp_niv_{_nrow['_nivel']}"
+            if _nk not in st.session_state:
+                st.session_state[_nk] = 100
+    
+        def _sl_changed(k):
+            v = st.session_state[f"_sl_{k}"]
+            st.session_state[k] = v
+            st.session_state[f"_ni_{k}"] = v   # sync number input
+    
+        def _ni_changed(k):
+            v = int(st.session_state[f"_ni_{k}"])
+            st.session_state[k] = v
+            st.session_state[f"_sl_{k}"] = v   # sync slider
+    
+        # ── Parámetros del escenario (área principal, arriba) ────────────────────
+        with st.container(border=True):
+            st.markdown(
+                "<div style='font-size:10px;color:#6c757d;font-weight:700;text-transform:uppercase;"
+                "letter-spacing:.7px;margin-bottom:10px;'>Parámetros del escenario</div>",
+                unsafe_allow_html=True,
+            )
+    
+            # Fila 1: gap + pasados con slider+número
+            _fc1, _fc2 = st.columns(2)
+            with _fc1:
+                st.markdown(
+                    f"<div style='font-size:10px;color:#888;font-weight:600;margin-bottom:2px;'>"
+                    f"Recuperación gap clientes activos &nbsp;"
+                    f"<span style='font-weight:400;color:#bbb;'>Máx. {eu(gap_a,2)} M€ · {n_ag} clientes</span></div>",
+                    unsafe_allow_html=True,
+                )
+                _sca, _nca, _pca = st.columns([5, 1, 0.25])
+                with _sca:
+                    st.slider("gap_lbl", 0, 100, step=5, format="%d%%", label_visibility="collapsed",
+                              key="_sl_imp_gap", value=st.session_state["imp_gap"],
+                              on_change=_sl_changed, args=("imp_gap",))
+                with _nca:
+                    st.number_input("gap_n", 0, 100, step=5,
+                                    label_visibility="collapsed",
+                                    key="_ni_imp_gap", value=st.session_state["imp_gap"],
+                                    on_change=_ni_changed, args=("imp_gap",))
+                with _pca:
                     st.markdown("<div style='padding-top:30px;color:#888;font-weight:600'>%</div>",
                                 unsafe_allow_html=True)
-
-    # ── Cálculo del escenario ajustado ────────────────────────────────────────
-    gap_adj  = gap_a  * pct_gap  / 100
-    rec_adj  = rec_p  * pct_past / 100
-    pot_adj  = sum(
-        _nr["potencial_M"] * st.session_state.get(f"imp_niv_{_nr['_nivel']}", 100) / 100
-        for _, _nr in _leads_niv.iterrows()
-    )
-    pot_t    = fac_a + gap_adj + rec_adj + pot_adj
-    uplift   = (pot_t / fac_a - 1) * 100 if fac_a > 0 else 0
-    pct_leads_eff = pot_adj / pot_l * 100 if pot_l > 0 else 0
-    n_leads_adj = int(sum(
-        round(_nr["n_leads"] * st.session_state.get(f"imp_niv_{_nr['_nivel']}", 100) / 100)
-        for _, _nr in _leads_niv.iterrows()
-    ))
-
-    # ── Banner de escenario ───────────────────────────────────────────────────
-    _all_100 = (pct_gap == 100 and pct_past == 100 and abs(pct_leads_eff - 100) < 0.1)
-    escenario_label = ("Escenario 100%" if _all_100
-                       else f"Escenario ajustado ({pct_gap}% / {pct_past}% / leads {eu(pct_leads_eff,0)}%)")
-    st.markdown(
-        f"<div style='background:transparent;border-radius:12px;padding:22px 28px;"
-        f"margin-bottom:18px;display:flex;align-items:center;justify-content:center;"
-        f"gap:36px;flex-wrap:wrap;border:2px solid #C0392B;'>"
-        f"  <div style='text-align:center;'>"
-        f"    <div style='font-size:10px;color:#888;text-transform:uppercase;"
-        f"                letter-spacing:.7px;margin-bottom:3px;'>Facturación actual 2026</div>"
-        f"    <div style='font-size:2.4rem;font-weight:800;color:{ZUKAN_BLACK};line-height:1;'>"
-        f"      {eu(fac_a,2)}"
-        f"      <span style='font-size:1.1rem;font-weight:400;color:#999;'> M€</span></div>"
-        f"  </div>"
-        f"  <div style='font-size:2.4rem;color:{ZUKAN_GREEN};font-weight:300;line-height:1;'>→</div>"
-        f"  <div style='text-align:center;'>"
-        f"    <div style='font-size:10px;color:#888;text-transform:uppercase;"
-        f"                letter-spacing:.7px;margin-bottom:3px;'>{escenario_label}</div>"
-        f"    <div style='font-size:2.4rem;font-weight:800;color:{ZUKAN_GREEN};line-height:1;'>"
-        f"      {eu(pot_t,2)}"
-        f"      <span style='font-size:1.1rem;font-weight:400;color:#999;'> M€</span></div>"
-        f"  </div>"
-        f"  <div style='text-align:center;'>"
-        f"    <div style='font-size:10px;color:#888;text-transform:uppercase;"
-        f"                letter-spacing:.7px;margin-bottom:3px;'>Incremento potencial</div>"
-        f"    <div style='font-size:2.4rem;font-weight:800;color:{ZUKAN_GREEN};line-height:1;'>"
-        f"      +{eu(uplift,1)}%</div>"
-        f"    <div style='font-size:11px;color:#666;margin-top:2px;'>"
-        f"      +{eu(pot_t - fac_a,2)} M€ adicionales</div>"
-        f"  </div>"
-        f"</div>",
-        unsafe_allow_html=True,
-    )
-
-    # ── 4 KPI cards ──────────────────────────────────────────────────────────
-    k1, k2, k3, k4 = st.columns(4)
-
-    def _kpi_card(col, title, value_str, unit, subtitle, pct_label, color, border_color):
-        col.markdown(
-            f"<div style='background:white;border-radius:10px;padding:16px 12px;"
-            f"border-top:4px solid {border_color};box-shadow:0 1px 4px rgba(0,0,0,.07);"
-            f"text-align:center;'>"
-            f"  <div style='font-size:9px;color:#999;text-transform:uppercase;"
-            f"              font-weight:700;letter-spacing:.6px;margin-bottom:6px;'>{title}</div>"
-            f"  <div style='font-size:1.9rem;font-weight:800;color:{color};line-height:1.1;'>"
-            f"    {value_str}"
-            f"    <span style='font-size:.9rem;font-weight:400;color:#aaa;'> {unit}</span></div>"
-            f"  <div style='font-size:10px;color:#aaa;margin-top:5px;'>{subtitle}</div>"
-            f"  <div style='font-size:10px;color:{border_color};font-weight:600;margin-top:3px;'>"
-            f"    {pct_label}</div>"
+                pct_gap = st.session_state["imp_gap"]
+    
+            with _fc2:
+                st.markdown(
+                    f"<div style='font-size:10px;color:#888;font-weight:600;margin-bottom:2px;'>"
+                    f"Reactivación clientes pasados &nbsp;"
+                    f"<span style='font-weight:400;color:#bbb;'>Máx. {eu(rec_p,2)} M€ · {n_p} clientes</span></div>",
+                    unsafe_allow_html=True,
+                )
+                _scb, _ncb, _pcb = st.columns([5, 1, 0.25])
+                with _scb:
+                    st.slider("past_lbl", 0, 100, step=5, format="%d%%", label_visibility="collapsed",
+                              key="_sl_imp_past", value=st.session_state["imp_past"],
+                              on_change=_sl_changed, args=("imp_past",))
+                with _ncb:
+                    st.number_input("past_n", 0, 100, step=5,
+                                    label_visibility="collapsed",
+                                    key="_ni_imp_past", value=st.session_state["imp_past"],
+                                    on_change=_ni_changed, args=("imp_past",))
+                with _pcb:
+                    st.markdown("<div style='padding-top:30px;color:#888;font-weight:600'>%</div>",
+                                unsafe_allow_html=True)
+                pct_past = st.session_state["imp_past"]
+    
+            # Fila 2: leads Cluster 1 por nivel de potencial estimado
+            st.markdown(
+                "<div style='font-size:10px;color:#6c757d;font-weight:700;text-transform:uppercase;"
+                "letter-spacing:.6px;margin-top:10px;margin-bottom:8px;'>"
+                "Leads Cluster 1 — % conversión por nivel de potencial estimado</div>",
+                unsafe_allow_html=True,
+            )
+            _niv_cols = st.columns(4)
+            for _ci, (_, _nr) in enumerate(_leads_niv.iterrows()):
+                _nk    = _nr["_nivel"]
+                _ss_k  = f"imp_niv_{_nk}"
+                _ni_k  = f"_ni_{_ss_k}"
+                _col   = _NIV_COLORS.get(_nk, "#888")
+                _rng   = _NIV_LABELS.get(_nk, "")
+                with _niv_cols[_ci]:
+                    st.markdown(
+                        f"<div style='font-size:10px;font-weight:700;color:{_col};"
+                        f"line-height:1.3;'>{_nk}</div>"
+                        f"<div style='font-size:8px;color:#bbb;margin-bottom:2px;'>"
+                        f"<span style='font-size:9px;color:#999;'>{_rng}</span></div>"
+                        f"<div style='font-size:8px;color:#bbb;'>"
+                        f"<span style='font-size:11px;font-weight:700;color:{_col};'>"
+                        f"{int(_nr['n_leads'])}</span> leads · {eu(_nr['potencial_M'],2)} M€ máx.</div>",
+                        unsafe_allow_html=True,
+                    )
+                    _inp_col, _pct_col = st.columns([4, 1])
+                    with _inp_col:
+                        st.number_input(
+                            _ss_k, 0, 100, step=5,
+                            label_visibility="collapsed",
+                            key=_ni_k, value=st.session_state[_ss_k],
+                            on_change=lambda k=_ss_k: st.session_state.__setitem__(
+                                k, int(st.session_state[f"_ni_{k}"])),
+                        )
+                    with _pct_col:
+                        st.markdown("<div style='padding-top:30px;color:#888;font-weight:600'>%</div>",
+                                    unsafe_allow_html=True)
+    
+        # ── Cálculo del escenario ajustado ────────────────────────────────────────
+        gap_adj  = gap_a  * pct_gap  / 100
+        rec_adj  = rec_p  * pct_past / 100
+        pot_adj  = sum(
+            _nr["potencial_M"] * st.session_state.get(f"imp_niv_{_nr['_nivel']}", 100) / 100
+            for _, _nr in _leads_niv.iterrows()
+        )
+        pot_t    = fac_a + gap_adj + rec_adj + pot_adj
+        uplift   = (pot_t / fac_a - 1) * 100 if fac_a > 0 else 0
+        pct_leads_eff = pot_adj / pot_l * 100 if pot_l > 0 else 0
+        n_leads_adj = int(sum(
+            round(_nr["n_leads"] * st.session_state.get(f"imp_niv_{_nr['_nivel']}", 100) / 100)
+            for _, _nr in _leads_niv.iterrows()
+        ))
+    
+        # ── Banner de escenario ───────────────────────────────────────────────────
+        _all_100 = (pct_gap == 100 and pct_past == 100 and abs(pct_leads_eff - 100) < 0.1)
+        escenario_label = ("Escenario 100%" if _all_100
+                           else f"Escenario ajustado ({pct_gap}% / {pct_past}% / leads {eu(pct_leads_eff,0)}%)")
+        st.markdown(
+            f"<div style='background:transparent;border-radius:12px;padding:22px 28px;"
+            f"margin-bottom:18px;display:flex;align-items:center;justify-content:center;"
+            f"gap:36px;flex-wrap:wrap;border:2px solid #C0392B;'>"
+            f"  <div style='text-align:center;'>"
+            f"    <div style='font-size:10px;color:#888;text-transform:uppercase;"
+            f"                letter-spacing:.7px;margin-bottom:3px;'>Facturación actual 2026</div>"
+            f"    <div style='font-size:2.4rem;font-weight:800;color:{ZUKAN_BLACK};line-height:1;'>"
+            f"      {eu(fac_a,2)}"
+            f"      <span style='font-size:1.1rem;font-weight:400;color:#999;'> M€</span></div>"
+            f"  </div>"
+            f"  <div style='font-size:2.4rem;color:{ZUKAN_GREEN};font-weight:300;line-height:1;'>→</div>"
+            f"  <div style='text-align:center;'>"
+            f"    <div style='font-size:10px;color:#888;text-transform:uppercase;"
+            f"                letter-spacing:.7px;margin-bottom:3px;'>{escenario_label}</div>"
+            f"    <div style='font-size:2.4rem;font-weight:800;color:{ZUKAN_GREEN};line-height:1;'>"
+            f"      {eu(pot_t,2)}"
+            f"      <span style='font-size:1.1rem;font-weight:400;color:#999;'> M€</span></div>"
+            f"  </div>"
+            f"  <div style='text-align:center;'>"
+            f"    <div style='font-size:10px;color:#888;text-transform:uppercase;"
+            f"                letter-spacing:.7px;margin-bottom:3px;'>Incremento potencial</div>"
+            f"    <div style='font-size:2.4rem;font-weight:800;color:{ZUKAN_GREEN};line-height:1;'>"
+            f"      +{eu(uplift,1)}%</div>"
+            f"    <div style='font-size:11px;color:#666;margin-top:2px;'>"
+            f"      +{eu(pot_t - fac_a,2)} M€ adicionales</div>"
+            f"  </div>"
             f"</div>",
             unsafe_allow_html=True,
         )
-
-    _kpi_card(k1, "Facturación actual 2026",
-              eu(fac_a, 2), "M€",
-              "Base de referencia", "Datos reales",
-              ZUKAN_BLACK, ZUKAN_BLACK)
-    _kpi_card(k2, "Gap clientes actuales",
-              eu(gap_adj, 2), "M€",
-              f"{n_ag} clientes con histórico superior",
-              f"{pct_gap}% del gap máximo ({eu(gap_a,2)} M€)",
-              ZUKAN_BLUE, ZUKAN_BLUE)
-    _kpi_card(k3, "Recuperación clientes pasados",
-              eu(rec_adj, 2), "M€",
-              f"{n_p} clientes sin actividad en 2026",
-              f"{pct_past}% del potencial máx. ({eu(rec_p,2)} M€)",
-              "#E76F51", "#E76F51")
-    _kpi_card(k4, "Nuevos clientes — Leads Índice 1",
-              eu(pot_adj, 2), "M€",
-              f"{n_leads_adj} de {n_l1} leads convertidos",
-              f"{eu(pct_leads_eff,0)}% efectivo ({eu(pot_l,2)} M€ máx.)",
-              ZUKAN_GREEN, ZUKAN_GREEN)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # ── Waterfall chart con colores por barra (simulado con go.Bar apilado) ───
-    x_labs  = ["Actual 2026", "+ Gap actuales", "+ Pasados", "+ Leads Índice 1", "Potencial total"]
-    bar_vals = [fac_a, gap_adj, rec_adj, pot_adj, pot_t]
-    bar_base = [0,     fac_a,   fac_a+gap_adj, fac_a+gap_adj+rec_adj, 0]
-    bar_cols = ["#1B4D3E", ZUKAN_BLUE, "#E76F51", "#C9B1D9", "#95D5B2"]
-    bar_text = [f"<b>{eu(v,2)} M€</b>" for v in bar_vals]
-
-    # Barra invisible de base
-    fig_wf = go.Figure()
-    fig_wf.add_trace(go.Bar(
-        x=x_labs,
-        y=bar_base,
-        marker_color="rgba(0,0,0,0)",
-        showlegend=False,
-        hoverinfo="skip",
-    ))
-    # Barras visibles
-    fig_wf.add_trace(go.Bar(
-        x=x_labs,
-        y=bar_vals,
-        marker_color=bar_cols,
-        marker_line=dict(color="white", width=1),
-        text=bar_text,
-        textposition="outside",
-        textfont=dict(size=11),
-        showlegend=False,
-        hovertemplate="<b>%{x}</b><br>%{customdata}<extra></extra>",
-        customdata=[f"{eu(v,2)} M€" for v in bar_vals],
-    ))
-    # Líneas conectoras
-    cum = fac_a
-    shapes = []
-    for v in [gap_adj, rec_adj, pot_adj]:
-        shapes.append(dict(
-            type="line", xref="x", yref="y",
-            x0=x_labs.index(["+ Gap actuales","+ Pasados","+ Leads Índice 1"][[gap_adj,rec_adj,pot_adj].index(v)]) - 0.5,
-            x1=x_labs.index(["+ Gap actuales","+ Pasados","+ Leads Índice 1"][[gap_adj,rec_adj,pot_adj].index(v)]) + 0.5,
-            y0=cum + v, y1=cum + v,
-            line=dict(color="#ccc", width=1, dash="dot"),
+    
+        # ── 4 KPI cards ──────────────────────────────────────────────────────────
+        k1, k2, k3, k4 = st.columns(4)
+    
+        def _kpi_card(col, title, value_str, unit, subtitle, pct_label, color, border_color):
+            col.markdown(
+                f"<div style='background:white;border-radius:10px;padding:16px 12px;"
+                f"border-top:4px solid {border_color};box-shadow:0 1px 4px rgba(0,0,0,.07);"
+                f"text-align:center;'>"
+                f"  <div style='font-size:9px;color:#999;text-transform:uppercase;"
+                f"              font-weight:700;letter-spacing:.6px;margin-bottom:6px;'>{title}</div>"
+                f"  <div style='font-size:1.9rem;font-weight:800;color:{color};line-height:1.1;'>"
+                f"    {value_str}"
+                f"    <span style='font-size:.9rem;font-weight:400;color:#aaa;'> {unit}</span></div>"
+                f"  <div style='font-size:10px;color:#aaa;margin-top:5px;'>{subtitle}</div>"
+                f"  <div style='font-size:10px;color:{border_color};font-weight:600;margin-top:3px;'>"
+                f"    {pct_label}</div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
+    
+        _kpi_card(k1, "Facturación actual 2026",
+                  eu(fac_a, 2), "M€",
+                  "Base de referencia", "Datos reales",
+                  ZUKAN_BLACK, ZUKAN_BLACK)
+        _kpi_card(k2, "Gap clientes actuales",
+                  eu(gap_adj, 2), "M€",
+                  f"{n_ag} clientes con histórico superior",
+                  f"{pct_gap}% del gap máximo ({eu(gap_a,2)} M€)",
+                  ZUKAN_BLUE, ZUKAN_BLUE)
+        _kpi_card(k3, "Recuperación clientes pasados",
+                  eu(rec_adj, 2), "M€",
+                  f"{n_p} clientes sin actividad en 2026",
+                  f"{pct_past}% del potencial máx. ({eu(rec_p,2)} M€)",
+                  "#E76F51", "#E76F51")
+        _kpi_card(k4, "Nuevos clientes — Leads Índice 1",
+                  eu(pot_adj, 2), "M€",
+                  f"{n_leads_adj} de {n_l1} leads convertidos",
+                  f"{eu(pct_leads_eff,0)}% efectivo ({eu(pot_l,2)} M€ máx.)",
+                  ZUKAN_GREEN, ZUKAN_GREEN)
+    
+        st.markdown("<br>", unsafe_allow_html=True)
+    
+        # ── Waterfall chart con colores por barra (simulado con go.Bar apilado) ───
+        x_labs  = ["Actual 2026", "+ Gap actuales", "+ Pasados", "+ Leads Índice 1", "Potencial total"]
+        bar_vals = [fac_a, gap_adj, rec_adj, pot_adj, pot_t]
+        bar_base = [0,     fac_a,   fac_a+gap_adj, fac_a+gap_adj+rec_adj, 0]
+        bar_cols = ["#1B4D3E", ZUKAN_BLUE, "#E76F51", "#C9B1D9", "#95D5B2"]
+        bar_text = [f"<b>{eu(v,2)} M€</b>" for v in bar_vals]
+    
+        # Barra invisible de base
+        fig_wf = go.Figure()
+        fig_wf.add_trace(go.Bar(
+            x=x_labs,
+            y=bar_base,
+            marker_color="rgba(0,0,0,0)",
+            showlegend=False,
+            hoverinfo="skip",
         ))
-        cum += v
-
-    fig_wf.update_layout(
-        barmode="stack",
-        height=400,
-        margin=dict(l=20, r=20, t=30, b=20),
-        paper_bgcolor="white",
-        plot_bgcolor="white",
-        yaxis=dict(
-            title="M€",
-            tickformat=".1f",
-            showgrid=True,
-            gridcolor="#f0f0f0",
-            zeroline=False,
-        ),
-        xaxis=dict(tickfont=dict(size=11)),
-        showlegend=False,
-        shapes=shapes,
-    )
-    st.plotly_chart(fig_wf, use_container_width=True, key="waterfall_impacto")
-
-    # ── Tabla resumen ─────────────────────────────────────────────────────────
-    st.markdown(
-        f"<div style='font-size:10px;color:#6c757d;font-weight:700;text-transform:uppercase;"
-        f"letter-spacing:.7px;margin-bottom:8px;margin-top:4px;'>Desglose por palanca</div>",
-        unsafe_allow_html=True,
-    )
-    resumen_df = pd.DataFrame({
-        "Palanca": [
-            "Facturación actual 2026",
-            "Gap clientes actuales",
-            "Recuperación clientes pasados",
-            "Leads prioritarios (Índice 1)",
-            "Potencial total escenario",
-        ],
-        "Potencial máx. (M€)": [
-            eu(fac_a, 2),
-            eu(gap_a, 2),
-            eu(rec_p, 2),
-            eu(pot_l, 2),
-            eu(fac_a + gap_a + rec_p + pot_l, 2),
-        ],
-        "Escenario ajustado (M€)": [
-            eu(fac_a, 2),
-            eu(gap_adj, 2),
-            eu(rec_adj, 2),
-            eu(pot_adj, 2),
-            eu(pot_t, 2),
-        ],
-        "% captura": [
-            "100%",
-            f"{pct_gap}%",
-            f"{pct_past}%",
-            f"{eu(pct_leads_eff,0)}%",
-            "—",
-        ],
-        "Sobre facturación actual": [
-            "—",
-            eu(gap_adj / fac_a * 100, 1) + "%" if fac_a > 0 else "—",
-            eu(rec_adj / fac_a * 100, 1) + "%" if fac_a > 0 else "—",
-            eu(pot_adj / fac_a * 100, 1) + "%" if fac_a > 0 else "—",
-            "+" + eu(uplift, 1) + "%",
-        ],
-        "Clientes / Leads": [
-            "—",
-            str(n_ag),
-            str(n_p),
-            f"{n_leads_adj} de {n_l1}",
-            str(n_ag + n_p + n_leads_adj),
-        ],
-    })
-    st.dataframe(resumen_df, use_container_width=True, hide_index=True)
+        # Barras visibles
+        fig_wf.add_trace(go.Bar(
+            x=x_labs,
+            y=bar_vals,
+            marker_color=bar_cols,
+            marker_line=dict(color="white", width=1),
+            text=bar_text,
+            textposition="outside",
+            textfont=dict(size=11),
+            showlegend=False,
+            hovertemplate="<b>%{x}</b><br>%{customdata}<extra></extra>",
+            customdata=[f"{eu(v,2)} M€" for v in bar_vals],
+        ))
+        # Líneas conectoras
+        cum = fac_a
+        shapes = []
+        for v in [gap_adj, rec_adj, pot_adj]:
+            shapes.append(dict(
+                type="line", xref="x", yref="y",
+                x0=x_labs.index(["+ Gap actuales","+ Pasados","+ Leads Índice 1"][[gap_adj,rec_adj,pot_adj].index(v)]) - 0.5,
+                x1=x_labs.index(["+ Gap actuales","+ Pasados","+ Leads Índice 1"][[gap_adj,rec_adj,pot_adj].index(v)]) + 0.5,
+                y0=cum + v, y1=cum + v,
+                line=dict(color="#ccc", width=1, dash="dot"),
+            ))
+            cum += v
+    
+        fig_wf.update_layout(
+            barmode="stack",
+            height=400,
+            margin=dict(l=20, r=20, t=30, b=20),
+            paper_bgcolor="white",
+            plot_bgcolor="white",
+            yaxis=dict(
+                title="M€",
+                tickformat=".1f",
+                showgrid=True,
+                gridcolor="#f0f0f0",
+                zeroline=False,
+            ),
+            xaxis=dict(tickfont=dict(size=11)),
+            showlegend=False,
+            shapes=shapes,
+        )
+        st.plotly_chart(fig_wf, use_container_width=True, key="waterfall_impacto")
+    
+        # ── Tabla resumen ─────────────────────────────────────────────────────────
+        st.markdown(
+            f"<div style='font-size:10px;color:#6c757d;font-weight:700;text-transform:uppercase;"
+            f"letter-spacing:.7px;margin-bottom:8px;margin-top:4px;'>Desglose por palanca</div>",
+            unsafe_allow_html=True,
+        )
+        resumen_df = pd.DataFrame({
+            "Palanca": [
+                "Facturación actual 2026",
+                "Gap clientes actuales",
+                "Recuperación clientes pasados",
+                "Leads prioritarios (Índice 1)",
+                "Potencial total escenario",
+            ],
+            "Potencial máx. (M€)": [
+                eu(fac_a, 2),
+                eu(gap_a, 2),
+                eu(rec_p, 2),
+                eu(pot_l, 2),
+                eu(fac_a + gap_a + rec_p + pot_l, 2),
+            ],
+            "Escenario ajustado (M€)": [
+                eu(fac_a, 2),
+                eu(gap_adj, 2),
+                eu(rec_adj, 2),
+                eu(pot_adj, 2),
+                eu(pot_t, 2),
+            ],
+            "% captura": [
+                "100%",
+                f"{pct_gap}%",
+                f"{pct_past}%",
+                f"{eu(pct_leads_eff,0)}%",
+                "—",
+            ],
+            "Sobre facturación actual": [
+                "—",
+                eu(gap_adj / fac_a * 100, 1) + "%" if fac_a > 0 else "—",
+                eu(rec_adj / fac_a * 100, 1) + "%" if fac_a > 0 else "—",
+                eu(pot_adj / fac_a * 100, 1) + "%" if fac_a > 0 else "—",
+                "+" + eu(uplift, 1) + "%",
+            ],
+            "Clientes / Leads": [
+                "—",
+                str(n_ag),
+                str(n_p),
+                f"{n_leads_adj} de {n_l1}",
+                str(n_ag + n_p + n_leads_adj),
+            ],
+        })
+        st.dataframe(resumen_df, use_container_width=True, hide_index=True)
