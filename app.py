@@ -3750,9 +3750,9 @@ elif st.session_state["pagina"] == "impacto":
         )
 
         _k1, _k2, _k3, _k4, _k5 = st.columns(5)
-        _total_nc = _t["nc_activos_M"] + _t["nc_pasados_M"]
+        _total_nc = _t["nc_activos_M"] + _t["nc_pasados_M"] + _t["tot_leads_top50_M"]
         for _col, _lbl, _val, _sub, _bg, _brd, _extra in [
-            (_k1, "Potencial NC total",         _total_nc,                    "Activos + ex-clientes",                                    "#f8f9fa", "#2E2A25", ""),
+            (_k1, "Potencial NC total",         _total_nc,                    "Activos + ex-clientes + top 50 leads",                     "#f8f9fa", "#2E2A25", ""),
             (_k2, "Gap NC clientes activos",    _t["nc_activos_M"],           f"{len(_df_cli[_df_cli['gap_nc_eur']>0])} clientes con gap NC", "#f0f7ff", "#0082CA", ""),
             (_k3, "NC recuperación pasados",    _t["nc_pasados_M"],           f"{len(_df_past[_df_past['fac_nc_ult']>0])} ex-clientes",      "#f0fff8", "#00AD68", ""),
             (_k4, "Potencial total leads C1",   _t["tot_leads_M"],            f"Todos los leads C1 detectados",                             "#fff5f7", "#CC003D", ""),
