@@ -783,11 +783,21 @@ def load_nocomm_ranking():
 
         leads_c = pd.read_csv("data/leads_clusters.csv", encoding="utf-8", low_memory=False)
         leads_e = pd.read_csv("data/leads_fuentes_externas.csv", encoding="utf-8", low_memory=False)
+        # Drop alimarket_ventas_eur from fuentes to avoid _x/_y suffix on merge
+        _leads_e_cols = ["empresa", "origen", "ingredientes_zukan_detectados", "sectores_zukan"]
+        if "alimarket_ventas_eur" in leads_e.columns and "alimarket_ventas_eur" in leads_c.columns:
+            _leads_e_cols_use = _leads_e_cols
+        else:
+            _leads_e_cols_use = _leads_e_cols + (["alimarket_ventas_eur"] if "alimarket_ventas_eur" in leads_e.columns else [])
         leads = leads_c.merge(
-            leads_e[["empresa", "origen", "ingredientes_zukan_detectados",
-                      "alimarket_ventas_eur", "sectores_zukan"]],
+            leads_e[[c for c in _leads_e_cols_use if c in leads_e.columns]],
             left_on=["empresa_lead", "origen"], right_on=["empresa", "origen"], how="left"
         )
+        # Resolve potential _x/_y suffix on alimarket_ventas_eur
+        if "alimarket_ventas_eur_x" in leads.columns:
+            leads["alimarket_ventas_eur"] = leads["alimarket_ventas_eur_x"].fillna(leads.get("alimarket_ventas_eur_y", 0))
+        if "sectores_zukan_x" in leads.columns:
+            leads["sectores_zukan"] = leads["sectores_zukan_x"].fillna(leads.get("sectores_zukan_y", ""))
         leads["ings_str"] = leads["ingredientes_zukan_detectados"].fillna(leads["ingredientes_lead"])
 
         def _lead_pot(row):
@@ -3846,8 +3856,14 @@ elif st.session_state["pagina"] == "impacto":
             _df_lds_d["pot_tot_M"] = (_df_lds_d["pot_tot_eur"] / 1e6).round(3)
             _df_lds_d["pct_nc"]    = _df_lds_d["pct_nc"].round(0).astype(int)
             _df_lds_d["jaccard"]   = (_df_lds_d["jaccard_max"] * 100).round(0).astype(int)
-            _df_lds_d["alimarket"] = (_df_lds_d["alimarket_ventas_eur"].fillna(0) / 1e6).round(1)
-            _show_lds = _df_lds_d[["rank","empresa_lead","sectores_zukan","jaccard","pot_nc_M","pot_tot_M","pct_nc","n_ings_nc","alimarket"]].copy()
+            _ali_col = _df_lds_d["alimarket_ventas_eur"] if "alimarket_ventas_eur" in _df_lds_d.columns else _df_lds_d.get("alimarket_ventas_eur_x", pd.Series(0.0, index=_df_lds_d.index))
+            _df_lds_d["alimarket"] = (_ali_col.fillna(0) / 1e6).round(1)
+            _sec_col = "sectores_zukan" if "sectores_zukan" in _df_lds_d.columns else "sectores_zukan_x"
+            _show_lds_cols = ["rank","empresa_lead","jaccard","pot_nc_M","pot_tot_M","pct_nc","n_ings_nc","alimarket"]
+            if _sec_col in _df_lds_d.columns:
+                _df_lds_d["sectores_zukan"] = _df_lds_d[_sec_col]
+                _show_lds_cols.insert(2, "sectores_zukan")
+            _show_lds = _df_lds_d[_show_lds_cols].copy()
             st.dataframe(
                 _show_lds,
                 use_container_width=True, hide_index=True,
