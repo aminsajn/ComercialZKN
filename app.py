@@ -86,7 +86,7 @@ def es_commodity(nombre_producto: str) -> bool:
         return False
     _nc = (
         'fosvitae', 'fosfruit', 'fos y stevia', 'apimix', 'apipasta',
-        'beesucre', 'apifonda', 'fondant', 'nectar base',
+        'beesucre', 'fondant', 'nectar base',
         'cobertura', 'sirope sabor', 'siropes de', 'jarabe sabor',
         'stevia & fibra', 'stevia zero', 'xilitol & stevia',
         'compo manz', 'compo al', 'compo hca', 'compo rae', 'compo le',
@@ -101,6 +101,7 @@ def es_commodity(nombre_producto: str) -> bool:
         'glucor', 'fructor', 'maltor', 'melaza',
         'glucosa atomizada', 'almidon', 'acido citrico',
         'sorbato potasico', 'sucralosa', 'xilitol',
+        'apifonda',  # producto de la competencia, no exclusivo Zukán
     )
     for kw in _c:
         if kw in n:
