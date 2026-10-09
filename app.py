@@ -81,6 +81,9 @@ def es_commodity(nombre_producto: str) -> bool:
     Orden de prioridad: NO commodity primero (Mix/Mixco y marcas Zukán), luego commodity.
     Por defecto devuelve False (conservador: si no se reconoce, se trata como no commodity)."""
     n = _norm(str(nombre_producto))
+    # Prioridad commodity: overrides la lista NC (ej. Fondant GL es commodity, no Fondant Zukán)
+    if 'fondant gl' in n:
+        return True
     # NO commodity: blends/formulaciones propias Zukán
     if re.search(r'\bmix\b|\bmixco\b', n):
         return False
@@ -89,19 +92,25 @@ def es_commodity(nombre_producto: str) -> bool:
         'beesucre', 'fondant', 'nectar base',
         'cobertura', 'sirope sabor', 'siropes de', 'jarabe sabor',
         'stevia & fibra', 'stevia zero', 'xilitol & stevia',
-        'compo manz', 'compo al', 'compo hca', 'compo rae', 'compo le',
-        'base neutra', 'ca1956',
+        'compo manz', 'base neutra',
     )
     for kw in _nc:
         if kw in n:
             return False
     # COMMODITY: ingredientes estándar de mercado
     _c = (
-        'azucar', 'fructosa', 'dextrosa', 'maltitol', 'sorbitol',
+        'azucar', 'az mor', 'az.bl', 'az bl',  # azúcares (incluye abreviaciones)
+        'fructosa', 'fructamyl',                 # fructosas
+        'dextrosa', 'maltitol', 'sorbitol',
         'glucor', 'fructor', 'maltor', 'melaza',
         'glucosa atomizada', 'almidon', 'acido citrico',
         'sorbato potasico', 'sucralosa', 'xilitol',
-        'apifonda',  # producto de la competencia, no exclusivo Zukán
+        'apifonda',                              # producto competencia
+        'ati 65', 'ati 72', 'cati',             # ATI/CATI (almíbar tipo industrial)
+        'base extracto granizado',
+        'ca1956', 'compo al', 'compo hca', 'compo le', 'compo rae',  # bases commodity
+        'raw sugar', 'icumsa', 'correfino',     # familia F005 azúcares
+        'pep58', 'pep 58',                      # código interno F005
     )
     for kw in _c:
         if kw in n:
